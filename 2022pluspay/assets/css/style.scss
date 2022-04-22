@@ -196,34 +196,35 @@ nav {
     overflow-x: auto;
     width: 100%;
     padding: 6px 10px;
+    cursor: grab;
     //捲軸底色
     &::-webkit-scrollbar-track {
       -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0);
       background-color: rgba(255,255,255,0);
-      @include pc() {
-        background-color: rgba(0,0,0,0);
-      }
+      // @include pc() {
+      //   background-color: rgba(0,0,0,0);
+      // }
     }
     //捲軸寬度
     &::-webkit-scrollbar {
       width: 2px;
       height: 2px;
       background-color: rgba(255,255,255,0);
-      @include pc() {
-        background-color: rgba(0,0,0,.25);
-        width: 6px;
-        height: 6px;
-        border-radius: 6px;
-      }
+      // @include pc() {
+      //   background-color: rgba(0,0,0,.25);
+      //   width: 6px;
+      //   height: 6px;
+      //   border-radius: 6px;
+      // }
     }
     //捲軸本體顏色
     &::-webkit-scrollbar-thumb {
       background-color: rgba(255,255,255,0);
-      @include pc() {
-        background-color: #fff;
-        border-radius: 6px;
-        border: 1px solid #c4bcb7;
-      }
+      // @include pc() {
+      //   background-color: #fff;
+      //   border-radius: 6px;
+      //   border: 1px solid #c4bcb7;
+      // }
     }
   }
   li {
@@ -241,6 +242,10 @@ nav {
     min-width: 108px;
     border-radius: 20px;
     cursor: pointer;
+    @include pc() {
+      width: 130px;
+      min-width: 130px;
+    }
     &:hover {
       background-color: #d00000;
     }
