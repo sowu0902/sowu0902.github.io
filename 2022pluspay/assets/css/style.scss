@@ -29,6 +29,9 @@ body {
 .text_orange {
   color: #E94C1B !important;
 }
+.text_blue {
+  color: #008a9f !important;
+}
 .text_center {
   text-align: center;
 }
@@ -958,7 +961,7 @@ nav {
   &--right {
     .toptext {
       strong {
-        &.text_orange {
+        &.text_blue {
           font-size: 21px;
           line-height: 21.6px;
         }

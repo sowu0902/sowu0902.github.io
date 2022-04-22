@@ -5,6 +5,8 @@ body { font-family: 'Noto Sans TC', sans-serif; }
 
 .text_orange { color: #E94C1B !important; }
 
+.text_blue { color: #008a9f !important; }
+
 .text_center { text-align: center; }
 
 .text_bold { font-weight: 700; }
@@ -367,7 +369,7 @@ nav.fixed .logobox { display: block; }
 
 .bank4-1--left .giftbox img { margin-bottom: 5px; }
 
-.bank4-1--right .toptext strong.text_orange { font-size: 21px; line-height: 21.6px; }
+.bank4-1--right .toptext strong.text_blue { font-size: 21px; line-height: 21.6px; }
 
 .bank4-1--right .toptext strong span { font-size: 16px; }
 
