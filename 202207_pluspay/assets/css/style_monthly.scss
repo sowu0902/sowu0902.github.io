@@ -34,10 +34,24 @@
     @content;
   }
 }
+@mixin min1366 {
+  @media(min-width:1366px){
+    @content;
+  }
+}
 $pluspay_orange: #FF4509;
+$pluspay_darkgray: #333;
+$pluspay_gray: #888;
+$pluspay_box-shadow: 5px 5px 16px rgba(64, 98, 105, 0.6);
+$pluspay_box-shadow--hover: 3px 3px 13px rgba(64, 98, 105, 0.8);
+
 body {
   font-family: 'Noto Sans TC', sans-serif;
   background-color: #DBFFE3;
+  color: $pluspay_darkgray;
+  @include max320() {
+    font-size: 15px;
+  }
 }
 .allpage {
   position: relative;
@@ -52,6 +66,30 @@ body {
   @include min768() {
     display: none;
   }
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  &--pconly {
+    display: inherit;
+    @include min768() {
+      display: flex;
+    }
+  }
+}
+.flex_item {
+  &--order2 {
+    order: 2;
+  }
+  &--order3 {
+    order: 3;
+  }
+}
+.align-item-center {
+  align-items: center;
+}
+.img {
+  line-height: 0;
 }
 header {
   position: fixed;
@@ -97,7 +135,7 @@ header {
       }
       //捲軸底色
       &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 2px rgba(0, 0, 0, 0);
+        box-shadow: $pluspay_box-shadow;
         background-color: rgba(255,255,255,0);
       }
       //捲軸寬度
@@ -351,35 +389,309 @@ main {
     // 共用的內容區塊
     &_container {
       margin: 0 25px 40px 25px;
-      box-shadow: 5px 5px 16px rgba(64, 98, 105, 0.6);
+      box-shadow: $pluspay_box-shadow;
       border-radius: 20px;
       background-color: #FFF;
+      @include min768() {
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+        // max-width: 1500px;
+      }
+      @include min1280() {
+        border-radius: 40px;
+      }
+      .anchor {
+        position: absolute;
+        top: -50px;
+      }
+      &__box_content {
+        padding: 10px 25px 10px 25px;
+        @include max320() {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        @include min768() {
+          padding: 20px 40px;
+        }
+        @include min1024() {
+          padding: 30px 60px;
+        }
+        @include min1280() {
+          padding: 50px 80px;
+        }
+      }
       h2 {
-        text-align: center;
-        font-weight: 900;
-        font-size: 25px;
-        line-height: 14vw;
-        letter-spacing: 0.12em;
+        line-height: 0;
+        img {
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          @include min1280() {
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+          }
+        }
+        span {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          text-align: center;
+          font-weight: 900;
+          font-size: 25px;
+          line-height: 14vw;
+          letter-spacing: 0.12em;
+          color: #FFF;
+          @include max375() {
+            font-size: 22px;
+          }
+          @include max320() {
+            font-size: 19px;
+          }
+          @include min1024() {
+            font-size: 30px;
+          }
+          @include min1280() {
+            font-size: 41px;
+          }
+          @include min1366() {
+            font-size: 45px;
+          }
+        }
+      }
+      &.odd {
+        h2::before {
+          content: "";
+          background-color: #9CF0AF;
+          width: 3.14vw;
+          height: 24.15vw;
+          position: absolute;
+          left: 0;
+          bottom: -24.15vw;
+          border-bottom-right-radius: 2.42vw;
+          @include min768() {
+            width: 3.68vw;
+            height: 11.81vw;
+            bottom: -11.81vw;
+            border-bottom-right-radius: 2.08vw;
+          }
+        }
+      }
+      .dot_text {
+        width: 28px;
+        height: 28px;
+        border-radius: 28px;
+        background-color: $pluspay_orange;
         color: #FFF;
-        background-image: url(../images/h2_odd_mb.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 14vw;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 27px;
+        display: inline-block;
+        padding-left: 2px;
+        @include min1024() {
+          font-size: 21px;
+          height: 36px;
+          width: 36px;
+          line-height: 35px;
+          padding-left: 3px;
+        }
+        @include min1280() {
+          font-size: 26px;
+          height: 44px;
+          width: 44px;
+          line-height: 41px;
+          padding-left: 3px;
+          top: -2px;
+        }
+      }
+      .hightlight {
+        color: $pluspay_orange;
+        font-weight: 900;
+        &.bigger {
+          font-size: 18px;
+        }
+      }
+      strong {
+        font-weight: 700;
+      }
+      .mgr4 {
+        margin-right: 4px;
+      }
+      .date {
+        font-family: lato;
+        font-size: 20px;
+        font-weight: 800;
+        background-image: url(../images/date_bg.png);
+        background-repeat: repeat-x;
+        background-size: 100px;
+        background-position: 0 95%;
+        padding: 0 5px;
+        margin-right: 3px;
+        @include max320() {
+          font-size: 17px;
+        }
+        &.small {
+          font-size: 18px;
+          background-size: 80px;
+        }
+      }
+      .swords {
+        font-size: 14px;
+        line-height: 1.6;
+        color: $pluspay_gray;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        li {
+          padding-left: 14px;
+          &::before {
+            content: "•";
+            position: absolute;
+            font-size: 12px;
+            left: 0;
+            top: 1px;
+          }
+        }
+      }
+      .btn {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        @include min768() {
+          text-align: left;
+        }
+        a {
+          background-color: $pluspay_orange;
+          color: #FFF;
+          font-size: 18px;
+          letter-spacing: 0.05em;
+          line-height: 1;
+          font-weight: 700;
+          display: inline-block;
+          width: auto;
+          padding: 14px 18px 10px 16px;
+          border-radius: 8px;
+          margin: auto;
+          box-shadow: $pluspay_box-shadow;
+          @include max320() {
+            font-size: 17px;
+          }
+          @include min768() {
+            margin: 0 4px 4px 0;
+            transition: 0s;
+          }
+          &:hover {
+            box-shadow: $pluspay_box-shadow--hover;
+            margin: 4px 0 0 4px;
+          }
+          span {
+            background-image: url(../images/icon_go.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 46px;
+            height: 28px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 2px;
+            @include max320() {
+              width: 41px;
+              height: 25px;
+            }
+          }
+        }
+        &.clear {
+          a {
+            padding: 12px 18px;
+            box-shadow: none;
+            letter-spacing: 0;
+            span {
+              display: none;
+              @include min768() {
+                display: inline-block;
+              }
+            }
+          }
+        }
+        &.fix170 {
+          a {
+            padding-left: 0;
+            padding-right: 0;
+            width: 170px;
+          }
+        }
+        &.fix130 {
+          a {
+            padding-left: 0;
+            padding-right: 0;
+            width: 130px;
+          }
+        }
+        &.left {
+          text-align: left;
+          a {
+            text-align: center;
+          }
+        }
       }
     }
     // 品牌活動
     &_event {
+      padding-bottom: 25px;
+      @include max320() {
+        padding-bottom: 20px;
+      }
+      &::before {
+        content: "";
+        background-image: url(../images/event_bg_after_mb.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 12.8vw;
+        height: 26.57vw;
+        position: absolute;
+        right: 0;
+        top: 51%;
+      }
       &__box_content {
-        padding: 10px 25px 0 25px;
-        .img img {
-          border-radius: 10px;
+        .img {
+          @include min768() {
+            flex: 0 0 47%;
+            width: 47%;
+            order: 2;
+          }
+          @include min1280() {
+            flex: 0 0 47%;
+            width: 47%;
+          }
+          img {
+            border-radius: 10px;
+            @include min1280() {
+              border-radius: 20px;
+            }
+          }
         }
         .text {
           padding-top: 12px;
+          @include min768() {
+            padding-right: 15px;
+            flex: 0 0 53%;
+            width: 53%;
+          }
+          @include min1280() {
+            padding-right: 25px;
+            // flex: 0 0 53%;
+            // width: 53%;
+          }
           .logos {
+            margin-bottom: 3px;
             img {
               height: 30px;
               width: auto;
+              @include max320() {
+                height: 27px;
+              }
+              @include min1024() {
+                height: 35px;
+              }
             }
             div {
               display: inline-block;
@@ -393,6 +705,16 @@ main {
                 display: inline-block;
                 vertical-align: top;
                 margin: 6px 7px 0 10px;
+                @include max320() {
+                  width: 18px;
+                  height: 18px;
+                  margin: 5px 2px 0 6px;
+                }
+                @include min1024() {
+                  width: 25px;
+                  height: 25px;
+                  margin: 6px 6px 0 9px;
+                }
               }
             }
           }
@@ -401,10 +723,433 @@ main {
             font-size: 21px;
             line-height: 1.33;
             letter-spacing: 0.08em;
+            color: #000;
+            @include max320() {
+              font-size: 18px;
+            }
+            @include min1024() {
+              font-size: 27px;
+            }
+            @include min1280() {
+              font-size: 33px;
+            }
+          }
+          p {
+            line-height: 1.8;
+            letter-spacing: 0.04em;
           }
         }
         
         
+      }
+      &__box_combo {
+        border-radius: 20px;
+        background-image: url(../images/event_combo_bg_mb.png);
+        background-color: #25BAC8;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin: 40px 25px 0 25px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        @include max360() {
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+        @include max320() {
+          padding-top: 20px;
+        }
+        @include min768() {
+          background-image: url(../images/event_combo_bg.png);
+        }
+        @include min1280() {
+          padding-top: 40px;
+        }
+        h3 {
+          color: #FFF;
+          font-size: 28px;
+          line-height: 1;
+          letter-spacing: .28em;
+          font-weight: 900;
+          text-align: center;
+          margin-bottom: 40px;
+          @include max360() {
+            font-size: 25px;
+            margin-bottom: 20px;
+          }
+          @include min1024() {
+            font-size: 32px;
+          }
+          @include min1280() {
+            font-size: 38px;
+          }
+          &::after {
+            content: "";
+            background-image: url(../images/icon_combo_mb.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 25.6vw;
+            height: 9.9vw;
+            max-width: 106px;
+            max-height: 41px;
+            position: absolute;
+            transform: rotate(-16.25deg) translateX(-50%);
+            left: calc(50% - 70px);
+            top: -55px;
+            @include max360() {
+              top: -50px;
+            }
+            @include max320() {
+              top: -45px;
+              left: calc(50% - 55px);
+            }
+            @include min1024() {
+              background-image: url(../images/icon_combo.png);
+              width: 9.17vw;
+              height: 3.33vw;
+              max-width: 132px;
+              max-height: 48px;
+              // top: -50px;
+            }
+            @include min1280() {
+              top: -65px;
+              left: calc(50% - 85px);
+            }
+            @include min1366() {
+              top: -70px;
+              left: calc(50% - 90px);
+            }
+          }
+        }
+        h4 {
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 1.3;
+          letter-spacing: 0.09em;
+          @include max360() {
+            font-size: 17px;
+          }
+        }
+        .cards {
+          padding: 0 20px;
+          @include max320() {
+            padding: 0 12px;
+          }
+          @include min768() {
+            flex-wrap: nowrap;
+            justify-content: space-around;
+          }
+        }
+        .card {
+          background-color: #FFF;
+          border-radius: 10px;
+          box-shadow: $pluspay_box-shadow;
+          padding: 10px 15px;
+          margin-bottom: 15px;
+          @include max360() {
+            padding: 8px 10px;
+          }
+          @include max320() {
+            margin-bottom: 10px;
+          }
+          @include min768() {
+            // flex: 0 0 30%;
+            margin-right: 15px;
+            margin-bottom: 0;
+            width: 50%;
+          }
+          &:last-child {
+            margin-bottom: 0;
+            @include min768() {
+              margin-right: 0;
+            }
+          }
+          .img {
+            margin-right: 10px;
+          }
+          .content {
+            @include min768() {
+              flex-wrap: nowrap;
+              align-items: center;
+              align-content: center;
+            }
+          }
+          &-combo-1 {
+            .img {
+              flex: 0 0 43px;
+              width: 43px;
+              @include max360() {
+                flex: 0 0 32px;
+                width: 32px;
+              }
+            }
+          }
+          &-combo-2 {
+            .img {
+              flex: 0 0 66px;
+              width: 66px;
+              @include max360() {
+                flex: 0 0 53px;
+                width: 53px;
+              }
+            }
+          }
+          &-combo-3 {
+            .img {
+              flex: 0 0 45px;
+              width: 45px;
+              @include max360() {
+                flex: 0 0 36px;
+                width: 36px;
+              }
+            }
+          }
+        }
+      }
+    }
+    // 優惠活動
+    &_walipiki {
+      &__box_content {
+        h3 {
+          font-size: 18px;
+          font-weight: 900;
+          letter-spacing: 0.08em;
+        }
+        .card {
+          margin-bottom: 15px;
+          .content {
+            flex-wrap: nowrap;
+          }
+        }
+        &.walipiki_a {
+          padding-bottom: 0;
+          .card {
+            box-shadow: $pluspay_box-shadow;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            overflow: hidden;
+            background-color: #FFE76A;
+            .title {
+              padding: 10px 0;
+              text-align: center;
+            }
+            .content {
+              background-color: #FFF;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+              padding: 12px 20px;
+              @include max360() {
+                padding: 8px 12px;
+              }
+              .box1 {
+                flex-wrap: nowrap;
+                .img {
+                  flex: 0 0 37%;
+                  text-align: right;
+                  padding-right: 5px;
+                  img {
+                    height: 100px;
+                    width: auto;
+                  }
+                }
+              }
+              .box2 {
+                flex-wrap: nowrap;
+                border-top: 1px solid #ddd;
+                padding-top: 10px;
+                .img {
+                  flex: 0 0 37%;
+                  text-align: right;
+                  // padding-right: 5px;
+                  img {
+                    height: 135px;
+                    width: auto;
+                  }
+                }
+              }
+            }
+            &.prom {
+              .hightlight {
+                display: block;
+              }
+              .img {
+                flex: 0 0 22vw;
+                text-align: right;
+                padding-right: 5px;
+                img {
+                  height: 100px;
+                  width: auto;
+                }
+              }
+            }
+          }
+          &--logo {
+            padding-top: 0;
+            .card {
+              .title {
+                height: 65px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            }
+            .watsons {
+              .title img {
+                height: 26px;
+                width: auto;
+              }
+              .img {
+                position: absolute;
+                width: 29vw;
+                right: 20px;
+                top: 15px;
+              }
+              .text {
+                width: 100%;
+                p {
+                  width: calc(100% - 29vw - 15px);
+                }
+              }
+            }
+            .ootoya {
+              .title img {
+                height: 50px;
+                width: auto;
+              }
+              .img {
+                padding-left: 15px;
+                img {
+                  width: 60px;
+                }
+              }
+            }
+            .familymart {
+              .title img {
+                height: 59px;
+                width: auto;
+              }
+              .img {
+                padding-left: 13px;
+                padding-bottom: 5px;
+                float: right;
+                img {
+                  width: 80px;
+                }
+              }
+            }
+            .familymart_icecream {
+              .title img {
+                height: 59px;
+                width: auto;
+              }
+              .img {
+                width: 49.27%;
+                margin-left: 13px;
+                float: right;
+              }
+            }
+            .fami_coffee {
+              .title img {
+                height: 50px;
+                width: auto;
+              }
+              .img {
+                margin-left: 13px;
+                flex: 0 0 49.27%;
+              }
+            }
+            .fami_water {
+              .title img {
+                height: 50px;
+                width: auto;
+              }
+              .img {
+                width: 51%;
+                margin-left: 5px;
+                float: right;
+              }
+            }
+            .fami {
+              .title img {
+                height: 50px;
+                width: auto;
+              }
+              .img {
+                margin-left: 13px;
+                flex: 0 0 49.27%;
+              }
+            }
+          }
+        }
+        &.walipiki_coupon {
+          display: flex;
+          padding-top: 0;
+          padding-bottom: 0;
+          .card {
+            width: 50%;
+            text-align: center;
+            filter: drop-shadow($pluspay_box-shadow);
+            &:first-child {
+              margin-right: 10px;
+            }
+            &::before {
+              content: "";
+              background-image: url(../images/coupon_top_mb.png);
+              width: 100%;
+              height: 9px;
+              background-repeat: repeat-x;
+              background-size: cover;
+              display: block;
+            }
+            &::after {
+              content: "";
+              background-image: url(../images/coupon_bottom_mb.png);
+              width: 100%;
+              height: 9px;
+              background-repeat: repeat-x;
+              background-size: cover;
+              display: block;
+            }
+            .top {
+              background-color: #DBFFE3;
+              padding-top: 3px;
+              font-size: 14px;
+              line-height: 1.6;
+              strong {
+                font-size: 20px;
+                font-weight: 900;
+                color: #000;
+                letter-spacing: 0.02em;
+              }
+            }
+            .border {
+              line-height: 0;
+            }
+            .bottom {
+              background-color: #FFF;
+              padding-bottom: 10px;
+              .logo img {
+                height: 20px;
+                width: auto;
+              }
+              p {
+                color: $pluspay_orange;
+                font-weight: 900;
+                font-size: 18px;
+                line-height: 1.5;
+              }
+            }
+          }
+        }
+        &.walipiki_banner {
+          padding-top: 0;
+          padding-bottom: 10px;
+          .card {
+            line-height: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: $pluspay_box-shadow;
+          }
+        }
       }
     }
   }
