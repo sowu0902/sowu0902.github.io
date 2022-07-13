@@ -139,10 +139,10 @@
           <span>優惠活動</span>
         </h2>
         <!-- 註冊禮+推薦禮 -->
-        <div class="section_container__box_content section_walipiki__box_content walipiki_a">
+        <div class="section_container__box_content section_walipiki__box_content walipiki_a flex flex--pconly flex--nowrap">
           <!-- 註冊禮(PC和MB分開) -->
           <div class="card register">
-            <div class="title"><h3>註冊禮</h3></div>
+            <div class="title"><h3>註冊禮<span class="pconly"><img src="assets/images/bird.png" alt=""></span></h3></div>
             <div class="content">
               <div class="box1 flex mbonly">
                 <div class="text">
@@ -158,16 +158,30 @@
                 </div>
                 <div class="img"><img src="assets/images/toast.png" alt=""></div>
               </div>
+              <div class="box flex pconly">
+                <div class="text">
+                  <p>
+                    透過「全家便利商店 FamilyMart」App 註冊，<br class="hide768">送<span class="hightlight bigger">Let's Café 經典美式</span>中杯x1<br>透過「智生活」App 註冊，<br class="hide768">送<span class="hightlight bigger">全家匠土司-原味覺土司</span>x1
+                  </p>
+                  <div class="btns flex flex--pconly">
+                    <div class="btn clear left"><a href="#" target="_blank" id="btn_202207monthly_walipiki_1a">FamilyMart 註冊<span></span></a></div>
+                    <div class="btn clear left fix170"><a href="#" target="_blank" id="btn_202207monthly_walipiki_1a">智生活 註冊<span></span></a></div>
+                  </div>
+                </div>
+                <div class="img"><img src="assets/images/walipiki_img1.png" alt=""></div>
+              </div>
             </div>
           </div>
           <!-- 推薦禮 -->
-          <div class="card prom">
-            <div class="title"><h3>推薦禮</h3></div>
-            <div class="content flex">
-              <div class="text">
-                <p><span class="hightlight bigger">Let's Café 經典拿鐵</span> 中杯x1</p>
-                <div class="swords">
-                  <p>推薦1位送1杯，推越多領越多！</p>
+          <div class="card prom flex flex--pconly">
+            <div class="title"><h3>推薦禮<span class="pconly"><img src="assets/images/bird.png" alt=""></span></h3></div>
+            <div class="content flex flex--nowrap">
+              <div class="text flex flex--pconly">
+                <div>
+                  <p><span class="hightlight bigger">Let's Café 經典拿鐵</span> 中杯x1</p>
+                  <div class="swords">
+                    <p>推薦1位送1杯，推越多領越多！</p>
+                  </div>
                 </div>
                 <div class="btn clear left fix170"><a href="https://app2.family.com.tw/home/RedirectApp?type=Mgm" target="_blank" id="btn_202207monthly_walipiki_2">手刀推薦<span></span></a></div>
               </div>
@@ -217,15 +231,18 @@
             <div class="title"><img src="assets/images/logo_watsons.png" alt="屈臣氏"></div>
             <div class="content flex">
               <div class="text">
-                <p><span class="date small">7/7-8/31</span>單筆消費滿588元<br>贈<span class="hightlight bigger">50元屈臣氏即享券</span></p>
-                <ul class="swords">
-                  <li>詳細活動辦法依屈臣氏公告為主</li>
-                  <li>限量6,000份</li>
-                  <li>每人限領2次</li>
-                </ul>
+                <div>
+                  <div class="img"><img src="assets/images/walipiki_img5.png" alt=""></div>
+                  <p><span class="date small">7/7-8/31</span>單筆消費滿588元<br>贈<span class="hightlight bigger">50元屈臣氏即享券</span></p>
+                  <ul class="swords">
+                    <li>詳細活動辦法依屈臣氏公告為主</li>
+                    <li>限量6,000份</li>
+                    <li>每人限領2次</li>
+                  </ul>
+                </div>
                 <div class="btn clear left fix130"><a href="#" target="_blank" id="btn_202207monthly_walipiki_5">瞭解更多<span></span></a></div>
               </div>
-              <div class="img"><img src="assets/images/walipiki_img5.png" alt=""></div>
+              
             </div>
           </div>
           <!-- 大戶屋 -->
@@ -233,11 +250,13 @@
             <div class="title"><img src="assets/images/logo_ootoya.png" alt="大戶屋"></div>
             <div class="content flex">
               <div class="text">
-                <p><span class="date small">6/29-7/26</span>單筆消費滿488元贈<span class="hightlight bigger">Let's Café 經典拿鐵</span>中杯x1</p>
-                <ul class="swords">
-                  <li>限量6,000份</li>
-                  <li>限路邊店</li>
-                </ul>
+                <div>
+                  <p><span class="date small">6/29-7/26</span>單筆消費滿488元贈<span class="hightlight bigger">Let's Café 經典拿鐵</span> 中杯x1</p>
+                  <ul class="swords">
+                    <li>限量6,000份</li>
+                    <li>限路邊店</li>
+                  </ul>
+                </div>
                 <div class="btn clear left fix130"><a href="#" target="_blank" id="btn_202207monthly_walipiki_6">了解更多<span></span></a></div>
               </div>
               <div class="img"><img src="assets/images/drink_latte.png" alt=""></div>
@@ -323,7 +342,7 @@
           </div>
         </div>
         <!-- BANNER -->
-        <div class="section_container__box_content section_walipiki__box_content walipiki_banner">
+        <div class="section_container__box_content section_walipiki__box_content walipiki_banner flex flex--pconly flex--nowrap">
           <div class="card">
             <a href="#" target="_blank" id="btn_202207monthly_walipiki_banner_1">
               <img src="assets/images/walipiki_card_banner_mb.png" alt="" class="mbonly">
@@ -336,6 +355,73 @@
               <img src="assets/images/walipiki_card_banner.png" alt="" class="pconly">
             </a>
           </div>
+        </div>
+      </section>
+      <!-- 合作通路 -->
+      <section class="section_container section_cooperation odd">
+        <a id="sec3" class="anchor"></a>
+        <h2>
+          <img src="assets/images/h2_odd_mb.png" alt="" class="mbonly">
+          <img src="assets/images/h2_odd.png" alt="" class="pconly">
+          <span>合作通路</span>
+        </h2>
+        <div class="section_container__box_content section_cooperation__box_content">
+          <div class="content flex">
+            <div class="card">
+              <img src="assets/images/cooperation/card_aftee.png" alt="AFTEE" class="pconly">
+              <img src="assets/images/cooperation/card_aftee_mb.png" alt="AFTEE" class="mbonly">
+            </div>
+            <div class="card">
+              <img src="assets/images/cooperation/card_charge.png" alt="" class="pconly">
+              <img src="assets/images/cooperation/card_charge_mb.png" alt="" class="mbonly">
+            </div>
+            <div class="card">
+              <img src="assets/images/cooperation/card_watsons.png" alt="" class="pconly">
+              <img src="assets/images/cooperation/card_watsons_mb.png" alt="" class="mbonly">
+            </div>
+            <div class="card">
+              <img src="assets/images/cooperation/card_bodyshop.png" alt="" class="pconly">
+              <img src="assets/images/cooperation/card_bodyshop_mb.png" alt="" class="mbonly">
+            </div>
+            <div class="card">
+              <img src="assets/images/cooperation/card_senao.png" alt="" class="pconly">
+              <img src="assets/images/cooperation/card_senao_mb.png" alt="" class="mbonly">
+            </div>
+            <div class="card">
+              <img src="assets/images/cooperation/card_tt.png" alt="" class="pconly">
+              <img src="assets/images/cooperation/card_tt_mb.png" alt="" class="mbonly">
+            </div>
+            <div class="card">
+              <img src="assets/images/cooperation/card_ootoya.png" alt="" class="pconly">
+              <img src="assets/images/cooperation/card_ootoya_mb.png" alt="" class="mbonly">
+            </div>
+            <div class="card">
+              <img src="assets/images/cooperation/card_bbq.png" alt="" class="pconly">
+              <img src="assets/images/cooperation/card_bbq_mb.png" alt="" class="mbonly">
+            </div>
+            <div class="card">
+              <img src="assets/images/cooperation/card_din.png" alt="" class="pconly">
+              <img src="assets/images/cooperation/card_din_mb.png" alt="" class="mbonly">
+            </div>
+            <div class="card">
+              <img src="assets/images/cooperation/card_laya.png" alt="" class="pconly">
+              <img src="assets/images/cooperation/card_laya_mb.png" alt="" class="mbonly">
+            </div>
+            <div class="card">
+              <img src="assets/images/cooperation/card_gastom.png" alt="" class="pconly">
+              <img src="assets/images/cooperation/card_gastom_mb.png" alt="" class="mbonly">
+            </div>
+            <div class="card">
+              <img src="assets/images/cooperation/card_dodohome.png" alt="" class="pconly">
+              <img src="assets/images/cooperation/card_dodohome_mb.png" alt="" class="mbonly">
+            </div>
+            <div class="card">
+              <img src="assets/images/cooperation/card_mtaxi.png" alt="" class="pconly">
+              <img src="assets/images/cooperation/card_mtaxi_mb.png" alt="" class="mbonly">
+            </div>
+          </div>
+          
+          <div class="btn clear"><a href="#" target="_blank" id="btn_202207monthly_cooperation">看完整合作通路名單<span></span></a></div>
         </div>
       </section>
     </main>
