@@ -592,6 +592,14 @@ main {
           font-size: 18px;
           background-size: 80px;
         }
+        &.bigger {
+          font-size: 22px;
+          line-height: 1;
+          background-size: 110px;
+          @include max320() {
+            font-size: 20px;
+          }
+        }
       }
       .swords {
         font-size: 14px;
@@ -697,6 +705,12 @@ main {
               width: auto;
               padding: 14px 18px 10px 16px;
             }
+          }
+        }
+        &.full {
+          width: 100%;
+          a {
+            width: 100%;
           }
         }
         &.left {
@@ -1596,6 +1610,125 @@ main {
           width: 100%;
           text-align: center;
           margin-top: 5px;
+        }
+      }
+    }
+    // 銀行回饋
+    &_bank {
+      &__box_content {
+        .hashtags {
+          display: flex;
+          font-size: 12px;
+          line-height: 1.7;
+          margin-bottom: 7px;
+          li {
+            border: 1px solid #333;
+            padding: 2px 9px;
+            border-radius: 20px;
+            margin-right: 8px;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+          .blue {
+            color: #00ACC3;
+            border-color: #00ACC3;
+          }
+          .orange {
+            color: $pluspay_orange;
+            border-color: $pluspay_orange;
+          }
+        }
+        &.bank_big {
+          .card {
+            border-radius: 10px;
+            border-bottom-left-radius: 0;
+            filter: drop-shadow($pluspay_box-shadow);
+            padding: 0 4px 4px;
+            margin-bottom: 20px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            .logo {
+              height: 50px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
+                height: 30px;
+                width: auto;
+              }
+            }
+            .content {
+              background-color: #FFF;
+              border-radius: 10px;
+              border-bottom-left-radius: 0;
+              padding: 15px 20px;
+              h3 {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 1.8;
+                letter-spacing: 0.04em;
+                margin-bottom: 7px;
+                margin-top: 5px;
+              }
+              img {
+                border-radius: 10px;
+              }
+              .btns {
+                justify-content: center;
+                .btn {
+                  margin: 0 8px;
+                }
+              }
+            }
+            &.taishin {
+              background-color: #D80C18;
+            }
+            &.esun {
+              background-color: #00A19B;
+            }
+          }
+        }
+        &.bank_small {
+          .card {
+            background-color: #FFF;
+            box-shadow: $pluspay_box-shadow;
+            overflow: hidden;
+            border-radius: 10px;
+            .logo {
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .img {
+              width: 53.14vw;
+              margin: 2px auto 5px auto;
+              img {
+                border-radius: 10px;
+              }
+            }
+            .text {
+              background-color: #F5F5F5;
+              padding: 10px 15px;
+              h3 {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 1.5;
+                letter-spacing: .02em;
+                margin-bottom: 5px;
+              }
+            }
+            &.fubon {
+              .logo {
+                img {
+                  height: 19px;
+                  width: auto;
+                }
+              }
+            }
+          }
         }
       }
     }
