@@ -57,9 +57,9 @@ body {
   position: relative;
 }
 .pconly {
-  display: none;
+  display: none !important;
   @include min768() {
-    display: inherit;
+    display: inherit !important;
   }
 }
 .mbonly {
@@ -694,6 +694,11 @@ main {
               width: auto;
               padding: 14px 18px 10px 16px;
             }
+            @include max320() {
+              width: auto;
+              padding-left: 12px;
+              padding-right: 12px;
+            }
           }
         }
         &.fix130 {
@@ -711,6 +716,9 @@ main {
           width: 100%;
           a {
             width: 100%;
+            @include min768() {
+              width: auto;
+            }
           }
         }
         &.left {
@@ -1073,6 +1081,9 @@ main {
                   padding-left: 5px;
                   text-align: right;
                   padding-right: 5px;
+                  @include max320() {
+                    max-width: 17.8vw;
+                  }
                   img {
                     height: 24.15vw;
                     width: auto;
@@ -1080,6 +1091,13 @@ main {
                       height: 100px;
                     }
                   }
+                }
+                .btn.fix170 a {
+                  @include max320() {
+                    padding-left: 7px;
+                    padding-right: 7px;
+                  }
+                  
                 }
               }
               .box2 {
@@ -1097,6 +1115,9 @@ main {
                   // padding-left: 5px;
                   text-align: right;
                   // padding-right: 5px;
+                  @include max320() {
+                    max-width:  17vw;
+                  }
                   img {
                     height: 32.61vw;
                     width: auto;
@@ -1150,6 +1171,9 @@ main {
                 padding-right: 5px;
                 @include min768() {
                   flex: 0 0 auto;
+                }
+                @include max320() {
+                  max-width: 18.8vw;
                 }
                 img {
                   height: 24.15vw;
@@ -1331,13 +1355,6 @@ main {
                     width: 97px;
                   }
                 }
-              }
-              .text {
-                // @include min1280() {
-                //   display: flex;
-                //   flex-wrap: wrap;
-                //   align-content: space-between;
-                // }
               }
             }
             .familymart_icecream {
@@ -1600,6 +1617,9 @@ main {
         .card {
           margin: 0 5px 10px 5px;
           width: calc(33.33% - 10px);
+          @include max360() {
+            width: calc(50% - 10px);
+          }
           @include min768() {
             width: calc(25% - 24px);
             max-width: 200px;
@@ -1620,12 +1640,21 @@ main {
           display: flex;
           font-size: 12px;
           line-height: 1.7;
-          margin-bottom: 7px;
+          // margin-bottom: 7px;
+          flex-wrap: wrap;
+          @include max320() {
+            font-size: 11px;
+          }
           li {
             border: 1px solid #333;
             padding: 2px 9px;
             border-radius: 20px;
             margin-right: 8px;
+            margin-bottom: 8px;
+            @include max320() {
+              padding: 1px 9px;
+              margin-right: 5px;
+            }
             &:last-child {
               margin-right: 0;
             }
@@ -1634,12 +1663,22 @@ main {
             color: #00ACC3;
             border-color: #00ACC3;
           }
+          .green {
+            color: #329E4A;
+            border-color: #329E4A;
+          }
           .orange {
             color: $pluspay_orange;
             border-color: $pluspay_orange;
           }
         }
+        .btns .btn a {
+          padding: 11px 19px 13px 19px;
+        }
         &.bank_big {
+          @include min1280() {
+            padding-bottom: 20px;
+          }
           .card {
             border-radius: 10px;
             border-bottom-left-radius: 0;
@@ -1654,9 +1693,15 @@ main {
               display: flex;
               align-items: center;
               justify-content: center;
+              @include max320() {
+                height: 35px;
+              }
               img {
                 height: 30px;
                 width: auto;
+                @include max320() {
+                  height: 21px;
+                }
               }
             }
             .content {
@@ -1664,6 +1709,9 @@ main {
               border-radius: 10px;
               border-bottom-left-radius: 0;
               padding: 15px 20px;
+              @include max320() {
+                padding: 12px 10px;
+              }
               h3 {
                 font-size: 18px;
                 font-weight: 700;
@@ -1671,14 +1719,40 @@ main {
                 letter-spacing: 0.04em;
                 margin-bottom: 7px;
                 margin-top: 5px;
+                @include max320() {
+                  font-size: 17px;
+                  line-height: 1.6;
+                }
+              }
+              .img {
+                @include min768() {
+                  flex: 0 0 170px;
+                  margin-right: 10px;
+                }
+                @include min1024() {
+                  flex: 0 0 220px;
+                  margin-right: 20px;
+                }
+                @include min1280() {
+                  flex: 0 0 320px;
+                }
               }
               img {
                 border-radius: 10px;
               }
               .btns {
                 justify-content: center;
+                @include min768() {
+                  justify-content: start;
+                }
                 .btn {
-                  margin: 0 8px;
+                  margin-right: 8px;
+                  @include min1024() {
+                    margin-right: 16px;
+                  }
+                  &:last-child {
+                    margin-right: 0;
+                  }
                 }
               }
             }
@@ -1691,20 +1765,75 @@ main {
           }
         }
         &.bank_small {
+          padding-top: 0;
+          @include min768() {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          }
           .card {
             background-color: #FFF;
             box-shadow: $pluspay_box-shadow;
             overflow: hidden;
             border-radius: 10px;
+            margin-bottom: 20px;
+            @include min768() {
+              width: calc(50% - 10px);
+              margin-left: 20px;
+              &:nth-child(odd) {
+                margin-left: 0;
+              }
+            }
+            @include min1280() {
+              margin-left: 20px;
+              width: calc(33.33% - 13.34px);
+              &:nth-child(odd) {
+                margin-left: 20px;
+              }
+              &:nth-child(3n+1) {
+                margin-left: 0;
+              }
+            }
+            .content {
+              @include min768() {
+                position: static;
+              }
+            }
             .logo {
               height: 40px;
               display: flex;
               justify-content: center;
               align-items: center;
+              padding-top: 2px;
+              @include max320() {
+                height: 32px;
+              }
+              @include min1024() {
+                height: 50px;
+              }
+              img {
+                height: 24px;
+                width: auto;
+                @include max320() {
+                  height: 19px;
+                }
+                @include min1024() {
+                  height: 28px;
+                }
+              }
             }
             .img {
               width: 53.14vw;
               margin: 2px auto 5px auto;
+              @include min768() {
+                width: 160px;
+              }
+              @include min1024() {
+                width: 200px;
+              }
+              @include min1280() {
+                width: 88%;
+              }
               img {
                 border-radius: 10px;
               }
@@ -1712,23 +1841,121 @@ main {
             .text {
               background-color: #F5F5F5;
               padding: 10px 15px;
+              @include min768() {
+                position: static;
+                background-color: transparent;
+                padding-bottom: 65px;
+                &_2btn {
+                  padding-bottom: 130px;
+                }
+                .date {
+                  font-size: 22px;
+                }
+              }
               h3 {
                 font-size: 16px;
                 font-weight: 700;
                 line-height: 1.5;
                 letter-spacing: .02em;
                 margin-bottom: 5px;
+                @include min768() {
+                  font-size: 18px;
+                  letter-spacing: 0.04em;
+                }
+              }
+            }
+            .btns {
+              justify-content: center;
+              @include min768() {
+                position: absolute;
+                bottom: 5px;
+                width: calc(100% - 30px);
+              }
+              .btn {
+                margin-right: 8px;
+                @include min768() {
+                  width: 100%;
+                  margin-top: 0;
+                  margin-right: 0;
+                }
+                &:last-child {
+                  margin-right: 0;
+                }
+                &.full,&.full a,a {
+                  @include min768() {
+                    width: 100%;
+                    text-align: center;
+                  }
+                }
               }
             }
             &.fubon {
               .logo {
                 img {
-                  height: 19px;
-                  width: auto;
+                  height: 21px;
+                  @include max320() {
+                    height: 16px;
+                  }
+                  @include min1024() {
+                    height: 24px;
+                  }
                 }
               }
             }
           }
+        }
+      }
+    }
+    // 注意事項
+    &_notice {
+      &__box_content {
+        .noticesbox {
+          font-size: 16px;
+          color: #010101;
+          line-height: 1.5;
+          letter-spacing: .02em;
+          @include max360() {
+            font-size: 13px;
+          }
+          .content {
+            p {
+              margin-top: 8px;
+              font-weight: 600;
+            }
+            a {
+              color: $pluspay_orange;
+              &:hover {
+                color: #000;
+                text-decoration: underline;
+              }
+            }
+            ol {
+              margin-bottom: 5px;
+              li {
+                list-style-type: decimal;
+                margin-left: 18px;
+                .sub {
+                  li {
+                    margin-left: 23px;
+                    padding-left: 5px;
+                    &::before {
+                      content: "(";
+                      position: absolute;
+                      top: 0;
+                      left: -27px;
+                    }
+                    &::after {
+                      content: ")";
+                      position: absolute;
+                      top: 0;
+                      left: -4px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          
         }
       }
     }
