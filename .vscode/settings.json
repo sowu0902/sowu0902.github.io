@@ -1,5 +1,5 @@
 {
-  "liveServer.settings.port": 5503,
+  "liveServer.settings.port": 5504,
   //css產出設定
   "liveSassCompile.settings.formats": [
     {
