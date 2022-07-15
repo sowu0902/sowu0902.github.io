@@ -1048,7 +1048,7 @@ main {
           span {
             @include min768() {
               width: 28px;
-              display: inline-block;
+              display: inline-block !important;
               vertical-align: middle;
               margin-left: 3px;
             }

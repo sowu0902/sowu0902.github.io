@@ -1212,7 +1212,7 @@ main .section_walipiki__box_content h3 {
 @media (min-width: 768px) {
   main .section_walipiki__box_content h3 span {
     width: 28px;
-    display: inline-block;
+    display: inline-block !important;
     vertical-align: middle;
     margin-left: 3px;
   }
