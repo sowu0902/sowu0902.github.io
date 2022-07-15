@@ -1,3 +1,24 @@
 {
-  "liveServer.settings.port": 5503
+  "liveServer.settings.port": 5503,
+  //css產出設定
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "" //此為輸出的路徑，可以自行更改
+    },
+    {
+      "extensionName": ".min.css", //正式版副檔名為min.css
+      "format": "compressed", //壓縮成一行css，正式版本
+      "savePath": ""
+    }
+  ],
+  "liveSassCompile.settings.excludeList": ["/node_modules/**", "/.vscode/**"],
+  //generateMap:SASS跟CSS做對應行數
+  "liveSassCompile.settings.generateMap": true,
+  //autoprefix設定
+  //這項套件會自動幫你加入前綴（Prefix）
+  //例如：-webkit- -moz- ...等
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"]
+  
 }

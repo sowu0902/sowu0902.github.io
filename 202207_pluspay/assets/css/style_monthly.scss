@@ -1,0 +1,1736 @@
+// FROM MOBILE 414px
+@mixin max375 {
+  @media(max-width:375px){
+    @content;
+  }
+}
+@mixin max360 {
+  @media(max-width:360px){
+    @content;
+  }
+}
+@mixin max320 {
+  @media(max-width:320px){
+    @content;
+  }
+}
+@mixin min480 {
+  @media(min-width:480px){
+    @content;
+  }
+}
+@mixin min768 {
+  @media(min-width:768px){
+    @content;
+  }
+}
+@mixin min1024 {
+  @media(min-width:1024px){
+    @content;
+  }
+}
+@mixin min1280 {
+  @media(min-width:1280px){
+    @content;
+  }
+}
+@mixin min1366 {
+  @media(min-width:1366px){
+    @content;
+  }
+}
+$pluspay_orange: #FF4509;
+$pluspay_darkgray: #333;
+$pluspay_gray: #888;
+$pluspay_box-shadow: 5px 5px 16px rgba(64, 98, 105, 0.6);
+$pluspay_box-shadow--hover: 3px 3px 13px rgba(64, 98, 105, 0.8);
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: #DBFFE3;
+  color: $pluspay_darkgray;
+  @include max320() {
+    font-size: 15px;
+  }
+}
+.allpage {
+  position: relative;
+}
+.pconly {
+  display: none;
+  @include min768() {
+    display: inherit;
+  }
+}
+.mbonly {
+  @include min768() {
+    display: none;
+  }
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  &--pconly {
+    display: inherit;
+    @include min768() {
+      display: flex;
+    }
+  }
+  &--nowrap {
+    flex-wrap: nowrap;
+  }
+}
+.flex_item {
+  &--order2 {
+    order: 2;
+  }
+  &--order3 {
+    order: 3;
+  }
+}
+.align-item-center {
+  align-items: center;
+}
+.img {
+  line-height: 0;
+}
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  width: 100%;
+  background-color: #DBFFE3;
+  z-index: 90;
+  .logo {
+    width: 100px;
+    padding-top: 2px;
+    @include min768() {
+      width: 125px;
+      &:hover {
+        opacity: .75;
+      }
+    }
+  }
+  nav {
+    position: fixed;
+    left: 100px;
+    top: 0;
+    overflow-x: auto;
+    width: calc(100% - 100px);
+    z-index: 99;
+    @include min768() {
+      left: auto;
+      right: 20px;
+      text-align: right;
+    }
+    ul {
+      display: flex;
+      overflow-x: auto;
+      width: 100%;
+      padding: 5px 10px 0 0;
+      cursor: grab;
+      @include min768() {
+        justify-content: flex-end;
+        padding-right: 0;
+        padding-top: 10px;
+        cursor: default;
+      }
+      //捲軸底色
+      &::-webkit-scrollbar-track {
+        box-shadow: $pluspay_box-shadow;
+        background-color: rgba(255,255,255,0);
+      }
+      //捲軸寬度
+      &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        background-color: rgba(255,255,255,0);
+      }
+      //捲軸本體顏色
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(255,255,255,0);
+      }
+      li {
+        width: 80px;
+        flex: 0 0 80px;
+        text-align: center;
+        font-size: 14px;
+        color: #515151;
+        letter-spacing: 0.04em;
+        @include min768() {
+          margin-left: 10px;
+          width: 90px;
+          flex: 0 0 90px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        @include min1024() {
+          margin-left: 30px;
+        }
+        span {
+          display: block;
+          width: 40px;
+          height: 40px;
+          margin: auto;
+          @include min768() {
+            width: 50px;
+            height: 50px;
+          }
+          &::before,&::after {
+            content: "";
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto 30.8px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            @include min768() {
+              background-size: auto 38.5px;
+            }
+          }
+          &::after {
+            opacity: 0;
+          }
+        }
+        &:hover {
+          color: $pluspay_orange;
+          @include min768() {
+            span::before {
+              opacity: 0;
+            }
+            span::after {
+              opacity: 1;
+            }
+          }
+        }
+        &.event span::before {
+          background-image: url(../images/nav/icon1.png);
+        }
+        &.walipiki span::before {
+          background-image: url(../images/nav/icon2.png);
+        }
+        &.cooperation span::before {
+          background-image: url(../images/nav/icon3.png);
+        }
+        &.bank span::before {
+          background-image: url(../images/nav/icon4.png);
+        }
+        &.notice span::before {
+          background-image: url(../images/nav/icon5.png);
+        }
+        &.follow span::before {
+          background-image: url(../images/nav/icon6.png);
+        }
+        &.event span::after {
+          background-image: url(../images/nav/icon1_hover.png);
+        }
+        &.walipiki span::after {
+          background-image: url(../images/nav/icon2_hover.png);
+        }
+        &.cooperation span::after {
+          background-image: url(../images/nav/icon3_hover.png);
+        }
+        &.bank span::after {
+          background-image: url(../images/nav/icon4_hover.png);
+        }
+        &.notice span::after {
+          background-image: url(../images/nav/icon5_hover.png);
+        }
+        &.follow span::after {
+          background-image: url(../images/nav/icon6_hover.png);
+        }
+      }
+    }
+  }
+}
+main {
+  padding-top: 70px;
+  padding-bottom: 40px;
+  @include min768() {
+    padding-top: 100px;
+  }
+  .section {
+    // KV
+    &_kv {
+      margin-bottom: 2.42vw;
+      .box {
+        &_slogan {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          text-align: center;
+          width: 90%;
+          margin-top: -11vw;
+          @include min768() {
+            margin-top: -4vw;
+            width: 89.31vw;
+            left: 0;
+            transform: translate(0%,-50%);
+          }
+          .logo img {
+            height: 16.91vw;
+            width: auto;
+            margin: auto;
+            @include min768() {
+              height: 6.94vw;
+              max-height: 100px;
+            }
+          }
+          h1 {
+            font-size: 45px;
+            font-weight: 900;
+            letter-spacing: 0.06em;
+            margin-top: -15px;
+            @include max360() {
+              font-size: 39px;
+            }
+            @include max320() {
+              font-size: 35px;
+            }
+            @include min768() {
+              font-size: 4.86vw;
+            }
+            @include min1024() {
+              font-size: 70px;
+            }
+            span {
+              background: url(../images/kv_h1_span_bg.png);
+              background-repeat: repeat-x;
+              background-size: 57.97vw;
+              background-position: 0 92%;
+              @include min768() {
+                background-size: 382px;
+              }
+            }
+          }
+          .period {
+            display: inline-block;
+            margin-top: 8px;
+            font-family: lato;
+            font-size: 16px;
+            line-height: 1;
+            color: $pluspay_orange;
+            border:  2px solid $pluspay_orange;
+            border-radius: 8px;
+            font-weight: 900;
+            letter-spacing: 0.06em;
+            padding: 4px 14px;
+            @include min1024() {
+              font-size: 19px;
+            }
+            @include min1280() {
+              font-size: 24px;
+            }
+          }
+          .discount {
+            width: 28.99vw;
+            position: absolute;
+            top: -13.29vw;
+            right: -2.42vw;
+            @include min768() {
+              width: 13.75vw;
+              top: -2vw;
+              right: 19vw;
+            }
+          }
+        }
+        &_bg {
+          .objects {
+            background-image: url(../images/kv_icon_mb.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: 0 4.2vw;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include min768() {
+              background-image: url(../images/kv_icon.png);
+              background-size: 69.72vw;
+              background-position: 11.39vw 0;
+              top: -1.11vw;
+            }
+          }
+          
+        }
+        &_mascot {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          div {
+            position: absolute;
+          }
+          .dudu {
+            width: 32.61vw;
+            bottom: -2.7vw;
+            left: 2vw;
+            @include min768() {
+              width: 23.33vw;
+              bottom: -1vw;
+              left: 1vw;
+            }
+          }
+          .bird {
+            width: 10.145vw;
+            bottom: 30vw;
+            right: 4vw;
+            @include min768() {
+              width: 7.22vw;
+              bottom: 15.5vw;
+              right: 2vw;
+            }
+          }
+        }
+      }
+    }
+    // 共用的內容區塊
+    &_container {
+      margin: 0 25px 40px 25px;
+      box-shadow: $pluspay_box-shadow;
+      border-radius: 20px;
+      background-color: #FFF;
+      @include min768() {
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+        // max-width: 1500px;
+      }
+      @include min1280() {
+        border-radius: 40px;
+      }
+      .anchor {
+        position: absolute;
+        top: -50px;
+      }
+      &__box_content {
+        padding: 10px 25px 10px 25px;
+        @include max320() {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        @include min768() {
+          padding: 20px 40px;
+        }
+        @include min1024() {
+          padding: 30px 60px;
+        }
+        @include min1280() {
+          padding: 50px 80px;
+        }
+      }
+      h2 {
+        line-height: 0;
+        img {
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          @include min1280() {
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+          }
+        }
+        span {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          text-align: center;
+          font-weight: 900;
+          font-size: 25px;
+          line-height: 14vw;
+          letter-spacing: 0.12em;
+          color: #FFF;
+          @include max375() {
+            font-size: 22px;
+          }
+          @include max320() {
+            font-size: 19px;
+          }
+          @include min1024() {
+            font-size: 30px;
+          }
+          @include min1280() {
+            font-size: 41px;
+          }
+          @include min1366() {
+            font-size: 45px;
+          }
+        }
+      }
+      &.odd {
+        &::before {
+          content: "";
+          background-color: #9CF0AF;
+          width: 12.8vw;
+          height: 26.57vw;
+          position: absolute;
+          right: 0;
+          top: 51%;
+          border-top-left-radius: 2.42vw;
+          border-bottom-left-radius: 2.42vw;
+          @include min768() {
+            width: 10.1389vw;
+            height: 7.6389vw;
+            top: 62%;
+            border-top-left-radius: 2.08vw;
+            border-bottom-left-radius: 2.08vw;
+          }
+        }
+        h2::before {
+          content: "";
+          background-color: #9CF0AF;
+          width: 3.14vw;
+          height: 24.15vw;
+          position: absolute;
+          left: 0;
+          bottom: -24.15vw;
+          border-bottom-right-radius: 2.42vw;
+          @include min768() {
+            width: 3.68vw;
+            height: 11.81vw;
+            bottom: -11.81vw;
+            border-bottom-right-radius: 2.08vw;
+          }
+        }
+      }
+      &.even {
+        overflow: hidden;
+        &::before {
+          content: "";
+          background-color: #9CF0AF;
+          width: 21.014vw;
+          height: 24.6377vw;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          border-top-right-radius: 2.42vw;
+          @include min768() {
+            width: 2.0833vw;
+            height: 12.9167vw;
+            border-top-right-radius: 2.08vw;
+            // border-bottom-left-radius: 2.08vw;
+          }
+        }
+        h2::before {
+          content: "";
+          background-color: #329E4A;
+          width: 8.4541vw;
+          height: 41.0628vw;
+          position: absolute;
+          right: 0;
+          bottom: -41.0628vw;
+          border-bottom-left-radius: 2.42vw;
+          @include min768() {
+            width: 7.639vw;
+            height: 11.81vw;
+            bottom: -11.81vw;
+            border-bottom-left-radius: 2.08vw;
+          }
+        }
+      }
+      .dot_text {
+        width: 28px;
+        height: 28px;
+        border-radius: 28px;
+        background-color: $pluspay_orange;
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 27px;
+        display: inline-block;
+        padding-left: 2px;
+        @include min1024() {
+          font-size: 21px;
+          height: 36px;
+          width: 36px;
+          line-height: 35px;
+          padding-left: 3px;
+        }
+        @include min1280() {
+          font-size: 26px;
+          height: 44px;
+          width: 44px;
+          line-height: 41px;
+          padding-left: 3px;
+          top: -2px;
+        }
+      }
+      .hightlight {
+        color: $pluspay_orange;
+        font-weight: 900;
+        &.bigger {
+          font-size: 18px;
+        }
+      }
+      strong {
+        font-weight: 700;
+      }
+      .mgr4 {
+        margin-right: 4px;
+      }
+      .date {
+        font-family: lato;
+        font-size: 20px;
+        font-weight: 800;
+        background-image: url(../images/date_bg.png);
+        background-repeat: repeat-x;
+        background-size: 100px;
+        background-position: 0 95%;
+        padding: 0 5px;
+        margin-right: 3px;
+        @include max320() {
+          font-size: 17px;
+        }
+        &.small {
+          font-size: 18px;
+          background-size: 80px;
+        }
+        &.bigger {
+          font-size: 22px;
+          line-height: 1;
+          background-size: 110px;
+          @include max320() {
+            font-size: 20px;
+          }
+        }
+      }
+      .swords {
+        font-size: 14px;
+        line-height: 1.6;
+        color: $pluspay_gray;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        li {
+          padding-left: 14px;
+          &::before {
+            content: "•";
+            position: absolute;
+            font-size: 12px;
+            left: 0;
+            top: 1px;
+          }
+        }
+      }
+      .btn {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        @include min768() {
+          text-align: left;
+        }
+        a {
+          background-color: $pluspay_orange;
+          color: #FFF;
+          font-size: 18px;
+          letter-spacing: 0.05em;
+          line-height: 1;
+          font-weight: 700;
+          display: inline-block;
+          width: auto;
+          padding: 14px 18px 10px 16px;
+          border-radius: 8px;
+          margin: auto;
+          box-shadow: $pluspay_box-shadow;
+          @include max320() {
+            font-size: 17px;
+          }
+          @include min768() {
+            margin: 0 4px 4px 0;
+            transition: 0s;
+          }
+          &:hover {
+            box-shadow: $pluspay_box-shadow--hover;
+            margin: 4px 0 0 4px;
+          }
+          span {
+            background-image: url(../images/icon_go.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 46px;
+            height: 28px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 2px;
+            @include max320() {
+              width: 41px;
+              height: 25px;
+            }
+          }
+        }
+        &.clear {
+          a {
+            padding: 12px 18px;
+            box-shadow: none;
+            letter-spacing: 0;
+            @include max360() {
+              font-size: 17px;
+              padding: 12px 12px;
+            }
+            @include min768() {
+              box-shadow: $pluspay_box-shadow;
+              padding: 14px 18px 10px 16px;
+            }
+            span {
+              display: none;
+              @include min768() {
+                display: inline-block;
+              }
+            }
+          }
+        }
+        &.fix170 {
+          a {
+            padding-left: 0;
+            padding-right: 0;
+            width: 170px;
+            @include min768() {
+              width: auto;
+              padding: 14px 18px 10px 16px;
+            }
+          }
+        }
+        &.fix130 {
+          a {
+            padding-left: 0;
+            padding-right: 0;
+            width: 130px;
+            @include min768() {
+              width: auto;
+              padding: 14px 18px 10px 16px;
+            }
+          }
+        }
+        &.full {
+          width: 100%;
+          a {
+            width: 100%;
+          }
+        }
+        &.left {
+          text-align: left;
+          a {
+            text-align: center;
+          }
+        }
+      }
+      .btns {
+        margin-top: 10px;
+        > div {
+          @include min1280() {
+            margin-right: 5px;
+          }
+          @include min1366() {
+            margin-right: 10px;
+          }
+          &:last-child {
+            @include min1280() {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    // 品牌活動
+    &_event {
+      padding-bottom: 25px;
+      @include max320() {
+        padding-bottom: 20px;
+      }
+      
+      &__box_content {
+        .img {
+          @include min768() {
+            flex: 0 0 47%;
+            width: 47%;
+            order: 2;
+          }
+          @include min1280() {
+            flex: 0 0 47%;
+            width: 47%;
+          }
+          img {
+            border-radius: 10px;
+            @include min1280() {
+              border-radius: 20px;
+            }
+          }
+        }
+        .text {
+          padding-top: 12px;
+          @include min768() {
+            padding-right: 15px;
+            flex: 0 0 53%;
+            width: 53%;
+          }
+          @include min1280() {
+            padding-right: 25px;
+            // flex: 0 0 53%;
+            // width: 53%;
+          }
+          .logos {
+            margin-bottom: 3px;
+            img {
+              height: 30px;
+              width: auto;
+              @include max320() {
+                height: 27px;
+              }
+              @include min1024() {
+                height: 35px;
+              }
+            }
+            div {
+              display: inline-block;
+              &:first-child::after {
+                content: "";
+                background-image: url(../images/icon_x.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                vertical-align: top;
+                margin: 6px 7px 0 10px;
+                @include max320() {
+                  width: 18px;
+                  height: 18px;
+                  margin: 5px 2px 0 6px;
+                }
+                @include min1024() {
+                  width: 25px;
+                  height: 25px;
+                  margin: 6px 6px 0 9px;
+                }
+              }
+            }
+          }
+          h3 {
+            font-weight: 900;
+            font-size: 21px;
+            line-height: 1.33;
+            letter-spacing: 0.08em;
+            color: #000;
+            @include max320() {
+              font-size: 18px;
+            }
+            @include min1024() {
+              font-size: 27px;
+            }
+            @include min1280() {
+              font-size: 33px;
+            }
+          }
+          p {
+            line-height: 1.8;
+            letter-spacing: 0.04em;
+          }
+        }
+        
+        
+      }
+      &__box_combo {
+        border-radius: 20px;
+        background-image: url(../images/event_combo_bg_mb.png);
+        background-color: #25BAC8;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin: 40px 25px 0 25px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        @include max360() {
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+        @include max320() {
+          padding-top: 20px;
+        }
+        @include min768() {
+          background-image: url(../images/event_combo_bg.png);
+        }
+        @include min1280() {
+          padding-top: 40px;
+        }
+        h3 {
+          color: #FFF;
+          font-size: 28px;
+          line-height: 1;
+          letter-spacing: .28em;
+          font-weight: 900;
+          text-align: center;
+          margin-bottom: 40px;
+          @include max360() {
+            font-size: 25px;
+            margin-bottom: 20px;
+          }
+          @include min1024() {
+            font-size: 32px;
+          }
+          @include min1280() {
+            font-size: 38px;
+          }
+          &::after {
+            content: "";
+            background-image: url(../images/icon_combo_mb.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 25.6vw;
+            height: 9.9vw;
+            max-width: 106px;
+            max-height: 41px;
+            position: absolute;
+            transform: rotate(-16.25deg) translateX(-50%);
+            left: calc(50% - 70px);
+            top: -55px;
+            @include max360() {
+              top: -50px;
+            }
+            @include max320() {
+              top: -45px;
+              left: calc(50% - 55px);
+            }
+            @include min1024() {
+              background-image: url(../images/icon_combo.png);
+              width: 9.17vw;
+              height: 3.33vw;
+              max-width: 132px;
+              max-height: 48px;
+              // top: -50px;
+            }
+            @include min1280() {
+              top: -65px;
+              left: calc(50% - 85px);
+            }
+            @include min1366() {
+              top: -70px;
+              left: calc(50% - 90px);
+            }
+          }
+        }
+        h4 {
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 1.3;
+          letter-spacing: 0.09em;
+          @include max360() {
+            font-size: 17px;
+          }
+        }
+        .cards {
+          padding: 0 20px;
+          @include max320() {
+            padding: 0 12px;
+          }
+          @include min768() {
+            flex-wrap: nowrap;
+            justify-content: space-around;
+          }
+        }
+        .card {
+          background-color: #FFF;
+          border-radius: 10px;
+          box-shadow: $pluspay_box-shadow;
+          padding: 10px 15px;
+          margin-bottom: 15px;
+          @include max360() {
+            padding: 8px 10px;
+          }
+          @include max320() {
+            margin-bottom: 10px;
+          }
+          @include min768() {
+            // flex: 0 0 30%;
+            margin-right: 15px;
+            margin-bottom: 0;
+            width: 50%;
+          }
+          &:last-child {
+            margin-bottom: 0;
+            @include min768() {
+              margin-right: 0;
+            }
+          }
+          .img {
+            margin-right: 10px;
+          }
+          .content {
+            flex-wrap: nowrap;
+            @include min768() {
+              align-items: center;
+              align-content: center;
+            }
+          }
+          &-combo-1 {
+            .img {
+              flex: 0 0 43px;
+              width: 43px;
+              @include max360() {
+                flex: 0 0 32px;
+                width: 32px;
+              }
+            }
+          }
+          &-combo-2 {
+            .img {
+              flex: 0 0 66px;
+              width: 66px;
+              @include max360() {
+                flex: 0 0 53px;
+                width: 53px;
+              }
+            }
+          }
+          &-combo-3 {
+            .img {
+              flex: 0 0 45px;
+              width: 45px;
+              @include max360() {
+                flex: 0 0 36px;
+                width: 36px;
+              }
+            }
+          }
+        }
+      }
+    }
+    // 優惠活動
+    &_walipiki {
+      &__box_content {
+        h3 {
+          font-size: 18px;
+          font-weight: 900;
+          letter-spacing: 0.08em;
+          @include min1024() {
+            font-size: 23px;
+          }
+          @include min1280() {
+            font-size: 28px;
+          }
+          span {
+            @include min768() {
+              width: 28px;
+              display: inline-block;
+              vertical-align: middle;
+              margin-left: 3px;
+            }
+            @include min1024() {
+              width: 35px;
+            }
+            @include min1280() {
+              width: 40px;
+            }
+          }
+        }
+        .card {
+          margin-bottom: 15px;
+          @include min1280() {
+            margin-bottom: 25px;
+          }
+          .content {
+            flex-wrap: nowrap;
+          }
+        }
+        &.walipiki_a {
+          padding-bottom: 0;
+          .card {
+            box-shadow: $pluspay_box-shadow;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            overflow: hidden;
+            background-color: #FFE76A;
+            @include min768() {
+              width: 50%;
+            }
+            .title {
+              padding: 10px 0;
+              text-align: center;
+            }
+            .content {
+              background-color: #FFF;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+              padding: 12px 20px;
+              justify-content: space-between;
+              @include max360() {
+                padding: 8px 12px;
+              }
+              .box1 {
+                flex-wrap: nowrap;
+                &.mbonly {
+                  @include min768() {
+                    display: none;
+                  }
+                }
+                .img {
+                  flex: 0 0 37%;
+                  max-width: calc(100% - 170px);
+                  padding-left: 5px;
+                  text-align: right;
+                  padding-right: 5px;
+                  img {
+                    height: 24.15vw;
+                    width: auto;
+                    @include min768() {
+                      height: 100px;
+                    }
+                  }
+                }
+              }
+              .box2 {
+                flex-wrap: nowrap;
+                border-top: 1px solid #ddd;
+                padding-top: 10px;
+                &.mbonly {
+                  @include min768() {
+                    display: none;
+                  }
+                }
+                .img {
+                  flex: 0 0 37%;
+                  max-width: calc(100% - 170px);
+                  // padding-left: 5px;
+                  text-align: right;
+                  // padding-right: 5px;
+                  img {
+                    height: 32.61vw;
+                    width: auto;
+                  }
+                }
+              }
+              .box {
+                .img {
+                  width: 110px;
+                  position: absolute;
+                  right: -25px;
+                  top: -3vw;
+                  @include min1024() {
+                    width: 137px;
+                    // right: -25px;
+                    // top: -3vw;
+                  }
+                }
+                .text {
+                  p {
+                    max-width: calc(100% - 92px);
+                    br.hide768 {
+                      display: none;
+                    }
+                    @include min1024() {
+                      max-width: calc(100% - 127px);
+                    }
+                  }
+                }
+              }
+            }
+            &.prom {
+              @include min768() {
+                margin-left: 20px;
+                align-content: flex-start;
+              }
+              @include min1280() {
+                margin-left: 30px;
+              }
+              .hightlight {
+                display: block;
+                @include min768() {
+                  display: inline;
+                }
+              }
+              .img {
+                flex: 0 0 22vw;
+                max-width: calc(100% - 170px);
+                text-align: right;
+                padding-left: 5px;
+                padding-right: 5px;
+                @include min768() {
+                  flex: 0 0 auto;
+                }
+                img {
+                  height: 24.15vw;
+                  width: auto;
+                  @include min768() {
+                    height: 100px;
+                    max-height: inherit;
+                  }
+                  @include min1024() {
+                    height: 130px;
+                  }
+                }
+              }
+              .title {
+                width: 100%;
+                // height: 52.66px;
+              }
+              .content {
+                width: 100%;
+                height: calc(100% - 52px);
+                align-content: space-between;
+                @include min1280() {
+                  // height: calc(100% - 67px);
+                }
+                .text {
+                  align-content: space-between;
+                }
+              }
+            }
+          }
+          &--logo {
+            padding-top: 0;
+            @include min1280() {
+              display: flex;
+              flex-wrap: wrap;
+            }
+            .card {
+              @include min768() {
+                width: 100%;
+              }
+              .title {
+                height: 65px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include max320() {
+                  height: 50px;
+                }
+                @include min1366() {
+                  height: 80px;
+                }
+              }
+            }
+            .watsons {
+              @include min1280() {
+                width: calc(33.33% - 20px);
+                margin-right: 30px;
+              }
+              .title img {
+                height: 26px;
+                width: auto;
+                @include max320() {
+                  height: 21px;
+                }
+                @include min1366() {
+                  height: 33px;
+                }
+              }
+              .content {
+                @include min1280() {
+                  // height: calc(100% - 65px);
+                }
+              }
+              .img {
+                // position: absolute;
+                width: 29vw;
+                // right: 20px;
+                // top: 15px;
+                float: right;
+                margin-left: 10px;
+                @include min768() {
+                  width: 145px;
+                }
+                @include min1280() {
+                  width: 120px;
+                }
+              }
+              .text {
+                width: 100%;
+                @include min1280() {
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-content: space-between;
+                  flex: 0 0 100%;
+                }
+                > div {
+                  width: 100%;
+                //   // width: calc(100% - 29vw - 15px);
+                //   @include min768() {
+                //     width: calc(100% - 160px);
+                //   }
+                //   @include min1280() {
+                //     width: calc(100% - 130px);
+                //   }
+                }
+                .btn {
+                  width: 100%;
+                }
+              }
+            }
+            .ootoya {
+              @include min1280() {
+                width: calc(33.33% - 20px);
+                margin-right: 30px;
+              }
+              .title img {
+                height: 50px;
+                width: auto;
+                @include max320() {
+                  height: 40px;
+                }
+                @include min1366() {
+                  height: 60px;
+                }
+              }
+              .content {
+                @include min1280() {
+                  height: calc(100% - 65px);
+                }
+              }
+              .img {
+                padding-left: 15px;
+                img {
+                  width: 14.49vw;
+                  @include min768() {
+                    width: 70px;
+                  }
+                  @include min1366() {
+                    width: 87px;
+                  }
+                }
+              }
+              .text {
+                width: 100%;
+                @include min1280() {
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-content: space-between;
+                }
+              }
+            }
+            .familymart {
+              @include min1280() {
+                width: calc(33.33% - 20px);
+              }
+              .title img {
+                height: 59px;
+                width: auto;
+                @include max320() {
+                  height: 47px;
+                }
+                @include min1366() {
+                  height: 70px;
+                }
+              }
+              .content {
+                @include min1280() {
+                  height: calc(100%);
+                  background-color: #FFF;
+                }
+              }
+              .img {
+                padding-left: 13px;
+                padding-bottom: 5px;
+                float: right;
+                img {
+                  width: 19.32vw;
+                  @include min768() {
+                    width: 97px;
+                  }
+                }
+              }
+              .text {
+                // @include min1280() {
+                //   display: flex;
+                //   flex-wrap: wrap;
+                //   align-content: space-between;
+                // }
+              }
+            }
+            .familymart_icecream {
+              @include min1280() {
+                width: calc(50% - 15px);
+                // margin-right: 30px;
+                background-color: #DBFFE3;
+              }
+              .title img {
+                height: 59px;
+                width: auto;
+                @include max320() {
+                  height: 47px;
+                }
+                @include min1366() {
+                  height: 70px;
+                }
+              }
+              .img {
+                width: 49.27%;
+                margin-left: 13px;
+                float: right;
+                @include min768() {
+                  width: 175px;
+                }
+              }
+              .text {
+                flex: 0 0 100%;
+              }
+            }
+            .fami_coffee {
+              @include min1280() {
+                width: calc(50% - 15px);
+                margin-right: 30px;
+                background-color: #DBFFE3;
+              }
+              .title img {
+                height: 50px;
+                width: auto;
+                @include max320() {
+                  height: 40px;
+                }
+                @include min1366() {
+                  height: 60px;
+                }
+              }
+              .img {
+                margin-left: 13px;
+                flex: 0 0 49.27%;
+                max-width: calc(100% - 143px);
+                @include min768() {
+                  flex: 0 0 148px;
+                  max-width: inherit;
+                }
+              }
+            }
+            .fami_water {
+              @include min1280() {
+                width: calc(50% - 15px);
+                margin-right: 30px;
+                background-color: #DBFFE3;
+              }
+              .title img {
+                height: 50px;
+                width: auto;
+                @include max320() {
+                  height: 40px;
+                }
+                @include min1366() {
+                  height: 60px;
+                }
+              }
+              .img {
+                width: 51%;
+                margin-left: 5px;
+                float: right;
+                @include min768() {
+                  width: 178px;
+                }
+              }
+              .text {
+                width: 100%;
+              }
+            }
+            .fami {
+              @include min1280() {
+                width: calc(50% - 15px);
+                // margin-right: 30px;
+                background-color: #DBFFE3;
+              }
+              .title img {
+                height: 50px;
+                width: auto;
+                @include max320() {
+                  height: 40px;
+                }
+                @include min1366() {
+                  height: 60px;
+                }
+              }
+              .content {
+                @include min1280() {
+                  height: calc(100% - 65px);
+                }
+                
+              }
+              .img {
+                margin-left: 13px;
+                flex: 0 0 49.27%;
+                max-width: calc(100% - 143px);
+                @include min768() {
+                  flex: 0 0 175px;
+                  max-width: inherit;
+                }
+              }
+              .text {
+                @include min1280() {
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-content: space-between;
+                }
+              }
+            }
+          }
+        }
+        &.walipiki_coupon {
+          display: flex;
+          padding-top: 0;
+          padding-bottom: 0;
+          .card {
+            width: 50%;
+            text-align: center;
+            filter: drop-shadow($pluspay_box-shadow);
+            &:first-child {
+              margin-right: 10px;
+              @include min768() {
+                margin-right: 20px;
+              }
+              @include min1280() {
+                margin-right: 30px;
+              }
+            }
+            &::before {
+              content: "";
+              background-image: url(../images/coupon_top_mb.png);
+              width: 100%;
+              height: 9px;
+              background-repeat: repeat-x;
+              background-size: cover;
+              background-position: center bottom;
+              display: block;
+              @include min768() {
+                background-image: url(../images/coupon_top.png);
+                height: 20px;
+                
+              }
+            }
+            &::after {
+              content: "";
+              background-image: url(../images/coupon_bottom_mb.png);
+              width: 100%;
+              height: 9px;
+              background-repeat: repeat-x;
+              background-size: cover;
+              background-position: center top;
+              display: block;
+              @include min768() {
+                background-image: url(../images/coupon_bottom.png);
+                height: 20px;
+              }
+            }
+            .top {
+              background-color: #DBFFE3;
+              padding-top: 3px;
+              font-size: 14px;
+              line-height: 1.6;
+              @include min768() {
+                // padding-top: 10px;
+              }
+              strong {
+                font-size: 20px;
+                font-weight: 900;
+                color: #000;
+                letter-spacing: 0.02em;
+                @include max375() {
+                  font-size: 19px;
+                }
+                @include max320() {
+                  font-size: 17px;
+                }
+                @include min768() {
+                  font-size: 27px;
+                }
+              }
+            }
+            .border {
+              line-height: 0;
+            }
+            .bottom {
+              background-color: #FFF;
+              padding-bottom: 10px;
+              @include min768() {
+                padding-top: 8px;
+              }
+              .logo img {
+                height: 4.83vw;
+                width: auto;
+                @include min768() {
+                  height: 28px;
+                }
+              }
+              p {
+                color: $pluspay_orange;
+                font-weight: 900;
+                font-size: 18px;
+                line-height: 1.5;
+                @include max375() {
+                  font-size: 17px;
+                }
+                @include max320() {
+                  font-size: 16px;
+                }
+              }
+              .btn {
+                @include min768() {
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+        &.walipiki_banner {
+          padding-top: 0;
+          padding-bottom: 10px;
+          .card {
+            line-height: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: $pluspay_box-shadow;
+            &:first-child {
+              @include min768() {
+                margin-right: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+    // 合作通路
+    &_cooperation {
+      background-color: #ABE3E9;
+      &::before {
+        display: none;
+      }
+      &__box_content {
+        .content {
+          max-width: 896px;
+          margin: auto;
+        }
+        .card {
+          margin: 0 5px 10px 5px;
+          width: calc(33.33% - 10px);
+          @include min768() {
+            width: calc(25% - 24px);
+            max-width: 200px;
+            margin: 0 12px 24px 12px;
+          }
+        }
+        .btn {
+          width: 100%;
+          text-align: center;
+          margin-top: 5px;
+        }
+      }
+    }
+    // 銀行回饋
+    &_bank {
+      &__box_content {
+        .hashtags {
+          display: flex;
+          font-size: 12px;
+          line-height: 1.7;
+          margin-bottom: 7px;
+          li {
+            border: 1px solid #333;
+            padding: 2px 9px;
+            border-radius: 20px;
+            margin-right: 8px;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+          .blue {
+            color: #00ACC3;
+            border-color: #00ACC3;
+          }
+          .orange {
+            color: $pluspay_orange;
+            border-color: $pluspay_orange;
+          }
+        }
+        &.bank_big {
+          .card {
+            border-radius: 10px;
+            border-bottom-left-radius: 0;
+            filter: drop-shadow($pluspay_box-shadow);
+            padding: 0 4px 4px;
+            margin-bottom: 20px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            .logo {
+              height: 50px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
+                height: 30px;
+                width: auto;
+              }
+            }
+            .content {
+              background-color: #FFF;
+              border-radius: 10px;
+              border-bottom-left-radius: 0;
+              padding: 15px 20px;
+              h3 {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 1.8;
+                letter-spacing: 0.04em;
+                margin-bottom: 7px;
+                margin-top: 5px;
+              }
+              img {
+                border-radius: 10px;
+              }
+              .btns {
+                justify-content: center;
+                .btn {
+                  margin: 0 8px;
+                }
+              }
+            }
+            &.taishin {
+              background-color: #D80C18;
+            }
+            &.esun {
+              background-color: #00A19B;
+            }
+          }
+        }
+        &.bank_small {
+          .card {
+            background-color: #FFF;
+            box-shadow: $pluspay_box-shadow;
+            overflow: hidden;
+            border-radius: 10px;
+            .logo {
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .img {
+              width: 53.14vw;
+              margin: 2px auto 5px auto;
+              img {
+                border-radius: 10px;
+              }
+            }
+            .text {
+              background-color: #F5F5F5;
+              padding: 10px 15px;
+              h3 {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 1.5;
+                letter-spacing: .02em;
+                margin-bottom: 5px;
+              }
+            }
+            &.fubon {
+              .logo {
+                img {
+                  height: 19px;
+                  width: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
