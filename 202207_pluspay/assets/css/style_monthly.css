@@ -2561,7 +2561,45 @@ main .section_socialmedia .socials div.web a {
 main .section_socialmedia .socials div.web a span {
   background-image: url(../images/icon_web.png);
 }
-
+main .card.blocked {
+  overflow: hidden;
+}
+main .card.blocked::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(187, 187, 187, 0.7);
+  background-image: url(../images/full.png);
+  background-repeat: no-repeat;
+  background-size: 198px;
+  background-position: center;
+  left: 0;
+  top: 0;
+}
+main .section_event__box_content .card.blocked {
+  overflow: visible;
+}
+main .section_event__box_content .card.blocked::after {
+  width: calc(100% + 50px);
+  height: calc(100% + 20px);
+  left: -25px;
+  top: -10px;
+}
+@media (max-width: 320px) {
+  main .section_event__box_content .card.blocked::after {
+    width: calc(100% + 40px);
+    left: -20px;
+  }
+}
+@media (min-width: 768px) {
+  main .section_event__box_content .card.blocked::after {
+    width: calc(100% + 80px);
+    height: calc(100% + 40px);
+    left: -40px;
+    top: -20px;
+  }
+}
 footer {
   border-top: 1px solid #25BAC8;
   background-color: rgba(255, 255, 255, 0.5);
