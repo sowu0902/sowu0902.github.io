@@ -1,0 +1,474 @@
+:root {
+  --remBasicSize: 16px;
+}
+@function rem($px) {
+  @return calc($px/16 * var(--remBasicSize));
+}
+/*思源*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+html,
+body {
+  font-family: "Noto Sans TC", Helvetica, Arial, "黑體-繁", "Heiti TC", "儷黑","LiHei", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+  font-size: rem(16);
+  width: 100%;
+  height: 100%;
+  background-color: #132f2e;
+  padding: 0; 
+  margin: 0;
+  // min-width: 750px;
+    
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.wrapper {
+  width: 100%;
+  margin: 0 auto; 
+  overflow: hidden;
+  section, .container {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+    max-width: rem(750);
+  }
+  .container {
+    h2 {
+      margin-top: rem(170);
+      margin-bottom: rem(70);
+      font-family: 'noto serif tc';
+      font-weight: 700;
+      font-size: rem(52);
+      text-align: center;
+      line-height: 1;
+      letter-spacing: rem(6);
+      color: #fff;
+      span {
+        display: block;
+        font-family: 'noto sans tc';
+        font-size: rem(34);
+        font-weight: 300;
+        color: #ffcf7f;
+        margin-bottom: rem(20);
+      }
+    }
+  }
+}
+
+// KV
+.kv {
+  height: 100vh;
+  min-height: rem(1390);
+  background-image: url(../images/kv/kv_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .container {
+    height: 100%;
+  }
+  .top_area {
+    padding-top: rem(77);
+    img {
+      display: block;
+      margin: auto;
+    }
+    .logo {
+      width: rem(370);
+      margin-bottom: rem(40);
+    }
+    .slogan {
+      width: rem(568);
+    }
+  }
+  .bottom_area {
+    position: absolute;
+    width: 100%;
+    padding-bottom: rem(106);
+    bottom: 0;
+    p {
+      font-size: rem(26);
+      line-height: 1.62;
+      font-weight: 300;
+      text-align: center;
+      color: #FFF;
+      text-shadow: 0 0 3px #122725 , 0 0 8px #122725;
+      margin-bottom: rem(40);
+    }
+    .cta {
+      font-family: 'noto serif tc';
+      font-weight: 600;
+      color: #FFF;
+      font-size: rem(32);
+      line-height: rem(80);
+      width: rem(340);
+      text-align: center;
+      background-image: url(../images/kv/btn@2x.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      margin: auto;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        bottom: rem(5);
+      }
+    }
+  }
+}
+
+// 青玉烏龍 main_product
+.main_product {
+  background-image: url(../images/main_product/bg@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+  background-color: #13344a;
+  font-size: rem(26);
+  line-height: 1.62;
+  font-weight: 300;
+  color: #FFF;
+  .video {
+    padding: 0 rem(20);
+  }
+  .text {
+    text-align: center;
+    padding: rem(70) 0;
+  }
+  .slide {
+    &::after {
+      content: "";
+      width: rem(119);
+      height: rem(88);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-image: url(../images/main_product/leaf@2x.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .left {
+      width: rem(422);
+    }
+    .right {
+      width: rem(329);
+      position: absolute;
+      right: rem(-1);
+      top: 0;
+    }
+  }
+  .quote {
+    padding: rem(60);
+    font-family: 'noto serif tc';
+    letter-spacing: rem(2);
+    font-weight: 400;
+    p {
+      padding: rem(30) 0;
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: rem(27);
+        height: rem(19);
+        background-image: url(../images/main_product/quote@2x.png);
+        
+      }
+      &::before {
+        left: 0;
+        top: 0;
+        background-position: left top;        
+      }
+      &::after {
+        right: 0;
+        bottom: 0;      
+        background-position: right top;  
+      }
+    }
+    .name {
+      width: rem(465);
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+      margin-top: rem(20);
+    }
+  }
+}
+
+// 兩種茶色，兩種心境 fragrance
+.fragrance {
+  background-image: url(../images/fragrance/bg@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+  background-color: #e9eaec;
+  padding-bottom: rem(50);
+  .slide {
+    width: rem(280);
+    height: rem(280);
+    // border: 1px solid #ece2ca;
+    margin-top: rem(170);
+    margin-right: rem(50);
+    margin-left: auto;
+    .slick-dots {
+      bottom: rem(-38);
+      li {
+        width: rem(16);
+        height: rem(16);
+        margin: rem(8);
+        // padding: rem(3);
+        button {
+          width: 100%;
+          height: 100%;
+          padding: rem(3);
+          
+          &::before {
+            color: transparent;
+            width: 100%;
+            height: 100%;
+            background-color: #FFF;
+            border-radius: 14px;
+          }
+        }
+      }
+    }
+  }
+  .text {
+    padding: 0 rem(30);
+    font-size: rem(26);
+    line-height: 1.62;
+    font-weight: 300;
+    .title {
+      span {
+        font-size: rem(36);
+        line-height: 1;
+        font-family: 'noto serif tc';
+        font-weight: 600;
+        letter-spacing: rem(2);
+        margin-right: rem(6);
+        display: inline-block;
+        top: rem(3);
+      }
+      
+    }
+  }
+  .monochrome {
+    .text {
+      margin-top: rem(125);
+      color: #FFF;
+      text-shadow: 0 0 3px #122725 , 0 0 8px #122725;
+    }
+  }
+  .infini {
+    .slide {
+      margin-top: rem(330);
+      margin-right: auto;
+      margin-left: rem(50);
+      .slick-dots li button::before {
+        background-color: #3273a5;
+      }
+    }
+    .text {
+      text-align: right;
+      margin-top: rem(76);
+      color: #2a6490;
+    }
+  }
+  .quote {
+    display: flex;
+    width: 100%;
+    padding: rem(70);
+    .img {
+      flex: 0 0 rem(220);
+      width: rem(220);
+      height: rem(220);
+      border-radius: 220px;
+      overflow: hidden;
+    }
+    .text {
+      padding-left: rem(50);
+      padding-right: 0;
+      p {
+        padding: rem(35) 0;
+        color: #4a4545;
+        font-family: 'noto serif tc';
+        font-weight: 400;
+        &::before,&::after {
+          content: "";
+          position: absolute;
+          width: rem(27);
+          height: rem(19);
+          background-image: url(../images/fragrance/quote@2x.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        &::before {
+          left: 0;
+          top: 0;
+        }
+        &::after {
+          right: 0;
+          bottom: 0;
+        }
+      }
+      img {
+        position: absolute;
+        right: 0;
+        bottom: rem(-20);
+        width: rem(413);
+        display: block;
+      }
+    }
+  }
+}
+
+// 茶香親啟 space
+.space {
+  background-image: url(../images/space/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+  // min-height: 100vh;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: #FFF;
+    h2 {
+      font-size: rem(70);
+      letter-spacing: rem(28);
+      line-height: 1.5;
+      font-weight: 300;
+      margin-bottom: rem(30);
+      flex: 0 0 100%;
+      text-shadow: 0 0 3px #122725 , 0 0 8px #122725;
+    }
+    p {
+      text-align: center;
+      font-size: rem(29);
+      line-height: 2;
+      letter-spacing: rem(10);
+      font-weight: 300;
+      text-shadow: 0 0 3px #122725 , 0 0 8px #122725;
+    }
+  }
+  
+}
+
+// data
+.data {
+  background-image: url(../images/data/bg@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+  background-color: #b9a99a;
+  .top-text {
+    p {
+      font-size: rem(26);
+      line-height: 1.62;
+      font-weight: 300;
+      text-align: center;
+      letter-spacing: rem(2);
+      color: #FFF;
+      margin-bottom: rem(40);
+    }
+  }
+  .data-text {
+    padding: 0 rem(50);
+    p {
+      font-size: rem(28);
+      line-height: 1.64;
+      font-weight: 300;
+      text-align: center;
+      letter-spacing: rem(2);
+      color: #FFF;
+      margin-top: rem(600);
+      margin-bottom: rem(30);
+      span {
+        display: block;
+        color: #ffcf7f;
+        font-family: 'noto serif tc';
+        font-size: rem(31);
+        font-weight: 400;
+      }
+    }
+  }
+  .data_area {
+    background-color: #FFF;
+    margin: 0 rem(40);
+    padding: rem(50);
+    &::before {
+      content: "";
+      background-image: url(../images/data/leaf-r1@2x.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: rem(102);
+      height: rem(98);
+      position: absolute;
+      right: rem(-38);
+      top: rem(-38);
+    }
+    .notice {
+      font-size: rem(26);
+      line-height: 1.62;
+      font-weight: 300;
+      color: #666;
+      .title {
+        color: #a26f19;
+        font-size: rem(48);
+        line-height: 1.5;
+        letter-spacing: rem(4);
+        font-weight: 500;
+        text-align: center;
+        font-family: 'noto serif tc';
+        margin: rem(65) 0;
+        &::before {
+          content: "";
+          background-image: url(../images/data/leaf-l2@2x.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: rem(216);
+          height: rem(127);
+          position: absolute;
+          left: rem(-90);
+          top: rem(-35);
+        }
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          margin: 0;
+          padding: 0 0 0 rem(40);
+          list-style: none;
+          &::before {
+            content: "◎";
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+  .elle {
+    padding: rem(40);
+    text-align: center;
+    img {
+      width: rem(150);
+    }
+  }
+}

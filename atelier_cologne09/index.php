@@ -1,0 +1,260 @@
+<?php
+include_once './common.php';
+?>
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title><?= $eventSetting->meta_title ?></title>
+  <meta name="author" content="<?= $eventSetting->author ?>" />
+  <meta name="copyright" content="Hearst Magazines Taiwan" />
+  <meta name="keywords" content="<?= $eventSetting->meta_keywords ?>" />
+  <meta name="description" content="<?= $eventSetting->meta_description ?>" />
+  <meta property="minisite_type" content="<?= $eventSetting->minisite_type ?>" />
+  <meta name="event_id" content="<?= $event_id ?>" />
+  <!-- FB Open Graphic -->
+  <meta property="fb:app_id" content="<?= $eventSetting->fb_app_id ?>" />
+  <meta property="og:title" content="<?= $eventSetting->meta_title ?>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="<?= $eventSetting->og_image ?>" />
+  <meta property="og:url" content="<?= $eventSetting->url ?>" />
+  <meta property="og:site_name" content="<?= $eventSetting->site_name ?>" />
+  <meta property="og:description" content="<?= $eventSetting->meta_description ?>" />
+  <link rel="image_src" type="image/jpeg" href="<?= $eventSetting->og_image ?>" />
+  <!-- Favicons -->
+  <link rel="shortcut icon" type="image/x-icon" href="<?= $eventSetting->favicon ?>" />
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://event.hearst.com.tw/common_support/css/font.css" />
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="scss/index.min.css">
+  <!-- js -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/rem.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js" integrity="sha512-jNDtFf7qgU0eH/+Z42FG4fw3w7DM/9zbgNPe3wfJlCylVDTT3IgKW5r92Vy9IHa6U50vyMz5gRByIu4YIXFtaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <!-- wrapper start -->
+  <div class="wrapper">
+    <div class="bg"></div>
+    <!-- kv start -->
+    <section class="kv" id="kv">
+      <div class="container">
+        <div class="top_area">
+          <img src="images/kv/ac_logo@2x.png" alt="Atelier Cologne 歐瓏" class="logo" data-aos="fade-down" data-aos-duration="800">
+          <img src="images/kv/slogan@2x.png" alt="An ode to Oolong 獻給烏龍茶的雙重頌歌" class="slogan" data-aos="fade-down"  data-aos-delay="300" data-aos-duration="1200">
+        </div>
+        <div class="bottom_area" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200">
+          <p>
+            在紛擾的日常裡，總有那麼一刻，
+            <br>我們渴望時間暫停，使感官歸於平靜。<br>
+            法國歐瓏獻上兩款截然不同的烏龍茶香篇章，<br>
+            如同兩幅匠心獨運的畫作，<br>
+            為你帶來心靈的沉澱與和諧。
+          </p>
+          <div class="cta">
+            領取你的茶香序曲
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- kv end -->
+    <!-- 青玉烏龍 start -->
+    <section class="main_product" id="product">
+      <div class="container">
+        <h2 data-aos="fade-up" data-aos-duration="800">
+          <span>珍稀新品</span>
+          青玉烏龍
+        </h2>
+        <div class="video">
+          <div class="video_box">
+            <div style="position: relative; width: 100%;">
+              <div class="play"></div>
+              <img src="images/mv_iframe.jpg" alt="Background image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+              <video id="my-video" autoplay controls playsinline muted loop style="width: 100%;">
+                <source src="https://streaming.hearstdigitalstudios.com/75040e6b-26be-4b56-bf04-4214642e09fc/video_rover_16x9_1080p_hd_1713336573_5356.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <script>
+              const playButton = document.querySelector(".play");
+              const video = document.getElementById("my-video");
+              playButton.addEventListener("click", () => {
+                video.play();
+                playButton.style.display = "none";
+              });
+            </script>
+          </div>
+        </div>
+        <div class="text" data-aos="fade" data-aos-duration="800">
+          <p>
+            單色畫布上的茶香暈染<br>
+            靜得能聽見光影的流動<br>
+            而廣藿香的深沉與雪松的挺拔<br>
+            讓每一次呼吸，都像穿行於薄霧山水<br>
+          </p>
+        </div>
+        <div class="slide" id="oolang-monochrome_slider">
+          <div class="left">
+            <img src="images/main_product/sec2-slide-left1@2x.png" alt="調香藝術家 Meabh McCurtin">
+            <img src="images/main_product/sec2-slide-left2@2x.png" alt="調香藝術家 Domitille Michalo">
+          </div>
+          <div class="right">
+            <img src="images/main_product/sec2-slide-right1@2x.jpg" alt="">
+            <img src="images/main_product/sec2-slide-right2@2x.jpg" alt="">
+            <img src="images/main_product/sec2-slide-right3@2x.jpg" alt="">
+            <img src="images/main_product/sec2-slide-right4@2x.jpg" alt="">
+          </div>
+          
+        </div>
+        <div class="quote" data-aos="fade" data-aos-duration="800">
+          <p>
+            我們以單色藝術為靈感，創作出這款層次細膩且溫柔的香氛。<br>
+            廣藿香的濕潤、茶香的輕盈至雪松的線條感，彼此交織出一幅從清晨到暮色的香氣畫面。它不喧嘩，卻能悄悄觸動感官深處，就像霧裡透光的靜謐。
+          </p>
+          <img src="images/main_product/name@2x@2x.png" alt="Meabh McCurtin & Domitille Michalo" class="name">
+        </div>
+      </div>
+    </section>
+    <!-- 青玉烏龍 end -->
+    <!-- 兩種茶色，兩種心境 start -->
+    <section class="fragrance" id="fragrance">
+      <div class="container">
+        <h2 data-aos="fade-up" data-aos-duration="800">
+          <span>與經典共作烏龍茶的詩賦</span>
+          兩種茶色，兩種心境
+        </h2>
+        <!-- 青玉烏龍 -->
+        <div class="monochrome">
+          <div class="slide">
+            <img src="images/fragrance/monochrome/child3-1@2x.jpg" alt="">
+            <img src="images/fragrance/monochrome/child3-2@2x.jpg" alt="">
+            <img src="images/fragrance/monochrome/child3-3@2x.jpg" alt="">
+          </div>
+          <div class="text" data-aos="fade-right" data-aos-duration="600">
+            <p class="title">
+              <span>青玉烏龍</span>| 青玉色
+            </p>
+            <p>
+              如霧中山水的溫柔筆觸，在靜謐與清亮間，<br>描繪單色的詩境
+            </p>
+          </div>
+        </div>
+        <!-- 無極烏龍 -->
+        <div class="infini">
+          <div class="slide">
+            <img src="images/fragrance/infini/child3-1@2x.jpg" alt="">
+            <img src="images/fragrance/infini/child3-2@2x.jpg" alt="">
+            <img src="images/fragrance/infini/child3-3@2x.jpg" alt="">
+          </div>
+          <div class="text" data-aos="fade-left" data-aos-duration="600">
+            <p class="title">
+              <span>無極烏龍</span>| 晨曦色
+            </p>
+            <p>
+              如清光灑落茶湯的明澈<br>在清新與悠然間，映照自在的心境
+            </p>
+          </div>
+        </div>
+        <!-- 調香藝術家 -->
+        <div class="quote" data-aos="fade-down" data-aos-duration="800">
+          <div class="img">
+            <img src="images/fragrance/artist@2x.jpg" alt="無極烏龍調香藝術家 Jérôme Epinette">
+          </div>
+          <div class="text">
+            <p>
+              我想用無極烏龍的香氣，
+              營造一個被木質和茶香所繚繞的靜謐時刻。
+            </p>
+            <img src="images/fragrance/name@2x.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 兩種茶色，兩種心境 end -->
+    <!-- 茶香親啟 start -->
+    <section class="space" id="space">
+      <div class="container">
+        <h2 data-aos="zoom-in" data-aos-duration="600">茶香<br>親啟</h2>
+        <p data-aos="fade" data-aos-duration="800">
+          文字與畫面，終究難以盡述茶香之美<br>
+          誠摯邀請親臨專櫃<br>
+          讓香氣親自訴說它的故事…
+        </p>
+      </div>
+    </section>
+    <!-- 茶香親啟 end -->
+    <!-- data start -->
+    <section class="data" id="data">
+      <div class="container">
+        <h2 data-aos="fade-up" data-aos-duration="800">揭開茶色光影的邀請函</h2>
+        <div class="top-text">
+          <p>
+            9/18～10/12 Atelier Cologne 專櫃靜候您至現場<br>
+            親自感受兩款烏龍香水的細膩層次<br>
+            以一縷茶香<br>
+            為日常開啟一段時間靜止的旅程<br>
+            在霧色與茶香之間，拾起時間遺落的片刻<br>
+          </p>
+        </div>
+        <div class="data-text">
+          <p>
+            填寫以下資料並憑簡訊至全台 CYRANO 席哈諾、法國歐瓏專櫃體驗試香，即可兌換
+            <span>隨行香氛禮「無極烏龍針管香 1.2ml 乙份」</span>
+            數量有限，送完為止
+          </p>
+        </div>
+        <div class="data_area">
+          <!-- 套用表單區 開始 -->
+          <div class="data_group">
+            <p class="tetris" data-id="<?= $tetris_id ?>" data-new-style="1" data-theme="event-theme">Loading...</p>
+            <script src="<?= TETRIS_SERVER ?>app.js"></script>
+            <?php
+            if (isset($_GET['debug']) && $_GET['debug']) {
+              echo '<script type="text/javascript" src="'. TETRIS_SERVER .'debug.js"></script>';
+            }
+            ?>
+          </div>
+          <!-- 套用表單區 結束 -->
+          <div class="notice">
+            <p class="title">
+              讓第一縷茶香<br>
+              為你的秋日揭開序幕
+            </p>
+            <p>注意事項：</p>
+            <ul>
+              <li>兌換有效期限至2025/10/12止。</li>
+              <li>送出前請確認您的手機門號正確無誤，且可接受廣告簡訊。</li>
+              <li>收到簡訊後，請交付櫃點服務人員按下兌換鈕方才完成兌換 (請確保手機需具備網路功能)。 </li>
+              <li>活動限填單本人兌換，每人每支門號限兌換乙次，限本人憑兌換頁面兌換，並不得與品牌其它兌換活動重複。</li>
+              <li>兌換贈品以店上現有針管香水為準，恕不得選款。數量有限，送完為止。</li>
+              <li>ELLE與荷風國際股份有限公司保留最終修改、取消、停止本活動權利。</li>
+              <li>送出資料前，請詳閱隱私權條款。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="elle">
+          <img src="images/data/logo-elle@2x.png" alt="ELLE">
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- wrapper end -->
+  <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="js/aos.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script src="js/index.js"></script>
+  <script>
+    AOS.init({
+        offset: 60,
+        duration: 1000,
+        easing: "ease",
+    });
+  </script>
+
+  <?php $eventSetting->getTracker(); ?> 
+</body>
+</html>
