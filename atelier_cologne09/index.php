@@ -55,7 +55,7 @@ include_once './common.php';
             如同兩幅匠心獨運的畫作，<br>
             為你帶來心靈的沉澱與和諧。
           </p>
-          <div class="cta">
+          <div class="cta" data-href="data">
             領取你的茶香序曲
           </div>
         </div>

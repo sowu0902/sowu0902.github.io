@@ -1,4 +1,20 @@
 $(function () {
+  document.querySelectorAll('.cta').forEach(el => {
+    el.addEventListener('click', () => {
+      const targetId = el.getAttribute('data-href');
+      const target = document.getElementById(targetId);
+
+      if (target) {
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+        const offset = 1; // 偏移量（往下 1px）
+
+        window.scrollTo({
+          top: targetPosition + offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
   $('#oolang-monochrome_slider .left').slick({
     dots: false, //顯示輪播圖片會顯示圓圈
     infinite: true, //重覆輪播
