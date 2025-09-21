@@ -1,0 +1,10 @@
+// RESET
+body,h1,h2,h3,h4,h5,h6,p,blockquote,th,td,div,dl,dt,dd,ul,ol,li,pre,code,form,fieldset,legend,input,button,textarea{margin:0;padding:0}body,td,th{font: 100%/1 Verdana, Geneva, sans-serif}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}img,fieldset{border:0}ol,ul{list-style:none outside none}table{border-collapse:collapse;border-spacing:0}caption,th{text-align:left}a,ins{text-decoration:none}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:normal;font-weight:normal}abbr,acronym{border:0;font-variant:normal}sup,sub{font-size:100%;vertical-align:baseline}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:""}code,kbd,samp,tt{font-size:100%}header,main,article,footer,div,section,ul{position:relative}input,button,select,textarea{outline:none;appearance: none;-webkit-appearance: none}*:focus{outline:none}
+body {font-family: "Noto Sans TC","LiHei Pro  Medium", "Microsoft JhengHei", "PMingLiU", Arial, sans-serif; -webkit-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-o-text-size-adjust: 100%;text-size-adjust: 100%;
+font-weight: 300;}
+a, *:hover {outline: none;-webkit-transition: 0.3s ease-out;-moz-transition: 0.3s ease-out;-o-transition: 0.3s;transition: 0.3s ease-out;}
+/*FOR DIV高度可以設滿版之用*/
+html, body { height:100%; border:none; }
+img { width: 100%; height: auto; }
+/*要忽略paddding的話使用*/
+div, section, header, footer, main, nav, ul, li, a, span { -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
