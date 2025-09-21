@@ -68,7 +68,7 @@ function renderChapters() {
 
   chapterList.innerHTML = Object.entries(chapters).map(([id, title]) => `
     <div class="card" data-num="${id}">
-      <div class="img"><img src="assets/images/chapter/img${id}.png"></div>
+      <div class="img"><img src="assets/images/chapter/img${id}.png" loading="lazy"></div>
       <div class="text">
         <span>Chapter ${id}</span>
         ${title}

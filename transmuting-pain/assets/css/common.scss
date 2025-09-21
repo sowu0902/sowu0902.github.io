@@ -304,7 +304,7 @@ main {
     }
   }
   .kv {
-    background-image: url(../images/kv-bg.png);
+    background-image: url(../images/kv-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -317,7 +317,7 @@ main {
       max-height: none;
     }
     @include media($tablet){
-      background-image: url(../images/kv-bg-mb.png);
+      background-image: url(../images/kv-bg-mb.jpg);
     }
     .container {
       margin: auto;
