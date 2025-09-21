@@ -136,7 +136,7 @@
             <p>痛苦，往往是推動改變、掙脫束縛、找回真我的最強大力量。當我們鼓起勇氣，直視那些限制潛能的痛，才有可能掙脫過去的枷鎖，走進一個布滿新生機與未知的世界...<a href="https://books.cw.com.tw/book/987" target="_blank">more</a></p>
           </div>
           <div class="img" data-aos="fade-right" data-aos-duration="1000">
-            <img src="assets/images/cover.jpg" alt="《綻放真我 突破痛苦 找回內心的自由》書封">
+            <img src="assets/images/cover.jpg" loading="lazy" alt="《綻放真我 突破痛苦 找回內心的自由》書封">
             <p class="info">
               <span class="discount">79</span>
               <span class="price-now">$395</span>
@@ -165,9 +165,9 @@
         <h2>關於作者</h2>
         <div class="content flex-pconly wrap">
           <div class="img" data-aos="fade-left" data-aos-duration="1000">
-            <img src="assets/images/personal-bg1.png" alt="" class="bg bg1">
-            <img src="assets/images/personal-bg2.png" alt="" class="bg bg2">
-            <img src="assets/images/personal.png" alt="" class="person">
+            <img src="assets/images/personal-bg1.png" loading="lazy" alt="" class="bg bg1">
+            <img src="assets/images/personal-bg2.png" loading="lazy" alt="" class="bg bg2">
+            <img src="assets/images/personal.png" loading="lazy" alt="" class="person">
           </div>
           <div class="text" data-aos="fade-right" data-aos-duration="1000">
             <h3>楊元寧</h3>
@@ -205,11 +205,11 @@
   <!-- render from artworkData.json -->
   <div class="lightbox" id="lightbox">
     <div class="container flex-pconly">
-      <div class="close"></div>
+      <div class="close" id="lightbox-close"></div>
       <div class="img">
-        <img src="" alt="">
+        <img id="lightbox-img" alt="">
       </div>
-      <div class="text">
+      <div class="text" id="lightbox-text">
         <div class="chapter">
           <span></span>
           <span></span>
@@ -217,8 +217,8 @@
         <h2></h2>
         <div class="content"></div>
       </div>
-      <div class="arrow arrow-prev"></div>
-      <div class="arrow arrow-next"></div>
+      <div class="arrow arrow-prev" id="lightbox-prev"></div>
+      <div class="arrow arrow-next" id="lightbox-next"></div>
     </div>
   </div>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
