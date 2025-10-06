@@ -48,6 +48,7 @@ const contentEl = lightbox.querySelector(".content");
 const closeBtn = lightbox.querySelector(".close");
 const arrowPrev = lightbox.querySelector(".arrow-prev");
 const arrowNext = lightbox.querySelector(".arrow-next");
+const loadingEl = lightbox.querySelector(".loading");
 
 // 載入 artworkData.jso
 fetch("assets/js/artworkData.json")
@@ -93,24 +94,51 @@ chapterList.addEventListener("click", e => {
 
 const container = lightbox.querySelector(".container");
 
-// 更新 Lightbox 顯示內容
-function updateContent() {
+// 更新 Lightbox 顯示內容。改成可接受參數，等圖片 onload 後再顯示
+function updateContent(onReady) {
   const item = currentChapter[currentIndex];
-  imgEl.src = `assets/images/artwork/img${item.img}.jpg`;
-  imgEl.alt = item.title;
-  chapterSpan.textContent = `Chapter ${item.chapter_id}`;
-  chapterTitleSpan.textContent = item.chapter_title;
-  titleEl.textContent = item.title;
-  contentEl.textContent = item.text;
+  console.log("🔄 updateContent() 開始載入圖片", item.img);
 
-  // 箭頭控制
-  arrowPrev.style.display = currentIndex > 0 ? "block" : "none";
-  arrowNext.style.display = currentIndex < currentChapter.length - 1 ? "block" : "none";
+  const tempImg = new Image();
+  tempImg.onload = () => {
+    console.log("✅ 圖片載入完成", tempImg.src);
+
+    imgEl.src = tempImg.src;
+    imgEl.alt = item.title;
+
+    chapterSpan.textContent = `Chapter ${item.chapter_id}`;
+    chapterTitleSpan.textContent = item.chapter_title;
+    titleEl.textContent = item.title;
+    contentEl.innerHTML = item.text.replace(/\n/g, "<br>");
+
+    arrowPrev.style.display = currentIndex > 0 ? "block" : "none";
+    arrowNext.style.display = currentIndex < currentChapter.length - 1 ? "block" : "none";
+
+    console.log("✨ updateContent() 已更新 DOM");
+
+    if (typeof onReady === "function") {
+      loadingEl.style.display = "none"; // ❌ 停止顯示
+      onReady(); // ✅ 確保只有在有傳入 callback 時才執行
+    }
+  };
+
+  tempImg.src = `assets/images/artwork/img${item.img}.jpg`;
+
+  if (tempImg.complete) {
+    console.log("⚡ tempImg.complete == true，直接觸發 onload");
+    tempImg.onload();
+  }
 }
 
 function showLightbox() {
+  container.classList.add("fade-out"); // 先透明
   lightbox.classList.add("show");
-  updateContent();
+
+  updateContent(() => {
+    requestAnimationFrame(() => {
+      container.classList.remove("fade-out"); // ✅ 淡入
+    });
+  });
 }
 
 function switchContent(newIndex) {
@@ -118,17 +146,26 @@ function switchContent(newIndex) {
 
   container.classList.add("fade-out");
 
-  // 等 CSS 動畫結束後才換內容
-  container.addEventListener("transitionend", function handler() {
-    container.removeEventListener("transitionend", handler);
+  function doSwitch() {
+    loadingEl.style.display = "block"; // ✅ 顯示 Loading
+    console.log("🟡 Loading should be visible now");
+    container.removeEventListener("transitionend", doSwitch);
 
     currentIndex = newIndex;
-    updateContent();
 
-    // 強制重繪，觸發淡入
-    void container.offsetWidth;
-    container.classList.remove("fade-out");
-  });
+    updateContent(() => {
+      requestAnimationFrame(() => {
+        container.classList.remove("fade-out");
+      });
+    });
+  }
+
+  container.addEventListener("transitionend", doSwitch);
+
+  // ✅ 萬一 transition 沒觸發（例如快速連點 或 無法 transition），保底 400ms
+  setTimeout(() => {
+    if (container.classList.contains("fade-out")) doSwitch();
+  }, 400);
 }
 
 // 箭頭事件
