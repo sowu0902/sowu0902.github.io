@@ -174,7 +174,7 @@ header {
         border-bottom: 2px solid transparent;
         transition: all 0.3s ease;
         @include media($small-desktop){
-          width: 9vw;
+          width: 9.8vw;
         }
         @include media($tablet){
           width: 100%;
@@ -505,6 +505,7 @@ main {
   .book {
     height: auto;
     background-color: $accent-color;
+    overflow: unset;
     .text {
       width: calc(100% - 300px - 90px);
       margin-right: 90px;
@@ -537,16 +538,21 @@ main {
     }
     .img {
       width: 300px;
+      height: 500px;
+      position: sticky;
+      top: 100px;
       @include media($small-desktop){
         width: 240px;
+        height: 400px;
       }
       @include media($tablet){
         width: 190px;
+        height: auto;
         margin: auto;
       }
       img {
         box-shadow: 5px 5px 34px 0 rgba(0, 0, 0, 0.15);
-        animation: flow 1.8s infinite linear;
+        // animation: flow 1.8s infinite linear;
       }
       .info {
         display: flex;
@@ -774,7 +780,7 @@ main {
         .text {
           text-align: center;
           font-size: 16px;
-          line-height: 1.8;
+          line-height: 1.4;
           color: $this-black;
           span {
             display: block;
@@ -1014,8 +1020,40 @@ main {
     }
     .content {
       white-space: pre-line;
+      text-align: justify;
     }
   }
+}
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  animation: blink 1s infinite;
+  z-index: 999;
+  display: none; /* 預設隱藏 */
+  &::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 3px solid #ccc;
+    border-top-color: #000;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    display: block;
+    margin: auto;
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
 }
 
 footer {
