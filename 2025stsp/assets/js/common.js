@@ -131,25 +131,18 @@ let scrollLeft;
 
 wrapper.addEventListener('mousedown', (e) => {
   isDown = true;
-  startX = e.pageX - wrapper.offsetLeft;
+  startX = e.pageX;
   scrollLeft = wrapper.scrollLeft;
-});
-
-wrapper.addEventListener('mouseleave', () => {
-  isDown = false;
-});
-
-wrapper.addEventListener('mouseup', () => {
-  isDown = false;
 });
 
 wrapper.addEventListener('mousemove', (e) => {
   if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - wrapper.offsetLeft;
-  const walk = (x - startX) * 1.5; // 拖曳速度倍率
-  wrapper.scrollLeft = scrollLeft - walk;
+  wrapper.scrollLeft = scrollLeft - (e.pageX - startX);
 });
+
+['mouseup', 'mouseleave'].forEach(evt =>
+  wrapper.addEventListener(evt, () => isDown = false)
+);
 
 // 影片區slider
 $('#video .video-group').slick({
