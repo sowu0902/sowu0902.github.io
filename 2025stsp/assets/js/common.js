@@ -167,7 +167,7 @@ $('#video .video-group').slick({
 });
 // 文章區slider
 $('#article .article-group').slick({
-  slidesToShow: 2.5,
+  slidesToShow: 2.7,
   centerMode: false,
   dots: true, //顯示輪播圖片會顯示圓圈
   infinite: true, //重覆輪播
