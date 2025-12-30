@@ -146,7 +146,7 @@ wrapper.addEventListener('mousemove', (e) => {
 
 // 影片區slider
 $('#video .video-group').slick({
-  slidesToShow: 2,
+  slidesToShow: 1,
   centerMode: false,
   dots: true, //顯示輪播圖片會顯示圓圈
   infinite: true, //重覆輪播
