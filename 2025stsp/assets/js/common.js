@@ -144,6 +144,29 @@ wrapper.addEventListener('mousemove', (e) => {
   wrapper.addEventListener(evt, () => isDown = false)
 );
 
+// 圖表的橫向滾動提示
+const hScroll = document.querySelector('.data-card-2');
+let hintShown = false;
+
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    if (entry.isIntersecting && !hintShown) {
+      hintShown = true;
+
+      hScroll.classList.add('is-hint-visible');
+
+      setTimeout(() => {
+        hScroll.classList.remove('is-hint-visible');
+      }, 3000);
+    }
+  },
+  {
+    threshold: 0.5
+  }
+);
+
+observer.observe(hScroll);
+
 // 影片區slider
 $('#video .video-group').slick({
   slidesToShow: 1,
