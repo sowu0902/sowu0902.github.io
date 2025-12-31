@@ -175,7 +175,7 @@ $('#video .video-group').slick({
   infinite: true, //重覆輪播
   speed: 700,
   cssEase: 'linear',
-  arrows: false, //false隐藏左右按钮
+  arrows: true, //false隐藏左右按钮
   autoplay: false,
   autoplaySpeed: 2000,
   initialSlide: 0, //滑動開始0為第一張
@@ -184,6 +184,7 @@ $('#video .video-group').slick({
       breakpoint: 799,
       settings: {
         slidesToShow: 1.08,
+        arrows: false,
       }
     }
   ]
