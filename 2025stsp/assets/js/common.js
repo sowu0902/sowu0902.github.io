@@ -145,27 +145,34 @@ wrapper.addEventListener('mousemove', (e) => {
 );
 
 // 圖表的橫向滾動提示
-const hScroll = document.querySelector('.data-card-2');
-let hintShown = false;
+// 所有需要橫向滾動提示的區塊
+const hScrollBlocks = document.querySelectorAll('.h-scroll');
 
 const observer = new IntersectionObserver(
-  ([entry]) => {
-    if (entry.isIntersecting && !hintShown) {
-      hintShown = true;
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
 
-      hScroll.classList.add('is-hint-visible');
+      const el = entry.target;
+
+      // 已顯示過就不再顯示
+      if (el.dataset.hintShown === 'true') return;
+
+      el.dataset.hintShown = 'true';
+      el.classList.add('is-hint-visible');
 
       setTimeout(() => {
-        hScroll.classList.remove('is-hint-visible');
+        el.classList.remove('is-hint-visible');
       }, 3000);
-    }
+    });
   },
   {
     threshold: 0.5
   }
 );
 
-observer.observe(hScroll);
+// 每個區塊都監聽
+hScrollBlocks.forEach((el) => observer.observe(el));
 
 // 影片區slider
 $('#video .video-group').slick({
