@@ -144,33 +144,6 @@ wrapper.addEventListener('mousemove', (e) => {
   wrapper.addEventListener(evt, () => isDown = false)
 );
 
-// 圖表的橫向滾動提示
-// 所有需要橫向滾動提示的區塊
-const hScrollBlocks = document.querySelectorAll('.h-scroll');
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-
-      const el = entry.target;
-
-      // 已顯示過就不再顯示
-      if (el.dataset.hintShown === 'true') return;
-
-      el.dataset.hintShown = 'true';
-      el.classList.add('is-hint-visible');
-
-      setTimeout(() => {
-        el.classList.remove('is-hint-visible');
-      }, 3000);
-    });
-  },
-  {
-    threshold: 0.5
-  }
-);
-
 // 每個區塊都監聽
 hScrollBlocks.forEach((el) => observer.observe(el));
 
