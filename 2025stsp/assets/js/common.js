@@ -144,9 +144,6 @@ wrapper.addEventListener('mousemove', (e) => {
   wrapper.addEventListener(evt, () => isDown = false)
 );
 
-// 每個區塊都監聽
-hScrollBlocks.forEach((el) => observer.observe(el));
-
 // 影片區slider
 $('#video .video-group').slick({
   slidesToShow: 1,
