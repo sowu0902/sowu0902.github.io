@@ -6,21 +6,21 @@
     "images": {
       "desktop": [
         {
-          "src": "/images/index/timetable-DAY1.png",
+          "src": "./images/index/timetable-DAY1.png",
           "alt": "三大野餐區總時間表 DAY1"
         },
         {
-          "src": "/images/index/timetable-DAY2.png",
+          "src": "./images/index/timetable-DAY2.png",
           "alt": "三大野餐區總時間表 DAY2"
         }
       ],
       "mobile": [
         {
-          "src": "/images/index/timetable-DAY1-mb.png",
+          "src": "./images/index/timetable-DAY1-mb.png",
           "alt": "三大野餐區總時間表 DAY1"
         },
         {
-          "src": "/images/index/timetable-DAY2-mb.png",
+          "src": "./images/index/timetable-DAY2-mb.png",
           "alt": "三大野餐區總時間表 DAY2"
         }
       ]
@@ -80,24 +80,24 @@
       {
         "id": "map",
         "titleImage": {
-          "desktop": "/images/index/access-h3a.png",
-          "mobile": "/images/index/access-h3a-mb.png"
+          "desktop": "./images/index/access-h3a.png",
+          "mobile": "./images/index/access-h3a-mb.png"
         },
         "contentImage": {
-          "desktop": "/images/index/access-map.png",
-          "mobile": "/images/index/access-map-mb.png"
+          "desktop": "./images/index/access-map.png",
+          "mobile": "./images/index/access-map-mb.png"
         },
         "buttonText": "點擊查看園區配置"
       },
       {
         "id": "traffic",
         "titleImage": {
-          "desktop": "/images/index/access-h3b.png",
-          "mobile": "/images/index/access-h3b-mb.png"
+          "desktop": "./images/index/access-h3b.png",
+          "mobile": "./images/index/access-h3b-mb.png"
         },
         "contentImage": {
-          "desktop": "/images/index/access-traffic.png",
-          "mobile": "/images/index/access-traffic-mb.png"
+          "desktop": "./images/index/access-traffic.png",
+          "mobile": "./images/index/access-traffic-mb.png"
         },
         "buttonText": "大眾運輸工具 / 停車資訊一次看"
       }
