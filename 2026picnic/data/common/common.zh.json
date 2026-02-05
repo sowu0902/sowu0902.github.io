@@ -60,14 +60,9 @@
         "title": "贊助單位",
         "items": [
           {
-            "name": "品牌 A",
-            "logo": "./images/common/logo_hearst.png",
-            "url": "https://www.hearst.com.tw/"
-          },
-          {
-            "name": "品牌 B",
-            "logo": "./images/common/logo_hearst.png",
-            "url": "https://www.hearst.com.tw/"
+            "name": "",
+            "logo": "./images/common/logo_blank.png",
+            "url": "#"
           }
         ]
       }
