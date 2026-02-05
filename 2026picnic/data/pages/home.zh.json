@@ -1,0 +1,106 @@
+{
+  "about": {
+    "html": "<p>三月花季，「2026台北花伴野餐」於大安森林公園盛大登場，今年打造三大主題野餐區與國際特色市集。<br>引領潮流的「咖啡音樂派對」、洗滌身心的「草地療癒運動」、親子與毛孩家庭策劃的「創意裝扮秀」與精彩主舞台表演。<br>活動與全球人氣手遊Pokémon GO的跨界合作，現場有拍照裝飾、皮卡丘見面會、Pokémon GO贈品發送等精彩內容，等你來參與！<br>報名野餐活動可領取限量 2000 份的特製野餐墊，數量有限送完為止！<br>邀請您與親友相約野餐派對，花香中共度浪漫潮流春日盛宴。</p>"
+  },
+  "timetable": {
+    "images": {
+      "desktop": [
+        {
+          "src": "/images/index/timetable-DAY1.png",
+          "alt": "三大野餐區總時間表 DAY1"
+        },
+        {
+          "src": "/images/index/timetable-DAY2.png",
+          "alt": "三大野餐區總時間表 DAY2"
+        }
+      ],
+      "mobile": [
+        {
+          "src": "/images/index/timetable-DAY1-mb.png",
+          "alt": "三大野餐區總時間表 DAY1"
+        },
+        {
+          "src": "/images/index/timetable-DAY2-mb.png",
+          "alt": "三大野餐區總時間表 DAY2"
+        }
+      ]
+    },
+    "cta": {
+      "text": "野餐報名連結",
+      "route": "register"
+    }
+  },
+  "news": {
+    "moreText": "MORE",
+    "items": [
+      {
+        "date": "2026-03-01",
+        "text": "野餐活動正式開放報名",
+        "route": "register"
+      },
+      {
+        "date": "2026-02-20",
+        "text": "公布三大主題野餐區內容",
+        "route": "info"
+      },
+      {
+        "date": "2026-02-15",
+        "text": "Pokémon GO 聯名活動搶先曝光",
+        "url": "https://pokemongo.com/"
+      },
+      {
+        "date": "2026-02-10",
+        "text": "市集品牌名單第一波公開",
+        "route": "market"
+      },
+      {
+        "date": "2026-02-05",
+        "text": "活動主視覺正式發布",
+        "route": "info"
+      },
+      {
+        "date": "2026-01-28",
+        "text": "活動官網上線",
+        "route": "home"
+      },
+      {
+        "date": "2026-01-15",
+        "text": "最新消息標題最新消息標題最新消息標題最新消息標題",
+        "route": "home"
+      },
+      {
+        "date": "2026-01-10",
+        "text": "最新消息標題",
+        "route": "home"
+      }
+    ]
+  },
+  "access": {
+    "cards": [
+      {
+        "id": "map",
+        "titleImage": {
+          "desktop": "/images/index/access-h3a.png",
+          "mobile": "/images/index/access-h3a-mb.png"
+        },
+        "contentImage": {
+          "desktop": "/images/index/access-map.png",
+          "mobile": "/images/index/access-map-mb.png"
+        },
+        "buttonText": "點擊查看園區配置"
+      },
+      {
+        "id": "traffic",
+        "titleImage": {
+          "desktop": "/images/index/access-h3b.png",
+          "mobile": "/images/index/access-h3b-mb.png"
+        },
+        "contentImage": {
+          "desktop": "/images/index/access-traffic.png",
+          "mobile": "/images/index/access-traffic-mb.png"
+        },
+        "buttonText": "大眾運輸工具 / 停車資訊一次看"
+      }
+    ]
+  }
+}
