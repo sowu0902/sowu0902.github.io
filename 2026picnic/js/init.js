@@ -54,15 +54,15 @@ function initSiteNav() {
 async function init() {
   // ① 載入共用區塊
   await Promise.all([
-    loadPartial('#header', '/partials/header.html'),
-    loadPartial('#marquee', '/partials/marquee.html'),
-    loadPartial('#fixed-cta', '/partials/fixed-cta.html'),
-    loadPartial('#footer', '/partials/footer.html')
+    loadPartial('#header', 'partials/header.html'),
+    loadPartial('#marquee', 'partials/marquee.html'),
+    loadPartial('#fixed-cta', 'partials/fixed-cta.html'),
+    loadPartial('#footer', 'partials/footer.html')
   ]);
 
   // ② 載入語系資料
-  const common = await loadJSON(`/data/common/common.${lang}.json`);
-  const homeData = await loadJSON(`/data/pages/home.${lang}.json`);
+  const common = await loadJSON(`data/common/common.${lang}.json`);
+  const homeData = await loadJSON(`data/pages/home.${lang}.json`);
 
   // ③ 套文字
   renderI18n(common);
