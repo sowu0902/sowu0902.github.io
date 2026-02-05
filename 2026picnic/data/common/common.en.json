@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "home": "Home",
+    "picnicA": "Coffee Party Area & Main Stage",
+    "picnicB": "Fitness Picnic Area",
+    "picnicC": "Family & Pet Picnic Area",
+    "market": "International Market Area",
+    "store": "Flower Companion Partner Stores",
+    "pokemon": "Pokemon GO"
+  },
+  "marquee": {
+    "text": "Event News Event News Event News Event News, Event News Event News Event News.",
+    "link": "#"
+  },
+  "fixedBtn": {
+    "route": "register",
+    "images": {
+      "desktop": "./images/common/fixbtn.png",
+      "mobile": "./images/common/fixbtn-mb.png"
+    }
+  },
+  "footer": {
+    "logos": [
+      {
+        "title": "Organizer",
+        "items": [
+          {
+            "name": "臺北市政府觀光傳播局",
+            "logo": "./images/common/logo_tpedoit.png",
+            "url": "https://www.tpedoit.gov.taipei/"
+          }
+        ]
+      },
+      {
+        "title": "Executor",
+        "items": [
+          {
+            "name": "HEARST TAIWAN",
+            "logo": "./images/common/logo_hearst.png",
+            "url": "https://www.hearst.com.tw/"
+          }
+        ]
+      },
+      {
+        "title": "Partners",
+        "items": [
+          {
+            "name": "臺北市政府工務局公園路燈工程管理處",
+            "logo": "./images/common/logo_pkl.png",
+            "url": "https://pkl.gov.taipei/"
+          },
+          {
+            "name": "Pokémon GO",
+            "logo": "./images/common/logo_pokemongo.png",
+            "url": "https://pokemongo.com/"
+          }
+        ]
+      },
+      {
+        "title": "Sponsors",
+        "items": [
+          {
+            "name": "",
+            "logo": "./images/common/logo_blank.png",
+            "url": "#"
+          }
+        ]
+      }
+    ],
+
+    "links": [
+      {
+        "text": "臺北旅遊網",
+        "icon": "./images/common/logo_undiscovered.png",
+        "url": "https://www.travel.taipei/zh-tw"
+      },
+      {
+        "text": "花IN台北",
+        "icon": "./images/common/logo_flower.png",
+        "url": "https://www.flowersfestival.taipei/"
+      }
+    ]
+  }
+}
