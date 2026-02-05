@@ -1,6 +1,6 @@
 // 頁面初始化
 import { getLang, loadJSON } from './i18n.js';
-import { renderI18n, renderNavLinks, renderMarquee, renderFooter, renderFixedBtn, renderAbout, renderTimetable, renderNews, renderAccess } from './render.js';
+import { renderI18n, renderLanguageSwitcher, renderNavLinks, renderMarquee, renderFooter, renderFixedBtn, renderAbout, renderTimetable, renderNews, renderAccess } from './render.js';
 
 
 const lang = getLang();
@@ -66,6 +66,7 @@ async function init() {
 
   // ③ 套文字
   renderI18n(common);
+  renderLanguageSwitcher(lang);
   renderNavLinks(lang);
   renderMarquee(common);
   renderFooter(common, lang);

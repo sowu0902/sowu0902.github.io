@@ -85,22 +85,23 @@ include_once './common.php';
         <div class="container">
           <h2 data-aos="fade-up" data-aos-duration="800"><span>宣傳影片</span></h2>
           <div class="card" data-aos="fade-down" data-aos-duration="800">
-            <div style="position: relative; width: 100%;">
-              <div class="play"></div>
+            <div style="position: relative; width: 100%;" class="ytiframe-container">
+              <!-- <div class="play"></div>
               <img src="images/mv_iframe.jpg" alt="Background image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
               <video id="my-video" autoplay controls playsinline muted loop style="width: 100%;">
-                <source src="https://streaming.hearstdigitalstudios.com/75040e6b-26be-4b56-bf04-4214642e09fc/video_rover_16x9_1080p_hd_1713336573_5356.mp4" type="video/mp4" />
+                <source src="https://www.youtube.com/watch?v=ZjJj47N8NIM" type="video/mp4" />
                 Your browser does not support the video tag.
-              </video>
+              </video> -->
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/ZjJj47N8NIM?si=MpmvVxljibuI1YVV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-            <script>
+            <!-- <script>
               const playButton = document.querySelector(".play");
               const video = document.getElementById("my-video");
               playButton.addEventListener("click", () => {
                 video.play();
                 playButton.style.display = "none";
               });
-            </script>
+            </script> -->
           </div>
         </div>
       </section>

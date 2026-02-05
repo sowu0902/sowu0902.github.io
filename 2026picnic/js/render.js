@@ -15,6 +15,17 @@ export function renderI18n(data) {
     if (value) el.textContent = value;
   });
 }
+// 變更語系時，變更樣式
+export function renderLanguageSwitcher(lang) {
+  const zh = document.querySelector('.language-zh');
+  const en = document.querySelector('.language-en');
+
+  if (!zh || !en) return;
+
+  zh.classList.toggle('is-active', lang === 'zh');
+  en.classList.toggle('is-active', lang === 'en');
+}
+
 
 /**
  * 自動補 nav href（含 lang）

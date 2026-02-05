@@ -32,6 +32,16 @@
         ]
       },
       {
+        "title": "執行單位",
+        "items": [
+          {
+            "name": "HEARST TAIWAN",
+            "logo": "./images/common/logo_hearst.png",
+            "url": "https://www.hearst.com.tw/"
+          }
+        ]
+      },
+      {
         "title": "合作單位",
         "items": [
           {
@@ -43,16 +53,6 @@
             "name": "Pokémon GO",
             "logo": "./images/common/logo_pokemongo.png",
             "url": "https://pokemongo.com/"
-          }
-        ]
-      },
-      {
-        "title": "執行單位",
-        "items": [
-          {
-            "name": "HEARST TAIWAN",
-            "logo": "./images/common/logo_hearst.png",
-            "url": "https://www.hearst.com.tw/"
           }
         ]
       },
