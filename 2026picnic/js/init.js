@@ -64,7 +64,7 @@ async function init() {
   const common = await loadJSON(`data/common/common.${lang}.json`);
   const homeData = await loadJSON(`data/pages/home.${lang}.json`);
 
-  // ③ 套文字
+  // ③ 套內容
   renderI18n(common);
   renderLanguageSwitcher(lang);
   renderNavLinks(lang);

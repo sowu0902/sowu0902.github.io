@@ -135,7 +135,7 @@ include_once './common.php';
     <div id="footer"></div>
   </div>
   <!-- wrapper end -->
-   <script src="./js/init.js" type="module"></script>
+  <script src="./js/init.js" type="module"></script>
   <script type="text/javascript" src="js/jquery.easing.min.js"></script>
   <script type="text/javascript" src="js/aos.js"></script>
   <script>

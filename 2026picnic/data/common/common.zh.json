@@ -1,9 +1,9 @@
 {
   "nav": {
     "home": "首頁",
-    "picnicA": "咖啡派對區＆主舞台",
-    "picnicB": "美力運動野餐區",
-    "picnicC": "親子毛孩野餐區",
+    "coffee": "咖啡派對區＆主舞台",
+    "sports": "美力運動野餐區",
+    "pets": "親子毛孩野餐區",
     "market": "國際市集區",
     "store": "花伴特約店家",
     "pokemon": "Pokemon GO"
@@ -67,17 +67,21 @@
         ]
       }
     ],
-
     "links": [
       {
-        "text": "臺北旅遊網",
-        "icon": "./images/common/logo_undiscovered.png",
-        "url": "https://www.travel.taipei/zh-tw"
-      },
-      {
-        "text": "花IN台北",
-        "icon": "./images/common/logo_flower.png",
-        "url": "https://www.flowersfestival.taipei/"
+        "title": "友善連結",
+        "items": [
+          {
+            "name": "臺北旅遊網",
+            "logo": "./images/common/logo_undiscovered.png",
+            "url": "https://www.travel.taipei/zh-tw"
+          },
+          {
+            "name": "花IN台北",
+            "logo": "./images/common/logo_flower.png",
+            "url": "https://www.flowersfestival.taipei/"
+          }
+        ]
       }
     ]
   }

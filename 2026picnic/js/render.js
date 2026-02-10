@@ -33,9 +33,9 @@ export function renderLanguageSwitcher(lang) {
 export function renderNavLinks(lang) {
   const routes = {
     home: 'index.html',
-    'picnic-a': 'picnic.html?type=picnic-a',
-    'picnic-b': 'picnic.html?type=picnic-b',
-    'picnic-c': 'picnic.html?type=picnic-c',
+    coffee: 'coffee.html',
+    sports: 'sports.html',
+    pets: 'pets.html',
     market: 'market.html',
     store: 'store.html',
     pokemon: 'pokemon.html'
@@ -46,8 +46,7 @@ export function renderNavLinks(lang) {
     const base = routes[key];
     if (!base) return;
 
-    const hasQuery = base.includes('?');
-    el.href = `${base}${hasQuery ? '&' : '?'}lang=${lang}`;
+    el.href = `${base}?lang=${lang}`;
   });
 }
 
@@ -74,7 +73,7 @@ export function renderFooter(data, lang) {
   if (!data.footer) return;
 
   const logoContainer = document.querySelector('[data-footer-logos]');
-  const linkList = document.querySelector('[data-footer-links]');
+  const linkContainer = document.querySelector('[data-footer-links]');
 
   /* ===============================
    * Logo 區塊
@@ -119,43 +118,40 @@ export function renderFooter(data, lang) {
   /* ===============================
    * 友善連結（含 icon）
    * =============================== */
-  if (linkList && Array.isArray(data.footer.links)) {
-    const routes = {
-      home: 'index.html',
-      info: 'info.html',
-      market: 'market.html',
-      register: 'register.html'
-    };
+  if (linkContainer && Array.isArray(data.footer.links)) {
+    linkContainer.innerHTML = data.footer.links
+      .map(group => `
+        <div class="footer-link-group content">
+          <h3 class="footer-link-title">${group.title}</h3>
+          <ul class="footer-link-list">
+            ${group.items
+              .map(item => {
+                // 有連結 → 包 a
+                if (item.url) {
+                  return `
+                    <li class="footer-link-item">
+                      <a
+                        href="${item.url}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img src="${item.logo}" alt="${item.name}">
+                      </a>
+                    </li>
+                  `;
+                }
 
-    linkList.innerHTML = data.footer.links
-      .map(link => {
-        let href = '#';
-        let extraAttr = '';
-
-        // 外連
-        if (link.url) {
-          href = link.url;
-          extraAttr = 'target="_blank" rel="noopener noreferrer"';
-        }
-
-        // 內連（支援 hash）
-        if (link.route) {
-          const [page, hash] = link.route.split('#');
-          if (routes[page]) {
-            href = `${routes[page]}?lang=${lang}${hash ? `#${hash}` : ''}`;
-          }
-        }
-
-        return `
-          <li class="footer-link-item">
-            <a href="${href}" ${extraAttr}>
-              ${link.icon
-                ? `<img src="${link.icon}" alt="${link.text}" aria-hidden="true">`
-                : ''}
-            </a>
-          </li>
-        `;
-      })
+                // 沒連結 → 只放 img
+                return `
+                  <li class="footer-link-item">
+                    <img src="${item.logo}" alt="${item.name}">
+                  </li>
+                `;
+              })
+              .join('')}
+          </ul>
+        </div>
+      `)
       .join('');
   }
 }

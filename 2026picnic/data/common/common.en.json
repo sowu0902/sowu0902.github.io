@@ -1,9 +1,9 @@
 {
   "nav": {
     "home": "Home",
-    "picnicA": "Coffee Party Area & Main Stage",
-    "picnicB": "Fitness Picnic Area",
-    "picnicC": "Family & Pet Picnic Area",
+    "coffee": "Coffee Party Area & Main Stage",
+    "sports": "Fitness Picnic Area",
+    "pets": "Family & Pet Picnic Area",
     "market": "International Market Area",
     "store": "Flower Companion Partner Stores",
     "pokemon": "Pokemon GO"
@@ -67,17 +67,21 @@
         ]
       }
     ],
-
     "links": [
       {
-        "text": "臺北旅遊網",
-        "icon": "./images/common/logo_undiscovered.png",
-        "url": "https://www.travel.taipei/zh-tw"
-      },
-      {
-        "text": "花IN台北",
-        "icon": "./images/common/logo_flower.png",
-        "url": "https://www.flowersfestival.taipei/"
+        "title": "Links",
+        "items": [
+          {
+            "name": "臺北旅遊網",
+            "logo": "./images/common/logo_undiscovered.png",
+            "url": "https://www.travel.taipei/zh-tw"
+          },
+          {
+            "name": "花IN台北",
+            "logo": "./images/common/logo_flower.png",
+            "url": "https://www.flowersfestival.taipei/"
+          }
+        ]
       }
     ]
   }
