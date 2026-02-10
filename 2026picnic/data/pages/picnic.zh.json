@@ -1,0 +1,472 @@
+{
+  "coffee": {
+    "kv": {
+      "bg": {
+        "desktop": "./images/coffee/kv-bg.gif",
+        "mobile": "./images/coffee/kv-bg-mb.gif"
+      },
+      "title": {
+        "desktop": "./images/coffee/kv-title.png",
+        "mobile": "./images/coffee/kv-title-mb.png"
+      }
+    },
+    "intro": {
+      "text": "<span class='pc-p mb-p'>咖啡音樂派對 × 浪漫花園體驗 × 野餐墊免費兌換</span><span class='pc-p mb-p'>在浪漫花園中品味咖啡與音樂，<span class='mb-p'>邀你用五感重新定義野餐體驗</span></span>",
+      "bg": {
+        "desktop": "./images/coffee/intro-bg.gif",
+        "mobile": "./images/coffee/intro-bg-mb.gif"
+      },
+      "cta": {
+        "text": "野餐報名連結",
+        "link": "register.html"
+      }
+    },
+    "schedule": {
+      "bg": {
+        "desktop": "./images/coffee/schedule-bg.gif",
+        "mobile": "./images/coffee/schedule-bg-mb.gif"
+      },
+      "title": {
+        "desktop": "./images/coffee/schedule-title.png",
+        "mobile": "./images/coffee/schedule-title-mb.png"
+      },
+      "image": {
+        "desktop": "./images/coffee/schedule-img.gif",
+        "mobile": "./images/coffee/schedule-img-mb.gif"
+      }
+    },
+    "infoSections": [
+      {
+        "id": "coffee-party",
+        "bg": {
+          "desktop": "./images/coffee/info1-bg.gif",
+          "mobile": "./images/coffee/info1-bg-mb.gif"
+        },
+        "title": {
+          "desktop": "./images/coffee/info1-title.png",
+          "mobile": "./images/coffee/info1-title-mb.png"
+        },
+        "desc": "舞台音樂派對 DJ 播放國際特色音樂組曲，<br>野餐區咖啡吧提供台北特色風味咖啡免費試飲兌換。",
+
+        "cards": [
+          {
+            "image": "./images/coffee/card1-1.jpg",
+            "title": "手沖咖啡體驗",
+            "desc": "邀請專業咖啡師進行特製手沖咖啡，民眾可免費排隊領取試飲。"
+          },
+          {
+            "image": "./images/coffee/card1-2.jpg",
+            "title": "免費咖啡兌換",
+            "desc": "邀請3家特約咖啡店家提供咖啡飲品，民眾可免費排隊兌換咖啡。"
+          },
+          {
+            "image": "./images/coffee/card1-3.jpg",
+            "title": "派對音樂DJ ",
+            "desc": "兩天14:00-15:30 主舞台進行音樂派對DJ表演，表演詳情見下方主舞台表演說明。"
+          }
+        ]
+      },
+      {
+        "id": "coffee-garden",
+        "bg": {
+          "desktop": "./images/coffee/info2-bg.gif",
+          "mobile": "./images/coffee/info2-bg-mb.gif"
+        },
+        "title": {
+          "desktop": "./images/coffee/info2-title.png",
+          "mobile": "./images/coffee/info2-title-mb.png"
+        },
+        "desc": "集結插畫師繪製獨一無二「花尚顏繪」，<br>邀請專業導師帶領製作的「水泥六角擴香花盤」與「鐵罐乾燥花香氛蠟燭」的手作活動，<br>沉浸於藝術與香氣交織的浪漫時光。",
+
+        "cards": [
+          {
+            "image": "./images/coffee/card2-1.jpg",
+            "title": "花尚顏繪體驗",
+            "desc": "在花香環繞的野餐現場，插畫師將以繪畫方式，捕捉報名者當下的神情、氣質與個人特色，呈現專屬於獨一無二的似顏繪作品。創作過程中融入花卉元素，將春日記憶定格於畫紙之上，讓你留下值得珍藏的紀念畫像。<br>每位參與者拍照約1分鐘，完成後可於 20 分鐘後回來取顏繪作品。",
+            "btnText": "立即前往報名",
+            "registerLink": "register.html"
+          },
+          {
+            "image": "./images/coffee/card2-2.jpg",
+            "title": "水泥六角擴香花盤",
+            "desc": "插花的時刻總讓人特別療癒，將索拉花插在六角花盤上，搭配進口精油，將香氣輕輕滴在花上，家裡立刻瀰漫著自己喜歡的味道，不只能當作漂亮的盆花擺飾，走過時還能聞到淡淡香氣，療癒又舒心。<br>課程時間90分鐘。作品為示意圖，以現場提供材料為準。",
+            "btnText": "立即前往報名",
+            "registerLink": "register.html"
+          },
+          {
+            "image": "./images/coffee/card2-3.jpg",
+            "title": "鐵罐乾燥花香氛蠟燭 ",
+            "desc": "以天然大豆蠟搭配香氛精油製作，搭配不同的乾燥花材與精緻鐵罐，呈現獨特而細緻的美感。精油融入蠟體後，即使不點燃，也能自然散發香氣，讓空間瀰漫柔和的芳香，還能作為點綴家的收藏品，為日常生活增添一點質感。<br>課程時間90分鐘。作品為示意圖，以現場提供材料為準。",
+            "btnText": "立即前往報名",
+            "registerLink": "register.html"
+          }
+        ]
+      },
+      {
+        "id": "coffee-gift",
+        "bg": {
+          "desktop": "./images/coffee/info3-bg.gif",
+          "mobile": "./images/coffee/info3-bg-mb.gif"
+        },
+        "title": {
+          "desktop": "./images/coffee/info3-title.png",
+          "mobile": "./images/coffee/info3-title-mb.png"
+        },
+        "desc": "咖啡派對區提供800份野餐墊免費兌換，<br>歡迎民眾立即報名野餐活動，活動現場領取。",
+
+        "cards": [
+          {
+            "image": "./images/coffee/card3-1.jpg",
+            "title": "野餐報名禮",
+            "desc": "活動特製野餐墊：設計以台北春季花卉為設計靈感，搭配淺黃色的主色，讓野餐墊輕鬆融入在自然草地環境中。<br>品牌好禮：敬請期待。",
+            "btnText": "立即前往報名",
+            "registerLink": "register.html"
+          },
+          {
+            "image": "",
+            "title": "野餐報名辦法",
+            "desc": "咖啡派對野餐區區提供800份野餐墊免費兌換，歡迎立即報名，活動現場各區報到處領取。",
+            "btnText": "立即前往報名",
+            "registerLink": "register.html"
+          }
+        ]
+      }
+    ],
+    "intro2": {
+      "text": "音樂派對DJ × 國際級馬戲表演 × 寶可夢見面會<br>兩天精彩不間斷！ 無論你是熱血樂迷、喜愛馬戲的親子家庭，<br class='mbhide'>還是寶可夢忠實粉絲，不可錯過的野餐表演舞台！",
+      "bg": {
+        "desktop": "./images/coffee/intro2-bg.gif",
+        "mobile": "./images/coffee/intro2-bg-mb.gif"
+      },
+      "title": {
+        "desktop": "./images/coffee/intro2-title.png",
+        "mobile": "./images/coffee/intro2-title-mb.png"
+      }
+    },
+    "schedule2": {
+      "bg": {
+        "desktop": "./images/coffee/schedule2-bg.gif",
+        "mobile": "./images/coffee/schedule2-bg-mb.gif"
+      },
+      "title": {
+        "desktop": "./images/coffee/schedule2-title.png",
+        "mobile": "./images/coffee/schedule2-title-mb.png"
+      },
+      "image": {
+        "desktop": "./images/coffee/schedule2-img.gif",
+        "mobile": "./images/coffee/schedule2-img-mb.gif"
+      }
+    },
+    "infoSections2": [
+      {
+        "id": "main-guest",
+        "bg": {
+          "desktop": "./images/coffee/info4-bg.gif",
+          "mobile": "./images/coffee/info4-bg-mb.gif"
+        },
+        "title": {
+          "desktop": "./images/coffee/info4-title.png",
+          "mobile": "./images/coffee/info4-title-mb.png"
+        },
+
+        "cards": [
+          {
+            "image": "./images/coffee/card4-1.jpg",
+            "title": "咖啡音樂派對DJ - Jamie Q",
+            "desc": "邀請時尚音樂DJ，播放國際風格組曲，搭配咖啡兌換，體驗風靡全球最潮咖啡音樂派對<br>Jamie Q 是跨足時尚與派對界的女性代表，經常受邀參與各大音樂祭與品牌活動。無論實驗空靈或低頻煽動，她皆能靈活運用，風格涉略廣泛，擅長將音樂曲風融入不同場景之中，投射環境、瞬間激活現場氛圍。從她的選曲可感受到鮮明的生活痕跡與性格，既暗黑冷冽，又帶著從容優雅的氣質，不時勾勒出 90 年代元素，並穿梭於跨界聲響之間。她偏好不受拘束且活潑的安排，形塑極高辨識度。"
+          },
+          {
+            "image": "./images/coffee/card4-2.jpg",
+            "title": "國際級馬戲: 馬戲之門 「紳士咖啡廳」",
+            "desc": "「馬戲之門」成立於 2015 年，團隊以「大門」為意象，期望引領大眾走進馬戲的風光，同時成為連結臺灣當代馬戲與各界的出口。2023 年藝術總監楊世豪作品《After》入圍台新藝術獎，並於 2022、2023、2025年獲選為新北市傑出藝文團隊。2025年為大阪萬國博覽會Tech World館指定合作表演團隊。<br>成軍10年國際級馬戲團隊，帶來獨創戲碼「紳士咖啡廳」，讓一杯咖啡的誕生過程轉化為一場充滿馬戲技巧、肢體喜劇與荒謬想像的旅程。<br>本次表演以「紳士咖啡廳」為主題，一間風格鮮明的咖啡廳作為故事場域，透過四位演員的身體行動，描繪一杯咖啡從被製作到被飲用後，在人身上所引發的感官與情緒變化。讓一杯咖啡的誕生過程轉化為一場充滿馬戲技巧、肢體喜劇與荒謬想像的旅程。"
+          },
+          {
+            "image": "",
+            "title": "皮卡丘見面會",
+            "desc": "全球超人氣寶可夢皮卡丘與伊布角色人偶見面會，只要排隊即可獲得合影機會，粉絲千萬別錯過。"
+          },
+          {
+            "image": "./images/coffee/card4-4.jpg",
+            "title": "音療手碟表演 因為手碟",
+            "desc": "2000年發明的「手碟」也被譽為「世上最療癒的樂器之一」，手碟柔和且空靈的音色，帶給人身心的平靜與療癒感。<br>因為手碟成立於 2021 年，以手碟演奏為核心，音樂演奏如溫潤流動的對話，引領聽眾穿梭不同時空與畫面，感受聲音帶來的共鳴與想像。創辦人-莉酸喜愛攜帶手碟旅行，從自然與環境中汲取靈感。他的音樂風格將細膩情感與靈巧節奏融入創作，透過手碟打造療癒而夢幻的聆聽體驗。"
+          },
+          {
+            "image": "./images/coffee/card4-5.jpg",
+            "title": "吉他女聲-傑西Jessie",
+            "desc": "現為駐唱歌手與街頭藝人，活躍於城市街頭與各式餐酒館演出。以溫暖真摯的歌聲擁抱每個瞬間，期待透過音樂與你共創難忘而美好的時光。"
+          },
+          {
+            "image": "./images/coffee/card4-6.jpg",
+            "title": "小提琴表演-小伊",
+            "desc": "現為街頭藝人，致力於推動台北自由街頭演出。無論上下班時段或假日，常可在台北市中心的各個角落見到他全心投入演出的身影。他始終秉持著簡單而純粹的理念，以全神貫注的信念，投入每一場演出，將音樂盡可能的感染、分享給更多人。累積超過 30 次登上國家音樂廳舞台，並曾於2015年與香港歌手譚詠麟於紅磡體育館同台演出。"
+          },
+          {
+            "image": "./images/coffee/card4-7.jpg",
+            "title": "吉他仙子-裴安",
+            "desc": "從小學習古典鋼琴，後來接觸民謠吉他與編曲製作，開啟音樂創作之路。深受 indie pop、bedroom pop、alternative 等曲風吸引，以空靈細膩的聲線與詩意的歌詞，詮釋內心最真實的情感故事。"
+          }
+        ]
+      }
+    ]
+  },
+
+  "sports": {
+    "kv": {
+      "bg": {
+        "desktop": "./images/sports/kv-bg.gif",
+        "mobile": "./images/sports/kv-bg-mb.gif"
+      },
+      "title": {
+        "desktop": "./images/sports/kv-title.png",
+        "mobile": "./images/sports/kv-title-mb.png"
+      }
+    },
+    "intro": {
+      "text": "<span class='pc-p mb-p'>草地療癒瑜珈 × 全齡永續運動 × 野餐墊免費兌換</span><span class='pc-p mb-p'>在綠意草地舒展身心、紓壓運動，<span class='mb-p'>讓身體找回最純粹的「美力」能量</span></span>",
+      "bg": {
+        "desktop": "./images/sports/intro-bg.gif",
+        "mobile": "./images/sports/intro-bg-mb.gif"
+      },
+      "cta": {
+        "text": "野餐報名連結",
+        "link": "register.html"
+      }
+    },
+    "schedule": {
+      "bg": {
+        "desktop": "./images/sports/schedule-bg.gif",
+        "mobile": "./images/sports/schedule-bg-mb.gif"
+      },
+      "title": {
+        "desktop": "./images/sports/schedule-title.png",
+        "mobile": "./images/sports/schedule-title-mb.png"
+      },
+      "image": {
+        "desktop": "./images/sports/schedule-img.gif",
+        "mobile": "./images/sports/schedule-img-mb.gif"
+      }
+    },
+    "infoSections": [
+      {
+        "id": "sports-all",
+        "bg": {
+          "desktop": "./images/sports/info1-bg.gif",
+          "mobile": "./images/sports/info1-bg-mb.gif"
+        },
+        "title": {
+          "desktop": "./images/sports/info1-title.png",
+          "mobile": "./images/sports/info1-title-mb.png"
+        },
+        "desc": "以無動力設施打造全年齡友善的運動體驗，<br>設置「台北地標充電站」、「花伴花卉咖啡屋」等互動關卡，完成挑戰即可獲得限量「花伴貼紙」。",
+
+        "cards": [
+          {
+            "image": "./images/sports/card1-1.jpg",
+            "title": "台北地標充電站",
+            "desc": "現場設置兩組電力腳踏車，透過踩踏發電腳踏車，邀請你一起點亮台北的新舊地標！於規定時間內成功點亮第三站，即可獲得限量活動貼紙。"
+          },
+          {
+            "image": "./images/sports/card1-2.jpg",
+            "title": "花伴花卉咖啡屋",
+            "desc": "翻開咖啡杯蓋互動裝置，進行春季花卉配對挑戰！於時間內完成指定花卉配對任務，即可獲得限量活動貼紙。"
+          }
+        ]
+      },
+      {
+        "id": "sports-yoga",
+        "bg": {
+          "desktop": "./images/sports/info2-bg.gif",
+          "mobile": "./images/sports/info2-bg-mb.gif"
+        },
+        "title": {
+          "desktop": "./images/sports/info2-title.png",
+          "mobile": "./images/sports/info2-title-mb.png"
+        },
+        "desc": "集結哈達瑜珈、頌缽瑜珈、精油皮拉提斯、瑜珈提斯等課程，<br class='mbhide'>精油皮拉提斯、瑜珈提斯等課程，在自然草地中感受身心平衡的時刻。",
+
+        "cards": [
+          {
+            "image": "./images/sports/card2-1.jpg",
+            "title": "哈達瑜珈",
+            "desc": "專業瑜珈老師:咪咪<br>哈達瑜珈是最傳統且普遍的瑜珈形式，以穩定、緩慢的體式搭配規律呼吸，引導身心逐步放鬆。課程著重基礎體式與呼吸的連結，培養身體覺察與專注力，讓能量自然流動。溫和且循序漸進的練習方式，特別適合初學者入門。<br>課程時間60分鐘。",
+            "btnText": "立即前往報名",
+            "registerLink": "register.html"
+          },
+          {
+            "image": "./images/sports/card2-2.jpg",
+            "title": "頌缽水晶缽瑜珈",
+            "desc": "專業瑜珈老師:咪咪<br>由咪咪愛運動老師帶領的頌缽、水晶缽瑜珈，結合溫和的身體伸展與水晶缽清澈悠長的聲音，引導呼吸與動作自然流動。透過聲波的共振，身體逐漸放鬆，思緒慢慢沉澱，在自然環境中感受片刻的安靜與專注，讓身心回到穩定、舒適的狀態，展開一段專屬於自己的療癒時光。<br>課程時間60分鐘。",
+            "btnText": "立即前往報名",
+            "registerLink": "register.html"
+          },
+          {
+            "image": "./images/sports/card2-3.jpg",
+            "title": "精油皮拉提斯",
+            "desc": "專業皮拉提斯老師: Anita小隻<br>由Anita小隻老師透過皮拉提斯的伸展與動作，引導練習者覺察身體的細微變化，並結合芳香植物萃取的精油，運用嗅吸、薰香與輕柔接觸的方式，讓香氣經由呼吸與肌膚自然吸收，協助協助釋放緊繃、延展身體線條，讓運動成為一場結合香氣與身體美感的優雅練習。<br>課程時間60分鐘。",
+            "btnText": "立即前往報名",
+            "registerLink": "register.html"
+          },
+          {
+            "image": "./images/sports/card2-4.jpg",
+            "title": "瑜珈提斯",
+            "desc": "專業皮拉提斯老師: Anita小隻<br>瑜珈提斯結合「瑜伽」的呼吸流動與「皮拉提斯」的肌肉伸展，主要訓練人體核心肌群。透過連續且重複性的動作，提升肌力訓練與身體活動度，慢慢讓身體增強力量，甚至能更進一步改善僵硬的肢體與不良姿勢，使身體更加穩定。<br>課程時間60分鐘。",
+            "btnText": "立即前往報名",
+            "registerLink": "register.html"
+          }
+        ]
+      },
+      {
+        "id": "sports-gift",
+        "bg": {
+          "desktop": "./images/sports/info3-bg.gif",
+          "mobile": "./images/sports/info3-bg-mb.gif"
+        },
+        "title": {
+          "desktop": "./images/sports/info3-title.png",
+          "mobile": "./images/sports/info3-title-mb.png"
+        },
+        "desc": "美力運動區提供600份野餐墊免費兌換，<br>歡迎民眾立即報名野餐活動，活動現場領取。",
+
+        "cards": [
+          {
+            "image": "./images/sports/card3-1.jpg",
+            "title": "野餐報名禮",
+            "desc": "活動特製野餐墊：設計以台北春季花卉為設計靈感，搭配淺黃色的主色，讓野餐墊輕鬆融入在自然草地環境中。<br>品牌好禮：敬請期待。",
+            "btnText": "立即前往報名",
+            "registerLink": "register.html"
+          },
+          {
+            "image": "",
+            "title": "野餐報名辦法",
+            "desc": "美力運動野餐區區提供600份野餐墊免費兌換，歡迎立即報名，活動現場各區報到處領取。",
+            "btnText": "立即前往報名",
+            "registerLink": "register.html"
+          }
+        ]
+      }
+    ]
+  },
+
+  "pets": {
+    "kv": {
+      "bg": {
+        "desktop": "./images/pets/kv-bg.gif",
+        "mobile": "./images/pets/kv-bg-mb.gif"
+      },
+      "title": {
+        "desktop": "./images/pets/kv-title.png",
+        "mobile": "./images/pets/kv-title-mb.png"
+      }
+    },
+    "intro": {
+      "text": "<span class='pc-p mb-p'>氣球泡泡秀表演 × 親子毛孩裝扮秀 × 限量野餐墊兌換</span><span class='pc-p mb-p'>童趣的互動表演、可愛的主題裝扮秀，<span class='mb-p'>讓大小朋友與毛孩共度笑聲滿滿的花季週末</span></span>",
+      "bg": {
+        "desktop": "./images/pets/intro-bg.gif",
+        "mobile": "./images/pets/intro-bg-mb.gif"
+      },
+      "cta": {
+        "text": "野餐報名連結",
+        "link": "register.html"
+      }
+    },
+    "schedule": {
+      "bg": {
+        "desktop": "./images/pets/schedule-bg.gif",
+        "mobile": "./images/pets/schedule-bg-mb.gif"
+      },
+      "title": {
+        "desktop": "./images/pets/schedule-title.png",
+        "mobile": "./images/pets/schedule-title-mb.png"
+      },
+      "image": {
+        "desktop": "./images/pets/schedule-img.gif",
+        "mobile": "./images/pets/schedule-img-mb.gif"
+      }
+    },
+    "infoSections": [
+      {
+        "id": "pets-show",
+        "bg": {
+          "desktop": "./images/pets/info1-bg.gif",
+          "mobile": "./images/pets/info1-bg-mb.gif"
+        },
+        "title": {
+          "desktop": "./images/pets/info1-title.png",
+          "mobile": "./images/pets/info1-title-mb.png"
+        },
+        "desc": "主題氣球秀與夢幻泡泡表演分別，<br>營造歡笑滿滿的親子毛孩野餐時光。",
+
+        "cards": [
+          {
+            "image": "./images/pets/card1-1.jpg",
+            "title": "氣球秀",
+            "desc": "色彩繽紛的氣球在歡笑中悄然變身！以花為主題的造型氣球秀，結合互動表演，讓氣球在歡樂氛圍中化作一朵朵夢幻花朵，帶領大小朋友走進充滿驚喜的時刻。從欣賞表演到參與，讓現場笑聲不斷、氣氛瞬間升溫，是最受親子喜歡的活動！<br>表演時間60分鐘。"
+          },
+          {
+            "image": "./images/pets/card1-2.jpg",
+            "title": "泡泡秀",
+            "desc": "泡泡承載著童年的純真記憶，七彩光影在空氣中流轉，彷彿帶人回到無憂的時光。本次演出邀請泡泡師以創意手法呈現泡泡表演，讓泡泡不只是吹出來，而是一場夢幻的視覺體驗。<br>表演時間60分鐘。"
+          }
+        ]
+      },
+      {
+        "id": "pets-kids",
+        "bg": {
+          "desktop": "./images/pets/info2-bg.gif",
+          "mobile": "./images/pets/info2-bg-mb.gif"
+        },
+        "title": {
+          "desktop": "./images/pets/info2-title.png",
+          "mobile": "./images/pets/info2-title-mb.png"
+        },
+        "desc": "以「粉色或白色」為主題的親子與毛孩裝扮秀，<br class='mbhide'>邀請全家大小與毛孩一同登台亮相，留下最時尚的紀念瞬間。",
+
+        "cards": [
+          {
+            "image": "./images/pets/card2-1.jpg",
+            "title": "親子裝扮秀",
+            "desc": "以粉色或白色為主題的親子扮裝秀，邀請爸爸媽媽與孩子一同走上舞台。活動以輕鬆的走秀形式進行，各組輪流登場，展現專屬家庭的穿搭巧思，讓野餐時光洋溢童趣與時尚感，留下溫馨難忘的春日家族回憶。<br>活動時間60分鐘。",
+            "btnText": "立即前往報名",
+            "registerLink": "register.html"
+          },
+          {
+            "image": "./images/pets/card2-2.jpg",
+            "title": "毛孩裝扮秀",
+            "desc": "以粉色或白色為主題的毛孩扮裝秀，邀請家人與毛孩一同走上舞台。活動以輕鬆的走秀形式進行，各組輪流登場，展現毛孩專屬的造型巧思與家庭風格，在歡樂氛圍中拉近家人與寵物之間的情感，為春日野餐留下可愛又具時尚感的春日回憶。<br>活動時間60分鐘。",
+            "btnText": "立即前往報名",
+            "registerLink": "register.html"
+          }
+        ]
+      },
+      {
+        "id": "pets-gift",
+        "bg": {
+          "desktop": "./images/pets/info3-bg.gif",
+          "mobile": "./images/pets/info3-bg-mb.gif"
+        },
+        "title": {
+          "desktop": "./images/pets/info3-title.png",
+          "mobile": "./images/pets/info3-title-mb.png"
+        },
+        "desc": "親子毛孩野餐區提供600份野餐墊免費兌換，<br>歡迎立即報名，活動現場各區報到處領取。",
+
+        "cards": [
+          {
+            "image": "./images/pets/card3-1.jpg",
+            "title": "野餐報名禮",
+            "desc": "活動特製野餐墊：設計以台北春季花卉為設計靈感，搭配淺黃色的主色，讓野餐墊輕鬆融入在自然草地環境中。<br>品牌好禮：敬請期待。",
+            "btnText": "立即前往報名",
+            "registerLink": "register.html"
+          },
+          {
+            "image": "",
+            "title": "野餐報名辦法",
+            "desc": "親子毛孩野餐區區提供600份野餐墊免費兌換，歡迎立即報名，活動現場各區報到處領取。",
+            "btnText": "立即前往報名",
+            "registerLink": "register.html"
+          }
+        ]
+      }
+    ]
+  }
+}
