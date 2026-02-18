@@ -37,7 +37,7 @@ include_once './common.php';
   <!-- <script type="text/javascript" src="js/rem.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js" integrity="sha512-jNDtFf7qgU0eH/+Z42FG4fw3w7DM/9zbgNPe3wfJlCylVDTT3IgKW5r92Vy9IHa6U50vyMz5gRByIu4YIXFtaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
- <body data-page="sports">
+<body data-page="run">
   <!-- wrapper start -->
   <div class="wrapper">
     <!-- Header / Nav（共用） -->
@@ -49,7 +49,7 @@ include_once './common.php';
     <div id="fixed-cta"></div>
 
     <!-- ===== 本頁內容開始 ===== -->
-    <main id="sports">
+    <main id="run">
         <!-- KV -->
         <section class="section-kv" data-page-kv data-kv-theme>
           <div class="kv-bg section-bg">
@@ -85,9 +85,9 @@ include_once './common.php';
           </div>
         </section>
 
-        <!-- 時程表 schedule -->
-        <section class="section-schedule" data-page-schedule>
-          <div class="schedule-bg section-bg">
+        <!-- rule -->
+        <section class="section-rule" data-page-rule>
+          <div class="rule-bg section-bg">
             <picture>
               <source media="(max-width: 750px)" data-bg-mobile />
               <img data-bg-desktop alt="">
@@ -95,44 +95,32 @@ include_once './common.php';
           </div>
 
           <div class="container">
-            <div class="schedule-title section-title" data-aos="fade-down" data-aos-duration="800">
+            <div class="rule-title section-title" data-aos="fade-down" data-aos-duration="800">
               <picture>
                 <source media="(max-width: 750px)" data-title-mobile />
                 <img data-title-desktop alt="">
               </picture>
             </div>
 
-            <div class="schedule-content" data-aos="fade-up" data-aos-duration="800">
-              <picture>
-                <source media="(max-width: 750px)" data-schedule-mobile />
-                <img data-schedule-desktop alt="">
-              </picture>
-            </div>
+            <!-- blocks render here -->
+            <div class="rule-blocks" data-aos="fade-up" data-aos-duration="800" data-rule-blocks></div>
           </div>
         </section>
+
 
         <!-- 圖文資訊區塊 info -->
         <section class="section-info" data-page-info>
-          <div class="info-bg section-bg">
-            <picture>
-              <source media="(max-width: 750px)" data-bg-mobile />
-              <img data-bg-desktop alt="">
-            </picture>
-          </div>
-
-          <div class="container">
-            <div class="info-title section-title" data-aos="fade-down" data-aos-duration="800">
-              <picture>
-                <source media="(max-width: 750px)" data-title-mobile />
-                <img data-title-desktop alt="">
-              </picture>
-            </div>
-
-            <p class="info-desc" data-aos="fade-up" data-aos-duration="800" data-desc></p>
-
-            <ul class="info-cards" data-aos="fade-up" data-aos-duration="800" data-cards></ul>
+          <div class="container info-inner" data-aos="fade-up" data-aos-duration="800">
+              <div class="info-title section-title" data-aos="fade-down" data-aos-duration="800">
+                <picture>
+                  <source media="(max-width: 750px)" data-title-mobile />
+                  <img data-title-desktop alt="">
+                </picture>
+              </div>
+              <ul class="info-cards small-cards" data-cards></ul>
           </div>
         </section>
+
       </main>
 
     <!-- FOOTER（共用） -->
@@ -154,6 +142,8 @@ include_once './common.php';
       <div class="popup-content">
         <div class="img">
           <img class="popup-img" alt="">
+          <!-- this page only -->
+          <img class="popup-logo" alt="">
         </div>
         <div class="txt">
           <h3 class="popup-title"></h3>

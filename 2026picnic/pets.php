@@ -31,7 +31,7 @@ include_once './common.php';
   <link rel="stylesheet" href="slick/slick-theme.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="scss/common.min.css">
-  <link rel="stylesheet" href="scss/picnic.min.css">
+  <link rel="stylesheet" href="scss/page.min.css">
   <!-- js -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <!-- <script type="text/javascript" src="js/rem.js"></script> -->
@@ -51,8 +51,8 @@ include_once './common.php';
     <!-- ===== 本頁內容開始 ===== -->
     <main id="pets">
       <!-- KV -->
-      <section class="picnic-kv" data-picnic-kv data-kv-theme>
-        <div class="kv-bg picnic-bg">
+      <section class="section-kv" data-page-kv data-kv-theme>
+        <div class="kv-bg section-bg">
           <picture>
             <source media="(max-width: 750px)" data-src-mobile />
             <img data-src-desktop alt="">
@@ -67,8 +67,8 @@ include_once './common.php';
       </section>
       
       <!-- 前言 intro -->
-      <section class="picnic-intro" data-picnic-intro>
-        <div class="intro-bg picnic-bg bottom">
+      <section class="section-intro" data-page-intro>
+        <div class="intro-bg section-bg bottom">
           <picture>
             <source media="(max-width: 750px)" data-bg-mobile />
             <img data-bg-desktop alt="">
@@ -86,8 +86,8 @@ include_once './common.php';
       </section>
 
       <!-- 時程表 schedule -->
-      <section class="picnic-schedule" data-picnic-schedule>
-        <div class="schedule-bg picnic-bg">
+      <section class="section-schedule" data-page-schedule>
+        <div class="schedule-bg section-bg">
           <picture>
             <source media="(max-width: 750px)" data-bg-mobile />
             <img data-bg-desktop alt="">
@@ -95,7 +95,7 @@ include_once './common.php';
         </div>
 
         <div class="container">
-          <div class="schedule-title picnic-title" data-aos="fade-down" data-aos-duration="800">
+          <div class="schedule-title section-title" data-aos="fade-down" data-aos-duration="800">
             <picture>
               <source media="(max-width: 750px)" data-title-mobile />
               <img data-title-desktop alt="">
@@ -112,8 +112,8 @@ include_once './common.php';
       </section>
 
       <!-- 圖文資訊區塊 info -->
-      <section class="picnic-info" data-picnic-info>
-        <div class="info-bg picnic-bg">
+      <section class="section-info" data-page-info>
+        <div class="info-bg section-bg">
           <picture>
             <source media="(max-width: 750px)" data-bg-mobile />
             <img data-bg-desktop alt="">
@@ -121,7 +121,7 @@ include_once './common.php';
         </div>
 
         <div class="container">
-          <div class="info-title picnic-title" data-aos="fade-down" data-aos-duration="800">
+          <div class="info-title section-title" data-aos="fade-down" data-aos-duration="800">
             <picture>
               <source media="(max-width: 750px)" data-title-mobile />
               <img data-title-desktop alt="">
@@ -170,7 +170,7 @@ include_once './common.php';
     </div>
   </div>
 
-  <script type="module" src="./js/init-picnic.js"></script>
+  <script type="module" src="./js/init-page.js"></script>
   <script type="text/javascript" src="js/jquery.easing.min.js"></script>
   <script type="text/javascript" src="js/aos.js"></script>
   <script>

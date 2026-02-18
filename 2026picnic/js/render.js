@@ -1,12 +1,15 @@
 // DOM 套資料
+
+/**
+ *  套共用
+ */
+
 // 共用工具
 function getValue(obj, path) {
   return path.split('.').reduce((o, k) => o?.[k], obj);
 }
 
-/**
- * 套語系文字
- */
+// 套語系文字
 export function renderI18n(data) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const keys = el.dataset.i18n.split('.');
@@ -26,10 +29,7 @@ export function renderLanguageSwitcher(lang) {
   en.classList.toggle('is-active', lang === 'en');
 }
 
-
-/**
- * 自動補 nav href（含 lang）
- */
+// 自動補 nav href（含 lang）
 export function renderNavLinks(lang) {
   const routes = {
     home: 'index.html',
@@ -37,7 +37,7 @@ export function renderNavLinks(lang) {
     sports: 'sports.html',
     pets: 'pets.html',
     market: 'market.html',
-    store: 'store.html',
+    run: 'run.html',
     pokemon: 'pokemon.html'
   };
 
@@ -50,9 +50,7 @@ export function renderNavLinks(lang) {
   });
 }
 
-/**
- * 套跑馬燈資料
- */
+// 套跑馬燈資料
 export function renderMarquee(data) {
   const textEl = document.querySelector('[data-marquee-text]');
   const linkEl = document.querySelector('[data-marquee-link]');
@@ -66,9 +64,7 @@ export function renderMarquee(data) {
   linkEl.href = marquee.link || '#';
 }
 
-/**
- *  套 footer 資料 
- */
+// 套 footer 資料 
 export function renderFooter(data, lang) {
   if (!data.footer) return;
 
@@ -156,9 +152,7 @@ export function renderFooter(data, lang) {
   }
 }
 
-/**
- *  套固定按鈕資料 
- */
+// 套固定按鈕資料 
 export function renderFixedBtn(data, lang) {
   if (!data.fixedBtn) return;
 
@@ -188,19 +182,17 @@ export function renderFixedBtn(data, lang) {
   }
 }
 
-
-/** 
- * 套INDEX about 區塊資料
+/**
+ *  套INDEX
  */
+// render 套INDEX about 區塊資料
 export function renderAbout(data) {
   const el = document.querySelector('[data-about-html]');
   if (!el || !data.about || !data.about.html) return;
   el.innerHTML = data.about.html;
 }
 
-/**
- * 套INDEX三大野餐區總時間表
- */
+// render 套INDEX三大野餐區總時間表資料
 export function renderTimetable(data, lang) {
   const imgContainer = document.querySelector('[data-timetable]');
   const ctaEl = document.querySelector('[data-timetable-cta]');
@@ -244,9 +236,7 @@ export function renderTimetable(data, lang) {
 }
 }
 
-/**
- * 套INDEX最新消息區塊資料
- */
+// render INDEX最新消息區塊資料
 export function renderNews(data, lang) {
   const listEl = document.querySelector('[data-news-list]');
   const moreBtn = document.querySelector('[data-news-more]');
@@ -333,8 +323,7 @@ export function renderNews(data, lang) {
   });
 }
 
-/** 套INDEX 交通資訊區塊資料
- */
+// render INDEX 交通資訊區塊資料
 export function renderAccess(data) {
   const container = document.querySelector('[data-access]');
   if (!container || !data.access || !Array.isArray(data.access.cards)) return;
@@ -377,4 +366,316 @@ export function renderAccess(data) {
     });
   });
 }
+
+// render內頁的kv資料
+export function renderPageKV(kv) {
+  const kvEl = document.querySelector('[data-page-kv]');
+  if (!kvEl || !kv) return;
+
+  kvEl.querySelector('[data-src-desktop]').src = kv.bg.desktop;
+  kvEl.querySelector('[data-src-mobile]').srcset = kv.bg.mobile;
+
+  kvEl.querySelector('[data-title-desktop]').src = kv.title.desktop;
+  kvEl.querySelector('[data-title-mobile]').srcset = kv.title.mobile;
+}
+
+// render內頁的intro資料
+export function renderIntro(intro, selector) {
+  const el = document.querySelector(selector);
+  if (!el || !intro) return;
+
+  el.querySelector('[data-bg-desktop]').src = intro.bg.desktop;
+  el.querySelector('[data-bg-mobile]').srcset = intro.bg.mobile;
+
+  const textEl = el.querySelector('[data-intro-text]');
+  if (textEl) textEl.innerHTML = intro.text;
+
+  const ctaEl = el.querySelector('[data-intro-cta]');
+  if (ctaEl) {
+    const hasCta = intro?.cta && typeof intro.cta.link === 'string' && intro.cta.link.trim() !== '';
+
+    if (hasCta) {
+      ctaEl.href = intro.cta.link;
+      // 如果你有 span.btn-text
+      const textEl = ctaEl.querySelector('.btn-text') || ctaEl.querySelector('[data-cta-text]');
+      if (textEl && intro.cta.text) textEl.textContent = intro.cta.text;
+
+      ctaEl.hidden = false;
+    } else {
+      ctaEl.hidden = true;
+      ctaEl.removeAttribute('href');
+    }
+  }
+}
+
+// render內頁的schedule資料
+export function renderSchedule(schedule, selector) {
+  const el = document.querySelector(selector);
+  if (!el || !schedule) return;
+
+  el.querySelector('[data-bg-desktop]').src = schedule.bg.desktop;
+  el.querySelector('[data-bg-mobile]').srcset = schedule.bg.mobile;
+
+  el.querySelector('[data-title-desktop]').src = schedule.title.desktop;
+  el.querySelector('[data-title-mobile]').srcset = schedule.title.mobile;
+
+  if (schedule.image) {
+    el.querySelector('[data-schedule-desktop]').src = schedule.image.desktop;
+    el.querySelector('[data-schedule-mobile]').srcset = schedule.image.mobile;
+  }
+}
+
+// render內頁的有popup的info資料
+let _popupEventsBound = false;
+export function renderInfoSections(sections, selector) {
+  const container = document.querySelector(selector);
+  if (!container || !Array.isArray(sections)) return;
+
+  const parent = container.parentNode;
+  const anchor = container.nextElementSibling;
+  if (!parent) return;
+
+  const popup = document.querySelector('[data-popup]');
+  if (!popup) return;
+
+  const popupImg = popup.querySelector('.popup-img');
+  const popupTitle = popup.querySelector('.popup-title');
+  const popupDesc = popup.querySelector('.popup-desc');
+  const popupCta = popup.querySelector('.popup-cta');
+  const popupLogo = popup.querySelector('.popup-logo');
+
+  function openPopup() {
+    popup.hidden = false;
+    requestAnimationFrame(() => popup.classList.add('is-active'));
+    document.body.classList.add('is-popup-open');
+  }
+
+  function closePopup() {
+    popup.classList.remove('is-active');
+    document.body.classList.remove('is-popup-open');
+    setTimeout(() => {
+      popup.hidden = true;
+    }, 300);
+  }
+
+  // popup close
+  if (!_popupEventsBound) {
+    popup.querySelectorAll('[data-popup-close]').forEach(btn => {
+      btn.addEventListener('click', closePopup);
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !popup.hidden) closePopup();
+    });
+    _popupEventsBound = true;
+  }
+
+  sections.forEach(section => {
+    const sectionEl = container.cloneNode(true);
+
+    if (section.id) sectionEl.id = section.id;
+
+    // 背景(非必填)
+    if (section.bg) {
+      const bgDesktop = sectionEl.querySelector('[data-bg-desktop]');
+      const bgMobile = sectionEl.querySelector('[data-bg-mobile]');
+      if (bgDesktop && section.bg.desktop) bgDesktop.src = section.bg.desktop;
+      if (bgMobile && section.bg.mobile) bgMobile.srcset = section.bg.mobile;
+    }
+
+    // title(非必填)
+    if (section.title) {
+      const titleDesktop = sectionEl.querySelector('[data-title-desktop]');
+      const titleMobile = sectionEl.querySelector('[data-title-mobile]');
+      if (titleDesktop && section.title.desktop) titleDesktop.src = section.title.desktop;
+      if (titleMobile && section.title.mobile) titleMobile.srcset = section.title.mobile;
+    }
+
+    // desc(非必填)
+    if (section.desc) {
+      const descEl = sectionEl.querySelector('[data-desc]');
+      if (descEl) descEl.innerHTML = section.desc;
+    }
+
+    // cards 容器
+    const cardsEl = sectionEl.querySelector('[data-cards]');
+    if (!cardsEl) {
+      // console.warn('renderInfoSections: missing [data-cards] in template:', selector);
+      parent.insertBefore(sectionEl, anchor);
+      return;
+    }
+
+    // market 純文字 title
+    if (section.textTitle) {
+      const textTitleEl = document.createElement('h3');
+      textTitleEl.className = 'info-text-title';
+
+      const span = document.createElement('span');
+      span.textContent = section.textTitle;
+
+      textTitleEl.appendChild(span);
+
+      // cardsEl
+      cardsEl.before(textTitleEl);
+    }
+
+    // 清空 cards
+    cardsEl.innerHTML = '';
+
+    const cards = Array.isArray(section.cards) ? section.cards : [];
+    const DEFAULT_CARD_IMAGE = './images/common/card-placeholder.png';
+
+    cards.forEach(card => {
+      const li = document.createElement('li');
+      li.className = 'info-card';
+
+      const imgSrc =
+        typeof card.image === 'string' && card.image.trim() !== ''
+          ? card.image
+          : DEFAULT_CARD_IMAGE;
+
+      // nation flag 圖
+      let nationHtml = '';
+      if (typeof card.nation === 'string' && card.nation.trim() !== '') {
+        const nation = card.nation.trim().toLowerCase();
+        const flagSrc = `./images/market/flag/flag-${nation}.png`;
+        nationHtml = `
+          <div class="nation">
+            <img src="${flagSrc}" alt="${nation}">
+          </div>
+        `;
+      }
+
+      li.innerHTML = `
+        ${nationHtml}
+        <div class="card-img">
+          <img src="${imgSrc}" alt="${card.title || ''}">
+        </div>
+        <h4 class="card-title">${card.title || ''}</h4>
+        <button class="card-more" aria-hidden="true">MORE</button>
+      `;
+
+      li.addEventListener('click', () => {
+        // 圖
+        if (popupImg) popupImg.src = imgSrc;
+
+        // logo（可選）
+        const popupLogo = popup.querySelector('.popup-logo');
+        if (popupLogo) {
+          const logoSrc = typeof card.logo === 'string' ? card.logo.trim() : '';
+          if (logoSrc) {
+            popupLogo.src = logoSrc;
+            popupLogo.hidden = false;
+          } else {
+            popupLogo.hidden = true;
+            popupLogo.removeAttribute('src');
+          }
+        }
+
+        // 文字
+        if (popupTitle) popupTitle.textContent = card.title || '';
+        if (popupDesc) popupDesc.innerHTML = card.desc || '';
+
+        // CTA
+        const hasRegister = typeof card.registerLink === 'string' && card.registerLink.trim() !== '';
+        if (popupCta) {
+          if (hasRegister) {
+            popupCta.href = card.registerLink;
+
+            const btnTextEl = popupCta.querySelector('.btn-text');
+            if (btnTextEl && card.btnText) btnTextEl.textContent = card.btnText;
+
+            popupCta.hidden = false;
+          } else {
+            popupCta.hidden = true;
+            popupCta.removeAttribute('href');
+          }
+        }
+
+        openPopup();
+      });
+
+
+      cardsEl.appendChild(li);
+    });
+
+    parent.insertBefore(sectionEl, anchor);
+  });
+
+  // 移除 template
+  container.remove();
+}
+
+
+// render內頁的marketMap資料
+export function renderMarketMap(map, selector) {
+  const el = document.querySelector(selector);
+  if (!el || !map) return;
+
+  el.querySelector('[data-title-desktop]').src = map.title.desktop;
+  el.querySelector('[data-title-mobile]').srcset = map.title.mobile;
+
+  if (map.image) {
+    el.querySelector('[data-map-desktop]').src = map.image.desktop;
+    el.querySelector('[data-map-mobile]').srcset = map.image.mobile;
+  }
+}
+
+// render內頁的runRule資料
+export function renderRule(rule, selector = '[data-rule]') {
+  const root = document.querySelector(selector);
+  if (!root || !rule) return;
+
+  // bg
+  const bgDesktop = root.querySelector('[data-bg-desktop]');
+  const bgMobile = root.querySelector('[data-bg-mobile]');
+  if (bgDesktop && rule.bg?.desktop) bgDesktop.src = rule.bg.desktop;
+  if (bgMobile && rule.bg?.mobile) bgMobile.srcset = rule.bg.mobile;
+
+  // title
+  const titleDesktop = root.querySelector('[data-title-desktop]');
+  const titleMobile = root.querySelector('[data-title-mobile]');
+  if (titleDesktop && rule.title?.desktop) titleDesktop.src = rule.title.desktop;
+  if (titleMobile && rule.title?.mobile) titleMobile.srcset = rule.title.mobile;
+
+  // blocks
+  const blocksWrap = root.querySelector('[data-rule-blocks]');
+  if (!blocksWrap) return;
+
+  blocksWrap.innerHTML = '';
+
+  const blocks = Array.isArray(rule.blocks) ? rule.blocks : [];
+  blocks.forEach(block => {
+    const blockEl = document.createElement('div');
+    blockEl.className = 'rule-block';
+    if (block.id) blockEl.id = block.id;
+
+    // subtitle (optional)
+    let subtitleHtml = '';
+    if (block.subtitle?.desktop || block.subtitle?.mobile) {
+      const d = block.subtitle?.desktop || '';
+      const m = block.subtitle?.mobile || '';
+      subtitleHtml = `
+        <div class="rule-subtitle">
+          <picture>
+            ${m ? `<source media="(max-width: 750px)" srcset="${m}">` : ''}
+            ${d ? `<img src="${d}" alt="">` : `<img alt="">`}
+          </picture>
+        </div>
+      `;
+    }
+
+    // content (HTML)
+    const contentHtml = typeof block.contentHtml === 'string' ? block.contentHtml : '';
+
+    blockEl.innerHTML = `
+      ${subtitleHtml}
+      <div class="rule-content">${contentHtml}</div>
+    `;
+
+    blocksWrap.appendChild(blockEl);
+  });
+}
+
+
+
 
