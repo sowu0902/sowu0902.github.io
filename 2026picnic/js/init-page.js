@@ -5,17 +5,14 @@ import {
   renderNavLinks,
   renderMarquee,
   renderFooter,
-  renderFixedBtn
+  renderFixedBtn,
+  renderPageKV,
+  renderIntro,
+  renderSchedule,
+  renderInfoSections,
+  renderMarketMap,
+  renderRule
 } from './render.js';
-import {
-  renderPicnicKV,
-  renderPicnicIntro,
-  renderPicnicSchedule,
-  renderPicnicInfoSections,
-  renderPicnicIntro2,
-  renderPicnicSchedule2,
-  renderPicnicInfoSections2
-} from './render-picnic.js';
 
 
 const page = document.body.dataset.page; // coffee / sports / pets
@@ -85,11 +82,11 @@ async function init() {
 
   // ② JSON
   const common = await loadJSON(`data/common/common.${lang}.json`);
-  const picnicAll = await loadJSON(`data/pages/picnic.${lang}.json`);
-  const pageData = picnicAll?.[page];
+  const pageAll = await loadJSON(`data/pages/page.${lang}.json`);
+  const pageData = pageAll?.[page];
 
   if (!pageData) {
-    console.warn(`No picnic data for page: ${page}`);
+    console.warn(`No data for page: ${page}`);
     return;
   }
 
@@ -101,13 +98,15 @@ async function init() {
   renderFooter(common, lang);
   renderFixedBtn(common, lang);
 
-  renderPicnicKV(pageData.kv);
-  renderPicnicIntro(pageData.intro);
-  renderPicnicSchedule(pageData.schedule);
-  renderPicnicInfoSections(pageData.infoSections);
-  renderPicnicIntro2(pageData.intro2);
-  renderPicnicSchedule2(pageData.schedule2);
-  renderPicnicInfoSections2(pageData.infoSections2);
+  renderPageKV(pageData.kv);
+  renderIntro(pageData.intro, '[data-page-intro]');
+  renderSchedule(pageData.schedule, '[data-page-schedule]');
+  renderInfoSections(pageData.infoSections, '[data-page-info]');
+  renderIntro(pageData.intro2, '[data-page-intro2]');
+  renderSchedule(pageData.schedule2, '[data-page-schedule2]');
+  renderInfoSections(pageData.infoSections2, '[data-page-info2]');
+  renderMarketMap(pageData.map, '[data-page-map]');
+  renderRule(pageData.rule, '[data-page-rule]');
 
   // 最後再跑頁面文字 i18n
   renderI18n(pageData);
