@@ -1,11 +1,11 @@
 {
   "nav": {
     "home": "Home",
-    "coffee": "Coffee Party Area & Main Stage",
-    "sports": "Fitness Picnic Area",
-    "pets": "Family & Pet Picnic Area",
-    "market": "International Market Area",
-    "store": "Flower Companion Partner Stores",
+    "coffee": "Coffee Party & Main Stage",
+    "sports": "Fitness Picnic",
+    "pets": "Family & Pet Picnic",
+    "market": "International Market",
+    "run": "Picnic Run",
     "pokemon": "Pokemon GO"
   },
   "marquee": [
