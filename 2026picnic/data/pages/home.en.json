@@ -1,17 +1,17 @@
 {
   "about": {
-    "html": "<p>coming soon</p>"
+    "html": "<p>In March, during the flower season, the 2026 Taipei Floral Picnic will be held in Daan Park, featuring three themed picnic areas and an international specialties market.</p><p>The celebration will feature trendy \"Coffee Raves,\" rejuvenating  \"Grassland Therapy Activities,\" \"Creative Dress-Up Shows\" bringing parents, kids, and family pets together, and exciting main stage performances.</p><p>Another event highlight will be a crossover collaboration with the globally popular mobile game Pokémon GO, with exciting activities such as dress-up photo opportunities, Pikachu meet-and-greets, and Pokémon GO gift giveaways. Come and join us!</p><p>Register for the picnic and receive one of 2,000 limited-edition specially crafted picnic mats -- available only while supplies last!</p><p>We warmly invite you to bring your family and friends to this grand picnic party, to enjoy this romantic and trendy springtime feast of the senses regaled by the fragrance of flowers.</p>"
   },
   "timetable": {
     "images": {
       "desktop": [
         {
           "src": "./images/index/timetable-DAY1.png",
-          "alt": "三大野餐區總時間表 DAY1"
+          "alt": "ACTIVITIES & EVENTS SCHEDULES DAY1"
         },
         {
           "src": "./images/index/timetable-DAY2.png",
-          "alt": "三大野餐區總時間表 DAY2"
+          "alt": "ACTIVITIES & EVENTS SCHEDULES DAY2"
         }
       ],
       "mobile": [
@@ -80,8 +80,8 @@
       {
         "id": "map",
         "titleImage": {
-          "desktop": "./images/index/access-h3a.png",
-          "mobile": "./images/index/access-h3a-mb.png"
+          "desktop": "./images/index/access-h3a-en.png",
+          "mobile": "./images/index/access-h3a-en-mb.png"
         },
         "contentImage": {
           "desktop": "./images/index/access-map.png",
@@ -92,8 +92,8 @@
       {
         "id": "traffic",
         "titleImage": {
-          "desktop": "./images/index/access-h3b.png",
-          "mobile": "./images/index/access-h3b-mb.png"
+          "desktop": "./images/index/access-h3b-en.png",
+          "mobile": "./images/index/access-h3b-en-mb.png"
         },
         "contentImage": {
           "desktop": "./images/index/access-traffic.png",

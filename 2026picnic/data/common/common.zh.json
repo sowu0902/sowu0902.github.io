@@ -8,10 +8,16 @@
     "run": "花伴野餐跑咖",
     "pokemon": "Pokemon GO"
   },
-  "marquee": {
-    "text": "活動快訊活動快訊活動快訊活動快訊，活動快訊活動快訊活動快訊。",
-    "link": "#"
-  },
+  "marquee": [
+    {
+      "text": "活動快訊1活動快訊1活動快訊1活動快訊1",
+      "link": "#"
+    },
+    {
+      "text": "活動快訊2活動快訊2活動快訊2活動快訊2活動快訊2活動快訊2活動快訊2",
+      "link": "https://www.google.com/"
+    }
+  ],
   "fixedBtn": {
     "route": "register",
     "images": {
@@ -23,6 +29,7 @@
     "logos": [
       {
         "title": "主辦單位",
+        "id": "organizer",
         "items": [
           {
             "name": "臺北市政府觀光傳播局",
@@ -33,6 +40,7 @@
       },
       {
         "title": "執行單位",
+        "id": "executor",
         "items": [
           {
             "name": "HEARST TAIWAN",
@@ -43,6 +51,7 @@
       },
       {
         "title": "合作單位",
+        "id": "partner",
         "items": [
           {
             "name": "臺北市政府工務局公園路燈工程管理處",
@@ -57,12 +66,68 @@
         ]
       },
       {
-        "title": "贊助單位",
+        "title": "協辦單位",
+        "id": "co-organizer",
+        "type": "text",
         "items": [
           {
-            "name": "",
-            "logo": "./images/common/logo_blank.png",
-            "url": "#"
+            "name": "臺北市動物保護處"
+          },
+          {
+            "name": "臺北市大安區公所及里辦公處"
+          },
+          {
+            "name": "臺北市中正區公所及里辦公處"
+          },
+          {
+            "name": "臺北市永康商圈"
+          },
+          {
+            "name": "臺北市公館商圈"
+          },
+          {
+            "name": "臺北市師大龍泉商圈"
+          }
+        ]
+      },
+      {
+        "title": "贊助單位",
+        "id": "sponsor",
+        "items": [
+          {
+            "name": "ELLE",
+            "logo": "./images/common/logo_elle.png",
+            "url": "https://www.elle.com/tw/"
+          },
+          {
+            "name": "GA黃金甲",
+            "logo": "./images/common/logo_ga.png",
+            "url": "https://www.galife.com.tw/"
+          },
+          {
+            "name": "NAKED 裸肌",
+            "logo": "./images/common/logo_naked.png",
+            "url": "https://www.naked-protein.com/"
+          },
+          {
+            "name": "Ora2",
+            "logo": "./images/common/logo_ora2.png",
+            "url": "https://www.ora2.com.tw/"
+          },
+          {
+            "name": "森仕 Dibaq Sense Taiwan",
+            "logo": "./images/common/logo_sense.png",
+            "url": "https://www.facebook.com/DibaqSense.tw/"
+          },
+          {
+            "name": "Vegan Joy",
+            "logo": "./images/common/logo_veganjoy.png",
+            "url": "https://veganjoy.91app.com/"
+          },
+          {
+            "name": "Women's Health",
+            "logo": "./images/common/logo_wh.png",
+            "url": "https://www.womenshealthmag.com/tw/"
           }
         ]
       }
