@@ -110,6 +110,11 @@
             "url": "https://www.naked-protein.com/"
           },
           {
+            "name": "not for hoomans",
+            "logo": "./images/common/logo_n4h.png",
+            "url": "https://www.n4h.life/"
+          },
+          {
             "name": "Ora2",
             "logo": "./images/common/logo_ora2.png",
             "url": "https://www.ora2.com.tw/"

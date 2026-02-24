@@ -45,9 +45,6 @@ include_once './common.php';
     <!-- 跑馬燈（共用） -->
     <div id="marquee"></div>
 
-    <!-- 浮動報名按鈕（共用） -->
-    <div id="fixed-cta"></div>
-
     <!-- ===== 本頁內容開始 ===== -->
     <main id="market">
         <!-- KV -->

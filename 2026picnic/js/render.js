@@ -94,7 +94,7 @@ export function renderMarquee(data) {
   // 可選：依內容長度調速度（避免字很少時太慢、字很多時太快）
   requestAnimationFrame(() => {
     const halfWidth = track.scrollWidth / 2; // 一份內容寬度
-    const pxPerSecDesktop = 90;
+    const pxPerSecDesktop = 60;
     const pxPerSecMobile = 60;
 
     const durationDesktop = Math.max(10, Math.round(halfWidth / pxPerSecDesktop));
