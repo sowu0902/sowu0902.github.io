@@ -157,7 +157,7 @@ include_once './common.php';
         </div>
         <div class="txt">
           <h3 class="popup-title"></h3>
-          <p class="popup-desc"></p>
+          <div class="popup-desc"></div>
 
           <a class="popup-cta btn-primary" target="_blank">
             <span class="btn-text" data-i18n="cta.register">立即前往報名</span>

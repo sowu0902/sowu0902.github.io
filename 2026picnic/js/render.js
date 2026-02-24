@@ -27,6 +27,13 @@ export function renderLanguageSwitcher(lang) {
 
   zh.classList.toggle('is-active', lang === 'zh');
   en.classList.toggle('is-active', lang === 'en');
+
+  // 把語系狀態掛到 html，讓 CSS 可針對語系覆寫
+  const root = document.documentElement; // <html>
+  root.dataset.lang = lang;              // <html data-lang="en">
+  root.classList.toggle('lang-zh', lang === 'zh');
+  root.classList.toggle('lang-en', lang === 'en');
+  root.setAttribute('lang', lang === 'zh' ? 'zh-Hant' : 'en');
 }
 
 // 自動補 nav href（含 lang）
@@ -52,16 +59,51 @@ export function renderNavLinks(lang) {
 
 // 套跑馬燈資料
 export function renderMarquee(data) {
-  const textEl = document.querySelector('[data-marquee-text]');
-  const linkEl = document.querySelector('[data-marquee-link]');
+  const items = data?.marquee;
+  if (!Array.isArray(items) || items.length === 0) return;
 
-  if (!textEl || !linkEl) return;
+  const track = document.querySelector('[data-marquee-track]');
+  if (!track) return;
 
-  const marquee = data.marquee;
-  if (!marquee || !marquee.text) return;
+  // 避免重複渲染
+  track.innerHTML = '';
 
-  textEl.textContent = marquee.text;
-  linkEl.href = marquee.link || '#';
+  const makeItem = (item) => {
+    const a = document.createElement('a');
+    a.className = 'marquee-item';
+    a.href = item.link || '#';
+    a.textContent = item.text || '';
+    // 如果你想支援新開視窗，可在 json 加 target
+    if (item.target) {
+      a.target = item.target;
+      if (item.target === '_blank') a.rel = 'noopener noreferrer';
+    }
+    return a;
+  };
+
+  // 第一份
+  const frag1 = document.createDocumentFragment();
+  items.forEach((it) => frag1.appendChild(makeItem(it)));
+  track.appendChild(frag1);
+
+  // 第二份（無縫）
+  const frag2 = document.createDocumentFragment();
+  items.forEach((it) => frag2.appendChild(makeItem(it)));
+  track.appendChild(frag2);
+
+  // 可選：依內容長度調速度（避免字很少時太慢、字很多時太快）
+  requestAnimationFrame(() => {
+    const halfWidth = track.scrollWidth / 2; // 一份內容寬度
+    const pxPerSecDesktop = 90;
+    const pxPerSecMobile = 60;
+
+    const durationDesktop = Math.max(10, Math.round(halfWidth / pxPerSecDesktop));
+    const durationMobile = Math.max(8, Math.round(halfWidth / pxPerSecMobile));
+
+    // 用 CSS 變數丟給 SCSS 裡的 var()
+    track.style.setProperty('--marquee-duration', `${durationDesktop}s`);
+    track.style.setProperty('--marquee-duration-m', `${durationMobile}s`);
+  });
 }
 
 // 套 footer 資料 
@@ -76,40 +118,61 @@ export function renderFooter(data, lang) {
    * =============================== */
   if (logoContainer && Array.isArray(data.footer.logos)) {
     logoContainer.innerHTML = data.footer.logos
-      .map(group => `
-        <div class="footer-logo-group">
-          <h3 class="footer-logo-title">${group.title}</h3>
-          <ul class="footer-logo-list">
-            ${group.items
-              .map(item => {
-                // 有連結 → 包 a
-                if (item.url) {
+      .map(group => {
+
+        // 如果是純文字類型
+        if (group.type === 'text') {
+          const names = group.items
+            .map((item, index) => {
+              const isLast = index === group.items.length - 1;
+
+              return `<span class="footer-text-item">${item.name}${!isLast ? '、' : ''}</span>`;
+            })
+            .join('');
+
+          return `
+            <div class="footer-logo-group footer-logo-group--text ${group.id ? `footer-logo-group--${group.id}` : ''}">
+              <h3 class="footer-logo-title">${group.title}</h3>
+              <p class="footer-logo-text">${names}</p>
+            </div>
+          `;
+        }
+
+        // 預設：原本的 logo 圖片組
+        return `
+          <div class="footer-logo-group ${group.id ? `footer-logo-group--${group.id}` : ''}">
+            <h3 class="footer-logo-title">${group.title}</h3>
+            <ul class="footer-logo-list">
+              ${group.items
+                .map(item => {
+                  if (item.url) {
+                    return `
+                      <li class="footer-logo-item">
+                        <a
+                          href="${item.url}"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img src="${item.logo}" alt="${item.name}">
+                        </a>
+                      </li>
+                    `;
+                  }
+
                   return `
                     <li class="footer-logo-item">
-                      <a
-                        href="${item.url}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img src="${item.logo}" alt="${item.name}">
-                      </a>
+                      <img src="${item.logo}" alt="${item.name}">
                     </li>
                   `;
-                }
-
-                // 沒連結 → 只放 img
-                return `
-                  <li class="footer-logo-item">
-                    <img src="${item.logo}" alt="${item.name}">
-                  </li>
-                `;
-              })
-              .join('')}
-          </ul>
-        </div>
-      `)
+                })
+                .join('')}
+            </ul>
+          </div>
+        `;
+      })
       .join('');
   }
+
 
   /* ===============================
    * 友善連結（含 icon）
@@ -387,6 +450,12 @@ export function renderIntro(intro, selector) {
   el.querySelector('[data-bg-desktop]').src = intro.bg.desktop;
   el.querySelector('[data-bg-mobile]').srcset = intro.bg.mobile;
 
+  // title(非必填)
+  const titleDesktop = el.querySelector('[data-title-desktop]');
+  const titleMobile = el.querySelector('[data-title-mobile]');
+  if (titleDesktop && intro.title?.desktop) titleDesktop.src = intro.title.desktop;
+  if (titleMobile && intro.title?.mobile) titleMobile.srcset = intro.title.mobile;
+
   const textEl = el.querySelector('[data-intro-text]');
   if (textEl) textEl.innerHTML = intro.text;
 
@@ -442,7 +511,7 @@ export function renderInfoSections(sections, selector) {
   const popupTitle = popup.querySelector('.popup-title');
   const popupDesc = popup.querySelector('.popup-desc');
   const popupCta = popup.querySelector('.popup-cta');
-  const popupLogo = popup.querySelector('.popup-logo');
+  // const popupLogo = popup.querySelector('.popup-logo');
 
   function openPopup() {
     popup.hidden = false;
