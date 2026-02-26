@@ -17,8 +17,8 @@
         "mobile": "./images/coffee/intro-bg-mb.gif"
       },
       "cta": {
-        "text": "野餐報名連結",
-        "link": "register.html"
+        "text": "按我預約報名",
+        "link": "https://www.accupass.com/event/2602090323411223645010"
       }
     },
     "schedule": {
@@ -83,22 +83,22 @@
             "image": "./images/coffee/card2-1.jpg",
             "title": "花尚顏繪體驗",
             "desc": "<p>在花香環繞的野餐現場，插畫師將以繪畫方式，捕捉報名者當下的神情、氣質與個人特色，呈現獨一無二專屬似顏繪作品。創作過程中融入花卉元素，將春日記憶保留於畫紙上，讓您留下值得珍藏的紀念畫像。</p><ul><li>免費報名，採線上預約，每小時20個名額，每日2個時段，共40個名額。免費報名參加。</li><li>活動開始前30分鐘開放報到，請民眾出示報名成功信件QRcode完成報到。依照工作人員指示拍照後，於指定時間回來領取顏繪作品。若超過活動報名體驗時間，視同放棄報名資格。</li></ul>",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090323411223645010"
           },
           {
             "image": "./images/coffee/card2-2.jpg",
             "title": "水泥六角擴香花盤",
             "desc": "<p>插花的時刻總讓人特別療癒，將索拉花插在六角花盤上，搭配進口精油，將香氣輕輕滴在花上，家裡立刻瀰漫著自己喜歡的味道，不只能當作漂亮的盆花擺飾，經過時還能聞到散發出來淡淡香氣，療癒又舒心。</p><ul><li>免費報名，採線上預約，每小時20個名額，每日1個時段，共20個名額。</li><li>課程時間90分鐘，免費報名參加。作品為示意圖，以現場提供材料為準。</li><li>活動開始前30分鐘開放報到，請民眾出示報名成功信件QRcode完成報到。若超過活動報名體驗時間，視同放棄報名資格。</li></ul>",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090323411223645010"
           },
           {
             "image": "./images/coffee/card2-3.jpg",
             "title": "鐵罐乾燥花香氛蠟燭",
             "desc": "<p>以天然大豆蠟搭配香氛精油製作，搭配不同的乾燥花材與精緻鐵罐，呈現獨特而細緻的美感。精油融入蠟體後，即使不點燃，也能自然散發香氣，讓空間瀰漫柔和的芳香，還能作為點綴家的收藏品，為日常生活增添療癒心靈的質感。</p><ul><li>免費報名，採線上預約，每小時20個名額，每日1個時段，共20個名額。</li><li>課程時間90分鐘，免費報名參加。作品為示意圖，以現場提供材料為準。</li><li>活動開始前30分鐘開放報到，請民眾出示報名成功信件QRcode完成報到。若超過活動報名體驗時間，視同放棄報名資格。</li></ul>",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090323411223645010"
           }
         ]
       },
@@ -119,23 +119,19 @@
             "image": "./images/coffee/card3-1.jpg",
             "title": "野餐報名禮",
             "desc": "<ul><li>活動特製野餐墊：設計以臺北春季花卉為設計靈感，搭配淺黃色的主色，讓野餐墊輕鬆融入在自然草地環境中。</li><li>兌換辦法：咖啡派對野餐區提供活動特製野餐墊免費兌換，歡迎立即報名，活動現場各區報到處領取。</li></ul>",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090212451166853258"
           },
           {
             "image": "",
             "title": "品牌好禮兌換",
-            "desc": "coming soon",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "desc": "coming soon"
           }
           ,
           {
             "image": "",
             "title": "品牌好禮兌換",
-            "desc": "coming soon",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "desc": "coming soon"
           }
         ]
       }
@@ -236,8 +232,8 @@
         "mobile": "./images/sports/intro-bg-mb.gif"
       },
       "cta": {
-        "text": "野餐報名連結",
-        "link": "register.html"
+        "text": "按我預約報名",
+        "link": "https://www.accupass.com/event/2602090328182068972664"
       }
     },
     "schedule": {
@@ -296,29 +292,29 @@
             "image": "./images/sports/card2-1.jpg",
             "title": "哈達瑜珈",
             "desc": "<p>專業瑜伽老師:咪咪</p><p>哈達瑜伽是最傳統且普遍的瑜伽形式，以穩定、緩慢的體式搭配規律呼吸，引導身心逐步放鬆。課程著重基礎體式與呼吸的連結，培養身體覺察與專注力，讓能量自然流動。溫和且循序漸進的練習方式，特別適合初學者入門。</p><p>在大自然中練習瑜伽，能讓身心更深層放鬆。於綠意與清新空氣中伸展呼吸，有助舒緩壓力、穩定情緒，讓身體與自然節奏同步，回歸自在平衡的狀態。</p><p>免費報名，採線上預約，總共20個名額。課程時間60分鐘。</p><p>活動開始前60分鐘「美力運動野餐區」開放報到，此課程只開放給線上報名成功的民眾。若超過報名體驗時間，視同放棄此報名資格。</p><p>建議穿著適合運動的衣物並自備毛巾。主辦單位提供瑜珈墊。</p><p>若活動遇到下雨，請參考活動官網或「台北旅遊網」官方社群通知至雨備地點。</p>",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090328182068972664"
           },
           {
             "image": "./images/sports/card2-2.jpg",
             "title": "頌缽水晶缽瑜珈",
             "desc": "<p>專業瑜伽老師:咪咪</p><p>由專業瑜珈老師帶領的頌缽、水晶缽瑜伽，結合溫和的身體伸展與水晶缽清澈悠長的聲音，引導呼吸與動作自然流動。透過聲波的共振，身體逐漸放鬆，思緒慢慢沉澱，在自然環境中感受片刻的安靜與專注，讓身心回到穩定、舒適的狀態，展開一段專屬於自己的療癒時光。</p><p>免費報名，採線上預約，總共20個名額。課程時間60分鐘。內文活動開始前60分鐘「美力運動野餐區」開放報到，此課程只開放給線上報名成功的民眾。若超過報名體驗時間，視同放棄此報名資格。</p><p>建議穿著適合運動的衣物並自備毛巾。主辦單位提供瑜珈墊。</p><p>若活動遇到下雨，請參考活動官網或「台北旅遊網」官方社群通知至雨備地點。</p>",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090328182068972664"
           },
           {
             "image": "./images/sports/card2-3.jpg",
             "title": "精油皮拉提斯",
             "desc": "<p>專業皮拉提斯老師: Anita小隻</p><p>由專業老師帶領透過皮拉提斯的伸展與動作，引導練習者覺察身體的細微變化，並結合芳香植物萃取的精油，運用嗅吸、薰香與輕柔接觸的方式，讓香氣經由呼吸與肌膚自然吸收，協助協助釋放緊繃、延展身體線條，讓運動成為一場結合香氣與身體美感的優雅練習。</p><p>免費報名，採線上預約，總共20個名額。課程時間60分鐘。</p><p>活動開始前60分鐘「美力運動野餐區」開放報到，此課程只開放給線上報名成功的民眾。若超過報名體驗時間，視同放棄此報名資格。</p><p>建議穿著適合運動的衣物並自備毛巾。主辦單位提供瑜珈墊。</p><p>若活動遇到下雨，請參考活動官網或「台北旅遊網」官方社群通知至雨備地點。</p>",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090328182068972664"
           },
           {
             "image": "./images/sports/card2-4.jpg",
             "title": "瑜珈提斯",
             "desc": "<p>專業皮拉提斯老師: Anita小隻</p><p>瑜伽提斯結合「瑜伽」的呼吸流動與「皮拉提斯」的肌肉伸展，主要訓練人體核心肌群。透過連續且重複性的動作，提升肌力訓練與身體活動度，慢慢讓身體增強力量，甚至能更進一步改善僵硬的肢體與不良姿勢，使身體更加穩定。</p><p>免費報名，採線上預約，總共20個名額。課程時間60分鐘。</p><p>活動開始前60分鐘「美力運動野餐區」開放報到，此課程只開放給線上報名成功的民眾。若超過報名體驗時間，視同放棄此報名資格。</p><p>建議穿著適合運動的衣物與毛巾。主辦單位會提供瑜珈墊。</p><p>若活動遇到下雨，請參考活動官網或「台北旅遊網」官方社群通知至雨備地點。</p>",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090328182068972664"
           }
         ]
       },
@@ -339,22 +335,18 @@
             "image": "./images/sports/card3-1.jpg",
             "title": "野餐報名禮",
             "desc": "<ul><li>活動特製野餐墊：設計以臺北春季花卉為設計靈感，搭配淺黃色的主色，讓野餐墊輕鬆融入在自然草地環境中。</li><li>兌換辦法：美力運動野餐區提供野餐墊免費兌換，歡迎立即報名，活動現場各區報到處領取。</li></ul>。",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090212451166853258"
           },
           {
             "image": "",
             "title": "品牌好禮兌換",
-            "desc": "coming soon",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "desc": "coming soon"
           },
           {
             "image": "",
             "title": "品牌好禮兌換",
-            "desc": "coming soon",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "desc": "coming soon"
           }
         ]
       }
@@ -379,8 +371,8 @@
         "mobile": "./images/pets/intro-bg-mb.gif"
       },
       "cta": {
-        "text": "野餐報名連結",
-        "link": "register.html"
+        "text": "按我預約報名",
+        "link": "https://www.accupass.com/event/2602090359091463058704"
       }
     },
     "schedule": {
@@ -440,15 +432,15 @@
             "image": "./images/pets/card2-1.jpg",
             "title": "親子裝扮秀",
             "desc": "<p>以粉色或白色為主題的親子扮裝秀，邀請爸爸媽媽與孩子一同走上舞台。活動以輕鬆的走秀形式進行，各組輪流登場，展現專屬家庭的穿搭巧思，讓野餐時光洋溢童趣與時尚感，留下溫馨難忘的春日家族回憶。</p><p>免費報名，採線上預約，總共20個名額。</p><p>活動辦法：</p><ol><li>活動開始前 1 小時開放報到。</li><li>請出示報名 QR Code，由現場工作人員核對並說明走秀流程。</li></ol>",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090359091463058704"
           },
           {
             "image": "./images/pets/card2-2.jpg",
             "title": "毛孩裝扮秀",
             "desc": "<p>以粉色或白色為主題的毛孩扮裝秀，邀請家人與毛孩一同走上舞台。活動以輕鬆的走秀形式進行，各組輪流登場，展現毛孩專屬的造型巧思與家庭風格，在歡樂氛圍中拉近家人與寵物之間的情感，為春日野餐留下可愛又具時尚感的春日回憶。</p><p>免費報名，採線上預約，總共20個名額。</p><p>活動辦法：</p><ol><li>活動開始前 1 小時開放報到。</li><li>請出示報名 QR Code，由現場工作人員核對並說明走秀流程。</li></ol>",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090359091463058704"
           }
         ]
       },
@@ -469,22 +461,18 @@
             "image": "./images/pets/card3-1.jpg",
             "title": "野餐報名禮",
             "desc": "<ul><li>活動特製野餐墊：設計以臺北春季花卉為設計靈感，搭配淺黃色的主色，讓野餐墊輕鬆融入在自然草地環境中。</li><li>兌換辦法：親子毛孩野餐區提供野餐墊免費兌換，歡迎立即報名，活動現場各區報到處領取。</li></ul>",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090212451166853258"
           },
           {
             "image": "",
             "title": "品牌好禮兌換",
-            "desc": "coming soon",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "desc": "coming soon"
           },
           {
             "image": "",
             "title": "品牌好禮兌換",
-            "desc": "coming soon",
-            "btnText": "立即前往報名",
-            "registerLink": "register.html"
+            "desc": "coming soon"
           }
         ]
       }
@@ -848,5 +836,34 @@
         ]
       }
     ]
+  },
+
+  "pokemon": {
+    "kv": {
+      "bg": {
+        "desktop": "./images/pokemon/kv-bg.gif",
+        "mobile": "./images/pokemon/kv-bg-mb.gif"
+      },
+      "title": {
+        "desktop": "./images/pokemon/kv-title.png",
+        "mobile": "./images/pokemon/kv-title-mb.png"
+      }
+    },
+    "intro": {
+      "title": {
+        "desktop": "./images/pokemon/intro-title.png",
+        "mobile": "./images/pokemon/intro-title-mb.png"
+      },
+      "text": "<span class='pc-p mb-p sub-title'>親愛的訓練家們，<br>準備好與「戴著花飾的皮卡丘」一起春遊臺北了嗎？</span><span class='pc-p mb-p'>2026年3月28日至4月6日，快來臺北市大安森林公園與寶可夢們一起成受春天的氣息吧！<span class='pc-p'>除了有活動主題實可夢之外，我們也準備了活動期問內可以參與的「限時調查」與「田野調查」。</span><span class='pc-p'>誠摯邀請您在春暖花開的美麗景致中，與《Pokemon GO》一同創造難忘的春日回憶。</span></span>",
+      "image": {
+        "desktop": "./images/pokemon/intro-bg.gif",
+        "mobile": "./images/pokemon/intro-bg-mb.gif"
+      },
+      "bg": {
+        "desktop": "./images/pokemon/intro-bg.gif",
+        "mobile": "./images/pokemon/intro-bg-mb.gif"
+      }
+    }
   }
+
 }
