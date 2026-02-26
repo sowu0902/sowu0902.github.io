@@ -236,7 +236,7 @@ export function renderFixedBtn(data, lang) {
   // 路由（沿用全站 routes）
   const routes = {
     home: 'index.html',
-    register: 'register.html'
+    register: 'https://www.accupass.com/organizer/detail/2602030409361972209177'
   };
 
   const base = routes[data.fixedBtn.route];
@@ -289,7 +289,7 @@ export function renderTimetable(data, lang) {
 
   const routes = {
     home: 'index.html',
-    register: 'register.html'
+    register: 'https://www.accupass.com/organizer/detail/2602030409361972209177'
   };
 
   const base = routes[timetable.cta.route];

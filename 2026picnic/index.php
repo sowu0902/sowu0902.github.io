@@ -72,7 +72,7 @@ include_once './common.php';
           <div class="card" data-aos="fade-down" data-aos-duration="800">
             <div data-timetable></div>
             <div class="cta">
-              <a class="btn-primary" data-timetable-cta>
+              <a class="btn-primary" target="_blank" rel="noopener noreferrer" data-timetable-cta>
                 <span class="btn-text"></span>
                 <span class="btn-icon" aria-hidden="true"></span>
               </a>

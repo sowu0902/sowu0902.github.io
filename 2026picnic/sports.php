@@ -78,7 +78,7 @@ include_once './common.php';
           <div>
             <div class="intro-text" data-aos="fade-up" data-aos-duration="800" data-intro-text></div>
 
-            <a class="intro-btn btn-primary" data-aos="fade-up" data-aos-duration="800" data-intro-cta>
+            <a class="intro-btn btn-primary" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-duration="800" data-intro-cta>
               <span class="btn-text"></span>
               <span class="btn-icon" aria-hidden="true"></span>
             </a>
@@ -159,7 +159,7 @@ include_once './common.php';
           <h3 class="popup-title"></h3>
           <div class="popup-desc"></div>
 
-          <a class="popup-cta btn-primary" target="_blank">
+          <a class="popup-cta btn-primary" target="_blank" rel="noopener noreferrer">
             <span class="btn-text" data-i18n="cta.register">立即前往報名</span>
             <span class="btn-icon"></span>
           </a>

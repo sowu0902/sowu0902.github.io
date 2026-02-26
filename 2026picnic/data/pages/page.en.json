@@ -6,19 +6,19 @@
         "mobile": "./images/coffee/kv-bg-mb.gif"
       },
       "title": {
-        "desktop": "./images/coffee/kv-title.png",
-        "mobile": "./images/coffee/kv-title-mb.png"
+        "desktop": "./images/coffee/kv-title-en.png",
+        "mobile": "./images/coffee/kv-title-en-mb.png"
       }
     },
     "intro": {
-      "text": "coming soon",
+      "text": "<span class='pc-p mb-p'>咖啡音樂派對 × 浪漫花園體驗</span><span class='pc-p mb-p'>在浪漫花園中品味咖啡與音樂，<span class='mb-p'>邀您用五感重新定義野餐體驗</span></span>",
       "bg": {
         "desktop": "./images/coffee/intro-bg.gif",
         "mobile": "./images/coffee/intro-bg-mb.gif"
       },
       "cta": {
-        "text": "Apply Now",
-        "link": "register.html"
+        "text": "按我預約報名",
+        "link": "https://www.accupass.com/event/2602090323411223645010"
       }
     },
     "schedule": {
@@ -27,12 +27,12 @@
         "mobile": "./images/coffee/schedule-bg-mb.gif"
       },
       "title": {
-        "desktop": "./images/coffee/schedule-title.png",
-        "mobile": "./images/coffee/schedule-title-mb.png"
+        "desktop": "./images/coffee/schedule-title-en.png",
+        "mobile": "./images/coffee/schedule-title-en-mb.png"
       },
       "image": {
-        "desktop": "./images/coffee/schedule-img.gif",
-        "mobile": "./images/coffee/schedule-img-mb.gif"
+        "desktop": "./images/coffee/schedule-img-en.gif",
+        "mobile": "./images/coffee/schedule-img-en-mb.gif"
       }
     },
     "infoSections": [
@@ -43,26 +43,26 @@
           "mobile": "./images/coffee/info1-bg-mb.gif"
         },
         "title": {
-          "desktop": "./images/coffee/info1-title.png",
-          "mobile": "./images/coffee/info1-title-mb.png"
+          "desktop": "./images/coffee/info1-title-en.png",
+          "mobile": "./images/coffee/info1-title-en-mb.png"
         },
-        "desc": "coming soon",
+        "desc": "<span class='pc-p'>舞台音樂派對 DJ 國際音樂組曲，</span>野餐區咖啡吧提供特色風味咖啡免費兌換。",
 
         "cards": [
           {
             "image": "./images/coffee/card1-1.jpg",
             "title": "手沖咖啡體驗",
-            "desc": "邀請專業咖啡師進行特製手沖咖啡，民眾可免費排隊領取試飲。"
+            "desc": "<ul><li>邀請專業咖啡師進行特製手沖咖啡，民眾可免費排隊領取試飲。</li><li>手沖咖啡表演與限量試飲：<ol><li>每場示範開始前 15 分鐘，現場將發放手沖咖啡試飲號碼牌，數量有限，發完為止。</li><li>手沖示範每日於指定時段進行，由專業咖啡師現場演示手沖咖啡。</li><li>示範過程中咖啡師會介紹沖煮技巧與風味特色。</li></ol></li><li>示範結束後，民眾可依號碼牌順序領取手沖咖啡試飲。現場提供環保紙杯。</li></ul>"
           },
           {
             "image": "./images/coffee/card1-2.jpg",
             "title": "台北咖啡補給",
-            "desc": "邀請3家特約咖啡店家提供咖啡飲品，民眾可免費排隊兌換咖啡。"
+            "desc": "<ul><li>邀請臺北特色咖啡店家提供咖啡飲品，民眾可排隊免費兌換咖啡。</li><li>咖啡兌換說明：</li><ol><li>活動當日民眾可於 14:30、15:30、16:30 三個指定梯次，至咖啡兌換區依序排隊兌換。</li><li>每梯次提供1種特色咖啡兌換，使用環保紙杯提供，亦歡迎民眾自備環保杯。</li><li>每梯次供應數量有限，若當梯次兌換完畢，請等待下一梯次開放。</li></ol></ul>"
           },
           {
             "image": "./images/coffee/card1-3.jpg",
             "title": "派對音樂DJ ",
-            "desc": "兩天14:00-15:30 主舞台進行音樂派對DJ表演，表演詳情見下方主舞台表演說明。"
+            "desc": "兩天14:30-15:30 主舞台進行音樂派對DJ表演，表演詳情請見下方主舞台表演節目說明。"
           }
         ]
       },
@@ -73,32 +73,32 @@
           "mobile": "./images/coffee/info2-bg-mb.gif"
         },
         "title": {
-          "desktop": "./images/coffee/info2-title.png",
-          "mobile": "./images/coffee/info2-title-mb.png"
+          "desktop": "./images/coffee/info2-title-en.png",
+          "mobile": "./images/coffee/info2-title-en-mb.png"
         },
-        "desc": "集結插畫師繪製獨一無二「花尚顏繪」，<br>邀請專業導師帶領製作的「水泥六角擴香花盤」與「鐵罐乾燥花香氛蠟燭」的手作活動，<br>沉浸於藝術與香氣交織的浪漫時光。",
+        "desc": "<span class='pc-p'>邀請風格插畫師繪製獨一無二「花尚顏繪」，</span><span class='pc-p'>與專業老師帶領製作「水泥六角擴香花盤」與「鐵罐乾燥花香氛蠟燭」手作活動，</span>沉浸於藝術與香氣交織的浪漫時光。",
 
         "cards": [
           {
             "image": "./images/coffee/card2-1.jpg",
             "title": "花尚顏繪體驗",
-            "desc": "在花香環繞的野餐現場，插畫師將以繪畫方式，捕捉報名者當下的神情、氣質與個人特色，呈現專屬於獨一無二的似顏繪作品。創作過程中融入花卉元素，將春日記憶定格於畫紙之上，讓你留下值得珍藏的紀念畫像。<br>每位參與者拍照約1分鐘，完成後可於 20 分鐘後回來取顏繪作品。",
-            "btnText": "Apply Now",
-            "registerLink": "register.html"
+            "desc": "<p>在花香環繞的野餐現場，插畫師將以繪畫方式，捕捉報名者當下的神情、氣質與個人特色，呈現獨一無二專屬似顏繪作品。創作過程中融入花卉元素，將春日記憶保留於畫紙上，讓您留下值得珍藏的紀念畫像。</p><ul><li>免費報名，採線上預約，每小時20個名額，每日2個時段，共40個名額。免費報名參加。</li><li>活動開始前30分鐘開放報到，請民眾出示報名成功信件QRcode完成報到。依照工作人員指示拍照後，於指定時間回來領取顏繪作品。若超過活動報名體驗時間，視同放棄報名資格。</li></ul>",
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090323411223645010"
           },
           {
             "image": "./images/coffee/card2-2.jpg",
             "title": "水泥六角擴香花盤",
-            "desc": "插花的時刻總讓人特別療癒，將索拉花插在六角花盤上，搭配進口精油，將香氣輕輕滴在花上，家裡立刻瀰漫著自己喜歡的味道，不只能當作漂亮的盆花擺飾，走過時還能聞到淡淡香氣，療癒又舒心。<br>課程時間90分鐘。作品為示意圖，以現場提供材料為準。",
-            "btnText": "Apply Now",
-            "registerLink": "register.html"
+            "desc": "<p>插花的時刻總讓人特別療癒，將索拉花插在六角花盤上，搭配進口精油，將香氣輕輕滴在花上，家裡立刻瀰漫著自己喜歡的味道，不只能當作漂亮的盆花擺飾，經過時還能聞到散發出來淡淡香氣，療癒又舒心。</p><ul><li>免費報名，採線上預約，每小時20個名額，每日1個時段，共20個名額。</li><li>課程時間90分鐘，免費報名參加。作品為示意圖，以現場提供材料為準。</li><li>活動開始前30分鐘開放報到，請民眾出示報名成功信件QRcode完成報到。若超過活動報名體驗時間，視同放棄報名資格。</li></ul>",
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090323411223645010"
           },
           {
             "image": "./images/coffee/card2-3.jpg",
-            "title": "鐵罐乾燥花香氛蠟燭 ",
-            "desc": "以天然大豆蠟搭配香氛精油製作，搭配不同的乾燥花材與精緻鐵罐，呈現獨特而細緻的美感。精油融入蠟體後，即使不點燃，也能自然散發香氣，讓空間瀰漫柔和的芳香，還能作為點綴家的收藏品，為日常生活增添一點質感。<br>課程時間90分鐘。作品為示意圖，以現場提供材料為準。",
-            "btnText": "Apply Now",
-            "registerLink": "register.html"
+            "title": "鐵罐乾燥花香氛蠟燭",
+            "desc": "<p>以天然大豆蠟搭配香氛精油製作，搭配不同的乾燥花材與精緻鐵罐，呈現獨特而細緻的美感。精油融入蠟體後，即使不點燃，也能自然散發香氣，讓空間瀰漫柔和的芳香，還能作為點綴家的收藏品，為日常生活增添療癒心靈的質感。</p><ul><li>免費報名，採線上預約，每小時20個名額，每日1個時段，共20個名額。</li><li>課程時間90分鐘，免費報名參加。作品為示意圖，以現場提供材料為準。</li><li>活動開始前30分鐘開放報到，請民眾出示報名成功信件QRcode完成報到。若超過活動報名體驗時間，視同放棄報名資格。</li></ul>",
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090323411223645010"
           }
         ]
       },
@@ -109,25 +109,29 @@
           "mobile": "./images/coffee/info3-bg-mb.gif"
         },
         "title": {
-          "desktop": "./images/coffee/info3-title.png",
-          "mobile": "./images/coffee/info3-title-mb.png"
+          "desktop": "./images/coffee/info3-title-en.png",
+          "mobile": "./images/coffee/info3-title-en-mb.png"
         },
-        "desc": "咖啡派對區提供800份野餐墊免費兌換，<br>歡迎民眾立即報名野餐活動，活動現場領取。",
+        "desc": "<span class='pc-p'>歡迎民眾預約報名咖啡派對野餐區，</span>早鳥成功報名野餐活動，活動當日可至各野餐區報到處領取活動野餐墊。",
 
         "cards": [
           {
             "image": "./images/coffee/card3-1.jpg",
             "title": "野餐報名禮",
-            "desc": "活動特製野餐墊：設計以台北春季花卉為設計靈感，搭配淺黃色的主色，讓野餐墊輕鬆融入在自然草地環境中。<br>品牌好禮：敬請期待。",
-            "btnText": "Apply Now",
-            "registerLink": "register.html"
+            "desc": "<ul><li>活動特製野餐墊：設計以臺北春季花卉為設計靈感，搭配淺黃色的主色，讓野餐墊輕鬆融入在自然草地環境中。</li><li>兌換辦法：咖啡派對野餐區提供活動特製野餐墊免費兌換，歡迎立即報名，活動現場各區報到處領取。</li></ul>",
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090212451166853258"
           },
           {
             "image": "",
-            "title": "野餐報名辦法",
-            "desc": "咖啡派對野餐區區提供800份野餐墊免費兌換，歡迎立即報名，活動現場各區報到處領取。",
-            "btnText": "Apply Now",
-            "registerLink": "register.html"
+            "title": "品牌好禮兌換",
+            "desc": "coming soon"
+          }
+          ,
+          {
+            "image": "",
+            "title": "品牌好禮兌換",
+            "desc": "coming soon"
           }
         ]
       }
@@ -139,8 +143,8 @@
         "mobile": "./images/coffee/intro2-bg-mb.gif"
       },
       "title": {
-        "desktop": "./images/coffee/intro2-title.png",
-        "mobile": "./images/coffee/intro2-title-mb.png"
+        "desktop": "./images/coffee/intro2-title-en.png",
+        "mobile": "./images/coffee/intro2-title-en-mb.png"
       }
     },
     "schedule2": {
@@ -149,12 +153,12 @@
         "mobile": "./images/coffee/schedule2-bg-mb.gif"
       },
       "title": {
-        "desktop": "./images/coffee/schedule2-title.png",
-        "mobile": "./images/coffee/schedule2-title-mb.png"
+        "desktop": "./images/coffee/schedule2-title-en.png",
+        "mobile": "./images/coffee/schedule2-title-en-mb.png"
       },
       "image": {
-        "desktop": "./images/coffee/schedule2-img.gif",
-        "mobile": "./images/coffee/schedule2-img-mb.gif"
+        "desktop": "./images/coffee/schedule2-img-en.gif",
+        "mobile": "./images/coffee/schedule2-img-en-mb.gif"
       }
     },
     "infoSections2": [
@@ -165,45 +169,45 @@
           "mobile": "./images/coffee/info4-bg-mb.gif"
         },
         "title": {
-          "desktop": "./images/coffee/info4-title.png",
-          "mobile": "./images/coffee/info4-title-mb.png"
+          "desktop": "./images/coffee/info4-title-en.png",
+          "mobile": "./images/coffee/info4-title-en-mb.png"
         },
 
         "cards": [
           {
+            "image": "./images/coffee/card4-8.jpg",
+            "title": "咖啡音樂派對DJ - Divyns",
+            "desc": "<p>來自法國南特的 Divyns，自幼接觸各類樂器與音樂創作，並活躍於臺灣多場活動演出。曾發行法文歌曲專輯，並以「法式臺味電音」受到關注。</p><p>本次演出將結合法式電音、美式流行與臺灣經典與當代歌曲，透過跨文化曲風編排與節奏轉換，營造濃厚異國氛圍，呼應本次活動的國際多元風格，帶來充滿律動的音樂體驗。</p>"
+          },
+          {
             "image": "./images/coffee/card4-1.jpg",
             "title": "咖啡音樂派對DJ - Jamie Q",
-            "desc": "邀請時尚音樂DJ，播放國際風格組曲，搭配咖啡兌換，體驗風靡全球最潮咖啡音樂派對<br>Jamie Q 是跨足時尚與派對界的女性代表，經常受邀參與各大音樂祭與品牌活動。無論實驗空靈或低頻煽動，她皆能靈活運用，風格涉略廣泛，擅長將音樂曲風融入不同場景之中，投射環境、瞬間激活現場氛圍。從她的選曲可感受到鮮明的生活痕跡與性格，既暗黑冷冽，又帶著從容優雅的氣質，不時勾勒出 90 年代元素，並穿梭於跨界聲響之間。她偏好不受拘束且活潑的安排，形塑極高辨識度。"
+            "desc": "<p>DJ Jamie Q無論實驗空靈或低頻煽動，她皆能靈活運用，風格涉略廣泛，擅長將音樂曲風融入不同場景之中，投射環境、瞬間點燃現場氛圍。</p><p>本次她將帶來的演出內容是融合亞洲流行、韓國潮流電音與華語經典金曲，並穿插 90 年代元素與當代電子節奏，在不同文化聲響之間自由轉換，她將依現場節奏靈活鋪陳，讓音樂隨著草地微風與人群互動自然流動，咖啡香氣伴隨歡樂節拍，共同營造春日野餐的輕鬆派對氛圍。</p>"
           },
           {
             "image": "./images/coffee/card4-2.jpg",
             "title": "國際級馬戲: 馬戲之門 「紳士咖啡廳」",
-            "desc": "「馬戲之門」成立於 2015 年，團隊以「大門」為意象，期望引領大眾走進馬戲的風光，同時成為連結臺灣當代馬戲與各界的出口。2023 年藝術總監楊世豪作品《After》入圍台新藝術獎，並於 2022、2023、2025年獲選為新北市傑出藝文團隊。2025年為大阪萬國博覽會Tech World館指定合作表演團隊。<br>成軍10年國際級馬戲團隊，帶來獨創戲碼「紳士咖啡廳」，讓一杯咖啡的誕生過程轉化為一場充滿馬戲技巧、肢體喜劇與荒謬想像的旅程。<br>本次表演以「紳士咖啡廳」為主題，一間風格鮮明的咖啡廳作為故事場域，透過四位演員的身體行動，描繪一杯咖啡從被製作到被飲用後，在人身上所引發的感官與情緒變化。讓一杯咖啡的誕生過程轉化為一場充滿馬戲技巧、肢體喜劇與荒謬想像的旅程。"
-          },
-          {
-            "image": "",
-            "title": "皮卡丘見面會",
-            "desc": "全球超人氣寶可夢皮卡丘與伊布角色人偶見面會，只要排隊即可獲得合影機會，粉絲千萬別錯過。"
+            "desc": "<p>「馬戲之門」成立於 2015 年，團隊以「大門」為意象，期望引領大眾走進馬戲的風光，同時成為連結臺灣當代馬戲與各界的出口。2025年為大阪萬國博覽會Tech World館指定合作表演團隊。</p><p>成軍10年國際級馬戲團隊，帶來獨創戲碼「紳士咖啡廳」，讓一杯咖啡的誕生過程轉化為一場充滿馬戲技巧、肢體喜劇與荒謬想像的旅程。</p><p>本次表演以「紳士咖啡廳」為主題，一間風格鮮明的咖啡廳作為故事場域，透過四位演員的身體行動，描繪一杯咖啡從被製作到被飲用後，在人身上所引發的感官與情緒變化。讓一杯咖啡的誕生過程轉化為一場充滿馬戲技巧、肢體喜劇與荒謬想像的旅程。當咖啡最終被喝下，身體狀態的轉變也重新定義了這個空間中人與人之間的關係。</p>"
           },
           {
             "image": "./images/coffee/card4-4.jpg",
-            "title": "音療手碟表演 因為手碟",
-            "desc": "2000年發明的「手碟」也被譽為「世上最療癒的樂器之一」，手碟柔和且空靈的音色，帶給人身心的平靜與療癒感。<br>因為手碟成立於 2021 年，以手碟演奏為核心，音樂演奏如溫潤流動的對話，引領聽眾穿梭不同時空與畫面，感受聲音帶來的共鳴與想像。創辦人-莉酸喜愛攜帶手碟旅行，從自然與環境中汲取靈感。他的音樂風格將細膩情感與靈巧節奏融入創作，透過手碟打造療癒而夢幻的聆聽體驗。"
+            "title": "音療手碟表演-因為手碟",
+            "desc": "<p>2000年發明的「手碟」被譽為「世上最療癒的樂器之一」，手碟柔和且空靈的音色，帶給人身心的平靜與療癒感。</p><p>「因為手碟」團隊成立於 2021 年，手碟的音樂演奏如溫潤流動的對話，引領聽眾穿梭不同時空與畫面，感受聲音帶來的共鳴與想像。創辦人-莉酸喜愛攜帶手碟旅行，從自然與環境中汲取靈感。他的音樂風格將細膩情感與靈巧節奏融入創作，透過手碟打造療癒而夢幻的聆聽體驗。</p>"
           },
           {
             "image": "./images/coffee/card4-5.jpg",
             "title": "吉他女聲-傑西Jessie",
-            "desc": "現為駐唱歌手與街頭藝人，活躍於城市街頭與各式餐酒館演出。以溫暖真摯的歌聲擁抱每個瞬間，期待透過音樂與你共創難忘而美好的時光。"
+            "desc": "<p>現為駐唱歌手與街頭藝人，活躍於城市街頭與各式餐酒館演出。以溫暖真摯的歌聲擁抱每個瞬間，期待透過音樂與您共創難忘而美好的時光。此次表演將挑選與花卉或咖啡相關的曲目，如許紹洋的《花香》、周杰倫的《花海》、周慧敏的《咖啡在等一個人》、李千娜的《心花開》等，透過音樂與民眾共創難忘而美好的春日野餐時光。</p>"
           },
           {
             "image": "./images/coffee/card4-6.jpg",
             "title": "小提琴表演-小伊",
-            "desc": "現為街頭藝人，致力於推動台北自由街頭演出。無論上下班時段或假日，常可在台北市中心的各個角落見到他全心投入演出的身影。他始終秉持著簡單而純粹的理念，以全神貫注的信念，投入每一場演出，將音樂盡可能的感染、分享給更多人。累積超過 30 次登上國家音樂廳舞台，並曾於2015年與香港歌手譚詠麟於紅磡體育館同台演出。"
+            "desc": "<p>現為街頭藝人，致力於推動臺北自由街頭演出。無論上下班時段或假日，常可在臺北市中心的各個角落見到他全心投入演出的身影。他始終秉持著簡單而純粹的理念，以全神貫注的信念，投入每一場演出，將音樂盡可能的感染、分享給更多人。累積超過 30 次登上國家音樂廳舞台，並曾於2015年與香港歌手譚詠麟於紅磡體育館同台演出</p>"
           },
           {
             "image": "./images/coffee/card4-7.jpg",
             "title": "吉他仙子-裴安",
-            "desc": "從小學習古典鋼琴，後來接觸民謠吉他與編曲製作，開啟音樂創作之路。深受 indie pop、bedroom pop、alternative 等曲風吸引，以空靈細膩的聲線與詩意的歌詞，詮釋內心最真實的情感故事。"
+            "desc": "<p>從小學習古典鋼琴，後來接觸民謠吉他與編曲製作，開啟音樂創作之路。深受 indie pop、bedroom pop、alternative 等曲風吸引，以空靈細膩的聲線與詩意的歌詞，詮釋內心最真實的情感故事。</p>"
           }
         ]
       }
@@ -217,19 +221,19 @@
         "mobile": "./images/sports/kv-bg-mb.gif"
       },
       "title": {
-        "desktop": "./images/sports/kv-title.png",
-        "mobile": "./images/sports/kv-title-mb.png"
+        "desktop": "./images/sports/kv-title-en.png",
+        "mobile": "./images/sports/kv-title-en-mb.png"
       }
     },
     "intro": {
-      "text": "coming soon",
+      "text": "<span class='pc-p mb-p'>草地療癒瑜珈 × 全齡永續運動</span><span class='pc-p mb-p'>在綠意草地舒展運動，<span class='mb-p'>讓身體找回最純粹的「美力」能量</span></span>",
       "bg": {
         "desktop": "./images/sports/intro-bg.gif",
         "mobile": "./images/sports/intro-bg-mb.gif"
       },
       "cta": {
-        "text": "Apply Now",
-        "link": "register.html"
+        "text": "按我預約報名",
+        "link": "https://www.accupass.com/event/2602090328182068972664"
       }
     },
     "schedule": {
@@ -238,8 +242,8 @@
         "mobile": "./images/sports/schedule-bg-mb.gif"
       },
       "title": {
-        "desktop": "./images/sports/schedule-title.png",
-        "mobile": "./images/sports/schedule-title-mb.png"
+        "desktop": "./images/sports/schedule-title-en.png",
+        "mobile": "./images/sports/schedule-title-en-mb.png"
       },
       "image": {
         "desktop": "./images/sports/schedule-img.gif",
@@ -254,21 +258,20 @@
           "mobile": "./images/sports/info1-bg-mb.gif"
         },
         "title": {
-          "desktop": "./images/sports/info1-title.png",
-          "mobile": "./images/sports/info1-title-mb.png"
+          "desktop": "./images/sports/info1-title-en.png",
+          "mobile": "./images/sports/info1-title-en-mb.png"
         },
-        "desc": "以無動力設施打造全年齡友善的運動體驗，<br>設置「台北地標充電站」、「花伴花卉咖啡屋」等互動關卡，完成挑戰即可獲得限量「花伴貼紙」。",
-
+        "desc": "以無動力設施打造全年齡友善的運動體驗，<br>設置「臺北地標充電站」、「花伴野餐咖啡屋」等互動關卡，完成挑戰即可獲得限量「花伴野餐貼紙」。",
         "cards": [
           {
             "image": "./images/sports/card1-1.jpg",
             "title": "台北地標充電站",
-            "desc": "現場設置兩組電力腳踏車，透過踩踏發電腳踏車，邀請你一起點亮台北的新舊地標！於規定時間內成功點亮第三站，即可獲得限量活動貼紙。"
+            "desc": "<p>現場設置2組電力腳踏車，透過踩踏發電腳踏車，邀請您一起點亮臺北的特色地標！於規定時間內成功點亮第3站，即可獲得限量花伴野餐活動貼紙。</p><p>活動辦法: </p><ol><li>本活動免報名，採現場排隊體驗方式進行，民眾可重複參與。</li><li>現場共設置 2 臺發電腳踏車，每次限 1 人使用 1 臺；於規定時間內完成指定挑戰並符合活動規定者，即可兌換限量貼紙乙張。</li><li>「花伴野餐貼紙」每日數量有限，送完為止。</li></ol>"
           },
           {
             "image": "./images/sports/card1-2.jpg",
-            "title": "花伴花卉咖啡屋",
-            "desc": "翻開咖啡杯蓋互動裝置，進行春季花卉配對挑戰！於時間內完成指定花卉配對任務，即可獲得限量活動貼紙。"
+            "title": "花伴野餐咖啡屋",
+            "desc": "<p>歡迎親子共同參與，翻開咖啡杯蓋，進行春季花卉配對挑戰！於時間內完成指定花卉配對任務，即可獲得限量活動貼紙。</p><p>活動辦法: </p><ol><li>本活動免報名，採現場排隊體驗方式進行，民眾可重複參與。</li><li>現場設置黑、白杯蓋共五組花卉配對，於規定時間內完成指定挑戰並符合活動規定者，即可兌換限量貼紙乙張。</li><li>「花伴野餐貼紙」每日數量有限，送完為止。</li></ol>"
           }
         ]
       },
@@ -279,39 +282,39 @@
           "mobile": "./images/sports/info2-bg-mb.gif"
         },
         "title": {
-          "desktop": "./images/sports/info2-title.png",
-          "mobile": "./images/sports/info2-title-mb.png"
+          "desktop": "./images/sports/info2-title-en.png",
+          "mobile": "./images/sports/info2-title-en-mb.png"
         },
-        "desc": "集結哈達瑜珈、頌缽瑜珈、精油皮拉提斯、瑜珈提斯等課程，<br class='mbhide'>精油皮拉提斯、瑜珈提斯等課程，在自然草地中感受身心平衡的時刻。",
+        "desc": "集結哈達瑜珈、頌缽瑜珈、精油皮拉提斯、瑜珈提斯等課程，<br class='mbhide'>在自然草地中感受身心平衡的時刻。",
 
         "cards": [
           {
             "image": "./images/sports/card2-1.jpg",
             "title": "哈達瑜珈",
-            "desc": "專業瑜珈老師:咪咪<br>哈達瑜珈是最傳統且普遍的瑜珈形式，以穩定、緩慢的體式搭配規律呼吸，引導身心逐步放鬆。課程著重基礎體式與呼吸的連結，培養身體覺察與專注力，讓能量自然流動。溫和且循序漸進的練習方式，特別適合初學者入門。<br>課程時間60分鐘。",
-            "btnText": "Apply Now",
-            "registerLink": "register.html"
+            "desc": "<p>專業瑜伽老師:咪咪</p><p>哈達瑜伽是最傳統且普遍的瑜伽形式，以穩定、緩慢的體式搭配規律呼吸，引導身心逐步放鬆。課程著重基礎體式與呼吸的連結，培養身體覺察與專注力，讓能量自然流動。溫和且循序漸進的練習方式，特別適合初學者入門。</p><p>在大自然中練習瑜伽，能讓身心更深層放鬆。於綠意與清新空氣中伸展呼吸，有助舒緩壓力、穩定情緒，讓身體與自然節奏同步，回歸自在平衡的狀態。</p><p>免費報名，採線上預約，總共20個名額。課程時間60分鐘。</p><p>活動開始前60分鐘「美力運動野餐區」開放報到，此課程只開放給線上報名成功的民眾。若超過報名體驗時間，視同放棄此報名資格。</p><p>建議穿著適合運動的衣物並自備毛巾。主辦單位提供瑜珈墊。</p><p>若活動遇到下雨，請參考活動官網或「台北旅遊網」官方社群通知至雨備地點。</p>",
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090328182068972664"
           },
           {
             "image": "./images/sports/card2-2.jpg",
             "title": "頌缽水晶缽瑜珈",
-            "desc": "專業瑜珈老師:咪咪<br>由咪咪愛運動老師帶領的頌缽、水晶缽瑜珈，結合溫和的身體伸展與水晶缽清澈悠長的聲音，引導呼吸與動作自然流動。透過聲波的共振，身體逐漸放鬆，思緒慢慢沉澱，在自然環境中感受片刻的安靜與專注，讓身心回到穩定、舒適的狀態，展開一段專屬於自己的療癒時光。<br>課程時間60分鐘。",
-            "btnText": "Apply Now",
-            "registerLink": "register.html"
+            "desc": "<p>專業瑜伽老師:咪咪</p><p>由專業瑜珈老師帶領的頌缽、水晶缽瑜伽，結合溫和的身體伸展與水晶缽清澈悠長的聲音，引導呼吸與動作自然流動。透過聲波的共振，身體逐漸放鬆，思緒慢慢沉澱，在自然環境中感受片刻的安靜與專注，讓身心回到穩定、舒適的狀態，展開一段專屬於自己的療癒時光。</p><p>免費報名，採線上預約，總共20個名額。課程時間60分鐘。內文活動開始前60分鐘「美力運動野餐區」開放報到，此課程只開放給線上報名成功的民眾。若超過報名體驗時間，視同放棄此報名資格。</p><p>建議穿著適合運動的衣物並自備毛巾。主辦單位提供瑜珈墊。</p><p>若活動遇到下雨，請參考活動官網或「台北旅遊網」官方社群通知至雨備地點。</p>",
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090328182068972664"
           },
           {
             "image": "./images/sports/card2-3.jpg",
             "title": "精油皮拉提斯",
-            "desc": "專業皮拉提斯老師: Anita小隻<br>由Anita小隻老師透過皮拉提斯的伸展與動作，引導練習者覺察身體的細微變化，並結合芳香植物萃取的精油，運用嗅吸、薰香與輕柔接觸的方式，讓香氣經由呼吸與肌膚自然吸收，協助協助釋放緊繃、延展身體線條，讓運動成為一場結合香氣與身體美感的優雅練習。<br>課程時間60分鐘。",
-            "btnText": "Apply Now",
-            "registerLink": "register.html"
+            "desc": "<p>專業皮拉提斯老師: Anita小隻</p><p>由專業老師帶領透過皮拉提斯的伸展與動作，引導練習者覺察身體的細微變化，並結合芳香植物萃取的精油，運用嗅吸、薰香與輕柔接觸的方式，讓香氣經由呼吸與肌膚自然吸收，協助協助釋放緊繃、延展身體線條，讓運動成為一場結合香氣與身體美感的優雅練習。</p><p>免費報名，採線上預約，總共20個名額。課程時間60分鐘。</p><p>活動開始前60分鐘「美力運動野餐區」開放報到，此課程只開放給線上報名成功的民眾。若超過報名體驗時間，視同放棄此報名資格。</p><p>建議穿著適合運動的衣物並自備毛巾。主辦單位提供瑜珈墊。</p><p>若活動遇到下雨，請參考活動官網或「台北旅遊網」官方社群通知至雨備地點。</p>",
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090328182068972664"
           },
           {
             "image": "./images/sports/card2-4.jpg",
             "title": "瑜珈提斯",
-            "desc": "專業皮拉提斯老師: Anita小隻<br>瑜珈提斯結合「瑜伽」的呼吸流動與「皮拉提斯」的肌肉伸展，主要訓練人體核心肌群。透過連續且重複性的動作，提升肌力訓練與身體活動度，慢慢讓身體增強力量，甚至能更進一步改善僵硬的肢體與不良姿勢，使身體更加穩定。<br>課程時間60分鐘。",
-            "btnText": "Apply Now",
-            "registerLink": "register.html"
+            "desc": "<p>專業皮拉提斯老師: Anita小隻</p><p>瑜伽提斯結合「瑜伽」的呼吸流動與「皮拉提斯」的肌肉伸展，主要訓練人體核心肌群。透過連續且重複性的動作，提升肌力訓練與身體活動度，慢慢讓身體增強力量，甚至能更進一步改善僵硬的肢體與不良姿勢，使身體更加穩定。</p><p>免費報名，採線上預約，總共20個名額。課程時間60分鐘。</p><p>活動開始前60分鐘「美力運動野餐區」開放報到，此課程只開放給線上報名成功的民眾。若超過報名體驗時間，視同放棄此報名資格。</p><p>建議穿著適合運動的衣物與毛巾。主辦單位會提供瑜珈墊。</p><p>若活動遇到下雨，請參考活動官網或「台北旅遊網」官方社群通知至雨備地點。</p>",
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090328182068972664"
           }
         ]
       },
@@ -322,8 +325,8 @@
           "mobile": "./images/sports/info3-bg-mb.gif"
         },
         "title": {
-          "desktop": "./images/sports/info3-title.png",
-          "mobile": "./images/sports/info3-title-mb.png"
+          "desktop": "./images/sports/info3-title-en.png",
+          "mobile": "./images/sports/info3-title-en-mb.png"
         },
         "desc": "美力運動區提供600份野餐墊免費兌換，<br>歡迎民眾立即報名野餐活動，活動現場領取。",
 
@@ -331,16 +334,19 @@
           {
             "image": "./images/sports/card3-1.jpg",
             "title": "野餐報名禮",
-            "desc": "活動特製野餐墊：設計以台北春季花卉為設計靈感，搭配淺黃色的主色，讓野餐墊輕鬆融入在自然草地環境中。<br>品牌好禮：敬請期待。",
-            "btnText": "Apply Now",
-            "registerLink": "register.html"
+            "desc": "<ul><li>活動特製野餐墊：設計以臺北春季花卉為設計靈感，搭配淺黃色的主色，讓野餐墊輕鬆融入在自然草地環境中。</li><li>兌換辦法：美力運動野餐區提供野餐墊免費兌換，歡迎立即報名，活動現場各區報到處領取。</li></ul>。",
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090212451166853258"
           },
           {
             "image": "",
-            "title": "野餐報名辦法",
-            "desc": "美力運動野餐區區提供600份野餐墊免費兌換，歡迎立即報名，活動現場各區報到處領取。",
-            "btnText": "Apply Now",
-            "registerLink": "register.html"
+            "title": "品牌好禮兌換",
+            "desc": "coming soon"
+          },
+          {
+            "image": "",
+            "title": "品牌好禮兌換",
+            "desc": "coming soon"
           }
         ]
       }
@@ -354,19 +360,19 @@
         "mobile": "./images/pets/kv-bg-mb.gif"
       },
       "title": {
-        "desktop": "./images/pets/kv-title.png",
-        "mobile": "./images/pets/kv-title-mb.png"
+        "desktop": "./images/pets/kv-title-en.png",
+        "mobile": "./images/pets/kv-title-en-mb.png"
       }
     },
     "intro": {
-      "text": "coming soon",
+      "text": "<span class='pc-p mb-p'>氣球泡泡秀表演 × 親子毛孩裝扮秀</span><span class='pc-p mb-p'>童趣的互動表演、可愛的主題裝扮秀，<span class='mb-p'>讓大小朋友與毛孩共度笑聲滿滿的花季週末</span></span>",
       "bg": {
         "desktop": "./images/pets/intro-bg.gif",
         "mobile": "./images/pets/intro-bg-mb.gif"
       },
       "cta": {
-        "text": "Apply Now",
-        "link": "register.html"
+        "text": "按我預約報名",
+        "link": "https://www.accupass.com/event/2602090359091463058704"
       }
     },
     "schedule": {
@@ -375,8 +381,8 @@
         "mobile": "./images/pets/schedule-bg-mb.gif"
       },
       "title": {
-        "desktop": "./images/pets/schedule-title.png",
-        "mobile": "./images/pets/schedule-title-mb.png"
+        "desktop": "./images/pets/schedule-title-en.png",
+        "mobile": "./images/pets/schedule-title-en-mb.png"
       },
       "image": {
         "desktop": "./images/pets/schedule-img.gif",
@@ -391,21 +397,21 @@
           "mobile": "./images/pets/info1-bg-mb.gif"
         },
         "title": {
-          "desktop": "./images/pets/info1-title.png",
-          "mobile": "./images/pets/info1-title-mb.png"
+          "desktop": "./images/pets/info1-title-en.png",
+          "mobile": "./images/pets/info1-title-en-mb.png"
         },
         "desc": "主題氣球秀與夢幻泡泡表演分別，<br>營造歡笑滿滿的親子毛孩野餐時光。",
 
         "cards": [
           {
             "image": "./images/pets/card1-1.jpg",
-            "title": "氣球秀",
-            "desc": "色彩繽紛的氣球在歡笑中悄然變身！以花為主題的造型氣球秀，結合互動表演，讓氣球在歡樂氛圍中化作一朵朵夢幻花朵，帶領大小朋友走進充滿驚喜的時刻。從欣賞表演到參與，讓現場笑聲不斷、氣氛瞬間升溫，是最受親子喜歡的活動！<br>表演時間60分鐘。"
+            "title": "氣球互動秀",
+            "desc": "<p>色彩繽紛的氣球在歡笑中悄然變身！以花為主題的造型氣球秀，結合互動表演，讓氣球在歡樂氛圍中化作一朵朵夢幻花朵，帶領大小朋友走進充滿驚喜的時刻。從欣賞表演到參與，讓現場笑聲不斷、氣氛瞬間升溫，是最受親子喜歡的活動！</p><p>本活動演出時間為 60 分鐘，前 30 分鐘進行花造型氣球秀表演，後 30 分鐘開放氣球發送；現場免費參加。</p>"
           },
           {
             "image": "./images/pets/card1-2.jpg",
-            "title": "泡泡秀",
-            "desc": "泡泡承載著童年的純真記憶，七彩光影在空氣中流轉，彷彿帶人回到無憂的時光。本次演出邀請泡泡師以創意手法呈現泡泡表演，讓泡泡不只是吹出來，而是一場夢幻的視覺體驗。<br>表演時間60分鐘。"
+            "title": "魔術泡泡秀",
+            "desc": "<p>泡泡承載著童年的純真記憶，七彩光影在空氣中流轉，彷彿帶人回到無憂的時光。本次演出邀請泡泡師以創意手法呈現泡泡表演，讓泡泡不只是吹出來，而是一場夢幻的視覺體驗。</p><p>表演時間60分鐘，現場免費參加。</p>"
           }
         ]
       },
@@ -416,8 +422,8 @@
           "mobile": "./images/pets/info2-bg-mb.gif"
         },
         "title": {
-          "desktop": "./images/pets/info2-title.png",
-          "mobile": "./images/pets/info2-title-mb.png"
+          "desktop": "./images/pets/info2-title-en.png",
+          "mobile": "./images/pets/info2-title-en-mb.png"
         },
         "desc": "以「粉色或白色」為主題的親子與毛孩裝扮秀，<br class='mbhide'>邀請全家大小與毛孩一同登台亮相，留下最時尚的紀念瞬間。",
 
@@ -425,16 +431,16 @@
           {
             "image": "./images/pets/card2-1.jpg",
             "title": "親子裝扮秀",
-            "desc": "以粉色或白色為主題的親子扮裝秀，邀請爸爸媽媽與孩子一同走上舞台。活動以輕鬆的走秀形式進行，各組輪流登場，展現專屬家庭的穿搭巧思，讓野餐時光洋溢童趣與時尚感，留下溫馨難忘的春日家族回憶。<br>活動時間60分鐘。",
-            "btnText": "Apply Now",
-            "registerLink": "register.html"
+            "desc": "<p>以粉色或白色為主題的親子扮裝秀，邀請爸爸媽媽與孩子一同走上舞台。活動以輕鬆的走秀形式進行，各組輪流登場，展現專屬家庭的穿搭巧思，讓野餐時光洋溢童趣與時尚感，留下溫馨難忘的春日家族回憶。</p><p>免費報名，採線上預約，總共20個名額。</p><p>活動辦法：</p><ol><li>活動開始前 1 小時開放報到。</li><li>請出示報名 QR Code，由現場工作人員核對並說明走秀流程。</li></ol>",
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090359091463058704"
           },
           {
             "image": "./images/pets/card2-2.jpg",
             "title": "毛孩裝扮秀",
-            "desc": "以粉色或白色為主題的毛孩扮裝秀，邀請家人與毛孩一同走上舞台。活動以輕鬆的走秀形式進行，各組輪流登場，展現毛孩專屬的造型巧思與家庭風格，在歡樂氛圍中拉近家人與寵物之間的情感，為春日野餐留下可愛又具時尚感的春日回憶。<br>活動時間60分鐘。",
-            "btnText": "Apply Now",
-            "registerLink": "register.html"
+            "desc": "<p>以粉色或白色為主題的毛孩扮裝秀，邀請家人與毛孩一同走上舞台。活動以輕鬆的走秀形式進行，各組輪流登場，展現毛孩專屬的造型巧思與家庭風格，在歡樂氛圍中拉近家人與寵物之間的情感，為春日野餐留下可愛又具時尚感的春日回憶。</p><p>免費報名，採線上預約，總共20個名額。</p><p>活動辦法：</p><ol><li>活動開始前 1 小時開放報到。</li><li>請出示報名 QR Code，由現場工作人員核對並說明走秀流程。</li></ol>",
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090359091463058704"
           }
         ]
       },
@@ -445,25 +451,28 @@
           "mobile": "./images/pets/info3-bg-mb.gif"
         },
         "title": {
-          "desktop": "./images/pets/info3-title.png",
-          "mobile": "./images/pets/info3-title-mb.png"
+          "desktop": "./images/pets/info3-title-en.png",
+          "mobile": "./images/pets/info3-title-en-mb.png"
         },
-        "desc": "親子毛孩野餐區提供600份野餐墊免費兌換，<br>歡迎立即報名，活動現場各區報到處領取。",
+        "desc": "親子毛孩野餐區提供野餐墊免費兌換，<br>歡迎立即報名，活動現場各區報到處領取。",
 
         "cards": [
           {
             "image": "./images/pets/card3-1.jpg",
             "title": "野餐報名禮",
-            "desc": "活動特製野餐墊：設計以台北春季花卉為設計靈感，搭配淺黃色的主色，讓野餐墊輕鬆融入在自然草地環境中。<br>品牌好禮：敬請期待。",
-            "btnText": "Apply Now",
-            "registerLink": "register.html"
+            "desc": "<ul><li>活動特製野餐墊：設計以臺北春季花卉為設計靈感，搭配淺黃色的主色，讓野餐墊輕鬆融入在自然草地環境中。</li><li>兌換辦法：親子毛孩野餐區提供野餐墊免費兌換，歡迎立即報名，活動現場各區報到處領取。</li></ul>",
+            "btnText": "按我預約報名",
+            "registerLink": "https://www.accupass.com/event/2602090212451166853258"
           },
           {
             "image": "",
-            "title": "野餐報名辦法",
-            "desc": "親子毛孩野餐區區提供600份野餐墊免費兌換，歡迎立即報名，活動現場各區報到處領取。",
-            "btnText": "Apply Now",
-            "registerLink": "register.html"
+            "title": "品牌好禮兌換",
+            "desc": "coming soon"
+          },
+          {
+            "image": "",
+            "title": "品牌好禮兌換",
+            "desc": "coming soon"
           }
         ]
       }
@@ -477,12 +486,12 @@
         "mobile": "./images/market/kv-bg-mb.gif"
       },
       "title": {
-        "desktop": "./images/market/kv-title.png",
-        "mobile": "./images/market/kv-title-mb.png"
+        "desktop": "./images/market/kv-title-en.png",
+        "mobile": "./images/market/kv-title-en-mb.png"
       }
     },
     "intro": {
-      "text": "coming soon",
+      "text": "<span class='pc-p mb-p sub-title'>台北特色咖啡廳 × 國際特色美食 × 風格文創手作</span><span class='pc-p'>台北花伴野餐精心匯聚臺北人氣精品咖啡、國際風格異國料理與職人文創品牌。</span><span class='pc-p'>市集美食地圖橫跨亞洲多國、浪漫歐陸、熱情美洲到臺灣道地風味。</span><span class='pc-p'>邀請您走入野餐市集，啜飲一杯人氣咖啡，品嘗異國野餐美食，並在質感選物中發掘生活驚喜。</span><span class='pc-p'>這不僅是一次國際化的野餐提案，更是一場滿足味蕾與生活美學的春日盛宴。</span>",
       "bg": {
         "desktop": "./images/market/intro-bg.gif",
         "mobile": "./images/market/intro-bg-mb.gif"
@@ -490,8 +499,8 @@
     },
     "map": {
       "title": {
-        "desktop": "./images/market/map-title.png",
-        "mobile": "./images/market/map-title-mb.png"
+        "desktop": "./images/market/map-title-en.png",
+        "mobile": "./images/market/map-title-en-mb.png"
       },
       "image": {
         "desktop": "./images/market/map-img.gif",
@@ -685,12 +694,12 @@
         "mobile": "./images/run/kv-bg-mb.gif"
       },
       "title": {
-        "desktop": "./images/run/kv-title.png",
-        "mobile": "./images/run/kv-title-mb.png"
+        "desktop": "./images/run/kv-title-en.png",
+        "mobile": "./images/run/kv-title-en-mb.png"
       }
     },
     "intro": {
-      "text": "coming soon",
+      "text": "<span class='pc-p mb-p sub-title'>循著花伴野餐地圖，<span class='mb-p'>開啟一場春日限定的城市跑咖漫遊</span></span><span class='pc-p'>「花伴野餐跑咖」串聯台北特色咖啡廳、異國美食與文創品牌。</span><span class='pc-p'>邀請民眾在大安森林公園野餐之餘，也循著活動地圖走進風格街區。</span><span class='pc-p'>活動期間，民眾可至特約店家<strong>免費索取花季限定貼紙</strong>，並<strong>享有專屬店家優惠</strong>。</span><span class='pc-p'>在花季3月，讓我們品味特色咖啡與美食、探索美學選物，將跑咖變成一場充滿驚喜的春季漫遊之旅。</span>",
       "bg": {
         "desktop": "./images/run/intro-bg.gif",
         "mobile": "./images/run/intro-bg-mb.gif"
@@ -702,8 +711,8 @@
         "mobile": "./images/run/rule-bg-mb.gif"
       },
       "title": {
-        "desktop": "./images/run/rule-title.png",
-        "mobile": "./images/run/rule-title-mb.png"
+        "desktop": "./images/run/rule-title-en.png",
+        "mobile": "./images/run/rule-title-en-mb.png"
       },
       "blocks": [
         {
@@ -712,7 +721,7 @@
             "desktop": "./images/run/rule-subtitle.png",
             "mobile": "./images/run/rule-subtitle-mb.png"
           },
-          "contentHtml": "<div><p><strong>活動時間：</strong>2026 年 3 月 3 日至 3 月 31 日</p></div><div><p><strong>活動辦法：</strong></p><p class='text-blue'>第一重好禮：追蹤＋消費，立即享店家專屬優惠</p><p>民眾追蹤「台北旅遊網」Facebook 或 Instagram 任一官方社群平台，並於合作店家消費達指定門檻（實際依各合作店家公告為準），出示追蹤畫面，即可享有該店家提供之限定優惠方案。</p><p class='text-blue'>第二重好禮：貼文按讚或分享，限量「花伴貼紙」帶回家</p><p>按讚或分享「台北旅遊網」Facebook 或 Instagram 任一則「2026 花伴野餐」相關貼文，出示完成畫面，即可兌換特製限量「花伴貼紙」乙份。</p></div><div><p><strong>注意事項：</strong></p><ul><li>每人每日限兌換限量貼紙乙次，數量有限，送完為止。</li><li>合作店家之消費門檻與優惠內容，依各店家公告為準。</li><li>主辦單位保留活動內容調整、修改及最終解釋權。</li></ul><img class='sticker' src='./images/run/sticker.png'></div>"
+          "contentHtml": "<div><p><strong>活動時間：</strong>2026 年 3 月 3 日至 3 月 31 日</p></div><div><p><strong>兌換地點：</strong>台北花伴野餐特約店家門市</p></div><div><p><strong>活動辦法：</strong></p><p class='text-blue'>第一重好禮：追蹤＋消費，立即享店家專屬優惠</p><p>民眾追蹤「台北旅遊網」Facebook 或 Instagram 任一官方社群平台，出示追蹤畫面。<br>消費達新台幣200元或店家指定門檻(依各合作店家公告)，即可享有該店家提供之限定優惠方案。</p><p class='text-blue'>第二重好禮：貼文按讚或分享，兌換「花伴野餐貼紙」(數量有限 送完為止) </p><p>轉發或按讚「台北旅遊網」Facebook 或 Instagram任一「2026花伴野餐」相關貼文，出示完成畫面，經合作店家確認後，即可兌換特製限量「花伴野餐貼紙」乙份。</p></div><div><p><strong>注意事項：</strong></p><ul><li>活動辦法僅適用於活動期間，逾期恕不受理。</li><li>每人每日每店家限兌換一次限量貼紙，數量有限，送完為止。</li><li>合作店家之消費門檻與優惠內容，依各店家公告為準。</li><li>本活動之優惠及贈品不得折換現金、轉售或要求更換其他品項。</li><li>如有未盡事宜，主辦單位保留活動內容調整、修改、暫停及最終解釋權。</li></ul><img class='sticker' src='./images/run/sticker.png'></div>"
         }
       ]
     },
@@ -720,20 +729,20 @@
       {
         "id": "shop1",
         "title": {
-          "desktop": "./images/run/info-title.png",
-          "mobile": "./images/run/info-title-mb.png"
+          "desktop": "./images/run/info-title-en.png",
+          "mobile": "./images/run/info-title-en-mb.png"
         },
         "textTitle": "台大公館商圈",
         "cards": [
           {
             "image": "./images/run/card1-1.jpg",
-            "title": "Zhanlu Coffee",
+            "title": "湛盧咖啡 台大店",
             "logo": "./images/run/logo1-1.jpg",
             "desc": "們不午那一：村裡有率是然後，多就是和進入好直播也會有。謝謝我沒半沒有人真時只能直接，的他的的狀態，好常可以開不時最好，很明的那了怎三個月本第，說是不到麼你真的下還沒，理起來還一點感覺角度。世這的結果。"
           },
           {
             "image": "",
-            "title": "Saturn Landing Turkish Coffee",
+            "title": "Saturn Landing Turkish Coffee 土耳其咖啡 客家店",
             "desc": "們不午那一：村裡有率是然後，多就是和進入好直播也會有。謝謝我沒半沒有人真時只能直接，的他的的狀態，好常可以開不時最好，很明的那了怎三個月本第，說是不到麼你真的下還沒，理起來還一點感覺角度。世這的結果。"
           },
           {
@@ -827,5 +836,34 @@
         ]
       }
     ]
+  },
+
+  "pokemon": {
+    "kv": {
+      "bg": {
+        "desktop": "./images/pokemon/kv-bg.gif",
+        "mobile": "./images/pokemon/kv-bg-mb.gif"
+      },
+      "title": {
+        "desktop": "./images/pokemon/kv-title-en.png",
+        "mobile": "./images/pokemon/kv-title-en-mb.png"
+      }
+    },
+    "intro": {
+      "title": {
+        "desktop": "./images/pokemon/intro-title-en.png",
+        "mobile": "./images/pokemon/intro-title-en-mb.png"
+      },
+      "text": "<span class='pc-p mb-p sub-title'>親愛的訓練家們，<br>準備好與「戴著花飾的皮卡丘」一起春遊臺北了嗎？</span><span class='pc-p mb-p'>2026年3月28日至4月6日，快來臺北市大安森林公園與寶可夢們一起成受春天的氣息吧！<span class='pc-p'>除了有活動主題實可夢之外，我們也準備了活動期問內可以參與的「限時調查」與「田野調查」。</span><span class='pc-p'>誠摯邀請您在春暖花開的美麗景致中，與《Pokemon GO》一同創造難忘的春日回憶。</span></span>",
+      "image": {
+        "desktop": "./images/pokemon/intro-bg.gif",
+        "mobile": "./images/pokemon/intro-bg-mb.gif"
+      },
+      "bg": {
+        "desktop": "./images/pokemon/intro-bg.gif",
+        "mobile": "./images/pokemon/intro-bg-mb.gif"
+      }
+    }
   }
+
 }
