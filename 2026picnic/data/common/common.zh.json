@@ -1,4 +1,13 @@
 {
+  "metaCommon": {
+    "author": "2026 台北花伴野餐",
+    "fb_app_id": "1234567890",
+    "favicon": "./images/common/favicon.ico",
+    "og": {
+      "site_name": "2026 台北花伴野餐",
+      "image": "./images/common/fb.jpg"
+    }
+  },
   "nav": {
     "home": "首頁",
     "coffee": "咖啡派對區＆主舞台",

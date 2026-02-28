@@ -1,5 +1,6 @@
 import { getLang, loadJSON } from './i18n.js';
 import {
+  renderMeta,
   renderI18n,
   renderLanguageSwitcher,
   renderNavLinks,
@@ -11,7 +12,9 @@ import {
   renderSchedule,
   renderInfoSections,
   renderMarketMap,
-  renderRule
+  renderRule,
+  renderEvent,
+  renderNotice
 } from './render.js';
 
 
@@ -91,6 +94,7 @@ async function init() {
   }
 
   // ③ render
+  renderMeta(common, pageData);
   renderI18n(common);
   renderLanguageSwitcher(lang);
   renderNavLinks(lang);
@@ -107,6 +111,8 @@ async function init() {
   renderInfoSections(pageData.infoSections2, '[data-page-info2]');
   renderMarketMap(pageData.map, '[data-page-map]');
   renderRule(pageData.rule, '[data-page-rule]');
+  renderEvent(pageData.event, '[data-page-event]');
+  renderNotice(pageData.notice, '[data-page-notice]');
 
   // 最後再跑頁面文字 i18n
   renderI18n(pageData);

@@ -1,5 +1,16 @@
 {
   "coffee": {
+    "meta": {
+      "title": "Coffee Rave Picnic Area｜2026 Taipei Floral Picnic",
+      "description": "Vibey Coffee Rave + Romantic Garden Picnic Immerse yourself in a romantic garden setting where coffee meets music; engage all five senses and redefine the picnicking experience.",
+      "keywords": "咖啡,音樂派對,野餐,台北花季",
+      "og": {
+        "title": "Coffee Rave Picnic Area｜2026 Taipei Floral Picnic",
+        "description": "Vibey Coffee Rave + Romantic Garden Picnic Immerse yourself in a romantic garden setting where coffee meets music; engage all five senses and redefine the picnicking experience.",
+        "image": "./images/fb.jpg",
+        "url": "https://2026floralpicnic.taipei/coffee.html"
+      }
+    },
     "kv": {
       "bg": {
         "desktop": "./images/coffee/kv-bg.gif",
@@ -11,13 +22,13 @@
       }
     },
     "intro": {
-      "text": "<span class='pc-p mb-p'>咖啡音樂派對 × 浪漫花園體驗</span><span class='pc-p mb-p'>在浪漫花園中品味咖啡與音樂，<span class='mb-p'>邀您用五感重新定義野餐體驗</span></span>",
+      "text": "<span class='pc-p mb-p'>Vibey Coffee Rave + Romantic Garden Picnic</span><span class='pc-p mb-p'>Immerse yourself in a romantic garden setting where coffee meets music; engage all five senses and redefine the picnicking experience.</span>",
       "bg": {
         "desktop": "./images/coffee/intro-bg.gif",
         "mobile": "./images/coffee/intro-bg-mb.gif"
       },
       "cta": {
-        "text": "按我預約報名",
+        "text": "Rigister",
         "link": "https://www.accupass.com/event/2602090323411223645010"
       }
     },
@@ -46,23 +57,23 @@
           "desktop": "./images/coffee/info1-title-en.png",
           "mobile": "./images/coffee/info1-title-en-mb.png"
         },
-        "desc": "<span class='pc-p'>舞台音樂派對 DJ 國際音樂組曲，</span>野餐區咖啡吧提供特色風味咖啡免費兌換。",
+        "desc": "<span class='pc-p'>Come and enjoy a curated mix of international hits performed live by talented DJs and musicians on the main stage, </span>with a cup of exclusive brew in hand from our dedicated picnic coffee bar.",
 
         "cards": [
           {
             "image": "./images/coffee/card1-1.jpg",
-            "title": "手沖咖啡體驗",
-            "desc": "<ul><li>邀請專業咖啡師進行特製手沖咖啡，民眾可免費排隊領取試飲。</li><li>手沖咖啡表演與限量試飲：<ol><li>每場示範開始前 15 分鐘，現場將發放手沖咖啡試飲號碼牌，數量有限，發完為止。</li><li>手沖示範每日於指定時段進行，由專業咖啡師現場演示手沖咖啡。</li><li>示範過程中咖啡師會介紹沖煮技巧與風味特色。</li></ol></li><li>示範結束後，民眾可依號碼牌順序領取手沖咖啡試飲。現場提供環保紙杯。</li></ul>"
+            "title": "Pour-Over Coffee Show",
+            "desc": "<p>Get ready to brew like a pro! Join our expert baristas daily at scheduled times as they showcase the art of hand pour-over brewing. During each session, they'll reveal their professional techniques and dive into the unique flavor profiles of featured beans.</p><br><p><strong>How to Join:</strong> To join a tasting, simply grab a numbered ticket on-site 15 minutes before each demo show kicks off. Tickets are limited, so it's first come, first served!</p><p><strong>Redeem Your Sip:</strong> Once the show wraps up, we'll call out the numbers for you to redeem your ticket and enjoy a fresh pour-over coffee sample (eco-friendly paper cups will be provided on-site).</p>"
           },
           {
             "image": "./images/coffee/card1-2.jpg",
-            "title": "台北咖啡補給",
-            "desc": "<ul><li>邀請臺北特色咖啡店家提供咖啡飲品，民眾可排隊免費兌換咖啡。</li><li>咖啡兌換說明：</li><ol><li>活動當日民眾可於 14:30、15:30、16:30 三個指定梯次，至咖啡兌換區依序排隊兌換。</li><li>每梯次提供1種特色咖啡兌換，使用環保紙杯提供，亦歡迎民眾自備環保杯。</li><li>每梯次供應數量有限，若當梯次兌換完畢，請等待下一梯次開放。</li></ol></ul>"
+            "title": "Free Specialty Coffee Giveaway",
+            "desc": "<p>Is one pour-over coffee not enough? We've partnered with iconic Taipei cafes to bring their signature brews to you, also for free!</p><br><p><strong>How to Get:</strong> Join the queue at the coffee booth for our three designated sessions: 14:30, 15:30, and 16:30 each day. Just line up and get ready for your specialty pour!</p><p><strong>NOTE:</strong> Each session features a different specialty brew served in eco-paper cups, but your own reusable cups are always welcome! Supplies are limited for each time slot, thus its first come, first served. If we're tapped out, please wait for the next round to begin!</p>"
           },
           {
             "image": "./images/coffee/card1-3.jpg",
-            "title": "派對音樂DJ ",
-            "desc": "兩天14:30-15:30 主舞台進行音樂派對DJ表演，表演詳情請見下方主舞台表演節目說明。"
+            "title": "Coffee Rave DJ Performance",
+            "desc": "<p>Join us at the Main Stage from 14:00 to 15:30 on both days for our Coffee Rave DJ performance. See more details in the Main Stage Program Guide below.</p><p><strong>Rights Reservation:</strong> The organizer reserves the right to adjust, modify, or suspend the above-mentioned events details at any time.</p>"
           }
         ]
       },
@@ -76,28 +87,28 @@
           "desktop": "./images/coffee/info2-title-en.png",
           "mobile": "./images/coffee/info2-title-en-mb.png"
         },
-        "desc": "<span class='pc-p'>邀請風格插畫師繪製獨一無二「花尚顏繪」，</span><span class='pc-p'>與專業老師帶領製作「水泥六角擴香花盤」與「鐵罐乾燥花香氛蠟燭」手作活動，</span>沉浸於藝術與香氣交織的浪漫時光。",
+        "desc": "Immerse yourself in art and fragrance through these curated creative activities.",
 
         "cards": [
           {
             "image": "./images/coffee/card2-1.jpg",
-            "title": "花尚顏繪體驗",
-            "desc": "<p>在花香環繞的野餐現場，插畫師將以繪畫方式，捕捉報名者當下的神情、氣質與個人特色，呈現獨一無二專屬似顏繪作品。創作過程中融入花卉元素，將春日記憶保留於畫紙上，讓您留下值得珍藏的紀念畫像。</p><ul><li>免費報名，採線上預約，每小時20個名額，每日2個時段，共40個名額。免費報名參加。</li><li>活動開始前30分鐘開放報到，請民眾出示報名成功信件QRcode完成報到。依照工作人員指示拍照後，於指定時間回來領取顏繪作品。若超過活動報名體驗時間，視同放棄報名資格。</li></ul>",
-            "btnText": "按我預約報名",
+            "title": "Floral Portrait Illustration",
+            "desc": "<p>Surrounded by the sweet scent of blossoms, one of our talented illustrators will capture your unique expression and style in a one-of-a-kind custom floral portrait. See your personality come to life on paper, beautifully intertwined with floral elements that bottle up the magic of spring. It will be more than just a drawing—a heartfelt keepsake of your day in the sun!</p><br><p><strong>How to Join:</strong> Free online admission, limited to 40 entries.</p><br><p>Check-in begins 30 minutes prior to the start of the activity. Please present the QR code from your registration confirmation email to complete the check-in process. After following the staff's instructions for a quick reference photo, you may return at the designated time to collect your custom portrait.</p",
+            "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090323411223645010"
           },
           {
             "image": "./images/coffee/card2-2.jpg",
-            "title": "水泥六角擴香花盤",
-            "desc": "<p>插花的時刻總讓人特別療癒，將索拉花插在六角花盤上，搭配進口精油，將香氣輕輕滴在花上，家裡立刻瀰漫著自己喜歡的味道，不只能當作漂亮的盆花擺飾，經過時還能聞到散發出來淡淡香氣，療癒又舒心。</p><ul><li>免費報名，採線上預約，每小時20個名額，每日1個時段，共20個名額。</li><li>課程時間90分鐘，免費報名參加。作品為示意圖，以現場提供材料為準。</li><li>活動開始前30分鐘開放報到，請民眾出示報名成功信件QRcode完成報到。若超過活動報名體驗時間，視同放棄報名資格。</li></ul>",
-            "btnText": "按我預約報名",
+            "title": "Cement Hexagonal Fragrance Diffuser Tray with Sola Flower",
+            "desc": "<p>Scent up your home! As you arrange Sola flowers on a hexagonal palette and add a few drops of exquisite essential oil, your favorite aroma begins to bloom. It functions as a gorgeous floral display that whispers a faint, pleasant scent as you walk by—a perfect remedy for the soul.</p><br><p><strong>How to Join:</strong> Free online admission, limited to 20 entries; 90-minute session.</p><p>*Images are for illustrative purposes only; final pieces will depend on the materials available on-site.</p><br><p>Check-in begins 30 minutes prior to the start of the activity. Please present the QR code from your registration confirmation email to complete the check-in process.</p>",
+            "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090323411223645010"
           },
           {
             "image": "./images/coffee/card2-3.jpg",
-            "title": "鐵罐乾燥花香氛蠟燭",
-            "desc": "<p>以天然大豆蠟搭配香氛精油製作，搭配不同的乾燥花材與精緻鐵罐，呈現獨特而細緻的美感。精油融入蠟體後，即使不點燃，也能自然散發香氣，讓空間瀰漫柔和的芳香，還能作為點綴家的收藏品，為日常生活增添療癒心靈的質感。</p><ul><li>免費報名，採線上預約，每小時20個名額，每日1個時段，共20個名額。</li><li>課程時間90分鐘，免費報名參加。作品為示意圖，以現場提供材料為準。</li><li>活動開始前30分鐘開放報到，請民眾出示報名成功信件QRcode完成報到。若超過活動報名體驗時間，視同放棄報名資格。</li></ul>",
-            "btnText": "按我預約報名",
+            "title": "Tin-Can Dried-Flower Scented Candles",
+            "desc": "<p>Blend natural soy wax with essential oils and dried botanicals in a vintage-style tin. This will serve as a beautiful decorative piece for your home, adding a touch of therapeutic elegance to your daily life.</p><br><p><strong>How to Join:</strong> Free online admission, limited to 20 entries; 90-minute session.</p><p>*Images are for illustrative purposes only; final pieces will depend on the materials available on-site.</p><br><p>Check-in begins 30 minutes prior to the start of the activity. Please present the QR code from your registration confirmation email to complete the check-in process.</p><p><strong>Rights Reservation:</strong> The organizer reserves the right to adjust, modify, or suspend the above-mentioned events and activities details at any time. </p>",
+            "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090323411223645010"
           }
         ]
@@ -112,35 +123,39 @@
           "desktop": "./images/coffee/info3-title-en.png",
           "mobile": "./images/coffee/info3-title-en-mb.png"
         },
-        "desc": "<span class='pc-p'>歡迎民眾預約報名咖啡派對野餐區，</span>早鳥成功報名野餐活動，活動當日可至各野餐區報到處領取活動野餐墊。",
+        "desc": "<span class='pc-p'>Register now for your spot in the Coffee Rave Picnic Area and </span>grab your exclusive early-bird gifts!",
 
         "cards": [
           {
             "image": "./images/coffee/card3-1.jpg",
-            "title": "野餐報名禮",
-            "desc": "<ul><li>活動特製野餐墊：設計以臺北春季花卉為設計靈感，搭配淺黃色的主色，讓野餐墊輕鬆融入在自然草地環境中。</li><li>兌換辦法：咖啡派對野餐區提供活動特製野餐墊免費兌換，歡迎立即報名，活動現場各區報到處領取。</li></ul>",
-            "btnText": "按我預約報名",
+            "title": "Registration Gift",
+            "desc": "<p>2026 Taipei Floral Picnic Exclusive Picnic Mat</p><p>Inspired by spring blossoms in Taipei and splashed with a soft yellow hue, this mat is designed to blend perfectly with the lush green grass for that ultimate picnic vibe.</p><br><p><strong>How to Get:</strong> Upon successful sign-up, registered guests are invited to pick up their mat at the on-site check-in spots.</p><br><p><strong>How to Register:</strong> Online registration is free via Accupass. Please choose one of the following options (Accupass account registration required):</p><ul><li>Individual: Groups of 2</li><li>Group: Groups of 10 or more.</li></ul><p> *For more details, please visit our Accupass event page</p><br><p><strong>Check-in & Pickup:</strong></p><ul><li>Date: March 28th – March 29th</li><li>Time: 13:00 – 17:00</li><li>Location: Check-in Booth at Coffee Rave Picnic Area</li><li>Process: Please present your Accupass E-ticket (QR code) and a valid ID of the primary registrant to our staff. Once verified, you will receive a limited-edition custom picnic mat.</li><li>><strong>Rights Reservation:</strong> The organizer reserves the right to adjust, modify, suspend, or provide final interpretation of the above-mentioned event's content.</li></ul>",
+            "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090212451166853258"
           },
           {
-            "image": "",
-            "title": "品牌好禮兌換",
-            "desc": "coming soon"
-          }
-          ,
+            "image": "./images/coffee/card3-2.jpg",
+            "title": "Vegan Joy Special Giveaway",
+            "desc": "<p>Committed to fostering an eco-friendly and conscious food culture, Vegan Joy centers its business on health, social responsibility, and animal welfare. Together, let's make sustainable living a reality.</p><br><p>2026 Taipei Floral Picnic Exclusive:  Complete the designated brand mission on-site to choose from one of the gifts below</p><p>(1) Choco Puff<br>(2)  Coco Maniac Popcorn<br>(3) Savory Caramel Popcorn<br>(4) Burdock Root Floss<br>(5) Vegetable Crisp</p><br><p>One pack per person per visit. Limited quantities available; offer valid while stocks last.</p>"
+          },
           {
-            "image": "",
-            "title": "品牌好禮兌換",
-            "desc": "coming soon"
+            "image": "./images/coffee/card3-3.jpg",
+            "title": "ELLE Special Giveaway",
+            "desc": "<p>Since its 1945 debut in Paris, ELLE has become a global powerhouse in fashion media. ELLE Taiwan carries on this legacy of French elegance with a focus on 'Effortless Chic,' guiding modern women to celebrate style, embody self-assurance, and lead a life full of flair.</p><br><p>2026 Taipei Floral Picnic Exclusive:  Complete the designated brand mission on-site to choose from one of the gifts below</p><p>(1) ELLE Stylish Sticker<br>(2) ELLE Eco-Friendly Cup Carrier<br>(3) ELLE Paperback Magazine</p><br><p>One item per person per visit. Limited quantities available; offer valid while stocks last.</p>"
+          },
+          {
+            "image": "./images/coffee/card3-4.jpg",
+            "title": "Ora2 Special Giveaway",
+            "desc": "<p>As Japan's leading oral care expert, Ora2 caters to women who pursue a refined lifestyle. Offering a full range of whitening and breath-care essentials, Ora2 ensures that even the busiest women can showcase a radiant smile and enjoy the invigorating feeling of a clean, healthy mouth.</p><br><p>2026 Taipei Floral Picnic Exclusive:  Complete the designated brand mission on-site to redeem a tube of Ora2 me STAIN CLEAR Toothpaste-Natural Mint.</p><br><p>Limited quantities available; offer valid while stocks last.</p>"
           }
         ]
       }
     ],
     "intro2": {
-      "text": "音樂派對DJ × 國際級馬戲表演 × 寶可夢見面會<br>兩天精彩不間斷！ 無論你是熱血樂迷、喜愛馬戲的親子家庭，<br class='mbhide'>還是寶可夢忠實粉絲，不可錯過的野餐表演舞台！",
+      "text": "Coffee Rave DJ Performance +  World-Class Circus Show + Pikachu and Eevee Meet-and-Greets!<br>Don't miss the non-stop two-day lineup featuring amazing DJs and talented music artists, international circus show, and meet the cutest Pokémon on our Main Stage!",
       "bg": {
-        "desktop": "./images/coffee/intro2-bg.gif",
-        "mobile": "./images/coffee/intro2-bg-mb.gif"
+        "desktop": "./images/coffee/intro2-bg-en.gif",
+        "mobile": "./images/coffee/intro2-bg-en-mb.gif"
       },
       "title": {
         "desktop": "./images/coffee/intro2-title-en.png",
@@ -176,38 +191,38 @@
         "cards": [
           {
             "image": "./images/coffee/card4-8.jpg",
-            "title": "咖啡音樂派對DJ - Divyns",
-            "desc": "<p>來自法國南特的 Divyns，自幼接觸各類樂器與音樂創作，並活躍於臺灣多場活動演出。曾發行法文歌曲專輯，並以「法式臺味電音」受到關注。</p><p>本次演出將結合法式電音、美式流行與臺灣經典與當代歌曲，透過跨文化曲風編排與節奏轉換，營造濃厚異國氛圍，呼應本次活動的國際多元風格，帶來充滿律動的音樂體驗。</p>"
+            "title": "Coffee Rave ft. DJ Divyns",
+            "desc": "<p>Hailing from Nantes, France, Divyns grew up surrounded by musical instruments and creative composition. Now a familiar face in Taiwan's vibrant event scene, he first made waves with his French albums and gained a dedicated following for his unique \"French-Taiwanese Electronica\" style.</p><p>For this performance, Divyns will blend French house, American pop, and a mix of Taiwanese classics and contemporary hits. Through a cross-cultural weaving together of genres and shifting rhythms, he'll create a rich, exotic atmosphere that perfectly captures the international spirit of our event. Get ready for a high-energy rhythmic journey!</p>"
           },
           {
             "image": "./images/coffee/card4-1.jpg",
-            "title": "咖啡音樂派對DJ - Jamie Q",
-            "desc": "<p>DJ Jamie Q無論實驗空靈或低頻煽動，她皆能靈活運用，風格涉略廣泛，擅長將音樂曲風融入不同場景之中，投射環境、瞬間點燃現場氛圍。</p><p>本次她將帶來的演出內容是融合亞洲流行、韓國潮流電音與華語經典金曲，並穿插 90 年代元素與當代電子節奏，在不同文化聲響之間自由轉換，她將依現場節奏靈活鋪陳，讓音樂隨著草地微風與人群互動自然流動，咖啡香氣伴隨歡樂節拍，共同營造春日野餐的輕鬆派對氛圍。</p>"
+            "title": "Coffee Rave ft. DJ Jamie Q",
+            "desc": "<p>Whether she's spinning experimental, ethereal soundscapes or bass-heavy beats, DJ Jamie Q is a true master of atmosphere. Known for her incredibly versatile style, she has a knack for tailoring her music to any setting, instantly transforming the environment and exciting the crowd.</p><p>For this performance, she'll be serving up a high-energy fusion of Asian Pop, K-Pop EDM, and Mandarin-pop classics, all seasoned with '90s nostalgia and modern electronic rhythms. Moving effortlessly between cultural sounds, Jamie Q will let the music flow naturally with the spring breeze and the crowd's energy. With the aroma of coffee in the air accompanied by joyful beats, she's here to create the ultimate, laid-back spring picnic party!</p>"
           },
           {
             "image": "./images/coffee/card4-2.jpg",
-            "title": "國際級馬戲: 馬戲之門 「紳士咖啡廳」",
-            "desc": "<p>「馬戲之門」成立於 2015 年，團隊以「大門」為意象，期望引領大眾走進馬戲的風光，同時成為連結臺灣當代馬戲與各界的出口。2025年為大阪萬國博覽會Tech World館指定合作表演團隊。</p><p>成軍10年國際級馬戲團隊，帶來獨創戲碼「紳士咖啡廳」，讓一杯咖啡的誕生過程轉化為一場充滿馬戲技巧、肢體喜劇與荒謬想像的旅程。</p><p>本次表演以「紳士咖啡廳」為主題，一間風格鮮明的咖啡廳作為故事場域，透過四位演員的身體行動，描繪一杯咖啡從被製作到被飲用後，在人身上所引發的感官與情緒變化。讓一杯咖啡的誕生過程轉化為一場充滿馬戲技巧、肢體喜劇與荒謬想像的旅程。當咖啡最終被喝下，身體狀態的轉變也重新定義了這個空間中人與人之間的關係。</p>"
+            "title": "Circus Gate - \"Gentleman's Café\"",
+            "desc": "<p>Founded in 2015, Circus Gate is a standout in the performing arts, honored as the designated collaborative performance team for the Tech World Pavilion at the 2025 Osaka World Expo.</p><p>For the 2026 Taipei Floral Picnic, the troupe is presenting its original work, \"Gentleman's Café.\" Set in a uniquely styled coffee house, four performers use their bodies to tell the story of a single cup of coffee. Watch as the simple act of brewing transforms into a journey of high-skill circus stunts, physical comedy, and wild imagination, a sensory explosion that connects the performers with the audience.</p>"
           },
           {
             "image": "./images/coffee/card4-4.jpg",
-            "title": "音療手碟表演-因為手碟",
-            "desc": "<p>2000年發明的「手碟」被譽為「世上最療癒的樂器之一」，手碟柔和且空靈的音色，帶給人身心的平靜與療癒感。</p><p>「因為手碟」團隊成立於 2021 年，手碟的音樂演奏如溫潤流動的對話，引領聽眾穿梭不同時空與畫面，感受聲音帶來的共鳴與想像。創辦人-莉酸喜愛攜帶手碟旅行，從自然與環境中汲取靈感。他的音樂風格將細膩情感與靈巧節奏融入創作，透過手碟打造療癒而夢幻的聆聽體驗。</p>"
+            "title": "Because Handpan",
+            "desc": "<p>Founded in 2021, the Because Handpan troupe brings the handpan to life through music that feels like a warm, flowing conversation. Its performances guide listeners through different times and spaces, sparking deep resonance and vivid imagination through sound.</p><p>Founder Li Suan (莉酸) loves traveling with her handpan, drawing inspiration directly from nature and her surroundings. Her musical style blends delicate emotions with nimble rhythms, using the handpan to craft a healing, dreamlike listening experience that's perfect for a relaxing afternoon</p>"
           },
           {
             "image": "./images/coffee/card4-5.jpg",
-            "title": "吉他女聲-傑西Jessie",
-            "desc": "<p>現為駐唱歌手與街頭藝人，活躍於城市街頭與各式餐酒館演出。以溫暖真摯的歌聲擁抱每個瞬間，期待透過音樂與您共創難忘而美好的時光。此次表演將挑選與花卉或咖啡相關的曲目，如許紹洋的《花香》、周杰倫的《花海》、周慧敏的《咖啡在等一個人》、李千娜的《心花開》等，透過音樂與民眾共創難忘而美好的春日野餐時光。</p>"
+            "title": "Jessie (Guitar Vocalist)",
+            "desc": "<p>A regular on the city streets and a favorite at local bistros, along with her guitar Jessie brings a warm, sincere voice that embraces every moment.</p><p>For this performance, she has specially curated a setlist centered around flowers and coffee, aiming to create a beautiful, unforgettable spring picnic experience through music. Come share a wonderful afternoon and let the melodies make your day!</p>"
           },
           {
             "image": "./images/coffee/card4-6.jpg",
-            "title": "小提琴表演-小伊",
-            "desc": "<p>現為街頭藝人，致力於推動臺北自由街頭演出。無論上下班時段或假日，常可在臺北市中心的各個角落見到他全心投入演出的身影。他始終秉持著簡單而純粹的理念，以全神貫注的信念，投入每一場演出，將音樂盡可能的感染、分享給更多人。累積超過 30 次登上國家音樂廳舞台，並曾於2015年與香港歌手譚詠麟於紅磡體育館同台演出</p>"
+            "title": "VIOLINick (Violinist)",
+            "desc": "<p>A dedicated busker and a driving force behind Taipei's vibrant street-performance scene, you'll often find this artist pouring his heart and soul into his music at various corners of the city—whether it's during the busy weekday rush or a relaxed holiday.</p><p>He lives by a pure and simple philosophy: total immersion. Giving his absolute all with every performance, his aim is to share the infectious joy of music with as many people as possible. His impressive resume includes over 30 appearances on the stage of the National Concert Hall, and he even shared the spotlight with Hong Kong legend Alan Tam at the iconic Hong Kong Coliseum in 2015.</p>"
           },
           {
             "image": "./images/coffee/card4-7.jpg",
-            "title": "吉他仙子-裴安",
-            "desc": "<p>從小學習古典鋼琴，後來接觸民謠吉他與編曲製作，開啟音樂創作之路。深受 indie pop、bedroom pop、alternative 等曲風吸引，以空靈細膩的聲線與詩意的歌詞，詮釋內心最真實的情感故事。</p>"
+            "title": "Annbae (Vocal Guitarist)",
+            "desc": "<p>Starting with classical piano as a child, she later found her path in music through folk guitar and arrangement production. Drawn to the dreamy vibes of Indie Pop, Bedroom Pop, and Alternative genres, she uses her ethereal, delicate vocals and poetic lyrics to tell the most authentic stories of the heart.</p>"
           }
         ]
       }
@@ -215,6 +230,17 @@
   },
 
   "sports": {
+    "meta": {
+      "title": "Vitality Lawn｜2026 Taipei Floral Picnic",
+      "description": "Green Healing Yoga + All-Age Sustainable Fitness Stretch and move upon the lush green lawn, allowing your body to rediscover its purest source of vitality and inner beauty.",
+      "keywords": "運動,瑜伽,野餐,台北花季",
+      "og": {
+        "title": "Vitality Lawn｜2026 Taipei Floral Picnic",
+        "description": "Green Healing Yoga + All-Age Sustainable Fitness Stretch and move upon the lush green lawn, allowing your body to rediscover its purest source of vitality and inner beauty.",
+        "image": "./images/fb.jpg",
+        "url": "https://2026floralpicnic.taipei/sports.html"
+      }
+    },
     "kv": {
       "bg": {
         "desktop": "./images/sports/kv-bg.gif",
@@ -226,13 +252,13 @@
       }
     },
     "intro": {
-      "text": "<span class='pc-p mb-p'>草地療癒瑜珈 × 全齡永續運動</span><span class='pc-p mb-p'>在綠意草地舒展運動，<span class='mb-p'>讓身體找回最純粹的「美力」能量</span></span>",
+      "text": "<span class='pc-p mb-p'>Green Healing Yoga + All-Age Sustainable Fitness</span><span class='pc-p mb-p'>Stretch and move upon the lush green lawn, allowing your body to rediscover its purest source of vitality and inner beauty.</span>",
       "bg": {
         "desktop": "./images/sports/intro-bg.gif",
         "mobile": "./images/sports/intro-bg-mb.gif"
       },
       "cta": {
-        "text": "按我預約報名",
+        "text": "Register",
         "link": "https://www.accupass.com/event/2602090328182068972664"
       }
     },
@@ -246,8 +272,8 @@
         "mobile": "./images/sports/schedule-title-en-mb.png"
       },
       "image": {
-        "desktop": "./images/sports/schedule-img.gif",
-        "mobile": "./images/sports/schedule-img-mb.gif"
+        "desktop": "./images/sports/schedule-img-en.gif",
+        "mobile": "./images/sports/schedule-img-en-mb.gif"
       }
     },
     "infoSections": [
@@ -261,17 +287,17 @@
           "desktop": "./images/sports/info1-title-en.png",
           "mobile": "./images/sports/info1-title-en-mb.png"
         },
-        "desc": "以無動力設施打造全年齡友善的運動體驗，<br>設置「臺北地標充電站」、「花伴野餐咖啡屋」等互動關卡，完成挑戰即可獲得限量「花伴野餐貼紙」。",
+        "desc": "<span class='pc-p'>Experience fitness activities for all ages with our zero-power interactive zones! </span>Take on fun challenges like the \"Taipei Landmark Power-Up\" and \"Floral Picnic Café.\" <span class='pc-p'>Once you've conquered the challenges, a limited event sticker is yours to take home!</span>",
         "cards": [
           {
             "image": "./images/sports/card1-1.jpg",
-            "title": "台北地標充電站",
-            "desc": "<p>現場設置2組電力腳踏車，透過踩踏發電腳踏車，邀請您一起點亮臺北的特色地標！於規定時間內成功點亮第3站，即可獲得限量花伴野餐活動貼紙。</p><p>活動辦法: </p><ol><li>本活動免報名，採現場排隊體驗方式進行，民眾可重複參與。</li><li>現場共設置 2 臺發電腳踏車，每次限 1 人使用 1 臺；於規定時間內完成指定挑戰並符合活動規定者，即可兌換限量貼紙乙張。</li><li>「花伴野餐貼紙」每日數量有限，送完為止。</li></ol>"
+            "title": "Taipei Landmark Power-Up",
+            "desc": "<p>Power the city with your own two feet! Use our power-generating bikes to bring Taipei's landmarks to life. If you can reach the third station before time runs out, you'll earn a limited-edition sticker as a reward for your energy!</p><br><p><strong>How to Join:</strong></p><ol><li>No registration is needed! Just come by and join the line—you're welcome to try as many times as you like.</li><li>We have two power-bikes available (one person per bike). Complete the challenge within the time limit to earn a limited-edition sticker! Stickers are available in limited quantities each day.</li><li>For your safety while riding the electric bicycles, a minimum height of 145 cm is recommended.</li></ol>"
           },
           {
             "image": "./images/sports/card1-2.jpg",
-            "title": "花伴野餐咖啡屋",
-            "desc": "<p>歡迎親子共同參與，翻開咖啡杯蓋，進行春季花卉配對挑戰！於時間內完成指定花卉配對任務，即可獲得限量活動貼紙。</p><p>活動辦法: </p><ol><li>本活動免報名，採現場排隊體驗方式進行，民眾可重複參與。</li><li>現場設置黑、白杯蓋共五組花卉配對，於規定時間內完成指定挑戰並符合活動規定者，即可兌換限量貼紙乙張。</li><li>「花伴野餐貼紙」每日數量有限，送完為止。</li></ol>"
+            "title": "Floral Picnic Café",
+            "desc": "<p>Fun for the whole family! Flip the coffee cup lids and complete the flower-matching mission within the time limit to win your limited-edition event sticker. Come show off your memory skills!</p><br><p><strong>How to Join: </strong></p><ol><li>No registration is needed! Just come by and join the line—you're welcome to try as many times as you like.</li><li>Find all five floral pairs by flipping the black and white lids, racing against the clock! Complete the challenge within the time limit to earn a limited sticker!</li><li>One person at a time. Children under 6 require adult supervision to participate.</li></ol>"
           }
         ]
       },
@@ -285,35 +311,35 @@
           "desktop": "./images/sports/info2-title-en.png",
           "mobile": "./images/sports/info2-title-en-mb.png"
         },
-        "desc": "集結哈達瑜珈、頌缽瑜珈、精油皮拉提斯、瑜珈提斯等課程，<br class='mbhide'>在自然草地中感受身心平衡的時刻。",
+        "desc": "Experience Hatha, Singing Bowls Yoga, Essential Oil Pilates, and Yogalates. <br class='mbhide'>A perfect moment to restore balance and mind-body harmony amidst nature.",
 
         "cards": [
           {
             "image": "./images/sports/card2-1.jpg",
-            "title": "哈達瑜珈",
-            "desc": "<p>專業瑜伽老師:咪咪</p><p>哈達瑜伽是最傳統且普遍的瑜伽形式，以穩定、緩慢的體式搭配規律呼吸，引導身心逐步放鬆。課程著重基礎體式與呼吸的連結，培養身體覺察與專注力，讓能量自然流動。溫和且循序漸進的練習方式，特別適合初學者入門。</p><p>在大自然中練習瑜伽，能讓身心更深層放鬆。於綠意與清新空氣中伸展呼吸，有助舒緩壓力、穩定情緒，讓身體與自然節奏同步，回歸自在平衡的狀態。</p><p>免費報名，採線上預約，總共20個名額。課程時間60分鐘。</p><p>活動開始前60分鐘「美力運動野餐區」開放報到，此課程只開放給線上報名成功的民眾。若超過報名體驗時間，視同放棄此報名資格。</p><p>建議穿著適合運動的衣物並自備毛巾。主辦單位提供瑜珈墊。</p><p>若活動遇到下雨，請參考活動官網或「台北旅遊網」官方社群通知至雨備地點。</p>",
-            "btnText": "按我預約報名",
+            "title": "Hatha",
+            "desc": "<p>Professional Yoga Instructor: Mimi</p><p>Hatha Yoga is a classic path to balance, focused on steady poses and deep breathing to release tension and build mindfulness. Gentle and accessible, it's the perfect start for beginners to find their inner flow.</p><br><p><strong>How to Join:</strong></p><p>Free online admission, limited to 20 entries; 60-minute session.</p><p>Check-in opens 30 minutes before the lesson.</p><p>Please note that this lesson is exclusive to confirmed online registrants.</p><br><p><strong>What to Bring:</strong> Wear comfortable workout attire and bring your own towel. Yoga mats are provided on-site.</p><br><p><strong>Weather Notice:</strong> In case of rain, please check the Event official website or \"Taipei Travel\" Facebook or Instagram for backup venue details.</p>",
+            "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090328182068972664"
           },
           {
             "image": "./images/sports/card2-2.jpg",
-            "title": "頌缽水晶缽瑜珈",
-            "desc": "<p>專業瑜伽老師:咪咪</p><p>由專業瑜珈老師帶領的頌缽、水晶缽瑜伽，結合溫和的身體伸展與水晶缽清澈悠長的聲音，引導呼吸與動作自然流動。透過聲波的共振，身體逐漸放鬆，思緒慢慢沉澱，在自然環境中感受片刻的安靜與專注，讓身心回到穩定、舒適的狀態，展開一段專屬於自己的療癒時光。</p><p>免費報名，採線上預約，總共20個名額。課程時間60分鐘。內文活動開始前60分鐘「美力運動野餐區」開放報到，此課程只開放給線上報名成功的民眾。若超過報名體驗時間，視同放棄此報名資格。</p><p>建議穿著適合運動的衣物並自備毛巾。主辦單位提供瑜珈墊。</p><p>若活動遇到下雨，請參考活動官網或「台北旅遊網」官方社群通知至雨備地點。</p>",
-            "btnText": "按我預約報名",
+            "title": "Singing Bowl Yoga",
+            "desc": "<p>Professional Yoga Instructor: Mimi</p><p>A journey of sound and movement. Guided by a professional instructor, this session blends gentle stretching with the pure, lingering tones of crystal singing bowls. Let the vibrations settle your thoughts and harmonize your breathing, guiding you into a deep state of peace and stability amidst nature.</p><br><p><strong>How to Join:</strong></p><p>Free online admission, limited to 20 entries; 60-minute session.</p><p>Check-in opens 30 minutes before the lesson.</p><p>Please note that this session is exclusive to confirmed online registrants.</p><br><p><strong>What to Bring:</strong> Wear comfortable workout attire and bring your own towel. Yoga mats are provided on-site.</p><br><p><strong>Weather Notice:</strong> In case of rain, please check the Event official website or \"Taipei Travel\" Facebook or Instagram for backup venue details.</p>",
+            "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090328182068972664"
           },
           {
             "image": "./images/sports/card2-3.jpg",
-            "title": "精油皮拉提斯",
-            "desc": "<p>專業皮拉提斯老師: Anita小隻</p><p>由專業老師帶領透過皮拉提斯的伸展與動作，引導練習者覺察身體的細微變化，並結合芳香植物萃取的精油，運用嗅吸、薰香與輕柔接觸的方式，讓香氣經由呼吸與肌膚自然吸收，協助協助釋放緊繃、延展身體線條，讓運動成為一場結合香氣與身體美感的優雅練習。</p><p>免費報名，採線上預約，總共20個名額。課程時間60分鐘。</p><p>活動開始前60分鐘「美力運動野餐區」開放報到，此課程只開放給線上報名成功的民眾。若超過報名體驗時間，視同放棄此報名資格。</p><p>建議穿著適合運動的衣物並自備毛巾。主辦單位提供瑜珈墊。</p><p>若活動遇到下雨，請參考活動官網或「台北旅遊網」官方社群通知至雨備地點。</p>",
-            "btnText": "按我預約報名",
+            "title": "Essential Oil Pilates",
+            "desc": "<p>Professional Pilates Instructor: Anita</p><p>An elegant fusion of movement and aroma. Led by a professional instructor, this session combines Pilates stretches with the healing power of essential oils. Through inhalation and aromatic mist, the scent is naturally absorbed by your body to release tension and refine your silhouette. Experience a workout that celebrates both fragrance and physical beauty.</p><br><p><strong>How to Join:</strong></p><p>Free online admission, limited to 20 entries; 60-minute session.</p><p>Check-in opens 30 minutes before the lesson. </p><p>Please note that this session is exclusive to confirmed online registrants.</p><br><p><strong>What to Bring:</strong> Wear comfortable workout attire and bring your own towel. Yoga mats are provided on-site.</p><br><p><strong>Weather Notice:</strong> In case of rain, please check the Event official website or \"Taipei Travel\" Facebook or Instagram for backup venue details.</p>",
+            "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090328182068972664"
           },
           {
             "image": "./images/sports/card2-4.jpg",
-            "title": "瑜珈提斯",
-            "desc": "<p>專業皮拉提斯老師: Anita小隻</p><p>瑜伽提斯結合「瑜伽」的呼吸流動與「皮拉提斯」的肌肉伸展，主要訓練人體核心肌群。透過連續且重複性的動作，提升肌力訓練與身體活動度，慢慢讓身體增強力量，甚至能更進一步改善僵硬的肢體與不良姿勢，使身體更加穩定。</p><p>免費報名，採線上預約，總共20個名額。課程時間60分鐘。</p><p>活動開始前60分鐘「美力運動野餐區」開放報到，此課程只開放給線上報名成功的民眾。若超過報名體驗時間，視同放棄此報名資格。</p><p>建議穿著適合運動的衣物與毛巾。主辦單位會提供瑜珈墊。</p><p>若活動遇到下雨，請參考活動官網或「台北旅遊網」官方社群通知至雨備地點。</p>",
-            "btnText": "按我預約報名",
+            "title": "Yogalate",
+            "desc": "<p>Professional Pilates Instructor: Anita</p><p>Yogalates, a perfect fusion of Yoga's mindful breathing and Pilates' core strengthening. This session focuses on repeated movements to enhance muscle tone and flexibility. Build a stronger foundation, correct your posture, and move with newfound stability and ease.</p><br><p><strong>How to Join:</strong></p><p>Free online admission, limited to 20 entries; 60-minute session.</p><p>Check-in opens 30 minutes before the lesson.</p><p>Please note that this session is exclusive to confirmed online registrants.</p><br><p><strong>What to Bring:</strong> Wear comfortable workout attire and bring your own towel. Yoga mats are provided on-site.</p><br><p><strong>Weather Notice:</strong> In case of rain, please check the Event official website or \"Taipei Travel\" Facebook or Instagram for backup venue details.</p>",
+            "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090328182068972664"
           }
         ]
@@ -328,25 +354,30 @@
           "desktop": "./images/sports/info3-title-en.png",
           "mobile": "./images/sports/info3-title-en-mb.png"
         },
-        "desc": "美力運動區提供600份野餐墊免費兌換，<br>歡迎民眾立即報名野餐活動，活動現場領取。",
+        "desc": "Register now for your spot at the Vitality Lawn and grab your exclusive early-bird gifts!",
 
         "cards": [
           {
             "image": "./images/sports/card3-1.jpg",
-            "title": "野餐報名禮",
-            "desc": "<ul><li>活動特製野餐墊：設計以臺北春季花卉為設計靈感，搭配淺黃色的主色，讓野餐墊輕鬆融入在自然草地環境中。</li><li>兌換辦法：美力運動野餐區提供野餐墊免費兌換，歡迎立即報名，活動現場各區報到處領取。</li></ul>。",
-            "btnText": "按我預約報名",
+            "title": "Registration Gift",
+            "desc": "<p>2026 Taipei Floral Picnic Exclusive Picnic Mat</p><p>Inspired by spring blossoms in Taipei and splashed with a soft yellow hue, this mat is designed to blend perfectly with the lush green grass for that ultimate picnic vibe.</p><br><p><strong>How to Get:</strong> Upon successful sign-up, registered guests are invited to pick up their mat at the on-site check-in spots.</p><br><p><strong>How to Register:</strong> Online registration is free via Accupass. Please choose one of the following options (Accupass account registration required):</p><ul><li>Individual: Groups of 2</li><li>Group: Groups of 10 or more.</li></ul><p> *For more details, please visit our Accupass event page</p><br><p><strong>Check-in & Pickup:</strong></p><ul><li>Date: March 28th – March 29th</li><li>Time: 13:00 – 17:00</li><li>Location: Check-in Booth at Coffee Rave Picnic Area</li><li>Process: Please present your Accupass E-ticket (QR code) and a valid ID of the primary registrant to our staff. Once verified, you will receive a limited-edition custom picnic mat.</li><li>><strong>Rights Reservation:</strong> The organizer reserves the right to adjust, modify, suspend, or provide final interpretation of the above-mentioned event's content.</li></ul>。",
+            "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090212451166853258"
           },
           {
-            "image": "",
-            "title": "品牌好禮兌換",
-            "desc": "coming soon"
+            "image": "./images/sports/card3-2.jpg",
+            "title": "GA Golden Armor Special Giveaway",
+            "desc": "<p>GA Golden Armor is committed to producing health supplements that we would proudly give to our own families. By combining scientifically proven safety with international certifications, we strive to provide our customers with a high-quality wellness experience.</p><br><p>2026 Taipei Floral Picnic Exclusive Event: <br>Complete the designated brand mission on-site to redeem a free Lutein Jelly!</p><br><p>One strip per person per visit. Limited quantities available; first come, first served.</p>"
           },
           {
-            "image": "",
-            "title": "品牌好禮兌換",
-            "desc": "coming soon"
+            "image": "./images/sports/card3-3.jpg",
+            "title": "NAKED Protein Special Giveaway",
+            "desc": "<p>NAKED Protein is a premium protein brand specifically formulated for Asian palates. Developed by nutritionists and food scientists, we are dedicated to supporting everyone in achieving a confident, balanced lifestyle through fitness and daily wellness.</p><br><p>2026 Taipei Floral Picnic Exclusive Event: <br>Complete the designated brand mission on-site to choose from one of the two gifts:</p><p>(1) NAKED Soy Protein Drink – Soy Milk Flavor<br>(2) NAKED Soy Protein Drink – Sesame Flavor</p><br><p>One type per person per visit. Limited quantities available; first come, first served.</p>"
+          },
+          {
+            "image": "./images/sports/card3-4.jpg",
+            "title": "Women's Health Special Giveaway",
+            "desc": "<p>Women's Health believes that true beauty comes from nurturing both the body and the mind. When you fuel your body with fitness and nutrition while enriching your life with mindfulness and wisdom, you become more confident, free, and radiant!</p><br><p>2026 Taipei Floral Picnic – Exclusive Double Rewards</p><p>(1) \"2026 WH Fit Fest\" Early Bird Registration Discount: Sign up for the “2026 WH Fit Fest” on-site to receive an exclusive NT$50 discount code. (Can be applied immediately. Limited availability; first come, first served.)<br>(2) Join Our Community & Get a Gift: Sign up as a Women's Health Member to receive a Limited Edition Athletic Eco-Bag.</p>"
           }
         ]
       }
@@ -354,6 +385,17 @@
   },
 
   "pets": {
+    "meta": {
+      "title": "Paws and Play Meadow｜2026 Taipei Floral Picnic",
+      "description": "Interactive Bubble and Balloon Shows + Family & Fur‑Kids Dress-Up Runway Playful interactive performances and an adorable themed costume show bring families and their furry friends a laughter‑filled weekend in this blooming season.",
+      "keywords": "親子,毛孩,野餐,台北花季",
+      "og": {
+        "title": "Paws and Play Meadow｜2026 Taipei Floral Picnic",
+        "description": "Interactive Bubble and Balloon Shows + Family & Fur‑Kids Dress-Up Runway Playful interactive performances and an adorable themed costume show bring families and their furry friends a laughter‑filled weekend in this blooming season.",
+        "image": "./images/fb.jpg",
+        "url": "https://2026floralpicnic.taipei/pets.html"
+      }
+    },
     "kv": {
       "bg": {
         "desktop": "./images/pets/kv-bg.gif",
@@ -365,13 +407,13 @@
       }
     },
     "intro": {
-      "text": "<span class='pc-p mb-p'>氣球泡泡秀表演 × 親子毛孩裝扮秀</span><span class='pc-p mb-p'>童趣的互動表演、可愛的主題裝扮秀，<span class='mb-p'>讓大小朋友與毛孩共度笑聲滿滿的花季週末</span></span>",
+      "text": "<span class='pc-p mb-p'>Interactive Bubble and Balloon Shows + Family & Fur‑Kids Dress-Up Runway</span><span class='pc-p mb-p'>Playful interactive performances and an adorable themed costume show bring families and their furry friends a laughter‑filled weekend in this blooming season.</span>",
       "bg": {
         "desktop": "./images/pets/intro-bg.gif",
         "mobile": "./images/pets/intro-bg-mb.gif"
       },
       "cta": {
-        "text": "按我預約報名",
+        "text": "Register",
         "link": "https://www.accupass.com/event/2602090359091463058704"
       }
     },
@@ -385,8 +427,8 @@
         "mobile": "./images/pets/schedule-title-en-mb.png"
       },
       "image": {
-        "desktop": "./images/pets/schedule-img.gif",
-        "mobile": "./images/pets/schedule-img-mb.gif"
+        "desktop": "./images/pets/schedule-img-en.gif",
+        "mobile": "./images/pets/schedule-img-en-mb.gif"
       }
     },
     "infoSections": [
@@ -400,18 +442,18 @@
           "desktop": "./images/pets/info1-title-en.png",
           "mobile": "./images/pets/info1-title-en-mb.png"
         },
-        "desc": "主題氣球秀與夢幻泡泡表演分別，<br>營造歡笑滿滿的親子毛孩野餐時光。",
+        "desc": "A themed balloon show and a dreamy bubble performance create a laughter‑filled picnic time for families and their furry companions.",
 
         "cards": [
           {
             "image": "./images/pets/card1-1.jpg",
-            "title": "氣球互動秀",
-            "desc": "<p>色彩繽紛的氣球在歡笑中悄然變身！以花為主題的造型氣球秀，結合互動表演，讓氣球在歡樂氛圍中化作一朵朵夢幻花朵，帶領大小朋友走進充滿驚喜的時刻。從欣賞表演到參與，讓現場笑聲不斷、氣氛瞬間升溫，是最受親子喜歡的活動！</p><p>本活動演出時間為 60 分鐘，前 30 分鐘進行花造型氣球秀表演，後 30 分鐘開放氣球發送；現場免費參加。</p>"
+            "title": "Balloon Interactive Show",
+            "desc": "<p>Balloons, blossoms, and big smiles! Join our interactive Balloon Show, where vibrant balloons come to life as stunning creations of flowers and animals. Designed to spark wonder in both kids and adults, this high-energy performance is a crowd favorite that brings laughter and magic to every moment. Don't miss out on the fun!</p><p>The total duration of the show is 60 minutes, comprising a 30-minute balloon show followed by a 30-minute balloon giveaway session. This show is open free to all walk-in guests.</p>"
           },
           {
             "image": "./images/pets/card1-2.jpg",
-            "title": "魔術泡泡秀",
-            "desc": "<p>泡泡承載著童年的純真記憶，七彩光影在空氣中流轉，彷彿帶人回到無憂的時光。本次演出邀請泡泡師以創意手法呈現泡泡表演，讓泡泡不只是吹出來，而是一場夢幻的視覺體驗。</p><p>表演時間60分鐘，現場免費參加。</p>"
+            "title": "Magical Bubble Show",
+            "desc": "<p>Get ready for a grand bubble adventure! Watch as rainbows swirl and float through the air, taking you back to those carefree days of pure joy. This isn't just about blowing bubbles—it's a spectacular show filled with surprises and creative artistry!</p><p>The total duration of the show is 60 minutes. This show is open free to all walk-in guests. </p>"
           }
         ]
       },
@@ -425,21 +467,21 @@
           "desktop": "./images/pets/info2-title-en.png",
           "mobile": "./images/pets/info2-title-en-mb.png"
         },
-        "desc": "以「粉色或白色」為主題的親子與毛孩裝扮秀，<br class='mbhide'>邀請全家大小與毛孩一同登台亮相，留下最時尚的紀念瞬間。",
+        "desc": "Dress up in your favorite pink or white outfits and shine on stage together. This is a chance for kids, adults, and furry companions to show off your unique style and create the most magical, fashionable memories!",
 
         "cards": [
           {
             "image": "./images/pets/card2-1.jpg",
-            "title": "親子裝扮秀",
-            "desc": "<p>以粉色或白色為主題的親子扮裝秀，邀請爸爸媽媽與孩子一同走上舞台。活動以輕鬆的走秀形式進行，各組輪流登場，展現專屬家庭的穿搭巧思，讓野餐時光洋溢童趣與時尚感，留下溫馨難忘的春日家族回憶。</p><p>免費報名，採線上預約，總共20個名額。</p><p>活動辦法：</p><ol><li>活動開始前 1 小時開放報到。</li><li>請出示報名 QR Code，由現場工作人員核對並說明走秀流程。</li></ol>",
-            "btnText": "按我預約報名",
+            "title": "Family Dress-Up Show",
+            "desc": "<p>Add a splash of style to your picnic, showing off family pride in pinks and whites!  Join our themed dress-up show where parents and kids can strut the runway together. This is a fun, casual way to showcase your family's matching styles and brighten up your picnic day. Come flaunt your most fashionable spring moments with the ones you love most!</p><p>Free Admission | Online registration required, limited to 20 entries.</p><br><p><strong>Activity Details:</strong></p><ol><li>Check-in: Opens one hour prior to the event. Please present your online registered QR Code to our staff. Our staff will verify your entry and explain the runway procedure to you.</li><li>Upon completing the Dress-Up Show, participants will receive a Grand Prize Pack, featuring a Health Food Set from Vegan Joy, a limited-edition event sticker, and other exclusive gifts.</li></ol>",
+            "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090359091463058704"
           },
           {
             "image": "./images/pets/card2-2.jpg",
-            "title": "毛孩裝扮秀",
-            "desc": "<p>以粉色或白色為主題的毛孩扮裝秀，邀請家人與毛孩一同走上舞台。活動以輕鬆的走秀形式進行，各組輪流登場，展現毛孩專屬的造型巧思與家庭風格，在歡樂氛圍中拉近家人與寵物之間的情感，為春日野餐留下可愛又具時尚感的春日回憶。</p><p>免費報名，採線上預約，總共20個名額。</p><p>活動辦法：</p><ol><li>活動開始前 1 小時開放報到。</li><li>請出示報名 QR Code，由現場工作人員核對並說明走秀流程。</li></ol>",
-            "btnText": "按我預約報名",
+            "title": "Fur-Kids Dress-Up Show",
+            "desc": "<p>Pinks, whites, and paws! Join our fur-kids dress-up show for a day of fashion and fun. Strut the runway with your furry best friend, show off your matching styles, and capture the perfect spring picnic memories. It's all about laughter, style, and celebrating our pets. Don't miss this adorable highlight of the season!</p><p>Free Admission | Online registration required, limited to 20 entries.</p><br><p><strong>Activity Details:</strong></p><ol><li>Check-in: Opens one hour prior to the event. Please present your online registered QR Code to our staff. Our staff will verify your entry and explain the runway procedure to you.</li><li>Upon completing the Dress-Up Show, participants will receive a Grand Prize Pack, featuring a Health Food Set from Vegan Joy, a limited-edition event sticker, and other exclusive gifts.</li></ol>",
+            "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090359091463058704"
           }
         ]
@@ -454,25 +496,25 @@
           "desktop": "./images/pets/info3-title-en.png",
           "mobile": "./images/pets/info3-title-en-mb.png"
         },
-        "desc": "親子毛孩野餐區提供野餐墊免費兌換，<br>歡迎立即報名，活動現場各區報到處領取。",
+        "desc": "Pre-register now for your spot at the Paws and Play Meadow and grab your exclusive early-bird gifts!",
 
         "cards": [
           {
             "image": "./images/pets/card3-1.jpg",
-            "title": "野餐報名禮",
-            "desc": "<ul><li>活動特製野餐墊：設計以臺北春季花卉為設計靈感，搭配淺黃色的主色，讓野餐墊輕鬆融入在自然草地環境中。</li><li>兌換辦法：親子毛孩野餐區提供野餐墊免費兌換，歡迎立即報名，活動現場各區報到處領取。</li></ul>",
-            "btnText": "按我預約報名",
+            "title": "Registration Gift",
+            "desc": "<p>2026 Taipei Floral Picnic Exclusive Picnic Mat</p><p>Inspired by spring blossoms in Taipei and splashed with a soft yellow hue, this mat is designed to blend perfectly with the lush green grass for that ultimate picnic vibe.</p><br><p><strong>How to Get:</strong> Upon successful sign-up, registered guests are invited to pick up their mat at the on-site check-in spots.</p><br><p><strong>How to Register:</strong> Online registration is free via Accupass. Please choose one of the following options (Accupass account registration required):</p><ul><li>Individual: Groups of 2</li><li>Group: Groups of 10 or more.</li></ul><p> *For more details, please visit our Accupass event page</p><br><p><strong>Check-in & Pickup:</strong></p><ul><li>Date: March 28th – March 29th</li><li>Time: 13:00 – 17:00</li><li>Location: Check-in Booth at Paws and Play Meadow</li><li>Process: Please present your Accupass E-ticket (QR code) and a valid ID of the primary registrant to our staff. Once verified, you will receive a limited-edition custom picnic mat.</li><li>><strong>Rights Reservation:</strong> The organizer reserves the right to adjust, modify, suspend, or provide final interpretation of the above-mentioned event's content.</li></ul>",
+            "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090212451166853258"
           },
           {
-            "image": "",
-            "title": "品牌好禮兌換",
-            "desc": "coming soon"
+            "image": "./images/pets/card3-2.jpg",
+            "title": "#n4h(Not for Hoomans) Special Giveaway",
+            "desc": "<p>Combining veterinary science with expert training, #n4h creates empathetic designs that solve daily pet care challenges. Together, we're making the world a friendlier place—one happy dog at a time.</p><br><p>2026 Taipei Floral Picnic Exclusive Event: Complete the designated on-site mission to redeem a complimentary #n4h Pet Cleaning Wipes.<br>Extra Moisturizing / Extra Thick & Large / Fragrance-Free / Alcohol-Free</p><br><p>One pack per person per visit. Limited quantities available; offer valid while stocks last.</p>"
           },
           {
-            "image": "",
-            "title": "品牌好禮兌換",
-            "desc": "coming soon"
+            "image": "./images/pets/card3-3.jpg",
+            "title": "Dipaq Sense Special Giveaway",
+            "desc": "<p>Hailing from Spain, Dipaq Sense is developed by a team of professional veterinarians. We are committed to using 100% fresh meat and non-GMO ingredients, providing cats and dogs with the purest, healthiest, and most premium dining experience.</p><br><p>2026 Taipei Floral Picnic Exclusive Event: Complete the designated on-site mission to redeem a travel Pack for Dogs/Cats. </p><br><p>One type and pack per person per visit. Limited quantities available; offer valid while stocks last.</p>"
           }
         ]
       }
@@ -480,6 +522,17 @@
   },
 
   "market": {
+    "meta": {
+      "title": "Theme Market｜2026 Taipei Floral Picnic",
+      "description": "Taipei-Style Café + International Dishes + Artisan Crafts Discover a fusion of taste and craft at the 2026 Taipei Floral Picnic Theme Market.",
+      "keywords": "咖啡,美食,野餐,台北花季",
+      "og": {
+        "title": "Theme Market｜2026 Taipei Floral Picnic",
+        "description": "Taipei-Style Café + International Dishes + Artisan Crafts Discover a fusion of taste and craft at the 2026 Taipei Floral Picnic Theme Market.",
+        "image": "./images/fb.jpg",
+        "url": "https://2026floralpicnic.taipei/market.html"
+      }
+    },
     "kv": {
       "bg": {
         "desktop": "./images/market/kv-bg.gif",
@@ -491,7 +544,7 @@
       }
     },
     "intro": {
-      "text": "<span class='pc-p mb-p sub-title'>台北特色咖啡廳 × 國際特色美食 × 風格文創手作</span><span class='pc-p'>台北花伴野餐精心匯聚臺北人氣精品咖啡、國際風格異國料理與職人文創品牌。</span><span class='pc-p'>市集美食地圖橫跨亞洲多國、浪漫歐陸、熱情美洲到臺灣道地風味。</span><span class='pc-p'>邀請您走入野餐市集，啜飲一杯人氣咖啡，品嘗異國野餐美食，並在質感選物中發掘生活驚喜。</span><span class='pc-p'>這不僅是一次國際化的野餐提案，更是一場滿足味蕾與生活美學的春日盛宴。</span>",
+      "text": "<span class='pc-p mb-p sub-title'>Taipei-Style Café + International Dishes + Artisan Crafts</span><span class='pc-p mb-p'>Discover a fusion of taste and craft at the 2026 Taipei Floral Picnic Theme Market. We've gathered the city's finest roasters and international culinary masters for a one-of-a-kind celebration. Wander through a global food map of exotic flavors and local favorites, savor world-class coffee, and explore our hand-picked artisan stalls. More than just a picnic, this is a curated springtime feast designed for the modern aesthete.</span>",
       "bg": {
         "desktop": "./images/market/intro-bg.gif",
         "mobile": "./images/market/intro-bg-mb.gif"
@@ -503,32 +556,32 @@
         "mobile": "./images/market/map-title-en-mb.png"
       },
       "image": {
-        "desktop": "./images/market/map-img.gif",
-        "mobile": "./images/market/map-img-mb.gif"
+        "desktop": "./images/market/map-img-en.gif",
+        "mobile": "./images/market/map-img-en-mb.gif"
       }
     },
     "infoSections": [
       {
         "id": "taiwan",
-        "textTitle": "台灣咖啡美食",
+        "textTitle": "Taiwanese Coffee and Cuisine",
         "cards": [
           {
             "nation": "taiwan",
             "image": "./images/market/card1-1.jpg",
-            "title": "CoffeeDestiny啡命咖啡",
-            "desc": "啡命咖啡意指 咖啡與命運<br>命運時常與我們開玩笑<br>有了咖啡陪伴讓大家一起分享幸福<br>與你我一同成長~"
+            "title": "Coffee Destiny",
+            "desc": "<p>Coffee Destiny is a self-roasting studio specializing in specialty coffee. Our main offerings include coffee beans, drip bags, and gift boxes. The name \"Coffee Destiny\" represents the connection between coffee and fate — coffee brings us together, allowing us to meet, share, and grow side by side.</p>"
           },
           {
             "nation": "taiwan",
             "image": "./images/market/card1-2.jpg",
-            "title": "山海豆花",
-            "desc": "們不午那一：村裡有率是然後，多就是和進入好直播也會有。謝謝我沒半沒有人真時只能直接，的他的的狀態，好常可以開不時最好，很明的那了怎三個月本第，說是不到麼你真的下還沒，理起來還一點感覺角度。世這的結果。"
+            "title": "mata tofu pudding",
+            "desc": "<p>Shan Hai Dou Hua was co-founded by Liu Ying-Ting and YoShi, whose friendship began in Taitung. Through the power of food culture, the founders hope to share the flavors of their hometown memories and, through a bowl of tofu pudding, introduce the stories and lands behind each ingredient.</p><p>The brand insists on using Taiwan-grown, non-GMO soybeans cultivated through natural farming methods, coagulated with natural sea salt brine. Carefully selected Taiwanese black sugar, peanut brittle, and handmade tapioca pearls highlight the purity of real ingredients.</p><p>Co-founder YoShi upholds the Japanese craftsmanship spirit of Yose-dofu (traditional tofu-making), dedicating meticulous care to every step of the process. He even incorporates a spicy tofu pudding inspired by his hometown, carrying memories across generations.</p><p>Shan Hai Dou Hua is more than just a dessert — it is a connection to land and culture. We invite you to savor this \"smile-bringing tofu pudding\" and let the world discover Taiwan through its flavors.<br>— \"The purity of mountains and sea, gathered into a timeless bowl of goodness.\"</p>"
           },
           {
             "nation": "taiwan",
             "image": "./images/market/card1-3.jpg",
-            "title": "紅玉滿赤心雞蛋糕",
-            "desc": "們不午那一：村裡有率是然後，多就是和進入好直播也會有。謝謝我沒半沒有人真時只能直接，的他的的狀態，好常可以開不時最好，很明的那了怎三個月本第，說是不到麼你真的下還沒，理起來還一點感覺角度。世這的結果。"
+            "title": "HongYuManEggPancakes",
+            "desc": "<p>Founded in 2016, Hong Yu Man Chi Xin Egg Cake is known for its creative shapes and crispy-on-the-outside, soft-on-the-inside texture. Over the years, it has introduced heart shapes, excavators, locomotives, and even T-rex designs, reinventing Taiwan's beloved street snack.</p><p>With the belief of “preserving a childlike heart,” the brand believes that even a simple street dessert can carry the stories of the land and the warmth of craftsmanship — transforming a classic national snack into a creative dessert rich in texture and cultural meaning.</p>"
           },
           {
             "nation": "taiwan",
@@ -546,7 +599,7 @@
       },
       {
         "id": "asia",
-        "textTitle": "亞洲咖啡美食",
+        "textTitle": "Asian Coffee and Cuisine",
         "cards": [
           {
             "nation": "turkiye",
@@ -582,7 +635,7 @@
       },
       {
         "id": "europe",
-        "textTitle": "歐洲咖啡美食",
+        "textTitle": "European Coffee and Cuisine",
         "cards": [
           {
             "nation": "italy",
@@ -624,7 +677,7 @@
       },
       {
         "id": "america",
-        "textTitle": "美洲咖啡美食",
+        "textTitle": "American Coffee and Cuisine",
         "cards": [
           {
             "nation": "brazil",
@@ -660,7 +713,7 @@
       },
       {
         "id": "styles",
-        "textTitle": "風格文創",
+        "textTitle": "Lifestyle Designs and Crafts",
         "cards": [
           {
             "image": "",
@@ -688,6 +741,17 @@
   },
 
   "run": {
+    "meta": {
+      "title": "Floral Picnic Café Hopping｜2026 Taipei Floral Picnic",
+      "description": "Follow the Map and embark on a limited-edition Spring urban adventure!",
+      "keywords": "跑咖,美食,野餐,台北花季",
+      "og": {
+        "title": "Floral Picnic Café Hopping｜2026 Taipei Floral Picnic",
+        "description": "Follow the Map and embark on a limited-edition Spring urban adventure!",
+        "image": "./images/fb.jpg",
+        "url": "https://2026floralpicnic.taipei/run.html"
+      }
+    },
     "kv": {
       "bg": {
         "desktop": "./images/run/kv-bg.gif",
@@ -699,7 +763,7 @@
       }
     },
     "intro": {
-      "text": "<span class='pc-p mb-p sub-title'>循著花伴野餐地圖，<span class='mb-p'>開啟一場春日限定的城市跑咖漫遊</span></span><span class='pc-p'>「花伴野餐跑咖」串聯台北特色咖啡廳、異國美食與文創品牌。</span><span class='pc-p'>邀請民眾在大安森林公園野餐之餘，也循著活動地圖走進風格街區。</span><span class='pc-p'>活動期間，民眾可至特約店家<strong>免費索取花季限定貼紙</strong>，並<strong>享有專屬店家優惠</strong>。</span><span class='pc-p'>在花季3月，讓我們品味特色咖啡與美食、探索美學選物，將跑咖變成一場充滿驚喜的春季漫遊之旅。</span>",
+      "text": "<span class='pc-p mb-p sub-title'>Follow the Map and embark on a limited-edition Spring urban adventure!</span><span class='pc-p mb-p'>\"Floral Picnic Café Hopping\" connects Taipei's most unique cafes, international-cuisine eateries, and creative boutiques. This March, we invite you to step beyond the picnic mats of Daan Park and wander into the city's most stylish neighborhoods.</span>Follow our activity map to discover specialty coffees, gourmet eats, and curated aesthetics. Turn your \"cafe hopping\" into a springtime journey of surprises!",
       "bg": {
         "desktop": "./images/run/intro-bg.gif",
         "mobile": "./images/run/intro-bg-mb.gif"
@@ -718,10 +782,10 @@
         {
           "id": "rule-1",
           "subtitle": {
-            "desktop": "./images/run/rule-subtitle.png",
-            "mobile": "./images/run/rule-subtitle-mb.png"
+            "desktop": "./images/run/rule-subtitle-en.png",
+            "mobile": "./images/run/rule-subtitle-en-mb.png"
           },
-          "contentHtml": "<div><p><strong>活動時間：</strong>2026 年 3 月 3 日至 3 月 31 日</p></div><div><p><strong>兌換地點：</strong>台北花伴野餐特約店家門市</p></div><div><p><strong>活動辦法：</strong></p><p class='text-blue'>第一重好禮：追蹤＋消費，立即享店家專屬優惠</p><p>民眾追蹤「台北旅遊網」Facebook 或 Instagram 任一官方社群平台，出示追蹤畫面。<br>消費達新台幣200元或店家指定門檻(依各合作店家公告)，即可享有該店家提供之限定優惠方案。</p><p class='text-blue'>第二重好禮：貼文按讚或分享，兌換「花伴野餐貼紙」(數量有限 送完為止) </p><p>轉發或按讚「台北旅遊網」Facebook 或 Instagram任一「2026花伴野餐」相關貼文，出示完成畫面，經合作店家確認後，即可兌換特製限量「花伴野餐貼紙」乙份。</p></div><div><p><strong>注意事項：</strong></p><ul><li>活動辦法僅適用於活動期間，逾期恕不受理。</li><li>每人每日每店家限兌換一次限量貼紙，數量有限，送完為止。</li><li>合作店家之消費門檻與優惠內容，依各店家公告為準。</li><li>本活動之優惠及贈品不得折換現金、轉售或要求更換其他品項。</li><li>如有未盡事宜，主辦單位保留活動內容調整、修改、暫停及最終解釋權。</li></ul><img class='sticker' src='./images/run/sticker.png'></div>"
+          "contentHtml": "<div><p><strong>When:</strong> March 3 (Tue) to March 31 (Tue), 2026</p></div><div><p><strong>Where:</strong> Check \"Partner Stores\" below to discover our partner stores across Taipei.</p></div><div><p class='text-blue'>Reward 1: Follow & Shop for Exclusive Deals</p><p><strong>How to Claim:</strong> Follow \"Taipei Travel\" on Facebook or Instagram.<br><strong>The Perk:</strong> Spend NT$200 (or meet the store's specific minimum) and show your \"follow\" screen to store staff to unlock an exclusive discount or special offer unique to that shop.</p><p class='text-blue'>Reward 2: Like & Share for Limited-Edition Stickers</p><p><strong>How to Claim:</strong> Like or share any \"2026 Taipei Floral Picnic\" post from the “Taipei Travel” official social media accounts<br><strong>The Perk:</strong> Show your like/post to store staff to receive a \"2026 Taipei Floral Picnic\" Limited-Edition Sticker (available while stocks last!).</p></div><div class='note'><p><strong>Notes</strong></p><ul><li>Offers are only valid during the event period</li><li><strong>Sticker Limit:</strong> Each person can redeem once per day at each store. Supplies are limited and available on a first-come, first-served basis.</li><li><strong>Store Policy:</strong> Specific spending thresholds and discount details are subject to each partner store's individual announcement.</li><li><strong>Non-Exchangeable:</strong> Rewards and gifts cannot be exchanged for cash, resold, or swapped for other items.</li><li><strong>Rights Reservation:</strong> The organizer reserves the right to adjust, modify, or suspend the event details at any time.</li></ul><img class='sticker' src='./images/run/sticker.png'></div>"
         }
       ]
     },
@@ -732,7 +796,7 @@
           "desktop": "./images/run/info-title-en.png",
           "mobile": "./images/run/info-title-en-mb.png"
         },
-        "textTitle": "台大公館商圈",
+        "textTitle": "NTU & Gongguan Shopping District",
         "cards": [
           {
             "image": "./images/run/card1-1.jpg",
@@ -759,7 +823,7 @@
       },
       {
         "id": "shop2",
-        "textTitle": "永康商圈",
+        "textTitle": "Yongkang Shopping District",
         "cards": [
           {
             "image": "",
@@ -785,7 +849,7 @@
       },
       {
         "id": "shop3",
-        "textTitle": "師大龍泉商圈",
+        "textTitle": "Longquan Street Shopping District",
         "cards": [
           {
             "image": "",
@@ -811,7 +875,7 @@
       },
       {
         "id": "shop4",
-        "textTitle": "其他區域",
+        "textTitle": "Other Select Areas",
         "cards": [
           {
             "image": "",
@@ -839,6 +903,17 @@
   },
 
   "pokemon": {
+    "meta": {
+      "title": "《Pokémon GO》 Events｜2026 Taipei Floral Picnic",
+      "description": "Pokémon GO at 2026 Taipei Floral Picnic: A Spring Outing with Pikachu Wearing a Flower Hat!",
+      "keywords": "Pokémon,野餐,台北花季",
+      "og": {
+        "title": "《Pokémon GO》 Events｜2026 Taipei Floral Picnic",
+        "description": "Pokémon GO at 2026 Taipei Floral Picnic: A Spring Outing with Pikachu Wearing a Flower Hat!",
+        "image": "./images/fb.jpg",
+        "url": "https://2026floralpicnic.taipei/pokemon.html"
+      }
+    },
     "kv": {
       "bg": {
         "desktop": "./images/pokemon/kv-bg.gif",
@@ -854,15 +929,129 @@
         "desktop": "./images/pokemon/intro-title-en.png",
         "mobile": "./images/pokemon/intro-title-en-mb.png"
       },
-      "text": "<span class='pc-p mb-p sub-title'>親愛的訓練家們，<br>準備好與「戴著花飾的皮卡丘」一起春遊臺北了嗎？</span><span class='pc-p mb-p'>2026年3月28日至4月6日，快來臺北市大安森林公園與寶可夢們一起成受春天的氣息吧！<span class='pc-p'>除了有活動主題實可夢之外，我們也準備了活動期問內可以參與的「限時調查」與「田野調查」。</span><span class='pc-p'>誠摯邀請您在春暖花開的美麗景致中，與《Pokemon GO》一同創造難忘的春日回憶。</span></span>",
+      "text": "<p class='sub-title'>Dear Trainers,<br>Are you ready for a spring outing in Taipei with Pikachu wearing a flower hat?</p><p>From March 28 to April 6, 2026, come join us at Daan Forest Park in Taipei City to soak in the fresh atmosphere of spring with your Pokémon! In addition to special Pokémon that perfectly fit the event theme, don't miss the event-excluseive Timed Research and Field Research to enjoy throughout the event.</p><p>We sincerely invite you to create unforgettable spring memories with Pokémon GO amidst the beautiful scenery of blooming flowers. See you there!</p>",
       "image": {
-        "desktop": "./images/pokemon/intro-bg.gif",
-        "mobile": "./images/pokemon/intro-bg-mb.gif"
+        "desktop": "./images/pokemon/intro-img.jpg",
+        "mobile": "./images/pokemon/intro-img-mb.jpg"
       },
       "bg": {
         "desktop": "./images/pokemon/intro-bg.gif",
         "mobile": "./images/pokemon/intro-bg-mb.gif"
       }
+    },
+    "event": {
+      "bg": {
+        "desktop": "./images/pokemon/event-bg.gif",
+        "mobile": "./images/pokemon/event-bg-mb.gif"
+      },
+      "title": {
+        "desktop": "./images/pokemon/event-title-en.png",
+        "mobile": "./images/pokemon/event-title-en-mb.png"
+      },
+      "introHtml": "<p><strong>Venue: </strong>Daan Forest Park, Taipei City</p><p><strong>Dates: </strong>March 28 10:00 – April 6, 2026 20:00(Taiwan Time)</p>",
+      "cards": [
+        {
+          "id": "event-1",
+          "bg": {
+            "desktop": "./images/pokemon/event-card1-bg.gif",
+            "mobile": "./images/pokemon/event-card1-bg-mb.gif"
+          },
+          "title": {
+            "desktop": "./images/pokemon/event-card1-title-en.png",
+            "mobile": "./images/pokemon/event-card1-title-en-mb.png"
+          },
+          "textHtml": "<p><strong>During the event, the following Pokémon will appear more frequently in the wild at the event location:</strong></p><ul><li>Pikachu wearing a flower hat*</li><li>Deerling (Spring Form)*</li><li>Flabébé (White Flower)*</li><li>Spritzee*</li><li>Combee*</li><li>Cherrim (Sunshine Form)*</li><li>Swirlix*</li><li>Luvdisc*</li></ul><p style='letter-spacing: 0;'>*If you're lucky, you may encounter a Shiny one!</p>"
+        },
+        {
+          "id": "event-2",
+          "title": {
+            "desktop": "./images/pokemon/event-card2-title-en.png",
+            "mobile": "./images/pokemon/event-card2-title-en-mb.png"
+          },
+          "textHtml": "<p><strong>Starting March 28, 2026, at 10:00 a.m. Taiwan Time, Trainers who visit the event site can access event-exclusive Timed Research.<br>Complete the Timed Research tasks to earn rewards such as Stardust, Lure Modules, and more. Additionally, you will have the chance to encounter the following Pokémon while completing the research:</strong></p><ul><li>Pikachu wearing a flower hat* **</li><li>Combee*</li><li>Deerling (Spring Form)* **</li><li>Spritzee*</li><li>Swirlix*</li></ul><p style='letter-spacing: 0;'>*If you're lucky, you may encounter a Shiny one! </p><p>**You may also encounter Pokémon with an event-themed Location Card!</p><p>Please note: Timed Research has a time limit. Tasks must be completed and rewards must be claimed before the research expires.</p>"
+        },
+        {
+          "id": "event-3",
+          "bg": {
+            "desktop": "./images/pokemon/event-card3-bg.gif",
+            "mobile": "./images/pokemon/event-card3-bg-mb.gif"
+          },
+          "title": {
+            "desktop": "./images/pokemon/event-card3-title-en.png",
+            "mobile": "./images/pokemon/event-card3-title-en-mb.png"
+          },
+          "textHtml": "<p><strong>Throughout the event, event-exclusive Field Research tasks will be available at the event venue. Complete these tasks to earn rewards such as Stardust, Poké Balls, and more!<br>In addition, you will have the chance to encounter the following Pokémon while completing Field Research tasks:</strong></p><ul><li>Pikachu wearing a flower hat* **</li><li>Luvdisc*</li><li>Deerling (Spring Form)* **</li><li>Flabébé (White Flower)*</li></ul><p style='letter-spacing: 0;'>*If you're lucky, you may encounter a Shiny one! </p><p style='letter-spacing: 0;'>**You may also encounter Pokémon with an event-themed Location Card!</p>"
+        },
+        {
+          "id": "event-4",
+          "blocks": [
+            {
+              "title": {
+                "desktop": "./images/pokemon/event-card4a-title-en.png",
+                "mobile": "./images/pokemon/event-card4a-title-en-mb.png"
+              },
+              "textHtml": "<p>From March 28, 2026, at 10:00 a.m. to April 6, 2026, at 8:00 p.m. Taiwan Time, an event-themed Collection Challenge will be available throughout the event area!</p><br><p><strong>Complete the Collection Challenge to earn various rewards,<br><span class='highlight'> including Star Pieces, Lucky Eggs, and more!</span></strong></p>"
+            },
+            {
+              "title": {
+                "desktop": "./images/pokemon/event-card4b-title-en.png",
+                "mobile": "./images/pokemon/event-card4b-title-en-mb.png"
+              },
+              "textHtml": "<p><strong><span class='highlight'>The following bonuses</span> will be active<br> at the event venue area during the event period:</strong></p><p>* 2× Candy for transferring Pokémon to the Professor.<br>* One additional Special Trade per day (for a maximum of 2 per day).<br>* Lure Modules activated during the event will last for one hour.<br>* Increased frequency of Field Research updates</p>"
+            }
+          ]
+        },
+        {
+          "id": "event-5",
+          "title": {
+            "desktop": "./images/pokemon/event-card5-title-en.png",
+            "mobile": "./images/pokemon/event-card5-title-en-mb.png"
+          },
+          "textHtml": "<p>Come visit our booth and be among the first to experience Pokémon Pokopia, launching on March 5th! As the first-ever Pokémon slow-life sandbox game, it is designed for everyone to enjoy—from children to adults. <span>We invite you to come and experience a new life, built bit by bit, step by step, alongside your Pokémon friends.</span></p>",
+          "image": {
+            "desktop": "./images/pokemon/event-card5-img.jpg",
+            "mobile": "./images/pokemon/event-card5-img.jpg"
+          }
+        },
+        {
+          "id": "event-6",
+          "image": {
+            "desktop": "./images/pokemon/event-card6-img.jpg",
+            "mobile": "./images/pokemon/event-card6-img.jpg"
+          }
+        },
+        {
+          "id": "event-7",
+          "title": {
+            "desktop": "./images/pokemon/event-card7-title-en.png",
+            "mobile": "./images/pokemon/event-card7-title-en-mb.png"
+          },
+          "textHtml": "<p>But wait, there's more! During the 2026 Taipei Floral Picnic from March 28 to March 29, you can receive exclusive giveaways by participating in our on-site activities!<br>Come visit our booth and be among the first to experience Pokémon Pokopia! We invite you to come and experience a new life, built bit by bit, step by step, alongside your Pokémon friends.<br>Additionally, we will be hosting a special Pikachu & Eevee Meet & Greet. It's the perfect opportunity for Trainers to meet Pikachu & Eevee in the warm spring sun and create precious, lasting memories together!</p>",
+          "image": {
+            "desktop": "./images/pokemon/event-card7-img-en.png",
+            "mobile": "./images/pokemon/event-card7-img-en-mb.png"
+          }
+        }
+      ]
+    },
+    "notice": {
+      "bg": {
+        "desktop": "./images/pokemon/notice-bg.gif",
+        "mobile": "./images/pokemon/notice-bg-mb.gif"
+      },
+      "title": {
+        "desktop": "./images/pokemon/notice-title-en.png",
+        "mobile": "./images/pokemon/notice-title-en-mb.png"
+      },
+      "items": [
+        "Please follow all rules and regulations set by the organizer, the Department of Information and Tourism, Taipei City Government, while participating in the event.",
+        "The Pikachu & Eevee Meet & Greet photo sessions are subject to on-site regulations. Opportunities will be provided on a first-come, first-served basis.",
+        "Event content is subject to change without prior notice; the actual on-site situation shall prevail.",
+        "Giveaways are available in limited quantities and only while supplies last.",
+        "Participation in the event does not guarantee the receipt of specific gifts. Please evaluate your participation carefully. If you have any objections regarding the probability of receiving giveaways, please refrain from participating.",
+        "All event rules and regulations are governed by announcements on the official event website and company statements. The Company reserves the right to reserve, change, modify, withdraw, or cancel the event or prize distribution at any time. In the event of force majeure, the Company reserves the right to partially or fully suspend, postpone, or cancel the event. The Company reserves the right to supplement or amend any matters not covered herein, and the latest official announcement shall prevail."
+      ],
+      "noteHtml": "<p>Please be aware of your surroundings and follow guidelines from local health authorities when playing Pokémon GO. Upcoming events are subject to change. Be sure to follow us on social media, opt in to receiving push notifications, and subscribe to our emails to stay updated.</p><p>– The Pokémon GO team</p><p class='copyright'>©Niantic ©Pokémon/Nintendo/Creatures/GAME FREAK<br>TM, ®, and character names are trademarks of Nintendo.</p>"
     }
   }
 
