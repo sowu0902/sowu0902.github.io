@@ -36,6 +36,138 @@ export function renderLanguageSwitcher(lang) {
   root.setAttribute('lang', lang === 'zh' ? 'zh-Hant' : 'en');
 }
 
+// 套 meta（title / description / og / favicon ...）
+// common.metaCommon + page.meta 合併，page 優先
+export function renderMeta(commonData, pageData) {
+  const common = commonData?.metaCommon || {};
+  const page = pageData?.meta || {};
+
+  // 合併（page 覆蓋 common）
+  const merged = {
+    ...common,
+    ...page,
+    og: {
+      ...(common.og || {}),
+      ...(page.og || {})
+    }
+  };
+
+  /* ===============================
+   * helpers
+   * =============================== */
+
+  // 建立或取得 meta
+  const ensureMeta = (attrs) => {
+    const selector = Object.entries(attrs)
+      .map(([k, v]) => `meta[${k}="${v}"]`)
+      .join('');
+
+    let el = document.head.querySelector(selector);
+
+    if (!el) {
+      el = document.createElement('meta');
+      Object.entries(attrs).forEach(([k, v]) => {
+        el.setAttribute(k, v);
+      });
+      document.head.appendChild(el);
+    }
+
+    return el;
+  };
+
+  const setMetaContent = (attrs, value) => {
+    if (typeof value !== 'string' || value.trim() === '') return;
+    const el = ensureMeta(attrs);
+    el.setAttribute('content', value);
+  };
+
+  const ensureLink = (rel) => {
+    let el = document.head.querySelector(`link[rel="${rel}"]`);
+    if (!el) {
+      el = document.createElement('link');
+      el.setAttribute('rel', rel);
+      document.head.appendChild(el);
+    }
+    return el;
+  };
+
+  const setLinkHref = (rel, href) => {
+    if (typeof href !== 'string' || href.trim() === '') return;
+    const el = ensureLink(rel);
+    el.setAttribute('href', href);
+  };
+
+  /* ===============================
+   * title
+   * =============================== */
+
+  if (typeof merged.title === 'string' && merged.title.trim() !== '') {
+    document.title = merged.title;
+  }
+
+  /* ===============================
+   * 基本 meta
+   * =============================== */
+
+  setMetaContent({ name: 'description' }, merged.description);
+  setMetaContent({ name: 'keywords' }, merged.keywords);
+  setMetaContent({ name: 'author' }, merged.author);
+
+  /* ===============================
+   * FB / Open Graph
+   * =============================== */
+
+  setMetaContent({ property: 'fb:app_id' }, merged.fb_app_id);
+
+  setMetaContent(
+    { property: 'og:title' },
+    merged.og?.title ?? merged.title
+  );
+
+  setMetaContent(
+    { property: 'og:description' },
+    merged.og?.description ?? merged.description
+  );
+
+  setMetaContent({ property: 'og:image' }, merged.og?.image);
+  setMetaContent({ property: 'og:url' }, merged.og?.url);
+  setMetaContent({ property: 'og:site_name' }, merged.og?.site_name);
+  setMetaContent({ property: 'og:type' }, merged.og?.type || 'website');
+
+  /* ===============================
+   * Twitter Card（加分項）
+   * =============================== */
+
+  setMetaContent({ name: 'twitter:card' }, 'summary_large_image');
+  setMetaContent(
+    { name: 'twitter:title' },
+    merged.og?.title ?? merged.title
+  );
+  setMetaContent(
+    { name: 'twitter:description' },
+    merged.og?.description ?? merged.description
+  );
+  setMetaContent({ name: 'twitter:image' }, merged.og?.image);
+
+  /* ===============================
+   * favicon
+   * =============================== */
+
+  if (merged.favicon) {
+    setLinkHref('shortcut icon', merged.favicon);
+    setLinkHref('icon', merged.favicon);
+  }
+
+  /* ===============================
+   * canonical（可選）
+   * =============================== */
+
+  if (merged.og?.url) {
+    const canonical = ensureLink('canonical');
+    canonical.setAttribute('href', merged.og.url);
+  }
+}
+
 // 自動補 nav href（含 lang）
 export function renderNavLinks(lang) {
   const routes = {
@@ -447,8 +579,11 @@ export function renderIntro(intro, selector) {
   const el = document.querySelector(selector);
   if (!el || !intro) return;
 
-  el.querySelector('[data-bg-desktop]').src = intro.bg.desktop;
-  el.querySelector('[data-bg-mobile]').srcset = intro.bg.mobile;
+  // bg
+  const bgDesktop = el.querySelector('[data-bg-desktop]');
+  const bgMobile = el.querySelector('[data-bg-mobile]');
+  if (bgDesktop && intro.bg?.desktop) bgDesktop.src = intro.bg.desktop;
+  if (bgMobile && intro.bg?.mobile) bgMobile.srcset = intro.bg.mobile;
 
   // title(非必填)
   const titleDesktop = el.querySelector('[data-title-desktop]');
@@ -456,9 +591,34 @@ export function renderIntro(intro, selector) {
   if (titleDesktop && intro.title?.desktop) titleDesktop.src = intro.title.desktop;
   if (titleMobile && intro.title?.mobile) titleMobile.srcset = intro.title.mobile;
 
+  // image（非必填）
+  const pic = el.querySelector('[data-intro-image]');
+  const imgDesktop = el.querySelector('[data-intro-image-desktop]');
+  const srcMobile = el.querySelector('[data-intro-image-mobile]');
+
+  const hasImage = !!(intro.image?.desktop || intro.image?.mobile);
+
+  if (pic && imgDesktop && srcMobile) {
+    if (hasImage) {
+      if (intro.image?.desktop) imgDesktop.src = intro.image.desktop;
+      if (intro.image?.mobile) srcMobile.srcset = intro.image.mobile;
+
+      // alt 
+      imgDesktop.alt = intro.image?.alt || '';
+
+      pic.hidden = false;
+    } else {
+      pic.hidden = true;
+      imgDesktop.removeAttribute('src');
+      srcMobile.removeAttribute('srcset');
+    }
+  }
+
+  // text
   const textEl = el.querySelector('[data-intro-text]');
   if (textEl) textEl.innerHTML = intro.text;
 
+  // cta
   const ctaEl = el.querySelector('[data-intro-cta]');
   if (ctaEl) {
     const hasCta = intro?.cta && typeof intro.cta.link === 'string' && intro.cta.link.trim() !== '';
@@ -674,7 +834,6 @@ export function renderInfoSections(sections, selector) {
   container.remove();
 }
 
-
 // render內頁的marketMap資料
 export function renderMarketMap(map, selector) {
   const el = document.querySelector(selector);
@@ -745,6 +904,227 @@ export function renderRule(rule, selector = '[data-rule]') {
   });
 }
 
+// render內頁的event資料(POKEMON ONLY)
+export function renderEvent(event, selector = '[data-page-event]') {
+  if (!event) return;
 
+  const root = document.querySelector(selector);
+  if (!root) return;
 
+  // ---------- helpers ----------
+  const setPictureFromPayload = (container, desktopSel, mobileSel, payload) => {
+    const d = container.querySelector(desktopSel);
+    const m = container.querySelector(mobileSel);
+
+    const has = !!(payload?.desktop || payload?.mobile);
+    if (!has) return false;
+
+    if (d && payload?.desktop) d.src = payload.desktop;
+    if (m && payload?.mobile) m.srcset = payload.mobile;
+    return true;
+  };
+
+  const createPicture = ({ desktop, mobile, alt = '' }, { mobileQuery = '(max-width: 750px)' } = {}) => {
+    const pic = document.createElement('picture');
+
+    if (mobile) {
+      const source = document.createElement('source');
+      source.media = mobileQuery;
+      source.srcset = mobile;
+      pic.appendChild(source);
+    }
+
+    const img = document.createElement('img');
+    if (desktop) img.src = desktop;
+    img.alt = alt;
+    pic.appendChild(img);
+
+    return pic;
+  };
+
+  const setHtmlOrHide = (el, html) => {
+    if (!el) return;
+    if (typeof html === 'string' && html.trim() !== '') {
+      el.innerHTML = html;
+      el.hidden = false;
+    } else {
+      el.innerHTML = '';
+      el.hidden = true;
+    }
+  };
+
+  // ---------- section bg/title ----------
+  setPictureFromPayload(root, '[data-event-bg-desktop]', '[data-event-bg-mobile]', event.bg);
+  setPictureFromPayload(root, '[data-event-title-desktop]', '[data-event-title-mobile]', event.title);
+
+  // ---------- intro html ----------
+  const introEl = root.querySelector('[data-event-intro]');
+  setHtmlOrHide(introEl, event.introHtml);
+
+  // ---------- cards ----------
+  const cardsWrap = root.querySelector('[data-event-cards]');
+  if (!cardsWrap) return;
+
+  cardsWrap.innerHTML = '';
+
+  const cards = Array.isArray(event.cards) ? event.cards : [];
+  cards.forEach((card, index) => {
+    // 若整張 card 完全沒資料就略過
+    const hasAnything =
+      !!(card?.bg?.desktop || card?.bg?.mobile ||
+         card?.title?.desktop || card?.title?.mobile ||
+         (typeof card?.textHtml === 'string' && card.textHtml.trim() !== '') ||
+         card?.image?.desktop || card?.image?.mobile ||
+         (Array.isArray(card?.blocks) && card.blocks.length));
+
+    if (!hasAnything) return;
+
+    const cardId = card?.id ? String(card.id) : `card-${index + 1}`;
+
+    const article = document.createElement('article');
+    article.className = `event-card event-card--${cardId}`;
+    article.dataset.cardId = cardId;
+    article.setAttribute('data-aos', 'fade-up');
+    article.setAttribute('data-aos-duration', '800');
+
+    // --- card bg (optional) ---
+    if (card?.bg?.desktop || card?.bg?.mobile) {
+      const bg = document.createElement('div');
+      bg.className = 'event-card-bg';
+      bg.appendChild(createPicture({ desktop: card.bg.desktop || '', mobile: card.bg.mobile || '', alt: '' }));
+      article.appendChild(bg);
+    }
+
+    const inner = document.createElement('div');
+    inner.className = 'event-card-inner';
+    article.appendChild(inner);
+
+    // --- content area: blocks OR single ---
+    const blocks = Array.isArray(card?.blocks) ? card.blocks : null;
+
+    if (blocks && blocks.length) {
+      blocks.forEach((b, i) => {
+        const block = document.createElement('div');
+        block.className = `event-card-block event-card-block--${i + 1}`;
+
+        // title (optional)
+        if (b?.title?.desktop || b?.title?.mobile) {
+          const titleWrap = document.createElement('div');
+          titleWrap.className = 'event-card-title';
+          // titleWrap.setAttribute('data-aos', 'fade-down');
+          // titleWrap.setAttribute('data-aos-duration', '800');
+          titleWrap.appendChild(createPicture({ desktop: b.title.desktop || '', mobile: b.title.mobile || '', alt: '' }));
+          block.appendChild(titleWrap);
+        }
+
+        // text (optional)
+        if (typeof b?.textHtml === 'string' && b.textHtml.trim() !== '') {
+          const text = document.createElement('div');
+          text.className = 'event-card-text';
+          text.innerHTML = b.textHtml;
+          block.appendChild(text);
+        }
+
+        inner.appendChild(block);
+      });
+    } else {
+      // title (optional)
+      if (card?.title?.desktop || card?.title?.mobile) {
+        const titleWrap = document.createElement('div');
+        titleWrap.className = 'event-card-title';
+        // titleWrap.setAttribute('data-aos', 'fade-down');
+        // titleWrap.setAttribute('data-aos-duration', '800');
+        titleWrap.appendChild(createPicture({ desktop: card.title.desktop || '', mobile: card.title.mobile || '', alt: '' }));
+        inner.appendChild(titleWrap);
+      }
+
+      // text (optional)
+      if (typeof card?.textHtml === 'string' && card.textHtml.trim() !== '') {
+        const text = document.createElement('div');
+        text.className = 'event-card-text';
+        text.innerHTML = card.textHtml;
+        inner.appendChild(text);
+      }
+    }
+
+    // --- media image (optional) ---
+    if (card?.image?.desktop || card?.image?.mobile) {
+      const media = document.createElement('div');
+      media.className = 'event-card-media';
+      // media.setAttribute('data-aos', 'fade-up');
+      // media.setAttribute('data-aos-duration', '800');
+      media.appendChild(createPicture({ desktop: card.image.desktop || '', mobile: card.image.mobile || '', alt: '' }));
+      inner.appendChild(media);
+    }
+
+    cardsWrap.appendChild(article);
+  });
+}
+
+// render內頁的notice資料(POKEMON ONLY)
+export function renderNotice(notice, selector = '[data-page-notice]') {
+  if (!notice) return;
+
+  const el = document.querySelector(selector);
+  if (!el) return;
+
+  /* ===========================
+   * 背景圖（非必填）
+   * =========================== */
+  const bgDesktop = el.querySelector('[data-notice-bg-desktop]');
+  const bgMobile = el.querySelector('[data-notice-bg-mobile]');
+  const hasBg = !!(notice.bg?.desktop || notice.bg?.mobile);
+
+  if (hasBg) {
+    if (bgDesktop && notice.bg?.desktop) bgDesktop.src = notice.bg.desktop;
+    if (bgMobile && notice.bg?.mobile) bgMobile.srcset = notice.bg.mobile;
+  }
+
+  /* ===========================
+   * 標題圖（非必填）
+   * =========================== */
+  const titleDesktop = el.querySelector('[data-notice-title-desktop]');
+  const titleMobile = el.querySelector('[data-notice-title-mobile]');
+  const hasTitle = !!(notice.title?.desktop || notice.title?.mobile);
+
+  if (hasTitle) {
+    if (titleDesktop && notice.title?.desktop) titleDesktop.src = notice.title.desktop;
+    if (titleMobile && notice.title?.mobile) titleMobile.srcset = notice.title.mobile;
+  } else {
+    const titleWrap = el.querySelector('.notice-title');
+    if (titleWrap) titleWrap.hidden = true;
+  }
+
+  /* ===========================
+   * 注意事項列表
+   * =========================== */
+  const listEl = el.querySelector('[data-notice-list]');
+  if (listEl) {
+    const items = Array.isArray(notice.items) ? notice.items : [];
+
+    if (items.length) {
+      listEl.innerHTML = items
+        .map(item => `<li class="notice-item">${item}</li>`)
+        .join('');
+      listEl.hidden = false;
+    } else {
+      listEl.innerHTML = '';
+      listEl.hidden = true;
+    }
+  }
+
+  /* ===========================
+   * container 外備註文字（非必填）
+   * =========================== */
+  const noteEl = el.querySelector('[data-notice-note]');
+  if (noteEl) {
+    if (typeof notice.noteHtml === 'string' && notice.noteHtml.trim() !== '') {
+      noteEl.innerHTML = notice.noteHtml;
+      noteEl.hidden = false;
+    } else {
+      noteEl.innerHTML = '';
+      noteEl.hidden = true;
+    }
+  }
+}
 

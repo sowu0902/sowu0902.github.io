@@ -1,4 +1,13 @@
 {
+  "metaCommon": {
+    "author": "2026 Taipei Floral Picnic",
+    "fb_app_id": "1234567890",
+    "favicon": "./images/common/favicon.ico",
+    "og": {
+      "site_name": "2026 Taipei Floral Picnic",
+      "image": "./images/common/fb.jpg"
+    }
+  },
   "nav": {
     "home": "Home",
     "coffee": "Coffee Party & Main Stage",
@@ -21,8 +30,8 @@
   "fixedBtn": {
     "route": "register",
     "images": {
-      "desktop": "./images/common/fixbtn.png",
-      "mobile": "./images/common/fixbtn-mb.png"
+      "desktop": "./images/common/fixbtn-en.png",
+      "mobile": "./images/common/fixbtn-en-mb.png"
     }
   },
   "footer": {
