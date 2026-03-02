@@ -62,7 +62,7 @@
         "cards": [
           {
             "image": "./images/coffee/card1-1.jpg",
-            "title": "Pour-Over Coffee Show",
+            "title": "Pour-Over Coffee <br>Show",
             "desc": "<p>Get ready to brew like a pro! Join our expert baristas daily at scheduled times as they showcase the art of hand pour-over brewing. During each session, they'll reveal their professional techniques and dive into the unique flavor profiles of featured beans.</p><br><p><strong>How to Join:</strong> To join a tasting, simply grab a numbered ticket on-site 15 minutes before each demo show kicks off. Tickets are limited, so it's first come, first served!</p><p><strong>Redeem Your Sip:</strong> Once the show wraps up, we'll call out the numbers for you to redeem your ticket and enjoy a fresh pour-over coffee sample (eco-friendly paper cups will be provided on-site).</p>"
           },
           {
@@ -92,7 +92,7 @@
         "cards": [
           {
             "image": "./images/coffee/card2-1.jpg",
-            "title": "Floral Portrait Illustration",
+            "title": "Floral <br>Portrait <br>Illustration",
             "desc": "<p>Surrounded by the sweet scent of blossoms, one of our talented illustrators will capture your unique expression and style in a one-of-a-kind custom floral portrait. See your personality come to life on paper, beautifully intertwined with floral elements that bottle up the magic of spring. It will be more than just a drawing—a heartfelt keepsake of your day in the sun!</p><br><p><strong>How to Join:</strong> Free online admission, limited to 40 entries.</p><br><p>Check-in begins 30 minutes prior to the start of the activity. Please present the QR code from your registration confirmation email to complete the check-in process. After following the staff's instructions for a quick reference photo, you may return at the designated time to collect your custom portrait.</p",
             "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090323411223645010"
@@ -106,7 +106,7 @@
           },
           {
             "image": "./images/coffee/card2-3.jpg",
-            "title": "Tin-Can Dried-Flower Scented Candles",
+            "title": "Tin-Can <br>Dried-Flower <br>Scented Candles",
             "desc": "<p>Blend natural soy wax with essential oils and dried botanicals in a vintage-style tin. This will serve as a beautiful decorative piece for your home, adding a touch of therapeutic elegance to your daily life.</p><br><p><strong>How to Join:</strong> Free online admission, limited to 20 entries; 90-minute session.</p><p>*Images are for illustrative purposes only; final pieces will depend on the materials available on-site.</p><br><p>Check-in begins 30 minutes prior to the start of the activity. Please present the QR code from your registration confirmation email to complete the check-in process.</p><p><strong>Rights Reservation:</strong> The organizer reserves the right to adjust, modify, or suspend the above-mentioned events and activities details at any time. </p>",
             "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090323411223645010"
@@ -128,24 +128,24 @@
         "cards": [
           {
             "image": "./images/coffee/card3-1.jpg",
-            "title": "Registration Gift",
+            "title": "Registration <br>Gift",
             "desc": "<p>2026 Taipei Floral Picnic Exclusive Picnic Mat</p><p>Inspired by spring blossoms in Taipei and splashed with a soft yellow hue, this mat is designed to blend perfectly with the lush green grass for that ultimate picnic vibe.</p><br><p><strong>How to Get:</strong> Upon successful sign-up, registered guests are invited to pick up their mat at the on-site check-in spots.</p><br><p><strong>How to Register:</strong> Online registration is free via Accupass. Please choose one of the following options (Accupass account registration required):</p><ul><li>Individual: Groups of 2</li><li>Group: Groups of 10 or more.</li></ul><p> *For more details, please visit our Accupass event page</p><br><p><strong>Check-in & Pickup:</strong></p><ul><li>Date: March 28th – March 29th</li><li>Time: 13:00 – 17:00</li><li>Location: Check-in Booth at Coffee Rave Picnic Area</li><li>Process: Please present your Accupass E-ticket (QR code) and a valid ID of the primary registrant to our staff. Once verified, you will receive a limited-edition custom picnic mat.</li><li>><strong>Rights Reservation:</strong> The organizer reserves the right to adjust, modify, suspend, or provide final interpretation of the above-mentioned event's content.</li></ul>",
             "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090212451166853258"
           },
           {
             "image": "./images/coffee/card3-2.jpg",
-            "title": "Vegan Joy Special Giveaway",
+            "title": "Vegan Joy <br>Special Giveaway",
             "desc": "<p>Committed to fostering an eco-friendly and conscious food culture, Vegan Joy centers its business on health, social responsibility, and animal welfare. Together, let's make sustainable living a reality.</p><br><p>2026 Taipei Floral Picnic Exclusive:  Complete the designated brand mission on-site to choose from one of the gifts below</p><p>(1) Choco Puff<br>(2)  Coco Maniac Popcorn<br>(3) Savory Caramel Popcorn<br>(4) Burdock Root Floss<br>(5) Vegetable Crisp</p><br><p>One pack per person per visit. Limited quantities available; offer valid while stocks last.</p>"
           },
           {
             "image": "./images/coffee/card3-3.jpg",
-            "title": "ELLE Special Giveaway",
+            "title": "ELLE <br>Special Giveaway",
             "desc": "<p>Since its 1945 debut in Paris, ELLE has become a global powerhouse in fashion media. ELLE Taiwan carries on this legacy of French elegance with a focus on 'Effortless Chic,' guiding modern women to celebrate style, embody self-assurance, and lead a life full of flair.</p><br><p>2026 Taipei Floral Picnic Exclusive:  Complete the designated brand mission on-site to choose from one of the gifts below</p><p>(1) ELLE Stylish Sticker<br>(2) ELLE Eco-Friendly Cup Carrier<br>(3) ELLE Paperback Magazine</p><br><p>One item per person per visit. Limited quantities available; offer valid while stocks last.</p>"
           },
           {
             "image": "./images/coffee/card3-4.jpg",
-            "title": "Ora2 Special Giveaway",
+            "title": "Ora2 <br>Special Giveaway",
             "desc": "<p>As Japan's leading oral care expert, Ora2 caters to women who pursue a refined lifestyle. Offering a full range of whitening and breath-care essentials, Ora2 ensures that even the busiest women can showcase a radiant smile and enjoy the invigorating feeling of a clean, healthy mouth.</p><br><p>2026 Taipei Floral Picnic Exclusive:  Complete the designated brand mission on-site to redeem a tube of Ora2 me STAIN CLEAR Toothpaste-Natural Mint.</p><br><p>Limited quantities available; offer valid while stocks last.</p>"
           }
         ]
@@ -206,22 +206,22 @@
           },
           {
             "image": "./images/coffee/card4-4.jpg",
-            "title": "Because Handpan",
+            "title": "Because <br>Handpan",
             "desc": "<p>Founded in 2021, the Because Handpan troupe brings the handpan to life through music that feels like a warm, flowing conversation. Its performances guide listeners through different times and spaces, sparking deep resonance and vivid imagination through sound.</p><p>Founder Li Suan (莉酸) loves traveling with her handpan, drawing inspiration directly from nature and her surroundings. Her musical style blends delicate emotions with nimble rhythms, using the handpan to craft a healing, dreamlike listening experience that's perfect for a relaxing afternoon</p>"
           },
           {
             "image": "./images/coffee/card4-5.jpg",
-            "title": "Jessie (Guitar Vocalist)",
+            "title": "Jessie <br>(Guitar Vocalist)",
             "desc": "<p>A regular on the city streets and a favorite at local bistros, along with her guitar Jessie brings a warm, sincere voice that embraces every moment.</p><p>For this performance, she has specially curated a setlist centered around flowers and coffee, aiming to create a beautiful, unforgettable spring picnic experience through music. Come share a wonderful afternoon and let the melodies make your day!</p>"
           },
           {
             "image": "./images/coffee/card4-6.jpg",
-            "title": "VIOLINick (Violinist)",
+            "title": "VIOLINick <br>(Violinist)",
             "desc": "<p>A dedicated busker and a driving force behind Taipei's vibrant street-performance scene, you'll often find this artist pouring his heart and soul into his music at various corners of the city—whether it's during the busy weekday rush or a relaxed holiday.</p><p>He lives by a pure and simple philosophy: total immersion. Giving his absolute all with every performance, his aim is to share the infectious joy of music with as many people as possible. His impressive resume includes over 30 appearances on the stage of the National Concert Hall, and he even shared the spotlight with Hong Kong legend Alan Tam at the iconic Hong Kong Coliseum in 2015.</p>"
           },
           {
             "image": "./images/coffee/card4-7.jpg",
-            "title": "Annbae (Vocal Guitarist)",
+            "title": "Annbae <br>(Vocal Guitarist)",
             "desc": "<p>Starting with classical piano as a child, she later found her path in music through folk guitar and arrangement production. Drawn to the dreamy vibes of Indie Pop, Bedroom Pop, and Alternative genres, she uses her ethereal, delicate vocals and poetic lyrics to tell the most authentic stories of the heart.</p>"
           }
         ]
@@ -296,7 +296,7 @@
           },
           {
             "image": "./images/sports/card1-2.jpg",
-            "title": "Floral Picnic Café",
+            "title": "Floral Picnic <br>Café",
             "desc": "<p>Fun for the whole family! Flip the coffee cup lids and complete the flower-matching mission within the time limit to win your limited-edition event sticker. Come show off your memory skills!</p><br><p><strong>How to Join: </strong></p><ol><li>No registration is needed! Just come by and join the line—you're welcome to try as many times as you like.</li><li>Find all five floral pairs by flipping the black and white lids, racing against the clock! Complete the challenge within the time limit to earn a limited sticker!</li><li>One person at a time. Children under 6 require adult supervision to participate.</li></ol>"
           }
         ]
@@ -359,7 +359,7 @@
         "cards": [
           {
             "image": "./images/sports/card3-1.jpg",
-            "title": "Registration Gift",
+            "title": "Registration <br>Gift",
             "desc": "<p>2026 Taipei Floral Picnic Exclusive Picnic Mat</p><p>Inspired by spring blossoms in Taipei and splashed with a soft yellow hue, this mat is designed to blend perfectly with the lush green grass for that ultimate picnic vibe.</p><br><p><strong>How to Get:</strong> Upon successful sign-up, registered guests are invited to pick up their mat at the on-site check-in spots.</p><br><p><strong>How to Register:</strong> Online registration is free via Accupass. Please choose one of the following options (Accupass account registration required):</p><ul><li>Individual: Groups of 2</li><li>Group: Groups of 10 or more.</li></ul><p> *For more details, please visit our Accupass event page</p><br><p><strong>Check-in & Pickup:</strong></p><ul><li>Date: March 28th – March 29th</li><li>Time: 13:00 – 17:00</li><li>Location: Check-in Booth at Coffee Rave Picnic Area</li><li>Process: Please present your Accupass E-ticket (QR code) and a valid ID of the primary registrant to our staff. Once verified, you will receive a limited-edition custom picnic mat.</li><li>><strong>Rights Reservation:</strong> The organizer reserves the right to adjust, modify, suspend, or provide final interpretation of the above-mentioned event's content.</li></ul>。",
             "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090212451166853258"
@@ -452,7 +452,7 @@
           },
           {
             "image": "./images/pets/card1-2.jpg",
-            "title": "Magical Bubble Show",
+            "title": "Magical Bubble <br>Show",
             "desc": "<p>Get ready for a grand bubble adventure! Watch as rainbows swirl and float through the air, taking you back to those carefree days of pure joy. This isn't just about blowing bubbles—it's a spectacular show filled with surprises and creative artistry!</p><p>The total duration of the show is 60 minutes. This show is open free to all walk-in guests. </p>"
           }
         ]
@@ -472,7 +472,7 @@
         "cards": [
           {
             "image": "./images/pets/card2-1.jpg",
-            "title": "Family Dress-Up Show",
+            "title": "Family Dress-Up <br>Show",
             "desc": "<p>Add a splash of style to your picnic, showing off family pride in pinks and whites!  Join our themed dress-up show where parents and kids can strut the runway together. This is a fun, casual way to showcase your family's matching styles and brighten up your picnic day. Come flaunt your most fashionable spring moments with the ones you love most!</p><p>Free Admission | Online registration required, limited to 20 entries.</p><br><p><strong>Activity Details:</strong></p><ol><li>Check-in: Opens one hour prior to the event. Please present your online registered QR Code to our staff. Our staff will verify your entry and explain the runway procedure to you.</li><li>Upon completing the Dress-Up Show, participants will receive a Grand Prize Pack, featuring a Health Food Set from Vegan Joy, a limited-edition event sticker, and other exclusive gifts.</li></ol>",
             "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090359091463058704"
@@ -501,7 +501,7 @@
         "cards": [
           {
             "image": "./images/pets/card3-1.jpg",
-            "title": "Registration Gift",
+            "title": "Registration <br>Gift",
             "desc": "<p>2026 Taipei Floral Picnic Exclusive Picnic Mat</p><p>Inspired by spring blossoms in Taipei and splashed with a soft yellow hue, this mat is designed to blend perfectly with the lush green grass for that ultimate picnic vibe.</p><br><p><strong>How to Get:</strong> Upon successful sign-up, registered guests are invited to pick up their mat at the on-site check-in spots.</p><br><p><strong>How to Register:</strong> Online registration is free via Accupass. Please choose one of the following options (Accupass account registration required):</p><ul><li>Individual: Groups of 2</li><li>Group: Groups of 10 or more.</li></ul><p> *For more details, please visit our Accupass event page</p><br><p><strong>Check-in & Pickup:</strong></p><ul><li>Date: March 28th – March 29th</li><li>Time: 13:00 – 17:00</li><li>Location: Check-in Booth at Paws and Play Meadow</li><li>Process: Please present your Accupass E-ticket (QR code) and a valid ID of the primary registrant to our staff. Once verified, you will receive a limited-edition custom picnic mat.</li><li>><strong>Rights Reservation:</strong> The organizer reserves the right to adjust, modify, suspend, or provide final interpretation of the above-mentioned event's content.</li></ul>",
             "btnText": "Register",
             "registerLink": "https://www.accupass.com/event/2602090212451166853258"
