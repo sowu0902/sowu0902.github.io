@@ -80,22 +80,25 @@
         "type": "text",
         "items": [
           {
-            "name": "Taipei Animal Protection Department"
+            "name": "Department of Enviromental Protection, Taipei City Government"
           },
           {
-            "name": "Taipei Da'an District Office and Community Office"
+            "name": "Taipei City Animal Protection Office"
           },
           {
-            "name": "Taipei Zhongzheng District Office and Community Office"
+            "name": "Daan District Office and Village Office"
           },
           {
-            "name": "Taipei Yongkang Business District"
+            "name": "Zhongzen District Office and Village Office"
           },
           {
-            "name": "Taipei Gongguan Business District"
+            "name": "Yongkang Shopping District"
           },
           {
-            "name": "Taipei Shida Longquan Business District"
+            "name": "Gongguan Shopping District"
+          },
+          {
+            "name": "Longquan Shopping District"
           }
         ]
       },
