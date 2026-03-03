@@ -801,7 +801,7 @@ export function renderInfoSections(sections, selector) {
         }
 
         // 文字
-        if (popupTitle) popupTitle.textContent = card.title || '';
+        if (popupTitle) popupTitle.innerHTML = card.title || '';
         if (popupDesc) popupDesc.innerHTML = card.desc || '';
 
         // CTA
