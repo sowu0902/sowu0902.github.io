@@ -19,6 +19,7 @@ build/
 
 # 如果你有編譯 SCSS
 *.map
+*.scss
 
 # =========================
 # Environment variables
