@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title><?= $eventSetting->meta_title ?></title>
+  <meta name="author" content="<?= $eventSetting->author ?>" />
+  <meta name="copyright" content="Hearst Magazines Taiwan" />
+  <meta name="keywords" content="<?= $eventSetting->meta_keywords ?>" />
+  <meta name="description" content="<?= $eventSetting->meta_description ?>" />
+  <meta property="minisite_type" content="<?= $eventSetting->minisite_type ?>" />
+  <meta name="event_id" content="<?= $event_id ?>" />
+  <!-- FB Open Graphic -->
+  <meta property="fb:app_id" content="<?= $eventSetting->fb_app_id ?>" />
+  <meta property="og:title" content="<?= $eventSetting->meta_title ?>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="<?= $eventSetting->og_image ?>" />
+  <meta property="og:url" content="<?= $eventSetting->url ?>" />
+  <meta property="og:site_name" content="<?= $eventSetting->site_name ?>" />
+  <meta property="og:description" content="<?= $eventSetting->meta_description ?>" />
+  <link rel="image_src" type="image/jpeg" href="<?= $eventSetting->og_image ?>" />
+  <!-- Favicons -->
+  <link rel="shortcut icon" type="image/x-icon" href="<?= $eventSetting->favicon ?>" />
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://event.hearst.com.tw/common_support/css/font.css" />
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="scss/index.min.css">
+  <!-- js -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/rem.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js" integrity="sha512-jNDtFf7qgU0eH/+Z42FG4fw3w7DM/9zbgNPe3wfJlCylVDTT3IgKW5r92Vy9IHa6U50vyMz5gRByIu4YIXFtaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <!-- wrapper start -->
+  <div class="wrapper">
+    <div class="bg"></div>
+    <!-- kv start -->
+    <section class="kv" id="kv">
+      <div class="container">
+        <div class="top_area">
+          <img src="images/kv/logo@2x.png" alt="I HOPE. KANEBO" class="logo" data-aos="fade-up" data-aos-duration="800">
+          <img src="images/kv/slogan@2x@2x.png" alt="凝萃潤光露 網友口碑實證！" class="slogan" data-aos="fade-down" data-aos-duration="800">
+        </div>
+        <div class="bottom_area" data-aos="fade-down" data-aos-duration="800">
+          <div class="cta" data-href="data">
+            <span>立即兌換免費體驗</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- kv end -->
+    <!-- info start -->
+    <section class="info" id="product">
+      <div class="container">
+        <div class="title-1 title_area" data-aos="fade-up" data-aos-duration="800">
+          <div class="label margin_bottom--30">
+            <img src="images/info/label1@2x.png" alt="POINT 1">
+          </div>
+          <h2 class="margin_bottom--40">
+            <span class="margin_bottom--10">首款化妝水添加</span><br>
+            胎凝脂微脂粒
+          </h2>
+        </div>
+        <div class="content-1 content_area" data-aos="fade-down" data-aos-duration="800">
+          <div class="text padding_left-right--50 margin_bottom--30">
+            <p class="text--center">由保護嬰兒肌膚的「胎脂」而研發的概念成分，讓肌膚一整天都像剛敷完面膜般潤澤。</p>
+          </div>
+          <div class="img margin_bottom--30">
+          <img src="images/info/img1@2x.jpg" alt="">
+        </div>
+        </div>
+        
+        <div class="title-2 title_area" data-aos="fade-up" data-aos-duration="800">
+          <div class="flex flex_gap--20 padding_left-right--30">
+            <div class="label margin_0"><img src="images/info/label2@2x.png" alt=""></div>
+            <h2 class="h2--small margin_0">植物性保濕成分</h2>
+          </div>
+        </div>
+        <div class="content-2 content_area" data-aos="fade-up" data-aos-duration="800">
+          <div class="flex flex_gap--30 padding_left-right--40 margin_bottom--40">
+            <div class="text">
+              <p>嚴選高生命力植物，添加尤加利樹葉、當歸葉/莖、褐藻及虎耳草萃取物。</p>
+            </div>
+            <div class="img">
+              <img src="images/info/img2@2x.jpg" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="title-3 title_area" data-aos="fade-up" data-aos-duration="800">
+          <div class="flex flex_gap--20 padding_left-right--30">
+            <div class="label margin_0"><img src="images/info/label3@2x.png" alt=""></div>
+            <h2 class="h2--small margin_0">全面滲透技術</h2>
+          </div>
+        </div>
+        <div class="content-3 content_area" data-aos="fade-up" data-aos-duration="800">
+          <div class="flex flex_gap--30 padding_left-right--40 margin_bottom--20">
+            <div class="img">
+              <img src="images/info/img3@2x.jpg" alt="">
+            </div>
+            <div class="text">
+              <p>透過高壓乳化技術，使成分迅速滲透角質層，持續潤澤肌膚。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="title-4 title_area" data-aos="fade-up" data-aos-duration="800">
+          <div class="flex flex_gap--20 padding_left-right--30">
+            <div class="label margin_0"><img src="images/info/label4@2x.png" alt=""></div>
+            <h2 class="h2--small margin_0">2 STEP 高效保養法</h2>
+          </div>
+        </div>
+        <div class="content-4 content_area" data-aos="fade-up" data-aos-duration="800">
+          <div class="text padding_left-right--40 margin_bottom--40">
+            <p>搭配<span class="go-popup link" data-popup-target="example">兩段式滲透手技</span>早晚使用，完成 42天循環式保養，可有效穩定膚況，伴隨柑橘木質調香氣療癒感官，一瓶完成「補水+修護」。</p>
+          </div>
+          <a class="cta">
+            <span>看看編輯怎麼說</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- info end -->
+    <!-- feedback start -->
+    <section class="feedback" id="feedback">
+      <div class="container">
+        <div class="title_area" data-aos="fade-up" data-aos-duration="800">
+          <h2 class="margin_bottom--40">
+            <span class="margin_bottom--10">7日有感體驗大成功！</span><br>
+            <span class="h2--medium">肌膚像麻糬般</span>軟、嫩、彈
+          </h2>
+        </div>
+        <!-- 總分區 -->
+        <div class="rating" data-rating>
+          <div class="rating-stage">
+            <!-- 弧線 -->
+            <div class="rating-circle"></div>
+            <!-- 容器 -->
+            <div class="rating-badges" data-rating-badges></div>
+          </div>
+        </div>
+        <!-- 回饋區 -->
+        <div class="reviews" data-reviews hidden>
+          <div class="reviews-title"><img src="images/ELLE@2x.png" alt="ELLE">網友好評推薦</div>
+          <div class="reviews-inner">
+            <div class="reviews-list" data-reviews-list></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- feedback end -->
+    <!-- data start -->
+    <section class="data" id="data">
+      <div class="container">
+        <div class="data-content" data-aos="fade-up" data-aos-duration="800">
+          <div class="top-text margin_bottom--40 margin_left--30 margin_right--30 padding_top--40 padding_bottom--40">
+            <p>
+              即日起至2026/3/31 (二) 前填寫以下資料<br>
+              即可獲得兌換簡訊至選取的指定櫃點搶先體驗<br>
+              <strong>「KANEBO凝萃潤光露體驗組」乙份</strong>
+              數量有限，換完為止。
+              <small>*恕不得與其他兌換活動重複領取。</small>
+            </p>
+          </div>
+          <div class="data-area margin_left--30 margin_right--30">
+            <!-- 套用表單區 開始 -->
+            <div class="data_group">
+              <p class="tetris" data-id="<?= $tetris_id ?>" data-new-style="1" data-theme="event-theme">Loading...</p>
+              <!-- <script src="<?= TETRIS_SERVER ?>app.js"></script>
+              <?php
+              if (isset($_GET['debug']) && $_GET['debug']) {
+                echo '<script type="text/javascript" src="'. TETRIS_SERVER .'debug.js"></script>';
+              }
+              ?> -->
+            </div>
+            <!-- 套用表單區 結束 -->
+          </div>
+          <div class="data-notice margin_top--40 margin_left--20 margin_right--20 margin_bottom--20 padding_left-right--40 padding_top--30 padding_bottom--30">
+            <p>注意事項：</p>
+            <ol>
+              <li>送出前請確認您的手機門號正確無誤，且可接受廣告簡訊。</li>
+              <li>手機須有網路功能方能兌換。</li>
+              <li>每人每支門號限兌換乙次，限本人憑兌換頁面兌換。贈品以實物為準，數量有限，送完為止。 </li>
+              <li>收到簡訊後，請交付櫃點服務人員按下兌換鈕方才完成兌換。</li>
+              <li>ELLE與KANEBO佳麗寶化粧品集團保留最終修改、取消、停止本活動權利。送出資料前，請詳閱隱私權條款。</li>
+            </ol>
+          </div>
+        </div>
+        
+        
+        
+        <div class="elle">
+          <img src="images/data/logo-elle@2x.png" alt="ELLE">
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- wrapper end -->
+  <!-- POPUP start -->
+  <div class="popup" hidden data-popup="example">
+    <div class="popup-mask" data-popup-close></div>
+    <div class="popup-wrapper">
+      <div class="popup-close" data-popup-close></div>
+      <div class="popup-content">
+        <h2 class="text--center margin_0">兩段式滲透手技</h2>
+        <div class="popup-card padding_left-right--40 flex flex_gap--40 margin_bottom--40">
+          <div class="txt">
+            <h3 class="popup-title flex flex_gap--10"><img src="images/popup/step1@2x.png" alt=""><span>軟化肌膚</span></h3>
+            <div class="popup-desc">
+              <p>取適量於手心，約按壓1次（約1mL） 以手掌仔細輕壓。</p>
+            </div>
+          </div>
+          <div class="img">
+            <img class="popup-img" src="images/popup/step1-img@2x.jpg" alt="">
+          </div>
+        </div>
+        <div class="popup-card padding_left-right--40 flex flex_gap--40">
+          <div class="txt">
+            <h3 class="popup-title flex flex_gap--10"><img src="images/popup/step2@2x.png" alt=""><span>深層滲透</span></h3>
+            <div class="popup-desc">
+              <p>再按壓1次（約1mL）於手心，雙手稍微溫熱後，像將水潤「注入」般輕柔按壓，最後雙手包覆全臉，由內往外滑動，輕按耳下。</p>
+            </div>
+          </div>
+          <div class="img">
+            <img class="popup-img" src="images/popup/step2-img@2x.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- POPUP end -->
+  <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="js/aos.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script src="js/index.js"></script>
+  <script type="module" src="js/render.js"></script>
+  <script>
+    AOS.init({
+        offset: 60,
+        duration: 1000,
+        easing: "ease",
+    });
+  </script>
+</body>
+</html>
