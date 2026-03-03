@@ -89,7 +89,7 @@
             "name": "Daan District Office and Village Office"
           },
           {
-            "name": "Zhongzen District Office and Village Office"
+            "name": "Zhongzeng District Office and Village Office"
           },
           {
             "name": "Yongkang Shopping District"
@@ -112,9 +112,19 @@
             "url": "https://www.elle.com/tw/"
           },
           {
+            "name": "foodpak",
+            "logo": "./images/common/logo_foopak.png",
+            "url": "https://share.google/UUqTPlz2TqqmnIAim"
+          },
+          {
             "name": "GA黃金甲",
             "logo": "./images/common/logo_ga.png",
             "url": "https://www.galife.com.tw/"
+          },
+          {
+            "name": "MILAN",
+            "logo": "./images/common/logo_MILAN.png",
+            "url": "https://funmi.com.tw/"
           },
           {
             "name": "NAKED 裸肌",
@@ -134,7 +144,7 @@
           {
             "name": "森仕 Dibaq Sense Taiwan",
             "logo": "./images/common/logo_sense.png",
-            "url": "https://www.facebook.com/DibaqSense.tw/"
+            "url": "https://www.partakerpetsworld.com/pages/sense"
           },
           {
             "name": "Vegan Joy",
