@@ -519,7 +519,7 @@
           {
             "image": "./images/pets/card3-4.jpg",
             "title": "MILAN<br>報名好禮",
-            "desc": "<p>西班牙百年品牌 MILAN，主打無毒、不含塑化劑的安心文具。結合藝術美學與人體工學，為孩子打造兼具安全與設計感的創意生活。</p><br><p>2026 台北花伴野餐合作限定活動：報名「親子裝扮秀」活動，現場出席活動可領取品牌好禮2選1<br>(1) 隨行畫筆袋著走<br>(2) 野餐必備_保溫保冷袋</p><br><p>※報名者須先完成 ACCUPASS 會員註冊，方可進行活動報名。</p><p>每人每次限兌換1種。產品數量有限，送完為止。</p>",
+            "desc": "<p>西班牙百年品牌 MILAN，主打無毒、不含塑化劑的安心文具。結合藝術美學與人體工學，為孩子打造兼具安全與設計感的創意生活。</p><br><p>2026 台北花伴野餐合作限定活動：報名「親子裝扮秀」活動，現場出席活動可領取品牌好禮2選1<br>(1) 隨行畫筆袋著走<br>(2) 野餐必備_保溫保冷袋</p><br><p>※報名者須先完成 ACCUPASS 會員註冊，方可進行活動報名。</p><p>每人每次限兌換1種。產品數量有限，送完為止。</p><br><p>※主辦單位保留活動內容調整、修改、暫停及最終解釋權。 </p>",
             "btnText": "按我預約報名",
             "registerLink": "https://www.accupass.com/event/2602090359091463058704"
           }
@@ -792,7 +792,7 @@
             "desktop": "./images/run/rule-subtitle.png",
             "mobile": "./images/run/rule-subtitle-mb.png"
           },
-          "contentHtml": "<div><p><strong>活動時間：</strong>2026 年 3 月 5日 (四)  至 3 月 31 日 (二)</p></div><div><p><strong>兌換地點：</strong>台北花伴野餐特約店家門市</p></div><div><p><strong>活動辦法：</strong></p><p class='text-blue'>第一重好禮：追蹤＋消費，立即享店家專屬優惠</p><p>追蹤「台北旅遊網」Facebook 或 Instagram 任一官方社群平台，並出示追蹤畫面。<br>消費達新臺幣200元或店家指定門檻(依各合作店家公告)，即可享有該店家提供之限定優惠方案。</p><p class='text-blue'>第二重好禮：貼文按讚或分享，兌換「花伴野餐貼紙」</p><p>轉發或按讚「台北旅遊網」Facebook 或 Instagram任一「2026台北花伴野餐」相關貼文，出示完成畫面，經合作店家確認後，即可兌換限量「花伴野餐貼紙」1份(數量有限，送完為止)。</p></div><div><p><strong>注意事項：</strong></p><ul><li>活動辦法僅適用於活動期間，逾期恕不受理。</li><li>每人每日每店家限兌換一次限量貼紙，數量有限，送完為止。</li><li>合作店家之消費門檻與優惠內容，依各店家公告為準。</li><li>本活動之優惠及贈品不得折換現金、轉售或要求更換其他品項。</li><li>如有未盡事宜，主辦單位保留活動內容調整、修改、暫停及最終解釋權。</li></ul><img class='sticker' src='./images/run/sticker.png'></div>"
+          "contentHtml": "<div><p><strong>活動時間：</strong>2026 年 3 月 5日 (四)  至 3 月 31 日 (二)</p></div><div><p><strong>兌換地點：</strong>台北花伴野餐特約店家門市</p></div><div><p><strong>活動辦法：</strong></p><p class='text-blue'>第一重好禮：追蹤＋消費，立即享店家專屬優惠</p><p>追蹤「台北旅遊網」Facebook 或 Instagram 任一官方社群平台，並出示追蹤畫面。<br>消費達店家指定門檻(依各合作店家公告)，即可享有該店家提供之限定優惠方案。</p><p class='text-blue'>第二重好禮：貼文按讚或分享，兌換「花伴野餐貼紙」</p><p>轉發或按讚「台北旅遊網」Facebook 或 Instagram任一「2026台北花伴野餐」相關貼文，出示完成畫面，經合作店家確認後，即可兌換限量「花伴野餐貼紙」1份(數量有限，送完為止)。</p></div><div><p><strong>注意事項：</strong></p><ul><li>活動辦法僅適用於活動期間，逾期恕不受理。</li><li>每人每日每店家限兌換一次限量貼紙，數量有限，送完為止。</li><li>合作店家之消費門檻與優惠內容，依各店家公告為準。</li><li>本活動之優惠及贈品不得折換現金、轉售或要求更換其他品項。</li><li>如有未盡事宜，主辦單位保留活動內容調整、修改、暫停及最終解釋權。</li></ul><img class='sticker' src='./images/run/sticker.png'></div>"
         }
       ]
     },
@@ -936,7 +936,7 @@
         "desktop": "./images/pokemon/intro-title.png",
         "mobile": "./images/pokemon/intro-title-mb.png"
       },
-      "text": "<span class='pc-p mb-p sub-title'>親愛的訓練家們，<br>準備好與「戴著花帽的皮卡丘」一起春遊臺北了嗎？</span><span class='pc-p mb-p'>2026年3月28日至4月6日，快來臺北市大安森林公園與寶可夢們一起成受春天的氣息吧！<span class='pc-p'>除了有活動主題實可夢之外，我們也準備了活動期問內可以參與的「限時調查」與「田野調查」。</span><span class='pc-p'>誠摯邀請您在春暖花開的美麗景致中，與《Pokemon GO》一同創造難忘的春日回憶。</span></span>",
+      "text": "<span class='pc-p mb-p sub-title'>親愛的訓練家們，<br>準備好與「戴著花帽的皮卡丘」一起春遊臺北了嗎？</span><span class='pc-p mb-p'>2026年3月28日至4月6日，快來臺北市大安森林公園與寶可夢們一起感受春天的氣息吧！<span class='pc-p'>除了有活動主題實可夢之外，我們也準備了活動期間內可以參與的「限時調查」與「田野調查」。</span><span class='pc-p'>誠摯邀請您在春暖花開的美麗景致中，與《Pokémon GO》一同創造難忘的春日回憶。</span></span>",
       "image": {
         "desktop": "./images/pokemon/intro-img.jpg",
         "mobile": "./images/pokemon/intro-img-mb.jpg"
