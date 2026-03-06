@@ -1,0 +1,2099 @@
+// 共用色碼
+$color-white: #fff;
+$color-black: #000;
+// RWD
+$wide: '(min-width: 1700px)' !default;
+$max-wide: '(min-width: 2560px)' !default;
+$desktop: '(max-width: 1440px)' !default; //初始值
+$small-desktop: '(max-width: 1280px)' !default;
+$tablet: '(max-width: 750px)' !default;
+$phone: '(max-width: 413px)' !default;
+$small-phone: '(max-width: 350px)' !default;
+@mixin media($query:$phone){
+  @media #{$query}{
+    @content;
+  }
+}
+section {
+  background-repeat: no-repeat;
+  background-position: center;
+  .container {
+    padding: 100px 0;
+    @include media($tablet) {
+      padding: 75px 15px;
+    }
+  }
+  h2 {
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+    margin-bottom: 40px;
+    display: block;
+    @include media($tablet) {
+      margin-bottom: 30px;
+    }
+    span {
+      opacity: 0;
+    }
+  }
+  .ytiframe-container {
+    position: relative;
+    padding-bottom: 52.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    iframe, object, embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .section-bg {
+    position: absolute;
+    width: 100%;
+    min-width: 2560px;
+    // height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 0;
+    @include media($tablet) {
+      min-width: 0;
+      width: 100%;
+    }
+    &.bottom {
+      bottom: -2px;
+      top: auto;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    @include media($tablet) {
+      margin-bottom: 25px;
+    }
+    img {
+      height: 39px;
+      width: auto;
+      @include media($tablet) {
+        height: 8.4vw;
+      }
+    }
+    &.title--double-row{
+      &-mb {
+        img {
+          @include media($tablet) {
+            height: 15.07vw;
+          }
+        }
+      }
+    }
+  }
+  .pc-p {
+    display: block;
+    @include media($tablet) {
+      display: inline;
+    }
+  }
+  .mb-p {
+    @include media($tablet) {
+      display: block;
+    }
+  }
+}
+
+body.is-popup-open {
+  overflow: hidden;
+}
+.popup {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  &.is-active {
+    opacity: 1;
+    pointer-events: auto;
+    .popup-wrapper {
+      top: 50%;
+      opacity: 1;
+    }
+  }
+  // &[hidden] {
+  //   // display: none;
+  // }
+  &-mask {
+    position: absolute;
+    inset: 0;
+    background: rgba(232,183,205,.9);
+  }
+  &-wrapper {
+    border-radius: 50px;
+    background-color: #f2edd9;
+    width: calc(100% - 30px);
+    max-width: 960px;
+    // max-height: 85vh;
+    margin: auto;
+    padding: 45px;
+    top: calc(50% + 40px);
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all .3s ease;
+    @include media($tablet) {
+      border-radius: 25px;
+      padding: 45px 25px 60px 25px;
+    }
+  }
+  &-deco {
+    width: 111.66%;
+    position: absolute;
+    left: -8%;
+    bottom: -8%;
+    @include media($tablet) {
+      width: 100vw;
+      left: -15px;
+    }
+  }
+  &-content {
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 400px;
+    padding-bottom: 20px;
+    padding-right: 5px;
+    @include media($tablet) {
+      display: block;
+      max-height: 68vh;
+    }
+    &::-webkit-scrollbar{
+      // height: 2px;
+      width: 5px;
+      
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      border-radius: 0;
+      margin: 40px;
+      @include media($tablet) {
+        margin: 0px;
+      }
+    }
+    &::-webkit-scrollbar-thumb{
+      border-radius: 0;
+      background-color: #e6afce;
+    }
+    .img {
+      flex: 0 0 400px;
+      width: 400px;
+      margin-right: 35px;
+      line-height: 0;
+      @include media($tablet) {
+        margin: 0 auto;
+        width: 70vw;
+        max-width: 500px;
+      }
+    }
+    .txt {
+      flex: 1;
+    }
+  }
+  &-cta {
+    margin-left: 0;
+    margin-top: 30px;
+    @include media($tablet) {
+      margin-top: 24px;
+      margin-left: auto;
+    }
+    &[hidden] {
+      display: none;
+    }
+  }
+  &-close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/common/close.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+    transform: rotate(0deg);
+    @include media($tablet) {
+      width: 20px;
+      height: 20px;
+      right: 16px;
+      top: 16px; 
+    }
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+  &-title {
+    font-size: 24px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    color: #d87fa7;
+    border-bottom: 5px solid #d87fa7;
+    margin-bottom: 15px;
+    margin-top: 35px;
+    @include media($tablet) {
+      font-size: 20px;
+      border-bottom-width: 2.5px;
+      margin-top: 25px;
+    }
+    br {
+      display: none;
+    }
+  }
+  &-desc {
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify;
+    letter-spacing: 0.4px;
+    color: #777777;
+    @include media($tablet) {
+      font-size: 12px;
+      line-height: 2;
+    }
+    ul,ol {
+      margin: 0;
+      list-style-position: outside;
+      padding-left: 16px;
+      @include media($tablet) {
+        padding-left: 14px;
+      }
+    }
+    ol {
+      padding-left: 22px;
+      @include media($tablet) {
+        padding-left: 18px;
+      }
+    }
+    .color-red {
+      color: #d32222;
+    }
+  }
+  &-logo {
+    position: absolute;
+    width: 135px;
+    height: 135px;
+    border-radius: 80px;
+    right: -20px;
+    bottom: -20px;
+    @include media($tablet) {
+      width: 25.47vw;
+      height: 25.47vw;
+      right: -3.7vw;
+      bottom: -3.7vw;
+    }
+  }
+}
+
+// KV
+.section-kv {
+  margin-top: 102px;
+  height: 350px;
+  @include media($tablet) {
+    margin-top: 84px;
+    height: 46.67vw;
+  }
+  .h1 {
+    max-width:  750px;
+    margin: auto;
+    padding-top: 75px;
+    @include media($tablet) {
+      padding: 9.3vw 9.3vw 0 9.3vw;
+    }
+    img {
+      height: 52px;
+      width: auto;
+      @include media($tablet) {
+        height: 6.93vw;
+      }
+    }
+  }
+}
+// 前言
+.section-intro {
+  text-align: center;
+  color: $color-white;
+  .intro-text {
+    max-width:  750px;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 25px;
+    font-size: 18px;
+    line-height: 2;
+    @include media($tablet) {
+      font-size: 14px;
+      padding: 9.3vw 1vw 6.67vw 1vw;
+    }
+    @include media($small-phone) {
+      font-size: 13px;
+      padding: 9.3vw 4vw 6.67vw 4vw;
+    }
+    .sub-title {
+      @include media($tablet) {
+        text-align: center !important;
+        margin-bottom: 14px;
+      }
+    }
+    strong {
+      font-weight: normal;
+      padding: 0 6px;
+      margin: 0 2px;
+      background-color: $color-white;
+      color: inherit;
+      @include media($tablet) {
+        padding: 0 3px;
+      }
+    }
+  }
+  &2 {
+    .intro-bg {
+      top: auto;
+      bottom: 0;
+    }
+    .container {
+      padding-bottom: 50px;
+      @include media($tablet) {
+        padding-bottom: 75px;
+      }
+    }
+    .intro-title {
+      margin-bottom: 30px;
+    }
+    .intro-text {
+      padding-top: 0;
+    }
+  }
+}
+// 時程表
+.section-schedule {
+  .schedule-content {   
+    // overflow: hidden;
+    max-width: 1140px;
+    margin: auto;
+    img {
+      border-radius: 50px;
+      @include media($tablet) {
+        border-radius: 25px;
+      }
+    }
+  }
+}
+// 圖文資訊區塊
+.section-info {
+  overflow: hidden;
+  .section-bg {
+    top: 50%;
+    transform: translate(-50%,-50%);
+    @include media($tablet) {
+      top: 0;
+      transform: translate(-50%,0);
+    }
+  }
+  .info-desc {
+    text-align: center;
+    color: $color-white;
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 40px;
+    @include media($tablet) {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+  }
+  .info-cards {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 750px;
+    @include media($tablet) {
+      padding: 0 15px;
+    }
+    li {
+      width: calc(33% - 14px);
+      margin: 0px 7px;
+      padding-bottom: 55px;
+      cursor: pointer;
+      @include media($tablet) {
+        width: calc(50% - 14px);
+        padding-bottom: 30px;
+      }
+      .card-img {
+        background-color: #fffde5;
+        border-radius: 50px;
+        line-height: 0;
+        overflow: hidden;
+        @include media($tablet) {
+          border-radius: 25px;
+        }
+      }
+      .card-title {
+        text-align: center;
+        font-size: 21px;
+        line-height: 1.48;
+        letter-spacing: 0;
+        margin: 18px auto;
+        font-weight: 500;
+        @include media($tablet) {
+          font-size: 14px;
+          margin: 10px auto;
+        }
+        @include media($small-phone) {
+          font-size: 12px;
+        }
+      }
+      .card-more {
+        display: block;
+        width: 160px;
+        margin: auto;
+        border-radius: 30px;
+        font-size: 19px;
+        padding: 11px 0;
+        @include media($tablet) {
+          max-width: 100px;
+          font-size: 14px;
+          padding: 6px 0;
+        }
+      }
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+  }
+  h3 {
+    text-align: center;
+    color: #f2edd9;
+    font-size: 26px;
+    font-weight: 500;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 70px;
+    z-index: 1;
+    @include media($tablet) {
+      font-size: 20px;
+      gap: 10px;
+      margin-bottom: 35px;
+    }
+    &::before,&::after {
+      content: "";
+      flex: 1;
+      height: 6px; /* 控制雙線區塊高度 */
+      background:
+        linear-gradient(
+          to bottom,
+          #f2edd9 0px,
+          #f2edd9 1px,
+          transparent 2px,
+          transparent 4px,
+          #f2edd9 5px,
+          #f2edd9 6px
+        );
+      @include media($tablet) {
+        height: 5px;
+        background:
+          linear-gradient(
+            to bottom,
+            #f2edd9 0px,
+            #f2edd9 1px,
+            transparent 2px,
+            transparent 3px,
+            #f2edd9 4px,
+            #f2edd9 5px
+          );
+      }
+    }
+    span {
+      display: block;
+      
+    }
+  }
+  .small-cards {
+    max-width: 780px;
+    @include media($tablet) {
+      padding: 0 5px;
+    }
+    &::before {
+      content:"";
+      width: 440px;
+      height: 486px;
+      position: absolute;
+      top: -190px;
+      left: -250px;
+      background-image: url(../images/market/info-title-before.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      @include media($tablet) {
+        width: 37vw;
+        height: 40.93vw;
+        top: -55px;
+        left: -5px;
+      }
+    }
+    .info-card {
+      width: calc(33% - 26px);
+      margin: 0px 13px;
+      background-color: #f2edd9;
+      border-radius: 50px;
+      padding: 37px 5px 25px 5px;
+      margin-bottom: 20px;
+      @include media($tablet) {
+        width: calc(50% - 14px);
+        margin: 0px 7px;
+        border-radius: 25px;
+        padding-top: 24px;
+        margin-bottom: 15px;
+      }
+      .nation {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 48px;
+        height: 48px;
+        z-index: 1;
+        @include media($tablet) {
+          left: 12px;
+          top: 12px;
+          width: 30px;
+          height: 30px;
+        }
+      }
+      .card-img {
+        background-color: #ac8dbd;
+        margin: 0 20px;
+        border-radius: 0;
+        @include media($tablet) {
+          margin: 0 10px;
+        }
+      }
+      .card-title {
+        font-size: 18px;
+        letter-spacing: 0;
+        color: #9a7cb6;
+        margin: 15px auto;
+        @include media($tablet) {
+          font-size: 11px;
+          margin: 8px auto;
+        }
+      }
+      .card-more {
+        color: #fffcd1;
+        background-color: #9a7cb6;
+        font-size: 16px;
+        @include media($tablet) {
+          font-size: 10px;
+        }
+      }
+      &:hover {
+        .card-title {
+          color: #9a7cb6;
+        }
+        .card-more {
+          color: #9a7cb6;
+          background-color: $color-white;
+        }
+      }
+    }
+  }
+}
+// 地圖(市集only)
+.section-map {
+  background-color: #9a7cb6;
+  background-image: url(../images/market/map-bg.gif);
+  background-repeat: no-repeat;
+  background-size: 2560px auto;
+  background-position: center bottom;
+  @include media($tablet) {
+    background-image: none;
+  }
+  .container {
+    &::before {
+      content: "";
+      width: 210px;
+      height: 125px;
+      background-image: url(../images/market/map-title-before.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 10%;
+      top: 35px;
+      @include media($tablet) {
+        width: 28.13vw;
+        height: 17.2vw;
+        background-image: url(../images/market/map-title-before-mb.png);
+        right: 10px;
+        left: inherit;
+        top: 18px;
+      }
+    }
+  }
+  .map-content {   
+    // overflow: hidden;
+    max-width: 850px;
+    margin: auto;
+    img {
+      border-radius: 50px;
+      @include media($tablet) {
+        border-radius: 25px;
+      }
+    }
+  }
+}
+// 活動資訊(RUN頁only)
+.section-rule {
+  background-color: #25a4d9;
+  .container {
+    &::before {
+      content: "";
+      width: 210px;
+      height: 126px;
+      background-image: url(../images/run/rule-bg-before.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 40px;
+      left: 13.5%;
+      @include media($tablet) {
+        width: 27.33vw;
+        height: 22.27vw;
+        background-image: url(../images/run/rule-bg-before-mb.png);
+        left: inherit;
+        right: 9vw;
+        top: 6vw;
+      }
+    }
+  }
+  
+  .rule-blocks {
+    border-radius: 50px;
+    background-color: #f2edd9;
+    padding: 40px 50px;
+    max-width: 850px;
+    margin: auto;
+    @include media($tablet) {
+      border-radius: 25px;
+      padding: 25px 15px 0 15px;
+    }
+    .rule-subtitle {
+      text-align: center;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 25px;
+      @include media($tablet) {
+        gap: 12px;
+        margin-bottom: 20px;
+        align-items: flex-end;
+      }
+      &::before,&::after {
+        content: "";
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(../images/run/rule-subtitle-before.png);
+        width: 35px;
+        height: 38px;
+        @include media($tablet) {
+          width: 6.27vw;
+          height: 6.8vw;
+        }
+      }
+      img {
+        height: 30px;
+        width: auto;
+        @include media($tablet) {
+          height: 13.2vw;
+        }
+      }
+    }
+    .rule-content {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #2c2c2c;
+      @include media($tablet) {
+        font-size: 14px;
+        line-height: 2;
+        letter-spacing: 0;
+      }
+      &::after {
+        @include media($tablet) {
+          content: "";
+          background-image: url(../images/run/rule-content-after-mb.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          display: block;
+          height: 38.67vw;
+          margin-top: 2rem;
+        }
+      }
+      >div {
+        margin-bottom: 1rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .text-blue {
+        font-weight: 500;
+        color: #28a9e0;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-position: inside;
+      }
+      .sticker {
+        width: 184px;
+        transform: rotate(5deg);
+        position: absolute;
+        right: -80px;
+        bottom: -65px;
+        @include media($tablet) {
+          width: 38vw;
+          bottom: -54vw;
+          right: 5vw;
+        }
+      }
+    }
+  }
+}
+
+// *
+// 各頁獨有樣式
+// *
+// coffee咖啡野餐頁
+.page-coffee {
+  .section-kv {
+    background-color: #d9bd92;
+  }
+  // coffee 頁面前言section
+  .section-intro {
+    min-height: 280px;
+    background-color: #d9bd92;
+    @include media($tablet) {
+      min-height: 84.4vw;
+      padding-bottom: 75px;
+    }
+    .intro-btn {
+      background-color: #c29b61;
+      &:hover {
+        background-color: #a37530;
+      }
+    }
+  }
+  // coffee 頁面時程表section
+  .section-schedule {
+    background-color: #c29b61;
+    // height: 702px;
+    // @include media($tablet) {
+    //   height: 176.4vw;
+    // }
+    &2 {
+      background-color: #e19eb9;
+      // height: 747px;
+      // @include media($tablet) {
+      //   height: 185.2vw;
+      // }
+    }
+  }
+  // coffee 頁面圖文資訊section
+  .section-info {
+    background-color: #d9bd92;
+    .info-cards {
+      li {
+        .card-title {
+          color: #fffcd1;
+        }
+        .card-more {
+          color: #fffcd1;
+          background-color: #c29b61;
+        }
+        &:hover {
+          .card-title {
+            color: #926f3c;
+          }
+          .card-more {
+            color: #926f3c;
+            background-color: #fffcd1;
+          }
+        }
+      }
+    }
+  }
+  #coffee-garden {
+    background-color: #c29b61;
+    .section-bg {
+      top: 0;
+      transform: translate(-50%, 0%);
+    }
+    .info-cards {
+      li {
+        .card-more {
+          background-color: #d9bd92;
+        }
+        &:hover {
+          .card-title {
+            color: #fff;
+          }
+          .card-more {
+            color: #926f3c;
+            background-color: #fffcd1;
+          }
+        }
+      }
+    }
+  }
+  #coffee-gift {
+    .section-bg {
+      top: 100%;
+      transform: translate(-50%, -100%);
+    }
+  }
+  #main-guest {
+    background-color: #e8b7cd;
+    .section-bg {
+      top: 100%;
+      transform: translate(-50%, -100%);
+    }
+    .info-cards {
+      li {
+        .card-more {
+          background-color: #d87fa7;
+        }
+        &:hover {
+          .card-title {
+            color: #fff;
+          }
+          .card-more {
+            color: #cd548b;
+            background-color: #fffcd1;
+          }
+        }
+      }
+    }
+  }
+}
+// sports運動野餐頁
+.page-sports {
+  .section-kv {
+    background-color: #98c795;
+  }
+  // sports 頁面前言section
+  .section-intro {
+    min-height: 280px;
+    background-color: #98c795;
+    @include media($tablet) {
+      min-height: 67.47vw;
+      padding-bottom: 75px;
+    }
+    .intro-btn {
+      background-color: #4ea048;
+      &:hover {
+        background-color: #23841c;
+      }
+    }
+  }
+  // sports 頁面時程表section
+  .section-schedule {
+    height: 697px;
+    @include media($tablet) {
+      height: 167.47vw;
+    }
+  }
+  // sports 頁面圖文資訊section
+  .section-info {
+    background-color: #98c795;
+    .info-bg {
+      @include media($tablet) {
+        top: 0;
+        transform: translate(-50%, 0%);
+      }  
+    }
+    .info-cards {
+      max-width: calc(750px * 0.66);
+      li {
+        width: calc(50% - 14px);
+        .card-title {
+          color: #fffcd1;
+        }
+        .card-more {
+          color: #fffcd1;
+          background-color: #4ea048;
+        }
+        &:hover {
+          .card-title {
+            color: #2c7227;
+          }
+          .card-more {
+            color: #2c7227;
+            background-color: #fffcd1;
+          }
+        }
+      }
+    }
+  }
+  #sports-yoga {
+    background-color: #78b474;
+    .info-cards {
+      li {
+        .card-more {
+          background-color: #4ea048;
+        }
+        &:hover {
+          .card-title {
+            color: #fff;
+          }
+          .card-more {
+            color: #2c7227;
+            background-color: #fffcd1;
+          }
+        }
+      }
+    }
+  }
+  #sports-gift {
+    .section-bg {
+        top: 5%;
+        transform: translate(-50%,0);
+        @include media($tablet) {
+          top: 0;
+          transform: translate(-50%,0);
+        }
+      }
+    .info-cards {
+      max-width: 750px;
+      li {
+        width: calc(33% - 14px);
+        @include media($tablet) {
+          width: calc(50% - 14px);
+        }
+      }
+    }
+  }
+}
+// pets毛孩野餐頁
+.page-pets {
+  .section-kv {
+    background-color: #f0aa4d;
+  }
+  // pets 頁面前言section
+  .section-intro {
+    min-height: 280px;
+    background-color: #f0aa4d;
+    @include media($tablet) {
+      min-height: 67.6vw;
+      padding-bottom: 75px;
+    }
+    .intro-btn {
+      background-color: #ec7a00;
+      &:hover {          
+        background-color: #de5e00;
+      }
+    }
+  }
+  // pets 頁面時程表section
+  .section-schedule {
+    height: 590px;
+    @include media($tablet) {
+      height: 136.27vw;
+    }
+  }
+  // pets 頁面圖文資訊section
+  .section-info {
+    background-color: #f0aa4d;
+    .info-cards {
+      max-width: calc(750px * 0.66);
+      li {
+        width: calc(50% - 14px);
+        .card-title {
+          color: #fffcd1;
+        }
+        .card-more {
+          color: #fffcd1;
+          background-color: #ec7a00;
+        }
+        &:hover {
+          .card-title {
+            color: #e76700;
+          }
+          .card-more {
+            color: #f5952e;
+            background-color: #fffcd1;
+          }
+        }
+      }
+    }
+  }
+  #pets-kids {
+    background-color: #f5952e;
+    .info-cards {
+      li {
+        .card-more {
+          background-color: #ec7a00;
+        }
+        &:hover {
+          .card-title {
+            color: #fff;
+          }
+          .card-more {
+            color: #f5952e;
+            background-color: #fffcd1;
+          }
+        }
+      }
+    }
+  }
+  #pets-gift {
+    .info-cards {
+      max-width: 750px;
+      li {
+        width: calc(33% - 14px);
+        @include media($tablet) {
+          width: calc(50% - 14px);
+        }
+        .card-title {
+          width: 110%;
+          margin-left: -5%;
+          @include media($small-phone) {
+            width: 116%;
+            margin-left: -8%;
+          }
+        }
+      }
+    }
+  }
+}
+// market主題市集頁
+.page-market {
+  // market 頁面前言section 
+  .section-intro {
+    background-color: #be9ec4;
+    .intro-bg {
+      top: inherit;
+      bottom: 0;
+    }
+    .intro-text {
+      max-width: 800px;
+      padding-bottom: 70px;
+      @include media($tablet) {
+        padding-right: 15px;
+        padding-left: 15px;
+        text-align: left;
+      }
+    }
+  }
+  .section-info {
+    background-color: #be9ec4;
+    .container {
+      max-width: 1016px;
+      overflow: visible;
+      padding-bottom: 0;
+      @include media($tablet) {
+        padding-top: 30px;
+      }
+      
+    }
+    &:nth-child(odd) {
+      .container {
+        .small-cards {
+          &::before {
+            left: inherit;
+            right: -250px;
+            @include media($tablet) {
+              left: inherit;
+              right: -5px;
+            }
+          }
+        }
+      }
+    }
+    &:last-child {
+      .container {
+        padding-bottom: 100px;
+        @include media($tablet) {
+          padding-bottom: 75px;
+        }
+      }
+    }
+  }
+}
+// run野餐跑咖頁
+.page-run {
+  .section-intro {
+    background-color: #55b6df;
+    .intro-bg {
+      top: inherit;
+      bottom: 0;
+    }
+    .intro-text {
+      max-width: 850px;
+      padding-bottom: 70px;
+      @include media($tablet) {
+        padding-right: 15px;
+        padding-left: 15px;
+        text-align: left;
+      }
+      strong {
+        color: #28a9e0;
+      }
+    }
+  }
+  .section-info {
+    background-color: #55b6df;
+    &:last-child {
+      .container {
+        padding-bottom: 100px;
+        @include media($tablet) {
+          padding-bottom: 75px;
+        }
+      }
+    }
+    &:nth-child(n+5) {
+      .container {
+        padding-top: 40px;
+        @include media($tablet) {
+          padding-top: 30px;
+        }
+      }
+    }
+    &:nth-child(odd) {
+      .container {
+        .small-cards {
+          &::before {
+            left: inherit;
+            right: -120px;
+            @include media($tablet) {
+              left: inherit;
+              right: -5px;
+            }
+          }
+        }
+      }
+    }
+    .container {
+      overflow: visible;
+      padding-bottom: 0;
+    }
+    .small-cards {
+      // max-width: 780px;
+      max-width: 1080px;
+      &::before {
+        background-image: url(../images/run/info-title-before.png);
+        left: -120px;
+        top: -200px;
+        @include media($tablet) {
+          left: -5px;
+          top: -65px;
+        }
+      }
+      .info-card {
+        width: calc(25% - 26px);
+        @include media($tablet) {
+          width: calc(50% - 14px);
+          margin: 0px 7px 15px 7px;
+        }
+        .card-img {
+          background-color: #68c9f2;
+        }
+        .card-title {
+          color: #39b1e4;
+        }
+        .card-more {
+          background-color: #28a9e0;
+        }
+        &:hover {
+          .card-title {
+            color: #28a9e0;
+          }
+          .card-more {
+            color: #28a9e0;
+            background-color: $color-white;
+          }
+        }
+      }
+    }
+  }
+  .section-rule {
+    .rule-bg {
+      top: inherit;
+      bottom: 0;
+    }
+  }
+}
+// pokemon寶可夢野餐頁
+.page-pokemon {
+  // KV
+  .section-kv {
+    background-color: #56cab5;
+    .h1 {
+      max-width: 920px;
+    }
+  }
+  // 前言
+  .section-intro {
+    background-color: #56cab5;
+    .intro-bg {
+      @include media($tablet) {
+        top: inherit;
+        bottom: 0;
+      }
+    }
+    .intro-title {
+      margin-bottom: 40px;
+      @include media($tablet) {
+        margin-bottom: 25px;
+      }
+    }
+    .intro-media {
+      border-radius: 50px;
+      overflow: hidden;
+      max-width: 850px;
+      margin: auto;
+      line-height: 0;
+      @include media($tablet) {
+        border-radius: 25px;
+      }
+    }
+    .intro-text {
+      max-width: 850px;
+      @include media($tablet) {
+        padding-top: 20px;
+        letter-spacing: 0;
+        text-align: left;
+      }
+    }
+  }
+  // 活動內容
+  .section-event {
+    background-color: #1cb598;
+    .container {
+      padding-bottom: 0;
+    }
+    .event-intro {
+      color: $color-white;
+      font-size: 18px;
+      line-height: 1.7;
+      text-align: center;
+      margin-bottom: 50px;
+      @include media($tablet) {
+        font-size: 14px;
+        line-height: 2;
+        margin: auto;
+        margin-bottom: 25px;
+        max-width: 80vw;
+      }
+    }
+    .event-card {
+      max-width: 850px;
+      margin: auto;
+      margin-top: 40px;
+      border-radius: 50px;
+      overflow: hidden;
+      background-color: #f2edd9;
+      @include media($tablet) {
+        margin-top: 30px;
+        border-radius: 25px;
+      }
+      &-bg {
+        width: 100%;
+        height: auto; 
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        line-height: 0;
+      }
+      &-title {
+        background-color: #68c9f2;
+        padding: 18px 0;
+        text-align: center;
+        @include media($tablet) {
+          padding: 15px 0;
+        }
+        img {
+          height: 28px;
+          width: auto;
+          @include media($tablet) {
+            height: 5.2vw;
+          }
+        }
+      }
+      &-text {
+        padding: 30px 50px 50px 50px;
+        font-size: 18px;
+        line-height: 1.7;
+        text-align: justify;
+        color: #2c2c2c;
+        @include media($tablet) {
+          padding: 25px 12px 45px 12px;
+          font-size: 14px;
+          line-height: 2;
+        }
+        ul {
+          margin: 0 0 40px 0;
+          padding: 0;
+          list-style-position: inside;
+          @include media($tablet) {
+            margin-bottom: 35px;
+          }
+          li {
+            margin-left: 5px;
+          }
+        }
+      }
+      &-block {
+        flex: 0 0 50%;
+        width: 50%;
+        @include media($tablet) {
+          width: 100%;
+          padding: 20px 0;
+        }
+        &--1 {
+          border-right: 1px solid #2c2c2c;
+          @include media($tablet) {
+            border-right: none;
+            border-bottom: 1px solid #2c2c2c;
+            padding-bottom: 15px;
+            margin: 0 13px;
+            width: calc(100% - 26px);
+          }
+        }
+      }
+      // event-4(粉紅底色)
+      &--event-4 {
+        background-color: #e8b7cd;
+        max-width: 1040px;
+        border-radius: 0px;
+        overflow: visible;
+        margin-top: 80px;
+        margin-bottom: 110px;
+        @include media($tablet) {
+          margin-top: 20.67vw;
+          margin-bottom: 20.67vw;
+        }
+        &::before,&::after {
+          content: "";
+          position: absolute;
+          bottom: -52px;
+          width: 168px;
+          height: 304px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          z-index: -1;
+          @include media($tablet) {
+            width: 100%;
+            height: 10.8vw;
+            bottom: inherit;
+          }
+        }
+        &::before {
+          background-image: url(../images/pokemon/event-card4-before.png);
+          left: -80px;
+          @include media($tablet) {
+            background-image: url(../images/pokemon/event-card4-before-mb.png);
+            background-position: center bottom;
+            left: 0;
+            top: -10.8vw;
+          }
+        }
+        &::after {
+          background-image: url(../images/pokemon/event-card4-after.png);
+          right: -80px;
+          @include media($tablet) {
+            background-image: url(../images/pokemon/event-card4-after-mb.png);
+            background-position: center top;
+            left: 0;
+            bottom: -10.8vw;
+          }
+        }
+        .event-card-inner {
+          background-color: #e8b7cd;
+          display: flex;
+          padding: 25px 0;
+          @include media($tablet) {
+            display: block;
+            padding: 0 0 15px 0;
+          }
+        }
+        .event-card-title {
+          background-color: transparent;
+          padding: 11px 0;
+        }
+        .event-card-text {
+          padding: 20px 0 5px 0;
+          text-align: center;
+          @include media($tablet) {
+            padding: 0;
+            letter-spacing: 0;
+          }
+        }
+        .highlight {
+          padding-left: 4px;
+          background-color: #d87fa7;
+        }
+      }
+      // event-5(黃底色)
+      &--event-5 {
+        background-color: #fff461;
+        padding-top: 25px;
+        overflow: visible;
+        max-width: 550px;
+        left: -70px;
+        margin-bottom: 135px;
+        @include media($tablet) {
+          padding-top: 20px;
+          max-width: 86.67vw;
+          left: calc(15px - 6.665vw);
+        }
+        .event-card-title {
+          background-color: transparent;
+          text-align: left;
+          padding-left: 50px;
+          @include media($tablet) {
+            padding-left: 0;
+            text-align: center;
+          }
+          &::before {
+            content: "";
+            width: 308px;
+            height: 163px;
+            background-image: url(../images/pokemon/event-card5-after.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            right: -200px;
+            top: -100px;
+            @include media($tablet) {
+              width: 55px;
+              height: 55px;
+              background-image: url(../images/pokemon/event-card5-before.png);
+              right: -24px;
+              top: -42px;
+            }
+          }
+          img {
+            height: 33px;
+            @include media($tablet) {
+              height: 6.13vw;
+            }
+          }
+        }
+        .event-card-text {
+          padding-top: 0;
+          padding-right: 120px;
+          @include media($tablet) {
+            padding-right: 20px;
+            padding-left: 20px;
+            letter-spacing: 0;
+          }
+          &::before {
+            content: "";
+            width: 83px;
+            height: 83px;
+            background-image: url(../images/pokemon/event-card5-before.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: -32px;
+            bottom: -32px;
+            @include media($tablet) {
+              background-image: url(../images/pokemon/event-card5-after-mb.png);
+              width: 36.8vw;
+              height: 30.67vw;
+              left: 0;
+              bottom: -23vw;
+            }
+          }
+          span {
+            @include media($tablet) {
+              display: block;
+              width: calc(100% - 140px);
+            }
+          }
+        }
+        .event-card-media {
+          position: absolute;
+          right: -140px;
+          bottom: -80px;
+          width: 200px;
+          border-radius: 18px;
+          overflow: hidden;
+          @include media($tablet) {
+            width: 145px;
+            right: -15px;
+            bottom: inherit;
+            top: 50%;
+            border-radius: 9px;
+          }
+        }
+      }
+      // event-6(IMG ONLY)
+      &--event-6 {
+        line-height: 0;
+        background-color: transparent;
+      }
+      &--event-7 {
+        background-color: transparent;
+        padding-top: 90px;
+        margin-top: 100px;
+        padding-bottom: 120px;
+        overflow: visible;
+        border-radius: 0;
+        @include media($tablet) {
+          padding-top: 90px;
+          margin-top: 0;
+          padding-bottom: 39vw;
+          background-image: url(../images/pokemon/event-card7-bg-mb.png);
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+          background-position: center 15px;
+          width: 100vw;
+          margin-left: -15px;
+        }
+        &::before {
+          content: "";
+          width: 935px;
+          height: 935px;
+          z-index: -1;
+          background-color: #f2edd9;
+          border-radius: 50%;
+          position: absolute;
+          top: calc(50% + 20px);
+          left: 50%;
+          transform: translate(-50%, -50%);
+          @include media($tablet) {
+            display: none;
+          }
+        }
+        &::after {
+          content:"";
+          background-image: url(../images/pokemon/event-card7-bg.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center bottom;
+          width: 1065px;
+          height: 1065px;
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          transform: translateX(-50%);
+          z-index: -1;
+          @include media($tablet) {
+            background-image: url(../images/pokemon/event-card7-after-mb.png);
+            width: 48vw;
+            height: 36vw;
+          }
+        }
+        .event-card-title {
+          background-color: transparent;
+          padding: 0;
+          img {
+            height: 33px;
+            @include media($tablet) {
+              height: 6.13vw;
+            }
+          }
+        }
+        .event-card-text {
+          text-align: center;
+          @include media($tablet) {
+            text-align: justify;
+            padding-left: 28px;
+            padding-right: 28px;
+            padding-bottom: 30px;
+          }
+          br {
+            @include media($tablet) {
+              display: none;
+            }
+          }
+          p {
+            margin-bottom: 1.5rem;
+            @include media($tablet) {
+              margin-bottom: 1rem;
+            }
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+        .event-card-media {
+          max-width: 540px;
+          margin: auto;
+          @include media($tablet) {
+            max-width: 86.4vw;
+          }
+        }
+      }
+    }
+  }
+  // 注意事項
+  .section-notice {
+    background-color: #57cab5;
+    .notice-bg {
+      top: inherit;
+      bottom: 0;
+    }
+    .container {
+      @include media($tablet) {
+        padding-bottom: 38vw;
+      }
+    }
+    .notice-content {
+      background-color: #1cb598;
+      max-width: 850px;
+      margin: auto;
+      border-radius: 50px;
+      padding: 40px 40px;
+      color: #fff;
+      font-size: 18px;
+      line-height: 1.7;
+      text-align: justify;
+      @include media($tablet) {
+        border-radius: 25px;
+        padding: 20px 15px;
+        font-size: 12px;
+        line-height: 2;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          &::before {
+            content: "*";
+          }
+        }
+      }
+    }
+    .notice-title {
+      margin-bottom: 30px;
+      @include media($tablet) {
+        margin-bottom: 15px;
+      }
+      img {
+        height: 28px;
+        width: auto;
+        @include media($tablet) {
+          height: 5.2vw;
+        }
+      }
+    }
+    .notice-note {
+      text-align: center;
+      font-size: 18px;
+      line-height: 2;
+      color: #2c2c2c;
+      margin-top: 30px;
+      @include media($tablet) {
+        letter-spacing: 0;
+        font-size: 12px;
+        margin-top: 25px; 
+      }
+      .copyright {
+        margin-top: 40px;
+        @include media($tablet) {
+          font-size: 10px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+// english version
+html[data-lang="en"] {
+  section {
+    .section-title {
+      img {
+        // 1行版本
+        height: 35px;
+        @include media($tablet) {
+          // 1行版本
+          height: 7.33vw;
+        }
+      }
+    }
+  }
+  .section-kv {
+    .h1 {    
+      img {
+        height: 42px;
+        @include media($tablet) {
+          height: 5.6vw;
+        }
+      }
+    }
+  }
+  .section-info {
+    .section-bg {
+      @include media($tablet) {
+        top: -2%;
+        transform: translate(-50%,0);
+      }
+    }
+    .info-title {
+      margin-bottom: 25px;
+    }
+  }
+  .popup {
+    &-title {
+      line-height: 1.5;
+    }
+  }
+  .page-coffee {
+    letter-spacing: 0;
+    .section-kv {
+      .h1 {
+        max-width: 930px;
+        @include media($tablet) {
+          padding-left: 4vw;
+        }
+      }
+    }
+    .section-intro {
+      height: auto;
+      padding-bottom: 50px;
+      @include media($tablet) {
+        padding-bottom: 37vw;
+      }
+      .intro-bg {
+        top: inherit;
+        bottom: 0;
+      }
+      .intro-text {
+        max-width: 540px;
+      }
+      &2 {
+        padding-bottom: 75px;
+        .intro-text {
+          max-width: 750px;
+        }
+      }
+    }
+    .section-info .section-bg {
+        top: 0;
+        transform: translate(-50%, 0);
+    }
+    #coffee-garden {
+      .section-bg {
+        top: inherit;
+        bottom: 0;
+        @include media($tablet) {
+          top: 0;
+        }
+      }
+    }
+    #coffee-gift {
+      .section-bg {
+        top: inherit;
+        bottom: 5%;
+        transform: translate(-50%,0);
+        @include media($tablet) {
+          top: 0;
+          transform: translate(-50%,0);
+        }
+      }
+    }
+  }
+  .page-sports {
+    letter-spacing: 0;
+    .section-kv {
+      .h1 {
+        max-width: 660px;
+        @include media($tablet) {
+          padding-left: 14vw;
+        }
+        img {
+          height: 54px;
+          @include media($tablet) {
+            height: 7.2vw;
+          }
+        }
+      }
+    }
+    .section-intro {
+      .intro-text {
+        max-width: 600px;
+      }
+    }
+    #sports-all {
+      .info-bg {
+        top: 0;
+        transform: translate(-50%, 0);
+      }
+      .section-title {
+        img {
+          @include media($tablet) {
+            // 2行版本
+            height: 16.93vw;
+          }
+        }
+      }
+    }
+    #sports-gift {
+      .section-bg {
+        top: inherit;
+        bottom: 5%;
+        transform: translate(-50%,0);
+        @include media($tablet) {
+          top: 0;
+          transform: translate(-50%,0);
+        }
+      }
+    }
+  }
+  .page-pets {
+    letter-spacing: 0;
+    // .section-kv {
+    //   .h1 {
+    //     max-width: 930px;
+    //     @include media($tablet) {
+    //       padding-left: 4vw;
+    //     }
+    //   }
+    // }
+    .section-intro {
+      padding-bottom: 50px;
+      .intro-text {
+        max-width: 670px;
+      }
+    }
+    .section-info {
+      .info-desc {
+        max-width: 670px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    #pets-kids {
+      .section-title {
+        img {
+          @include media($tablet) {
+          height: 16.8vw;
+        }
+        }
+      }
+    }
+  }
+  .page-market {
+    letter-spacing: 0;
+    .section-kv {
+      .h1 {
+        max-width: 700px;
+        @include media($tablet) {
+          padding-left: 8.9vw;
+        }
+      }
+    }
+  }
+  .page-run {
+    letter-spacing: 0;
+    .section-kv {
+      .h1 {
+        max-width: 980px;
+        top: 8px;
+        @include media($tablet) {
+          padding-left: 5.6vw;
+          top: 4px;
+        }
+        img {
+          height: 54px;
+          @include media($tablet) {
+            height: 7.2vw;
+          }
+        }
+      }
+    }
+    .section-rule {
+      .rule-blocks {
+        // padding: 40px 50px;
+        padding-left: 0;
+        padding-right: 0;
+        .rule-subtitle {
+          gap: 15px;
+          &::before,&::after {
+            margin-top: -8px;
+            @include media($tablet) {
+              position: absolute;
+              bottom: -5px;
+              // left: 50%;
+              // transform: translate(50%,0);
+            }
+          }
+          &::before {
+            @include media($tablet) {
+              left: 16%;
+            }
+          }
+          &::after {
+            @include media($tablet) {
+              right: 15%;
+            }
+          }
+          img {
+            @include media($tablet) {
+              height: 12.27vw;
+            }
+          }
+        }
+        .rule-content {
+          padding-left: 50px;
+          padding-right: 50px;
+          @include media($tablet) {
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+          .note {
+            padding-right: 120px;
+            @include media($tablet) {
+              padding-right: 0;
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  .page-pokemon {
+    letter-spacing: 0;
+    .section-kv {
+      .h1 {   
+        max-width: 880px; 
+        @include media($tablet) {
+          padding-left: 7.33vw;
+        }
+        img {
+          height: 53px;
+          @include media($tablet) {
+            height: 7.07vw;
+          }
+        }
+      }
+    }
+    .section-title {
+      @include media($tablet) {
+        width: 100vw;
+        margin-left: -15px;
+      }
+      // img {
+      // // 1行版本
+      // height: 34px;
+      // @include media($tablet) {
+      //   // 3行版本
+      //   height: 22vw;
+      // }
+      &.intro-title {
+        img {
+          // 2行版本
+          height: 79px;
+          @include media($tablet) {
+            // 3行版本
+            height: 22vw;
+          }
+        } 
+      }
+      &.event-title {
+        img {
+          @include media($tablet) {
+            // 2行版本
+            height: 14.53vw;
+          }
+        }
+      }
+    }
+    .section-event {
+      .event-card-title {
+        padding-bottom: 14px;
+        @include media($tablet) {
+          padding-bottom: 11px;
+        }
+        img {
+          height: 28px;
+          @include media($tablet) {
+            height: 5.47vw;
+          }
+        }
+      }
+      .event-card-text {
+        @include media($tablet) {
+          text-align: left;
+        }
+      }
+      .event-card--event-4 {
+        .event-card-text {
+          padding-right: 10px;
+          padding-left: 10px;
+          @include media($tablet) {
+            text-align: center;
+          }
+        }
+      }
+      .event-card--event-5 {
+        .event-card-title img {
+          height: 28px;
+          @include media($tablet) {
+            height: 5.2vw;
+          }
+        }
+      }
+      .event-card--event-7 {
+        .event-card-title img {
+          height: 25px;
+          @include media($tablet) {
+            height: 4.13vw;
+          }
+        }
+        .event-card-text {
+          padding-left: 90px;
+          padding-right: 90px;
+          @include media($tablet) {
+            padding-left: 28px;
+            padding-right: 28px;
+          }
+        }
+      }
+    }
+    .section-notice {
+      .notice-title {
+        @include media($tablet) {
+          width: 100%;
+          margin-left: 0;
+        }
+        img {
+          height: 23px;
+          @include media($tablet) {
+            height: 4.27vw;
+          }
+        }
+      }
+      .notice-item {
+        margin-bottom: .5rem;
+        @include media($tablet) {
+         line-height: 1.6;
+         margin-bottom: .67rem;
+         text-align: left;
+        }
+      }
+      .notice-note {
+        max-width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+        @include media($tablet) {
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
