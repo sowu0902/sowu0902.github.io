@@ -1,0 +1,657 @@
+// 共用色碼
+$color-pink-30: #e8b7cd;
+$color-pink-50: #d87fa7;
+$color-pink-60: #e478a0;
+$color-yellow-50: #fffcd1;
+$color-blue-50: #68c9f2;
+$color-green-50: #98c795;
+$color-green-60: #3ba692;
+$color-green-70: #127f47;
+$color-purple-50: #be9ec4;
+$color-purple-70: #9a7cb6;
+$color-white: #fff;
+$color-black: #000;
+// RWD
+$wide: '(min-width: 1700px)' !default;
+$max-wide: '(min-width: 2560px)' !default;
+$desktop: '(max-width: 1440px)' !default; //初始值
+$small-desktop: '(max-width: 1280px)' !default;
+$tablet: '(max-width: 750px)' !default;
+$phone: '(max-width: 413px)' !default;
+$small-phone: '(max-width: 350px)' !default;
+@mixin media($query:$phone){
+  @media #{$query}{
+    @content;
+  }
+}
+section {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 177vw;
+  @include media($wide) {
+    background-size: 2560px;
+  }
+  @include media($tablet) {
+    background-size: 100% auto;
+  }
+  .container {
+    padding: 100px 0;
+    @include media($tablet) {
+      padding: 75px 30px;
+    }
+  }
+  h2 {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: auto;
+    margin-bottom: 40px;
+    display: block;
+    width: 100%;
+    @include media($tablet) {
+      margin-bottom: 30px;
+    }
+    span {
+      opacity: 0;
+    }
+  }
+  .ytiframe-container {
+    position: relative;
+    padding-bottom: 52.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    iframe, object, embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .btn-primary {
+    background-color: $color-pink-50;
+    &:hover {
+      background-color: darken($color-pink-60, 10%);
+    }
+  }
+}
+// KV
+.kv {
+  height: 100vh;
+  min-height: 55vw;
+  background-color: $color-pink-30;
+  background-image: url(../images/index/kv-bg.gif);
+  background-position: center bottom;
+  @include media($tablet) {
+    background-image: url(../images/index/kv-bg-mb.gif);
+    min-height: 156vw;
+    max-height: 179vw;
+    background-size: 100% auto;
+  }
+  @include media($wide) {
+    min-height: 52vw;
+  }
+  @include media($max-wide) {
+    min-height: 37vw;
+    background-size: 100% auto;
+  }
+  .container {
+    height: 100%;
+    padding-top: 140px;
+    @include media($tablet) {
+      padding-top: 135px;
+    }
+  }
+  .h1 {
+    background-image: url(../images/index/kv-slogan.png);
+    width: 75.94vw;
+    height: 8.9vw;
+    max-width: 972px;
+    max-height: 114px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+    @include media($tablet) {
+      width: 100%;
+      height: 22vw;
+      max-width: 300px;
+      max-height: calc(158px/2);
+      background-image: url(../images/index/kv-slogan-mb.png);
+    }
+    h1 {
+      display: none;
+    }
+  }
+}
+// about
+.about {
+  background-image: url(../images/index/about-bg.gif);
+  background-color: $color-pink-30;
+  @include media($tablet) {
+    background-image: url(../images/index/about-bg-mb.gif);
+    background-position: center bottom;
+  }
+  h2 {
+    // width: 494px;
+    height: 34px;
+    background-image: url(../images/index/about-title.png);
+    @include media($tablet) {
+      // width: 215px;
+      height: 65px;
+      background-image: url(../images/index/about-title-mb.png);
+    }
+  }
+  .text {
+    text-align: center;
+    color: $color-white;
+    line-height: 1.9;
+    font-size: 18px;
+    @include media($tablet) {
+      text-align: left;
+      br {
+        display: none;
+      }
+    }
+  }
+}
+// timetable
+.timetable {
+  background-image: url(../images/index/timetable-bg.gif);
+  background-color: $color-green-50;
+  background-position: center bottom;
+  @include media($tablet) {
+    background-image: url(../images/index/timetable-bg-mb.gif);
+    background-size: 75px;
+    background-position: 10px 20px;
+  }
+  h2 {
+    // width: 100%;
+    height: 40px;
+    background-image: url(../images/index/timetable-title.png);
+    @include media($tablet) {
+      // width: 258px;
+      height: 32px;
+      background-image: url(../images/index/timetable-title-mb.png);
+    }
+  }
+  .container {
+    @include media($tablet) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  .card {
+    background-color: #f2edd9;
+    border-radius: 50px;
+    width: 90%;
+    padding: 50px;
+    margin: auto;
+    @include media($tablet) {
+      width: 100%;
+      padding: 20px 12px 40px 12px;
+      border-radius: 25px;
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -28px;
+      right: 19%;
+      background-image: url(../images/index/timetable-deco.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 143px;
+      height: 134px;
+      @include media($tablet) {
+        width: 89px;
+        height: 83px;
+        bottom: -60px;
+        right: 5%;
+      }
+    }
+    img {
+      margin-bottom: 40px;
+      @include media($tablet) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+// video
+.video {
+  background-image: url(../images/index/video-bg.gif);
+  background-color: $color-purple-50;
+  @include media($tablet) {
+    background-image: url(../images/index/video-bg-mb.gif);
+  }
+  h2 {
+    // width: 164px;
+    height: 41px;
+    background-image: url(../images/index/video-title.png);
+    @include media($tablet) {
+      // width: 133px;
+      height: 30px;
+      background-image: url(../images/index/video-title-mb.png);
+    }
+  }
+  .container {
+    @include media($tablet) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .card {
+    width: 100%;
+    max-width: 712px;
+    margin: auto;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 16px;
+      background-color: $color-purple-70;
+      position: absolute;
+      left: 0;
+      bottom: -14px;
+      @include media($tablet) {
+        height: 8px;
+        bottom: -6.5px;
+      }
+    }
+    &::after {
+      content: "";
+      width: 164px;
+      height: 150px;
+      background-image: url(../images/index/video-dec.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      right: -60px;
+      bottom: -70px;
+      @include media($tablet) {
+        width: 116px;
+        height: 106px;
+        right: 25px;
+        bottom: -70px;
+      }
+    }
+  }
+}
+// news
+.news {
+  background-color: $color-pink-30;
+  h2 {
+    // width: 164px;
+    height: 39px;
+    background-image: url(../images/index/news-title.png);
+    @include media($tablet) { 
+      // width: 134px;
+      height: 30px;
+      background-image: url(../images/index/news-title-mb.png);
+    }
+  }
+  .container {
+    @include media($tablet) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  .content {
+    width: 100%;
+    max-width: 712px;
+    margin: auto;
+    padding: 25px 50px;
+    border-radius: 50px;
+    background-color: $color-white;
+    @include media($tablet) {
+      padding: 20px 15px 80px 15px;
+      border-radius: 25px;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 30px;
+      li {
+        list-style: none;
+        font-weight: 300;
+        line-height: 1.6;
+        padding: 22px 0;
+        border-bottom: 1px solid $color-pink-30;
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        @include media($tablet) {
+          display: block;
+        }
+        time {
+          // margin-right: 50px;
+          flex: 0 0 90px;
+          @include media($tablet) {
+            display: block;
+            margin-bottom: 8px;
+            // margin-right: 0;
+          }
+        }
+        a {
+          &:hover {
+            color: $color-pink-60;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    &::before {
+      content: "";
+      width: 344px;
+      height: 288px;
+      background-image: url(../images/index/news-before.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      left: -150px;
+      top: -80px;
+      @include media($tablet) {
+        background-image: url(../images/index/news-before-mb.png);
+        width: 290px;
+        height: 132px;
+        left: 45%;
+        transform: translateX(-50%);
+        top: -104px;
+      }
+    }
+    &::after {
+      content: "";
+      width: 228px;
+      height: 202px;
+      background-image: url(../images/index/news-after.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      right: -183px;
+      bottom: -33px;
+      @include media($tablet) {
+        background-image: url(../images/index/news-after-mb.png);
+        width: 128px;
+        height: 120px;
+        right: 5%;
+        bottom: -60px;
+      }
+    }
+    .deco {
+      position: absolute;
+      @include media($tablet) {
+        background-image: url(../images/index/news-deco.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 150px;
+        height: 114px;
+        left: -20px;
+        bottom: -145px;
+      }
+    }
+  }
+}
+// access
+.access {
+  background-image: url(../images/index/access-bg.gif);
+  background-color: $color-green-50;
+  background-position: center bottom;
+  @include media($tablet) {
+    background-image: none;
+  }
+  h2 {
+    // width: 329px;
+    height: 38px;
+    background-image: url(../images/index/access-title.png);
+    @include media($tablet) {
+      // width: 259px;
+      height: 32px;
+      background-image: url(../images/index/access-title-mb.png);
+    }
+  }
+  .access-card {
+    width: 100%;
+    max-width: 712px;
+    margin: auto;
+    margin-bottom: 25px;
+    background-color: #f2edd9;
+    border-radius: 50px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    @include media($tablet) {
+      border-radius: 25px;
+      // padding: 0px 15px 40px 15px;
+    }
+    .access-title {
+      padding: 15px 0;
+      border-radius: 38px 38px 0 0;
+      @include media($tablet) {
+        border-radius: 25px 25px 0 0;
+        padding: 12px 0;
+      }
+      img {
+        display: block;
+        width: 107px;
+        margin: auto;
+        @include media($tablet) {
+          width: 79px;
+        }
+      }
+    }
+    .access-toggle {
+      width: 290px;
+      display: block;
+      margin: auto;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      @include media($tablet) {
+        width: 200px;
+        font-size: 14px;
+        padding: 12px 0;
+      }
+      &:hover {
+        opacity: .7;
+      }
+      .btn-icon {
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: auto;
+        margin-top: 16px;
+        width: 61px;
+        height: 22px;
+        transform: rotate(180deg);
+        @include media($tablet) {
+          width: 52px;
+          height: 19px;
+          margin-top: 10px;
+        }
+      }
+      &.is-open {
+        .btn-icon {
+          transform: rotate(0deg);
+        }
+      } 
+    }
+    .access-content[hidden] {
+      display: none;
+    }
+    .access-content {
+      padding: 15px 80px 40px 80px;
+      @include media($tablet) {
+        padding: 0px 15px;
+      }
+    }
+    &:nth-child(1) {
+      .access-title {
+        background-color: $color-pink-50;
+        &::before {
+          content: "";
+          width: 157px;
+          height: 133px;
+          background-image: url(../images/index/access-title1-deco.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          left: -59px;
+          bottom: 13px;
+          @include media($tablet) {
+            width: 68px;
+            height: 58px;
+            left: -30px;
+            bottom: 12px;
+          }
+        }
+        &::after {
+          @include media($tablet) {
+            content: "";
+            width: 43px;
+            height: 43px;
+            background-image: url(../images/index/access-content1-deco.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: 0px;
+            top: -115px;
+          }
+        }
+      }
+      .access-toggle {
+        color: $color-pink-50;
+        .btn-icon {
+          background-image: url(../images/index/access-arrow1.png);
+        }
+      }
+      .access-content {
+        &::before {
+          content: "";
+          width: 78px;
+          height: 77px;
+          background-image: url(../images/index/access-content1-deco.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          left: -110px;
+          top: 0px;
+          @include media($tablet) {
+            display: none;
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      .access-title {
+        background-color: $color-green-60;
+      }
+      .access-toggle {
+        color: $color-green-60;
+        .btn-icon {
+          background-image: url(../images/index/access-arrow2.png);
+        }
+      }
+      .access-content {
+        &::before {
+          content: "";
+          width: 163px;
+          height: 427px;
+          background-image: url(../images/index/access-content2-deco.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          right: -32px;
+          top: 140px;
+          @include media($tablet) {
+            background-image: url(../images/index/access-content2-deco-mb.png);
+            width: 109px;
+            height: 355px;
+            right: -22px;
+            top: 56%;
+          }
+        }
+      }
+    }
+  }
+  .deco {
+    width: 600px;
+    height: 340px;
+    background-image: url(../images/index/access-deco.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+    margin-top: 60px;
+    @include media($tablet) {
+      width: 324px;
+      height: 184px;
+      left: -5px;
+      margin-top: 40px;
+    }
+  }
+}
+
+// english version
+html[data-lang="en"] {
+  section {
+    .container {
+      max-width: 1100px;
+    }
+  }
+  .timetable {
+    h2 {
+      background-image: url(../images/index/timetable-title-en.png);
+      height: 35px;
+      @include media($tablet) {
+        background-image: url(../images/index/timetable-title-en-mb.png);
+        height: 63px;
+      }
+    }
+  }
+  .video {
+    h2 {
+      background-image: url(../images/index/video-title-en.png);
+      height: 37px;
+      @include media($tablet) {
+        background-image: url(../images/index/video-title-en-mb.png);
+        height: 26.5px;
+      }
+    }
+  }
+  .news {
+    h2 {
+      background-image: url(../images/index/news-title-en.png);
+      height: 34px;
+      @include media($tablet) {
+        background-image: url(../images/index/news-title-en-mb.png);
+        height: 26.5px;
+      }
+    }
+  }
+  .access {
+    h2 {
+      background-image: url(../images/index/access-title-en.png);
+      height: 34px;
+      @include media($tablet) {
+        background-image: url(../images/index/access-title-en-mb.png);
+        height: 63px;
+      }
+    }
+    .access-card {
+      .access-title {
+        padding-top: 18px;
+        @include media($tablet) {
+          padding-top: 15px;
+        }
+        img {
+          height: 27px;
+          width: auto;
+          @include media($tablet) {
+            height: 20px;
+            width: auto;
+          }
+        }
+      } 
+    }
+  }
+}

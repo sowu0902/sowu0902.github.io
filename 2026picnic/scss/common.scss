@@ -1,0 +1,729 @@
+// :root {
+//   --remBasicSize: 16px;
+// }
+// @function rem($px) {
+//   @return calc($px/16 * var(--remBasicSize));
+// }
+/*思源*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap');
+
+// 共用色碼
+$color-pink-30: #e8b7cd;
+$color-pink-50: #d87fa7;
+$color-pink-60: #e478a0;
+$color-yellow-50: #fffcd1;
+$color-white: #fff;
+$color-black: #000;
+$font-base: "Noto Sans TC", Helvetica, Arial, "黑體-繁", "Heiti TC", "儷黑","LiHei", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+$font-serif: 'Noto Serif TC', serif;
+$font-eng: "Roboto",'Noto Sans TC', sans-serif;
+// RWD
+$wide: '(min-width: 1700px)' !default;
+$desktop: '(max-width: 1440px)' !default; //初始值
+$small-desktop: '(max-width: 1280px)' !default;
+$tablet: '(max-width: 750px)' !default;
+$phone: '(max-width: 413px)' !default;
+$small-phone: '(max-width: 350px)' !default;
+
+@mixin media($query:$phone){
+  @media #{$query}{
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+html,
+body {
+  font-family: $font-base;
+  font-size: 16px;
+  letter-spacing: 1px;
+  width: 100%;
+  height: 100%;
+  background-color: $color-white;
+  padding: 0; 
+  margin: 0;
+  @include media($tablet) {
+    font-size: 14px;
+  } 
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.wrapper {
+  width: 100%;
+  margin: 0 auto; 
+  overflow: hidden;
+  .container {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1280px;
+  }
+  
+}
+.btn-primary {
+  display: block;
+  width: 280px;
+  padding: 20px;
+  background-color: $color-pink-50;
+  color: $color-white;
+  font-size: 19px;
+  font-weight: 500;
+  border-radius: 30px;
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+  @include media($tablet) {
+    font-size: 15px;
+    width: 220px;
+    padding: 14px;
+  }
+  &:hover {
+    background-color: darken($color-pink-60, 10%);
+    opacity: 1;
+  }
+  .btn-icon {
+    display: inline-block;
+    margin-left: 10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 14px;
+    border-color: transparent transparent transparent $color-white;
+    @include media($tablet) {
+      border-width: 6px 0 6px 10px;
+      margin-left: 5px;
+    }
+  }
+  &[hidden] {
+    display: none;
+  }
+}
+.mbonly {
+  display: none;
+  @include media($tablet) {
+    display: block;
+  }
+}
+.mbhide {
+  @include media($tablet) {
+    display: none;
+  }
+}
+
+#header {
+  background-color: $color-white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    @include media($tablet) {
+      padding: 10px 13px;
+    }
+  }
+  .logo {
+    flex: 0 0 145px;
+    @include media($tablet) {
+      flex: 0 0 94px;
+    }
+  }
+  .language {
+    flex: 1 1 100%;
+    text-align: right;
+    padding-right: 120px;
+    padding-right: 87px;
+    font-size: 18px;
+    font-weight: 300;
+    @include media($tablet) {
+      padding-right: 82px;
+      padding-right: 67px;
+      font-size: 14px;
+    }
+    @include media($small-phone) {
+      // padding-right: 80px;
+      font-size: 13px;
+    }
+    a {
+      color: $color-black;
+      &:hover {
+        color: $color-pink-60;
+        opacity: 1;
+      }
+      &.is-active {
+        font-weight: 600;
+      }
+    }
+  }
+  .hamburger-notice {
+    // 縮小70%
+    width: calc(95px * 0.7);
+    height: calc(87px * 0.7);
+    background-image: url(../images/common/hamburger-notice.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: fixed;
+    // z-index: 2;
+    right: 75px;
+    top: 0;
+    animation: 1.5s floating infinite linear;
+    @media screen and (min-width: 1281px) {
+      right: calc(50% - 640px + 75px);
+      // top: 20px;
+    }
+    @include media($tablet) {
+      // *.55
+      width: calc(95px * 0.55);
+      height: calc(87px * 0.55);
+      right: 48px;
+    }
+  }
+  .hamburger {
+    flex: 0 0 33px;
+    height: 33px;
+    cursor: pointer;
+    @include media($tablet) {
+      flex: 0 0 25px;
+      height: 25px;
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: $color-pink-60;
+      transform: translateY(-50%);
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: $color-pink-60;
+        left: 0;
+      }
+      &::before {
+        top: -10px;
+        @include media($tablet) {
+          top: -8px;
+        }
+      }
+      &::after {
+        bottom: -10px;
+        @include media($tablet) {
+          bottom: -8px;
+        }
+      }
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $color-pink-30;
+    background-image: url(../images/common/nav-bg.png);
+    background-size: 1204px auto;
+    background-position: center 260px;
+    background-repeat: no-repeat;
+    // display: none;
+    @include media($tablet) {
+      background-image: url(../images/common/nav-bg-mb.png);
+      background-size: 100% auto;
+      background-position: 0 180px;
+    }
+    &.active {
+      left: 0;
+      transition: left 0.3s ease-in-out;
+    }
+    .container {
+      display: block;
+      padding: 120px 20px;
+      @include media($tablet) {
+        padding: 80px 60px;
+      }
+    }
+    &-header {
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+      padding-bottom: 40px;
+      @include media($tablet) {
+        max-width: 250px;
+        padding-bottom: 20px;
+      }
+    }
+    &-close {
+      position: absolute;
+      width: 38px;
+      height: 38px;
+      background-image: url(../images/common/close.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      right: 30px;
+      top: 30px;
+      cursor: pointer;
+      transform: rotate(0deg);
+      @include media($tablet) {
+        width: 25px;
+        height: 25px;
+        right: 16px;
+        top: 16px; 
+      }
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+    &-social {
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+      @include media($tablet) {
+        padding-top: 20px;
+      }
+      a {
+        width: 64px;
+        margin: 0 10px;
+        @include media($tablet) {
+          width: 32px;
+          margin: 0 10px;
+        }
+      }
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      a {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        padding: 40px 0;
+        color: $color-yellow-50;
+        border-bottom: 1px solid $color-yellow-50;
+        text-align: center;
+        font-size: 25px;
+        @include media($tablet) {
+          font-size: 17px;
+          padding: 25px 0;
+        }
+        &:hover {
+          color: $color-pink-60;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+#marquee {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: $color-yellow-50;
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+
+  @include media($tablet) {
+    top: 46.5px;
+  }
+
+  // ✅ 新增：viewport / track
+  .marquee-viewport {
+    overflow: hidden;
+  }
+
+  .marquee-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 60px; // 每則之間距，可依需求調
+    will-change: transform;
+    animation: marquee-track var(--marquee-duration, 21s) linear infinite;
+
+    @include media($tablet) {
+      animation-duration: var(--marquee-duration-m, 12s);
+      gap: 40px;
+    }
+  }
+
+  // ✅ 每一則都是可點的 a（保留你原本視覺）
+  a.marquee-item {
+    font-size: 16px;
+    color: $color-black;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+
+    @include media($tablet) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: $color-pink-60;
+      opacity: 1;
+    }
+
+    &::before {
+      content: "";
+      background-image: url(../images/common/icon-marquee.png);
+      width: 22px;
+      height: 22px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include media($tablet) {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  // ✅ hover 暫停：移到 track（整條停住）
+  &:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marquee-track {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } // 無縫關鍵（因為 JS 會塞兩份）
+}
+
+#footer {
+  padding-top: 90px;
+  background-color: $color-white;
+  @include media($tablet) {
+    padding-top: 40px;
+  }
+  .site-footer {
+    .footer-logos,.footer-links .content {
+      display: flex;
+      flex-wrap: wrap;
+      // justify-content: center;
+      width: 100%;
+      max-width: 1280px;
+      padding: 0 140px;
+      margin: auto;
+      gap: 40px;
+      @include media($tablet) {
+        padding: 0 30px;
+        display: block;
+      }
+    }
+    .footer-logos {
+      padding-bottom: 40px;
+      &::before,&::after {
+        content: "";
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        bottom: 0;
+        @include media($tablet) {
+          display: none;
+        }
+      }
+      &::before {
+        background-image: url(../images/common/footer-logo-deco1.png);
+        width: 120px;
+        height: 210px;
+        left: 0px;
+      } 
+      &::after {
+        background-image: url(../images/common/footer-logo-deco2.png);
+        width: 61px;
+        height: 67px;
+        right: 10%;
+        bottom: 90px;
+      } 
+      img {
+        height: 120px;
+        width: auto;
+        // margin-right: 20px;
+        @include media($tablet) {
+          height: 73px;
+          // margin-right: 0;
+        }
+      }
+      .footer-logo-group {
+        // margin-right: 40px;
+        // @include media($tablet) {
+        //   margin-right: 0;
+        // }
+        // &:nth-child(4) {
+        //   width: 100%;
+        // }
+        &--text {
+          flex: 0 0 100%;
+        }
+        &--partner {
+          margin-right: 0;
+        }
+        &--sponsor {
+          margin-bottom: 110px;
+          @include media($tablet) {
+            margin-bottom: 0;
+          }
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            @include media($tablet) {
+              margin: auto;
+              width: 82vw;
+              gap: 3.3vw;
+            }
+            li {
+              @include media($tablet) {
+                flex: 0 0 18vw;
+              }
+              img {
+                height: 60px;
+                width: auto;
+                @include media($tablet) {
+                  width: 100%;
+                  height: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer-links {
+      padding-top: 40px;
+      background-color: $color-yellow-50;
+      .content {
+        padding-bottom: 40px;
+        @include media($tablet) {
+          padding-bottom: 0;
+        }
+        &::before,&::after {
+          content: "";
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          bottom: 0;
+        }
+        &::before {
+          background-image: url(../images/common/footer-links-deco1.png);
+          width: 122px;
+          height: 177px;
+          left: 10px;
+          @include media($tablet) {
+            display: none;
+          }
+        } 
+        &::after {
+          background-image: url(../images/common/footer-links-deco2.png);
+          width: 120px;
+          height: 240px;
+          right: 3%;
+          @include media($tablet) {
+            background-image: url(../images/common/footer-bg-mb.png);
+            background-position: center bottom;
+            position: relative;
+            width: 100%;
+            height: 60vw;
+            display: block;
+            right: inherit;
+            margin-top: 30px;
+          }
+        } 
+      }
+      
+      h3 {
+        margin-right: 125px;
+      }
+      img {
+        height: 80px;
+        width: auto;
+        @include media($tablet) {
+          width: 32.8vw;
+          height: auto;
+        }
+      }
+      ul {
+        gap: 145px;
+        @include media($tablet) {
+          display: flex;
+          justify-content: center;
+          gap: 6.6vw;
+        }
+        // li {
+        //   margin-left: 145px;
+        //   @include media($tablet) {
+        //     margin-left: 40px;
+        //   }
+        //   &:nth-child(1) {
+        //     margin-left: 0;
+        //   }
+        // }
+      }
+    }
+  }
+  
+  h3 {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+    @include media($tablet) {
+      font-size: 11px;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    @include media($tablet) {
+      display: block;
+      margin-bottom: 40px;
+    }
+    li {
+      list-style: none;
+      // margin-right: 40px;
+      @include media($tablet) {
+        // margin-right: 0;
+        text-align: center;
+      }
+      // &:last-child {
+      //   margin-right: 0;
+      // }
+    }
+  }
+  p {
+    // text-align: center;
+    // max-width: 750px;
+    margin: 40px auto 60px auto;
+    font-size: 18px;
+    line-height: 1.5;
+    word-break: break-all;
+    @include media($tablet) {
+      font-size: 12px;
+      line-height: 1.67;
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+    span {
+      white-space: nowrap;
+    }
+  }
+}
+#fixed-cta {
+  position: fixed;
+  bottom: calc(50% - 50px);
+  right: -15px;
+  width: 82px;
+  height: auto;
+  z-index: 90;
+  transform: translateY(50%);
+  @include media($tablet) {
+    width: 100%;
+    max-width: 375px;
+    max-height: 71px;
+    right: 50%;
+    bottom: 0;
+    transform: translate(50%,0%);
+    // right: 20px;
+  }
+  &:hover {
+    right: 0;
+    @include media($tablet) {
+      right: 50%;
+    }
+  }
+  a:hover {
+    opacity: 0.9;
+  }
+}
+
+@keyframes floating {
+  from,to { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+// english version
+html[data-lang="en"] {
+  #header {
+    .hamburger-notice {
+      background-image: url(../images/common/hamburger-notice-en.png);
+    }
+  }
+  #footer {
+    p {
+      max-width: inherit;
+      padding-left: 20px;
+      padding-right: 20px;
+      span {
+        white-space: inherit;
+        word-break: break-word;
+      }
+    }
+  }
+  #fixed-cta {
+    bottom: calc(50% - 50px);
+    right: 0;
+    width: 107px;
+    height: auto;
+    z-index: 90;
+    transform: translateY(50%);
+    @include media($tablet) {
+      width: 100%;
+      max-width: 375px;
+      max-height: 71px;
+      right: 50%;
+      bottom: 0;
+      transform: translate(50%,0%);
+    }
+    &:hover {
+      right: 10px;
+      @include media($tablet) {
+        right: 50%;
+      }
+    }
+    a:hover {
+      opacity: 0.9;
+    }
+  }
+}
