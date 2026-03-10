@@ -1133,13 +1133,14 @@ body.is-popup-open {
 .page-run {
   .section-intro {
     background-color: #55b6df;
-    .intro-bg {
-      top: inherit;
-      bottom: 0;
-    }
+    padding-bottom: 70px;
+    // .intro-bg {
+    //   top: inherit;
+    //   bottom: 0;
+    // }
     .intro-text {
       max-width: 850px;
-      padding-bottom: 70px;
+      // padding-bottom: 70px;
       @include media($tablet) {
         padding-right: 15px;
         padding-left: 15px;
@@ -1147,6 +1148,12 @@ body.is-popup-open {
       }
       strong {
         color: #28a9e0;
+      }
+    }
+    .intro-btn {
+      background-color: #0095d3;
+      &:hover {
+        background-color: #0087bf;
       }
     }
   }
