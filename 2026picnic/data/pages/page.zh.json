@@ -774,6 +774,10 @@
       "bg": {
         "desktop": "./images/run/intro-bg.gif",
         "mobile": "./images/run/intro-bg-mb.gif"
+      },
+      "cta": {
+        "text": "花伴野餐跑咖地圖",
+        "link": "https://pse.is/8mkxny"
       }
     },
     "rule": {

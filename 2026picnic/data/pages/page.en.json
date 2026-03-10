@@ -772,6 +772,10 @@
       "bg": {
         "desktop": "./images/run/intro-bg.gif",
         "mobile": "./images/run/intro-bg-mb.gif"
+      },
+      "cta": {
+        "text": "Partner Store Map",
+        "link": "https://pse.is/8mkxny"
       }
     },
     "rule": {
