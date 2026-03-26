@@ -431,7 +431,7 @@ img {
       width: rem(275);
       height: rem(275);
       .badge-text {
-        font-size: rem(34);
+        font-size: rem(32);
         line-height: rem(52);
         color: #fff;
         font-weight: 400; //Medium
@@ -573,6 +573,7 @@ img {
       background-size: rem(20);
       background-position: 88% 50%;
       border: 1px solid #313131;
+      color: #313131;
       border-radius: 0;
       margin-top: rem(10);
       display: block;
