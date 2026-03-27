@@ -157,8 +157,8 @@ include_once './common.php';
         <div class="data-content" data-aos="fade-up" data-aos-duration="800">
           <div class="top-text margin_bottom--40 margin_left--30 margin_right--30 padding_top--40 padding_bottom--40">
             <p>
-              即日起至2026/4/30(四) 前填寫以下資料<br>
-              即可獲得兌換簡訊至選取的指定櫃點搶先體驗<br>
+              即日起填寫以下資料，憑簡訊至指定櫃點，<br>
+              體驗完整肌膚諮詢，完成後即可獲得<br>
               <strong>「KANEBO凝萃潤光露體驗組」乙份</strong>
               數量有限，換完為止。
               <small>*恕不得與其他兌換活動重複領取。</small>
