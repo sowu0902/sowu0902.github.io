@@ -199,7 +199,7 @@ img {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url(../images/entro_bg.jpg);
+    background-image: url(../images/bg.jpg);
     background-size: 100% auto;
     background-position: center top;
     background-repeat: no-repeat;
@@ -215,110 +215,102 @@ img {
     max-width: rem(828);
   }
   .container {
+    h1 {
+      font-size: rem(58);
+      font-family: 'noto serif tc';
+      color: #000000;
+      text-align: center;
+      letter-spacing: rem(3);
+      margin: 0 auto rem(56) auto;
+    }
     h2 {
       font-family: 'noto serif tc';
-      font-weight: 600; //SemiBold
-      font-size: rem(75);
+      font-weight: 600; //Bold
+      font-size: rem(48);
       text-align: center;
-      line-height: rem(75);
-      letter-spacing: rem(4);
-      color: #000;
-      margin: 0 auto;
-      span {
-        display: inline-block;
-        font-family: 'noto sans tc';
-        font-size: rem(48);
-        font-weight: 300; //Regular
-      }
+      // line-height: rem(75);
+      // letter-spacing: rem(4);
+      color: #693e35;
+      margin: 0 auto rem(40) auto;
     }
-    h3 {
-      margin: 0 auto;
-      font-size: rem(44);
-      line-height: rem(69);
-      letter-spacing: rem(3);
-      color: #0e7dcb;
-      text-align: center;
-      font-family: 'noto serif tc';
-      font-weight: 600; //SemiBold
-      strong {
-        display: block;
-        font-size: rem(55);
-        font-weight: 700;  //Bold
-      }
-    }
-    .h2 {
-      &--medium {
-        font-size: rem(50);
-        letter-spacing: rem(3);
-        font-family: 'noto serif tc';
-        font-weight: 500;  //Medium
-      }
-      &--small {
-        font-size: rem(48);
-        letter-spacing: rem(3);
-      }
-    }
-    .cta {
-      display: block;
-      background-color: #000000;
-      font-weight: 400; //Medium
-      color: #FFF;
-      font-size: rem(35);
-      line-height: rem(100);
-      letter-spacing: rem(1.5);
-      width: rem(420);
-      text-align: center;
-      text-decoration: none;
-      margin: auto;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      span {
-        &::after {
-          content: "";
-          width: rem(15);
-          height: rem(27);
-          background-image: url(../images/cta-arrow@2x.png);
-          background-repeat: no-repeat;
-          background-size: contain;
-          display: inline-block;
-          margin-left: rem(15);
-          animation: go_horizontal 1s infinite linear;
-        }
-      }
-      &:hover {
-        // bottom: rem(5);
-        span {
-          &::after {
-            animation-name: none;
-          }
-        }
-      }
-    }
-    .link {
-      color: #0e7dcb;
-      text-decoration: underline;
-      padding: 0 rem(8);
-      cursor: pointer;
+    .data-form {
+      margin: 0 rem(40) rem(56) rem(40);
+      padding: rem(60) rem(40);
+      background-color: #fff;
       &::after {
         content: "";
-        background-image: url(../images/external-link@2x.png);
+        display: block;
+        clear: both;
+        background-image: url(../images/paper-shadow.png);
         background-repeat: no-repeat;
         background-size: contain;
-        width: rem(29);
-        height: rem(28);
-        display: inline-block;
-        margin-left: rem(8);
+        background-position: center;
+        width: rem(58/2);
+        height: rem(480/2);
+        position: absolute;
+        right: rem(-58/2);
+        top: 0;
+      }
+    }
+    .notice {
+      color: #313131;
+      padding: 0 rem(50);
+      margin-bottom: rem(56);
+      .title {
+        font-family: 'noto serif tc';
+        font-weight: 600; //Bold
+        font-size: rem(32);
+        line-height: rem(54);
+        letter-spacing: rem(1);
+        text-align: center;
+        margin-bottom: rem(30);
+      }
+      ol {
+        padding: 0 0 0 rem(42);
+        margin: 0;
+      }
+      li {
+        font-size: rem(30);
+        line-height: rem(45);
+        margin-bottom: rem(10);
       }
     }
   }
   .footer {
     text-align: center;
     padding-bottom: rem(100);
+    margin-top: rem(100);
     img {
       width: rem(524);
     }
   }
 }
+
+// animation
+@keyframes wiggle {
+  0% {transform: rotate(10deg);}
+  25% {transform: rotate(-10deg);}
+  50% {transform: rotate(20deg);}
+  75% {transform: rotate(-5deg);}
+  100% {transform: rotate(0deg);}
+}
+@keyframes go_horizontal {
+  0%,100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+}
+@keyframes flow {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
 [data-aos="custom-anim1"] {
   filter: blur(10px);
   opacity: 0;
