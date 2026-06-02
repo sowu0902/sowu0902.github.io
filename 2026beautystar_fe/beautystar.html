@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- <title><?= $eventSetting->meta_title ?></title> -->
+  <title>【ELLE 2026美妝之星】美妝種子限時招募中！加入美的認知計畫，再抽限量好禮</title>
+  <meta name="author" content="<?= $eventSetting->author ?>" />
+  <meta name="copyright" content="Hearst Magazines Taiwan" />
+  <meta name="keywords" content="<?= $eventSetting->meta_keywords ?>" />
+  <meta name="description" content="<?= $eventSetting->meta_description ?>" />
+  <meta property="minisite_type" content="<?= $eventSetting->minisite_type ?>" />
+  <meta name="event_id" content="<?= $event_id ?>" />
+  <!-- FB Open Graphic -->
+  <meta property="fb:app_id" content="<?= $eventSetting->fb_app_id ?>" />
+  <meta property="og:title" content="<?= $eventSetting->meta_title ?>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="<?= $eventSetting->og_image ?>" />
+  <meta property="og:url" content="<?= $eventSetting->url ?>" />
+  <meta property="og:site_name" content="<?= $eventSetting->site_name ?>" />
+  <meta property="og:description" content="<?= $eventSetting->meta_description ?>" />
+  <link rel="image_src" type="image/jpeg" href="<?= $eventSetting->og_image ?>" />
+  <!-- Favicons -->
+  <link rel="shortcut icon" type="image/x-icon" href="<?= $eventSetting->favicon ?>" />
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://event.hearst.com.tw/common_support/css/font.css" />
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="scss/beautystar.min.css">
+  <!-- js -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/rem.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js" integrity="sha512-jNDtFf7qgU0eH/+Z42FG4fw3w7DM/9zbgNPe3wfJlCylVDTT3IgKW5r92Vy9IHa6U50vyMz5gRByIu4YIXFtaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <!-- wrapper start -->
+  <div class="wrapper">
+    <div class="bg"></div>
+    <!-- main content start -->
+    <section class="main">
+        <div class="container">
+          <!-- 裝飾們 -->
+          <div class="decos">
+            <img src="images/lips2.png" alt="" class="lips lips_2">
+            <img src="images/lips3.png" alt="" class="lips lips_3">
+            <img src="images/post-it_left-apng.png" alt="" class="post-it post-it_left">
+            <img src="images/post-it_right-apng.png" alt="" class="post-it post-it_right">
+          </div>
+          <!-- 美妝之星logo -->
+          <div class="logo" data-aos="fade-up" data-aos-duration="800"></div>
+          <!-- 美妝種子招募資訊 -->
+          <div class="top-infomation">
+            <div class="h1" data-aos="fade-down" data-aos-duration="800"><h1>2026美妝種子招募中</h1></div>
+            <p class="text_big" data-aos="fade-up" data-aos-duration="800">熱愛美妝、對「美」有獨到觀點的您，<br>絕不能錯過這場年度美學體驗，<br>一同成為美的共同定義者！</p>
+            <div class="h2 h2_who" data-aos="fade-down" data-aos-duration="800"><h2>報名資格</h2></div>
+            <div class="who-text" data-aos="fade-up" data-aos-duration="800"></div>
+            <div class="h2 h2_how" data-aos="fade-down" data-aos-duration="800"><h2>活動說明</h2></div>
+            <div class="how-list" data-aos="fade-up" data-aos-duration="800">
+              <ul>
+                <li>即日起至 2026/06/17(三) 23:59 止，填妥以下資料，由ELLE專人審核。</li>
+                <li>審核通過者，將收到手機簡訊與E-mail通知，ELLE 將於2026年7月中旬前開始寄送「ELLE美妝之星 BOX」。</li>
+                <li>開啟試用，並於 2026年7月底前分享圖文體驗心得於個人 Instagram 帳號，並加入指定 Hashtag：<br><strong>#ELLE美妝圈</strong><strong>#ELLEBEAUTYSTAR2026</strong><strong>#美妝之星</strong><span class="copy-hashtag" data-copy="#ELLE美妝圈 #ELLEBEAUTYSTAR2026 #美妝之星">點此複製 Hashtag</span></li>
+              </ul>
+            </div>
+          </div>
+          <!-- 美妝種子招募表單 -->
+          <div class="data-form" data-aos="fade-up" data-aos-duration="800">
+            <h2>請填寫報名資訊</h2>
+            <div class="data-area">
+              <!-- 套用表單區 開始 -->
+              <div class="data_group">
+                <p class="tetris" data-id="<?= $tetris_id ?>" data-new-style="1" data-theme="event-theme">Loading...</p>
+                <!-- <script src="<?= TETRIS_SERVER ?>app.js"></script>
+                <?php
+                if (isset($_GET['debug']) && $_GET['debug']) {
+                  echo '<script type="text/javascript" src="'. TETRIS_SERVER .'debug.js"></script>';
+                }
+                ?> -->
+              </div>
+              <!-- 套用表單區 結束 -->
+            </div>
+          </div>
+          <!-- 美妝種子招募注意事項 -->
+          <div class="notice" data-aos="fade-up" data-aos-duration="800">
+            <p class="title">注意事項</p>
+            <ol>
+              <li>美妝種子名額將依照使用者填寫資料篩選出試用者，每人限報名一次。 </li>
+              <li>所有試用品因通訊住址錯漏或郵寄運送過程中造成的損壞、遲遞、錯遞或遺失，ELLE概不負責。請務必正確填寫您的個人資料，以確保您的資格！ </li>
+              <li>本活動因不可抗力因素， ELLE有權取消、終止、修改或暫停本活動。 </li>
+            </ol>
+          </div>
+    </section>
+    <!-- main content end -->
+    <section class="footer">
+      <img src="images/footer.png" alt="ELLE BEAUTY STAR AWARDS 2026">
+    </section>
+  </div>
+  <!-- wrapper end -->
+  <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="js/aos.js"></script>
+  <script>
+    AOS.init({
+        offset: 60,
+        duration: 1000,
+        easing: "ease",
+    });
+    // copy hashtag
+    document.querySelectorAll(".copy-hashtag").forEach((el) => {
+      el.addEventListener("click", async () => {
+        const text = el.dataset.copy || el.textContent.trim();
+
+        try {
+          await navigator.clipboard.writeText(text);
+
+          const originalText = el.textContent;
+
+          el.classList.add("is-copied");
+          el.textContent = "已複製！";
+
+          setTimeout(() => {
+            el.textContent = originalText;
+            el.classList.remove("is-copied");
+          }, 1200);
+        } catch (err) {
+          console.error("複製失敗：", err);
+          alert("複製失敗請再試一次");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
