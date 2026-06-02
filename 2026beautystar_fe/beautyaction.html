@@ -99,29 +99,6 @@
         duration: 1000,
         easing: "ease",
     });
-    // copy hashtag
-    document.querySelectorAll(".copy-hashtag").forEach((el) => {
-      el.addEventListener("click", async () => {
-        const text = el.dataset.copy || el.textContent.trim();
-
-        try {
-          await navigator.clipboard.writeText(text);
-
-          const originalText = el.textContent;
-
-          el.classList.add("is-copied");
-          el.textContent = "已複製！";
-
-          setTimeout(() => {
-            el.textContent = originalText;
-            el.classList.remove("is-copied");
-          }, 1200);
-        } catch (err) {
-          console.error("複製失敗：", err);
-          alert("複製失敗，請手動選取文字複製");
-        }
-      });
-    });
   </script>
 </body>
 </html>
