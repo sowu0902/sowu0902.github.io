@@ -1,10 +1,34 @@
 @import "_common";
 .main {
   .photo {
-    width: rem(667);
+    width: rem(664);
     margin: 0 auto;
     padding-top: rem(305);
     padding-bottom: rem(200);
+    &::before {
+      content: "";
+      position: absolute;
+      width: rem(200);
+      height: rem(200);
+      background-image: url(../images/entro_photo_top.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      top: rem(282);
+      left: rem(-9);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: rem(200);
+      height: rem(200);
+      background-image: url(../images/entro_photo_right.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      top: rem(595);
+      right: rem(-13);
+    }
   }
   h1 {
     display: none;
