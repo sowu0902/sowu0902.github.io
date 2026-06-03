@@ -310,6 +310,14 @@ img {
     transform: translateY(-3px);
   }
 }
+@keyframes flow-logo {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
 
 [data-aos="custom-anim1"] {
   filter: blur(10px);

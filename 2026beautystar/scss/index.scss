@@ -43,6 +43,7 @@
     position: absolute;
     top: rem(60);
     left: calc(50% - rem(192));
+    animation: flow-logo 1.6s infinite ease-in-out;
     // transform: translateX(-50%);
   }
   .decos {
@@ -53,7 +54,7 @@
     top: 0;
     .lips {
       position: absolute;
-      animation: wiggle 4s infinite ease-in-out;
+      // animation: wiggle 4s infinite ease-in-out;
       &_1 {
         width: rem(121);
         top: rem(1250);
@@ -100,13 +101,38 @@
       position: absolute;
       width: rem(340);
       height: rem(370);
-      background-image: url(../images/post-it_main.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
+      // background-image: url(../images/post-it_main.png);
+      // background-repeat: no-repeat;
+      // background-size: contain;
+      // background-position: center;
       text-align: center;
       padding-top: rem(70);
       transition: all 0.3s ease;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        opacity: 0;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
       .post-it-card_arrow {
         width: rem(60);
         height: rem(60);
@@ -132,9 +158,16 @@
         height: 100%;
         top: 0;
         left: 0;
+        z-index: 2;
       }
       &.beautystar {
         left: rem(-10);
+        &::before {
+          background-image: url(../images/post-it_beautystar.png);
+        }
+        &::after {
+          background-image: url(../images/post-it_beautystar-apng.png);
+        }  
         .post-it-card_h2 {
           width: rem(220);
         }
@@ -145,6 +178,12 @@
       &.beautyaction {
         right: rem(20);
         top: rem(200);
+        &::before {
+          background-image: url(../images/post-it_beautyaction.png);
+        }
+        &::after {
+          background-image: url(../images/post-it_beautyaction-apng.png);
+        }
         .post-it-card_h2 {
           width: rem(156);
         }
@@ -158,6 +197,7 @@
         }
         .post-it-card_bubble {
           position: absolute;
+          z-index: 2;
           width: rem(198);
           right: 0;
           top: rem(-55);
@@ -166,6 +206,12 @@
       }
       &:hover {
         transform: scale(1.02) translateY(rem(-10));
+        &::before {
+          opacity: 1;
+        }
+        &::after {
+          opacity: 0;
+        }
         .post-it-card_arrow img {
           animation-play-state: paused;
         }
