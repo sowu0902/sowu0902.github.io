@@ -43,15 +43,15 @@ include_once './common.php';
     <section class="main">
         <div class="container">
           <!-- 照片 -->
-          <div class="photo"><img src="images/entro_photo.png" alt=""></div>
+          <div class="photo" data-aos="custom-anim1" data-aos-duration="600"><img src="images/entro_photo.png" alt=""></div>
           <!-- 裝飾們 -->
           <div class="decos">
             <img src="images/lips1.png" alt="" class="lips lips_1">
             <img src="images/lips2.png" alt="" class="lips lips_2">
             <img src="images/lips3.png" alt="" class="lips lips_3">
-            <img src="images/post-it_left-apng.png" alt="" class="post-it post-it_left">
-            <img src="images/post-it_right-apng.png" alt="" class="post-it post-it_right">
-            <img src="images/post-it_down-apng.png" alt="" class="post-it post-it_down">
+            <img src="images/post-it_left.png" alt="" class="post-it post-it_left">
+            <img src="images/post-it_right.png" alt="" class="post-it post-it_right">
+            <img src="images/post-it_down.png" alt="" class="post-it post-it_down">
           </div>
           <!-- 美妝之星logo -->
           <div class="logo" data-aos="fade-up" data-aos-duration="800"><h1>2026美妝之星</h1></div>
@@ -59,16 +59,10 @@ include_once './common.php';
           <div class="post-its">
             <!-- GO美妝種子 -->
             <div class="post-it-card beautystar">
-              <img src="images/entro_h2-star.png" alt="" class="post-it-card_h2">
-              <div class="post-it-card_arrow"><img src="images/entro_arrow_left.png" alt=""></div>
-              <img src="images/entro_p-star.png" alt="" class="post-it-card_p">
               <a href="beautystar.php" target="_blank"></a>
             </div>
             <!-- GO美的意識大調查 -->
             <div class="post-it-card beautyaction">
-              <img src="images/entro_h2-action.png" alt="" class="post-it-card_h2">
-              <div class="post-it-card_arrow"><img src="images/entro_arrow_right.png" alt=""></div>
-              <img src="images/entro_p-action.png" alt="" class="post-it-card_p">
               <img src="images/entro_bubble.png" alt="" class="post-it-card_bubble">
               <a href="beautyaction.php" target="_blank"></a>
             </div>
