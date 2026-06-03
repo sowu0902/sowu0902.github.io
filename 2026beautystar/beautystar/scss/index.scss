@@ -1,0 +1,175 @@
+@import "_common";
+.main {
+  .photo {
+    width: rem(664);
+    margin: 0 auto;
+    padding-top: rem(305);
+    padding-bottom: rem(200);
+    &::before {
+      content: "";
+      position: absolute;
+      width: rem(200);
+      height: rem(200);
+      background-image: url(../images/entro_photo_top.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      top: rem(282);
+      left: rem(-9);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: rem(200);
+      height: rem(200);
+      background-image: url(../images/entro_photo_right.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      top: rem(595);
+      right: rem(-13);
+    }
+  }
+  h1 {
+    display: none;
+  }
+  .logo {
+    width: rem(384);
+    height: rem(484);
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: rem(60);
+    left: calc(50% - rem(192));
+    // transform: translateX(-50%);
+  }
+  .decos {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    .lips {
+      position: absolute;
+      animation: wiggle 4s infinite ease-in-out;
+      &_1 {
+        width: rem(121);
+        top: rem(1250);
+        left: rem(40);
+        animation-timing-function: steps(3, start);
+      }
+      &_2 {
+        width: rem(124);
+        top: rem(30);
+        left: rem(130);
+        animation-timing-function: steps(1, start);
+      }
+      &_3 {
+        width: rem(121);
+        top: rem(500);
+        right: rem(20);
+        animation-timing-function: steps(2, start);
+      }
+    }
+    .post-it {
+      position: absolute;
+      width: rem(250);
+      &_down {
+        top: rem(1150);
+        left: rem(160);
+      }
+      &_left {
+        top: rem(520);
+        left: rem(-30);
+      }
+      &_right {
+        top: rem(240);
+        right: 0;
+      }
+    }
+  }
+  .post-its {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: rem(850);
+    .post-it-card {
+      position: absolute;
+      width: rem(340);
+      height: rem(370);
+      background-image: url(../images/post-it_main.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      text-align: center;
+      padding-top: rem(70);
+      transition: all 0.3s ease;
+      .post-it-card_arrow {
+        width: rem(60);
+        height: rem(60);
+        border-radius: rem(60);
+        margin: rem(12) auto rem(16) auto;
+        background-color: #df4d51;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: rem(40);
+          margin-top: rem(-12);
+          animation: go_horizontal 1s infinite ease-in-out;
+        }
+      }
+      a {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+      &.beautystar {
+        left: rem(-10);
+        .post-it-card_h2 {
+          width: rem(220);
+        }
+        .post-it-card_p {
+          width: rem(227);
+        }
+      }
+      &.beautyaction {
+        right: rem(20);
+        top: rem(200);
+        .post-it-card_h2 {
+          width: rem(156);
+        }
+        .post-it-card_p {
+          width: rem(166);
+        }
+        .post-it-card_arrow {
+          img {
+            animation-direction: reverse;
+          }
+        }
+        .post-it-card_bubble {
+          position: absolute;
+          width: rem(198);
+          right: 0;
+          top: rem(-55);
+          animation: flow 1.4s infinite linear;
+        }
+      }
+      &:hover {
+        transform: scale(1.02) translateY(rem(-10));
+        .post-it-card_arrow img {
+          animation-play-state: paused;
+        }
+      }
+    }
+  }
+}

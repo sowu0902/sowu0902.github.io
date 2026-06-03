@@ -1,0 +1,107 @@
+<?php
+include_once './common_beautyaction.php';
+?>
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- <title><?= $eventSetting->meta_title ?></title> -->
+  <title>【ELLE 2026美妝之星】美妝種子限時招募中！加入美的認知計畫，再抽限量好禮</title>
+  <meta name="author" content="<?= $eventSetting->author ?>" />
+  <meta name="copyright" content="Hearst Magazines Taiwan" />
+  <meta name="keywords" content="<?= $eventSetting->meta_keywords ?>" />
+  <meta name="description" content="<?= $eventSetting->meta_description ?>" />
+  <meta property="minisite_type" content="<?= $eventSetting->minisite_type ?>" />
+  <meta name="event_id" content="<?= $event_id ?>" />
+  <!-- FB Open Graphic -->
+  <meta property="fb:app_id" content="<?= $eventSetting->fb_app_id ?>" />
+  <meta property="og:title" content="<?= $eventSetting->meta_title ?>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="<?= $eventSetting->og_image ?>" />
+  <meta property="og:url" content="<?= $eventSetting->url ?>" />
+  <meta property="og:site_name" content="<?= $eventSetting->site_name ?>" />
+  <meta property="og:description" content="<?= $eventSetting->meta_description ?>" />
+  <link rel="image_src" type="image/jpeg" href="<?= $eventSetting->og_image ?>" />
+  <!-- Favicons -->
+  <link rel="shortcut icon" type="image/x-icon" href="<?= $eventSetting->favicon ?>" />
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://event.hearst.com.tw/common_support/css/font.css" />
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="scss/beautyaction.min.css">
+  <!-- js -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/rem.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js" integrity="sha512-jNDtFf7qgU0eH/+Z42FG4fw3w7DM/9zbgNPe3wfJlCylVDTT3IgKW5r92Vy9IHa6U50vyMz5gRByIu4YIXFtaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <!-- wrapper start -->
+  <div class="wrapper">
+    <div class="bg"></div>
+    <!-- main content start -->
+    <section class="main">
+        <div class="container">
+          <!-- 裝飾們 -->
+          <div class="decos">
+            <img src="images/lips2.png" alt="" class="lips lips_2">
+            <img src="images/lips3.png" alt="" class="lips lips_3">
+            <img src="images/post-it_left-apng.png" alt="" class="post-it post-it_left">
+            <img src="images/post-it_right-apng.png" alt="" class="post-it post-it_right">
+          </div>
+          <!-- 美妝之星logo -->
+          <div class="logo" data-aos="fade-up" data-aos-duration="800"></div>
+          <!-- 美的意識大調查資訊 -->
+          <div class="top-infomation">
+            <div class="h1" data-aos="fade-down" data-aos-duration="800">
+              <img src="images/beautyaction_h1_en.png" alt="Beauty, Defined by You">
+              <h1>2026美的意識大調查</h1>
+            </div>
+            <p class="text_big" data-aos="fade-up" data-aos-duration="800">讓我們一起深入您的意識，<br>探索您對美的定義！<br>完成下方問卷就有機會獲得千元禮券！</p>
+            <div class="h2 h2_how" data-aos="fade-down" data-aos-duration="800"><h2>活動說明</h2></div>
+            <div class="how-text" data-aos="fade-up" data-aos-duration="800"></div>
+          </div>
+          <!-- 美的意識大調查表單 -->
+          <div class="data-form" data-aos="fade-up" data-aos-duration="800">
+            <h2>請回答以下問題</h2>
+            <div class="data-area">
+              <!-- 套用表單區 開始 -->
+              <div class="data_group">
+                <p class="tetris" data-id="<?= $tetris_id ?>" data-theme="event-theme" data-new-style="1">Loading...</p>
+                <script src="<?= TETRIS_SERVER ?>app.js"></script>
+                <?php
+                if (isset($_GET['debug']) && $_GET['debug']) {
+                  echo '<script type="text/javascript" src="'. TETRIS_SERVER .'debug.js"></script>';
+                }
+                ?>
+              </div>
+              <!-- 套用表單區 結束 -->
+            </div>
+          </div>
+          <!-- 美的意識大調查注意事項 -->
+          <div class="notice" data-aos="fade-up" data-aos-duration="800">
+            <p class="title">注意事項</p>
+            <ol>
+              <li>得獎名單將於 2026/7/1 公布於ELLE官網得獎公告專區，並聯繫得獎人。 </li>
+              <li>需完整填寫個人基本資料，若資料有誤則不受理得獎事宜。</li>
+              <li>ELLE 保有最終修改、變更、活動解釋及取消本活動之權利，若有相關異動將會公告於活動網頁，恕不另行通知。 </li>
+            </ol>
+          </div>
+    </section>
+    <!-- main content end -->
+    <section class="footer">
+      <img src="images/footer.png" alt="ELLE BEAUTY STAR AWARDS 2026">
+    </section>
+  </div>
+  <!-- wrapper end -->
+  <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="js/aos.js"></script>
+  <script>
+    AOS.init({
+        offset: 60,
+        duration: 1000,
+        easing: "ease",
+    });
+  </script>
+</body>
+</html>
