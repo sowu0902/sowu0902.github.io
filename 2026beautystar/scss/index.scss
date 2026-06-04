@@ -1,9 +1,9 @@
 @import "_common";
 .main {
   .photo {
-    width: rem(664);
+    width: rem(700);
     margin: 0 auto;
-    padding-top: rem(305);
+    padding-top: rem(290);
     padding-bottom: rem(200);
     &::before {
       content: "";
@@ -15,7 +15,7 @@
       background-size: contain;
       background-position: center;
       top: rem(282);
-      left: rem(-9);
+      left: rem(5);
     }
     &::after {
       content: "";
@@ -26,8 +26,8 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      top: rem(595);
-      right: rem(-13);
+      top: rem(600);
+      right: 0;
     }
   }
   h1 {
