@@ -43,7 +43,7 @@ include_once './common.php';
     <section class="main">
         <div class="container">
           <!-- 照片 -->
-          <div class="photo" data-aos="custom-anim1" data-aos-duration="600"><img src="images/entro_photo.png" alt=""></div>
+          <div class="photo" data-aos="custom-anim1" data-aos-duration="600"><img src="images/entro_photo-apng.png" alt=""></div>
           <!-- 裝飾們 -->
           <div class="decos">
             <img src="images/lips1.png" alt="" class="lips lips_1">
