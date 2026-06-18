@@ -833,7 +833,7 @@ async function createGameResultCanvas() {
 
   if (document.fonts?.load) {
     await document.fonts.load(
-      '700 52px "Noto Sans TC"'
+      '400 32px "Noto Sans TC"'
     );
   }
 
@@ -861,13 +861,13 @@ async function createGameResultCanvas() {
 
   const userName = gameState.userName || '';
 
-  await document.fonts.load('400 18px "Noto Sans TC"');
+  await document.fonts.load('400 32px "Noto Sans TC"');
   await document.fonts.ready;
 
   context.textAlign = 'left';
   context.textBaseline = 'top';
   context.fillStyle = 'white';
-  context.font = '400 18px "Noto Sans TC", sans-serif';
+  context.font = '400 32px "Noto Sans TC", sans-serif';
 
   context.fillText(
     userName,
