@@ -60,10 +60,6 @@ function initReadingProgressTracking() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  initReadingProgressTracking();
-});
-
 /* ========================================
  * header / fixedbtn 相關設定
  * ======================================== */
@@ -131,6 +127,25 @@ nav?.addEventListener('click', (event) => {
 
   nav.classList.remove('show');
 });
+
+/* ========================================
+ * kv scrolldown 設定
+ * ======================================== */
+function initScrollDown() {
+  const scrollDownButton = document.querySelector('.scrolldown');
+  const gameSection = document.querySelector('#interactive-game');
+
+  if (!scrollDownButton || !gameSection) return;
+
+  scrollDownButton.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    gameSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  });
+}
 
 /* ========================================
  * Google Sheet 共用設定
@@ -239,7 +254,7 @@ function initNameInput() {
 
   updateInputState();
 }
-document.addEventListener('DOMContentLoaded', initNameInput);
+// document.addEventListener('DOMContentLoaded', initNameInput);
 
 // 字數限制
 function getFullWidthLength(value) {
@@ -299,8 +314,26 @@ const gameState = {
   resultCardNumber: '',
   isChangingQuestion: false,
   isDownloading: false,
+
+  // 圖片暫存
+  resultImageBlob: null,
+  resultImageFile: null,
 };
 
+
+/* ========================================
+ * 遊戲區塊切換時滾到top
+ * ======================================== */
+function scrollToGameTop(behavior = 'smooth') {
+  const gameSection = document.querySelector('#interactive-game');
+
+  if (!gameSection) return;
+
+  gameSection.scrollIntoView({
+    behavior,
+    block: 'start',
+  });
+}
 
 /* ========================================
  * 初始化遊戲
@@ -420,19 +453,39 @@ function isValidGameRoute(route) {
  * 畫面切換
  * ======================================== */
 
-function showGameScreen(screenName) {
+function showGameScreen(
+  screenName,
+  {
+    shouldScroll = false,
+    scrollBehavior = 'smooth',
+  } = {}
+) {
   const gameSection = document.querySelector('#interactive-game');
+
   if (!gameSection) return;
 
   const gameIntro = gameSection.querySelector('.game-entro');
   const gameMain = gameSection.querySelector('.game-main');
   const gameResult = gameSection.querySelector('.game-result');
 
+  if (!gameIntro || !gameMain || !gameResult) return;
+
   gameIntro.hidden = screenName !== 'intro';
   gameMain.hidden = screenName !== 'main';
   gameResult.hidden = screenName !== 'result';
 
-  /* AOS 重新計算元素位置。 */
+  /*
+   * 等 hidden 狀態完成版面重排後再捲動，
+   * 避免取得切換前的位置。
+   */
+  if (shouldScroll) {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        scrollToGameTop(scrollBehavior);
+      });
+    });
+  }
+
   refreshAOS();
 }
 
@@ -451,7 +504,9 @@ function startGame() {
   gameState.userName = userNameInput?.value.trim() ?? '';
 
   resetGameProgress();
-  showGameScreen('main');
+  showGameScreen('main', {
+    shouldScroll: true,
+  });
   renderCurrentQuestion();
 }
 
@@ -665,7 +720,6 @@ function updateGameProgress(questionNumber) {
 /* ========================================
  * 完成測驗
  * ======================================== */
-
 function finishGame() {
   const resultRoute = gameState.candidateRoutes[0];
 
@@ -674,23 +728,17 @@ function finishGame() {
     return;
   }
 
-  if (gameState.candidateRoutes.length !== 1) {
-    console.warn(
-      `測驗完成後仍有 ${gameState.candidateRoutes.length} 筆候選結果`,
-      gameState.candidateRoutes
-    );
-  }
-
   gameState.resultCardNumber =
     String(resultRoute['結果卡編號']).trim();
 
   renderGameResult();
 
-  showGameScreen('result');
+  showGameScreen('result', {
+    shouldScroll: true,
+  });
 
-  /*
-   * 不等待寫入完成，避免網路較慢時卡住結果畫面。
-   */
+  prepareGameResultFile();
+
   saveGameRecord({
     submittedAt: new Date().toISOString(),
     userName: gameState.userName,
@@ -750,44 +798,70 @@ function renderGameResult() {
 /* ========================================
  * 再玩一次
  * ======================================== */
-
 function retryGame() {
   resetGameProgress();
-  showGameScreen('main');
-  renderCurrentQuestion();
 
-  /*
-   * 保留原本輸入的姓名。
-   * 若希望重新輸入姓名，改成：
-   *
-   * showGameScreen('intro');
-   */
+  const userNameInput = document.querySelector('#userName');
+  const nameWrap = document.querySelector('.name-input-wrap');
+
+  if (userNameInput) {
+    userNameInput.value = '';
+  }
+
+  nameWrap?.classList.remove('is-active', 'has-value');
+
+  gameState.userName = '';
+
+  showGameScreen('intro', {
+    shouldScroll: true,
+  });
 }
 
-
 /* ========================================
- * 下載結果圖
+ * 產生含姓名的 Canvas
  * ======================================== */
-async function downloadGameResult() {
+async function createGameResultCanvas() {
   const resultImage = document.querySelector(
     '#interactive-game .game-result .card-box img'
   );
 
-  if (!resultImage) return;
+  if (!resultImage) {
+    throw new Error('找不到結果底圖');
+  }
 
   await waitForImage(resultImage);
+
+  if (document.fonts?.load) {
+    await document.fonts.load(
+      '700 52px "Noto Sans TC"'
+    );
+  }
+
+  if (document.fonts?.ready) {
+    await document.fonts.ready;
+  }
 
   const canvas = document.createElement('canvas');
   const context = canvas.getContext('2d');
 
+  if (!context) {
+    throw new Error('無法建立 Canvas context');
+  }
+
   canvas.width = resultImage.naturalWidth;
   canvas.height = resultImage.naturalHeight;
 
-  context.drawImage(resultImage, 0, 0);
+  context.drawImage(
+    resultImage,
+    0,
+    0,
+    canvas.width,
+    canvas.height
+  );
 
   const userName = gameState.userName || '';
 
-  await document.fonts.load('700 52px "Noto Sans TC"');
+  await document.fonts.load('400 18px "Noto Sans TC"');
   await document.fonts.ready;
 
   context.textAlign = 'left';
@@ -795,20 +869,193 @@ async function downloadGameResult() {
   context.fillStyle = 'white';
   context.font = '400 18px "Noto Sans TC", sans-serif';
 
-  // 依實際設計調整位置
   context.fillText(
     userName,
     canvas.width * 0.04,
     canvas.height * 0.03
   );
 
+  return canvas;
+}
+
+/* ========================================
+ * Canvas 轉 Blob
+ * ======================================== */
+function canvasToBlob(canvas) {
+  return new Promise((resolve, reject) => {
+    canvas.toBlob(
+      (blob) => {
+        if (blob) {
+          resolve(blob);
+        } else {
+          reject(new Error('圖片轉換失敗'));
+        }
+      },
+      'image/png',
+      1
+    );
+  });
+}
+/* ========================================
+ * 進入結果頁時先準備圖片檔
+ * ======================================== */
+async function prepareGameResultFile() {
+  const downloadButton = document.querySelector(
+    '#interactive-game .game-download'
+  );
+
+  gameState.resultImageBlob = null;
+  gameState.resultImageFile = null;
+
+  if (downloadButton) {
+    downloadButton.disabled = true;
+  }
+
+  try {
+    const canvas = await createGameResultCanvas();
+    const blob = await canvasToBlob(canvas);
+
+    const fileNumber = String(
+      gameState.resultCardNumber
+    ).padStart(2, '0');
+
+    const fileName =
+      `village-chief-result-${fileNumber}.png`;
+
+    const file = new File(
+      [blob],
+      fileName,
+      {
+        type: 'image/png',
+      }
+    );
+
+    gameState.resultImageBlob = blob;
+    gameState.resultImageFile = file;
+  } catch (error) {
+    console.error('結果圖片準備失敗：', error);
+  } finally {
+    if (downloadButton) {
+      downloadButton.disabled = false;
+    }
+  }
+}
+
+/* ========================================
+ * 一般下載共用函式
+ * ======================================== */
+function downloadBlob(blob, fileName) {
+  const objectURL = URL.createObjectURL(blob);
   const link = document.createElement('a');
 
-  link.download =
-    `village-chief-result-${gameState.resultCardNumber}.png`;
+  link.href = objectURL;
+  link.download = fileName;
 
-  link.href = canvas.toDataURL('image/png');
+  document.body.appendChild(link);
   link.click();
+  link.remove();
+
+  window.setTimeout(() => {
+    URL.revokeObjectURL(objectURL);
+  }, 1000);
+}
+
+/* ========================================
+ * 下載結果圖
+ * ======================================== */
+async function downloadGameResult() {
+  if (gameState.isDownloading) return;
+
+  const downloadButton = document.querySelector(
+    '#interactive-game .game-download'
+  );
+
+  gameState.isDownloading = true;
+
+  if (downloadButton) {
+    downloadButton.disabled = true;
+  }
+
+  try {
+    /*
+     * 若預先準備尚未完成，這裡再產生一次。
+     */
+    if (
+      !gameState.resultImageBlob ||
+      !gameState.resultImageFile
+    ) {
+      const canvas = await createGameResultCanvas();
+      const blob = await canvasToBlob(canvas);
+
+      const fileNumber = String(
+        gameState.resultCardNumber
+      ).padStart(2, '0');
+
+      const fileName =
+        `village-chief-result-${fileNumber}.png`;
+
+      gameState.resultImageBlob = blob;
+      gameState.resultImageFile = new File(
+        [blob],
+        fileName,
+        {
+          type: 'image/png',
+        }
+      );
+    }
+
+    const file = gameState.resultImageFile;
+
+    /*
+     * 手機／瀏覽器支援分享圖片檔時，
+     * 優先開啟系統分享面板。
+     */
+    const canShareFile =
+      typeof navigator.share === 'function' &&
+      typeof navigator.canShare === 'function' &&
+      navigator.canShare({
+        files: [file],
+      });
+
+    if (canShareFile) {
+      await navigator.share({
+        files: [file],
+      });
+
+      return;
+    }
+
+    /*
+     * 不支援 Web Share 時回退為一般下載。
+     */
+    downloadBlob(
+      gameState.resultImageBlob,
+      file.name
+    );
+  } catch (error) {
+    /*
+     * 使用者自行關閉分享面板不視為程式錯誤。
+     */
+    if (error?.name !== 'AbortError') {
+      console.error('結果圖片儲存失敗：', error);
+
+      if (
+        gameState.resultImageBlob &&
+        gameState.resultImageFile
+      ) {
+        downloadBlob(
+          gameState.resultImageBlob,
+          gameState.resultImageFile.name
+        );
+      }
+    }
+  } finally {
+    gameState.isDownloading = false;
+
+    if (downloadButton) {
+      downloadButton.disabled = false;
+    }
+  }
 }
 
 function waitForImage(image) {
@@ -823,7 +1070,9 @@ function waitForImage(image) {
 
     image.addEventListener(
       'error',
-      () => reject(new Error('結果圖載入失敗')),
+      () => {
+        reject(new Error('結果圖載入失敗'));
+      },
       {
         once: true,
       }
@@ -1024,15 +1273,6 @@ function handleGameError(message) {
   errorElement.textContent = message;
 }
 
-
-/* ========================================
- * 頁面初始化
- * ======================================== */
-
-document.addEventListener('DOMContentLoaded', () => {
-  initGameQuiz();
-});
-
 /* ========================================
  * 數據地圖 MAP 相關設定
  * ======================================== */
@@ -1096,10 +1336,6 @@ function initDataStory() {
 
   setActiveItem(items[0].dataset.index);
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  initDataStory();
-});
 
 
 /* ========================================
@@ -1851,11 +2087,20 @@ function renderSponsorEmpty(container) {
  * ======================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // datalayer.push閱讀進度
+  initReadingProgressTracking();
+
+  // ui
+  initScrollDown();
+  initNameInput();
+  initDataStory();
+
+  // GAME
+  initGameQuiz();
+
+
+  // 讀取sheet工作表
   loadSponsors();
   loadArticles();
   loadAnalysis();
-
-  /*
-   * 需要讀取其他工作表時，可繼續在這裡執行
-   */
 });
