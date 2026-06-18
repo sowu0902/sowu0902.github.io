@@ -1,0 +1,2022 @@
+@import "_reset";
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+// 共用色碼
+$primary-color: #8F6C51;
+$secondary-color: #D9D9D9;
+$accent-color: #FFFDEE;
+$this-black: #353A3D;
+$this-white: #fff;
+$this-grey60: #8B8A8A;
+$this-grey80: #645B5B;
+$font-base: 'Noto Sans TC', sans-serif;
+// RWD
+$wide: '(min-width: 1900px)' !default;
+$big-desktop: '(min-width: 1600px)' !default;
+$desktop: '(max-width: 1440px)' !default; //初始值
+$small-desktop: '(max-width: 1200px)' !default;
+$old-desktop: '(max-width: 1050px)' !default;
+$tablet: '(max-width: 799px)' !default;
+$phone: '(max-width: 490px)' !default;
+$small-phone: '(max-width: 360px)' !default;
+
+@mixin media($query:$phone){
+  @media #{$query}{
+    @content;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 16px;
+  font-family: $font-base;
+  color: $this-black;
+  background-color: #F4F3F1;
+}
+.pconly {
+  @include media($tablet){
+    display: none !important;
+  }
+}
+.mbonly {
+  display: none;
+  @include media($tablet){
+    display: block !important;
+  }
+}
+.flex {
+  display: flex;
+}
+.flex-pconly {
+  display: flex;
+  @include media($tablet){
+    display: block !important;
+  }
+}
+.wrap {
+  flex-wrap: wrap;
+}
+[hidden] {
+  display: none !important;
+}
+// header
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 2.78vw;
+  z-index: 99;
+  transition: all 0.5s ease;
+  @include media($tablet) {
+    padding: 15px 5vw;
+  }
+  @include media($wide) {
+    padding: 15px 4.69vw;
+  }
+  &.scrolled {
+    background-color: #F4F3F1;
+  }
+  &.hide {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+  }
+  .logo {
+    img {
+      height: 40px;
+      width: auto;
+      @include media($small-desktop){
+        height: 30px;
+      }
+    }
+    
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .hamberger {
+    @include media($tablet) {
+      position: fixed;
+      right: 20px;
+      top: 15px;
+      width: 30px;
+      height: 30px;
+      z-index: 100; 
+    }
+    span {
+      @include media($tablet) {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: $this-black;
+        position: absolute;
+        left: 0;
+        top: calc(50% - 2px);
+      }
+      &::before, &::after {
+        @include media($tablet) {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 4px;
+          background-color: $this-black;
+          position: absolute;
+          left: 0;
+        }
+      }
+      &::before {
+        @include media($tablet) {
+          top: -10px;
+        }
+      }
+      &::after {
+        @include media($tablet) {
+          bottom: -10px;
+        }
+      }
+    }
+
+  }
+  nav {
+    @include media($tablet){
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 100vw;
+      background: #FFF;
+      padding: 35px;
+      z-index: 101;
+      transition: all 0.1s ease;
+    }
+    &.show {
+      left: 0;
+    }
+    ul {
+      display: flex;
+      width: 100%;
+      gap: 25px; 
+      @include media($tablet){
+        flex-wrap: wrap;
+        height: 100%;
+        justify-content: center;
+        align-content: center;
+        gap: 30px; 
+      }
+      li {
+        font-weight: 400;
+        line-height: 1;
+        text-align: center;
+        transition: all 0.3s ease;
+        @include media($tablet){
+          font-weight: 300;
+          flex: 0 0 100%;
+          width: 100%;
+        }
+        a {
+          color: $this-black;
+          display: block;
+          padding: 8px 0;
+          &:hover {
+            color: #00897F;
+            padding: 3px 0 10px 0;
+          }
+          @include media($tablet){
+            padding: 10px 0;
+            &:hover {
+              padding: 10px 0;
+            }
+          }
+        }
+      }
+    }
+    .close {
+      @include media($tablet){
+        display: block;
+        background-image: url(../images/icon_close.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+    }
+  }
+}
+// 主要內容區 main
+main {
+  section {
+    min-height: 100vh;
+    overflow: hidden;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    .noice-pattern {
+      background-image: url(../images/bg-pattern.png);
+      background-repeat: repeat-y;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .h2 {
+      position: relative;
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 1.1;
+      text-align: center;
+      letter-spacing: 2.5px;
+      display: block;
+      width: fit-content;
+      margin: auto;
+      margin-bottom: 40px;
+      color: $this-black;
+      @include media($tablet) {
+        font-size: 36px;
+        letter-spacing: 1.8px;
+      }
+      &::before, &::after {
+        content: "";
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 50px;
+        height: 25px;
+        position: absolute;
+        top: 18px;
+      }
+      &::before {
+        background-image: url(../images/h2-before.svg);
+        left: -70px;
+      }
+      &::after {
+        background-image: url(../images/h2-after.svg);
+        right: -70px;
+      }
+      &.white {
+        color: #FFF;
+        &::before {
+          background-image: url(../images/h2-before_white.svg);
+        }
+        &::after {
+          background-image: url(../images/h2-after_white.svg);
+        }
+      }
+    }
+    .slick-prev, .slick-next {
+      border-radius: 40px;
+      background-color: #FFF;
+      &:hover {
+        background-color: #E1F8FF;
+      }
+    }
+    .slick-prev {
+      background-image: url(../images/icon_prev.svg);
+      @include media($tablet) {
+        top: inherit;
+        bottom: -16px;
+        left: 7%;
+      }
+      &:hover {
+        transform: translateX(-5px);
+      }
+    }
+    .slick-next {
+      background-image: url(../images/icon_next.svg);
+      @include media($tablet) {
+        top: inherit;
+        bottom: -16px;
+        right: 7%;
+      }
+      &:hover {
+        transform: translateX(5px);
+      }
+    }
+  }
+  // 主視覺
+  .top {
+    height: calc(55px + 52vw);
+    // display: block;
+    @include media($tablet) {
+      min-height: auto;
+      height: calc(50px + 150vw);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 55px;
+      width: 100%;
+      height: 100%;
+      background-image: url(../images/top-bg.png);
+      background-repeat: no-repeat;
+      background-size: 96.67vw;
+      background-position: center top;
+      z-index: 1;
+      @include media($tablet){
+        background-image: url(../images/top-bg_mb.png);
+        top: 50px;
+      }
+    }
+    .container {
+      padding-top: calc(70px + 11vw);
+      @include media($tablet) {
+          padding-top: calc(60px + 35vw);
+        }
+      .slogan {
+        width: 43.27vw;
+        margin: auto;
+        animation: slogan 3.8s ease-in-out infinite;
+        @include media($tablet) {
+          width: 66.92vw;
+          animation-name: slogan_mb;
+          animation-duration: 2.5s;
+        }
+      }
+      .jump {
+        width: 13.95vw;
+        margin: auto;
+        margin-top: 3vw;
+        z-index: 0;
+        animation: jump 3.8s ease-in-out infinite;
+        @include media($tablet) {
+          margin-top: 6vw;
+          width: 30.17vw;
+          animation-name: jump_mb;
+          animation-duration: 2.5s;
+        }
+      }
+      .scrolldown {
+        width: 1.24vw;
+        position: absolute;
+        left: calc(50% - 0.62vw);
+        bottom: -1vw;
+        cursor: pointer;
+        z-index: 10;
+        @include media($tablet) {
+          width: 3.59vw;
+          left: calc(50% - 1.795vw);
+          bottom: -16vw;
+        }
+        &:hover {
+          bottom: -0.5vw;
+          @include media($tablet) {
+            bottom: -16vw;
+          }
+        }
+        span {
+          display: block;
+          width: 100%;
+          height: 1.06vw;
+          background-image: url(../images/top-scrolldown.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          animation: scrolldown 2s ease-in-out infinite;
+          @include media($tablet) {
+            height: 3.08vw;
+          }
+          &:nth-child(1) {
+            animation-delay: -0.6s;
+          }
+          &:nth-child(2) {
+            animation-delay: -0.45s;
+          }
+          &:nth-child(3) {
+            animation-delay: -0.3s;
+          }
+          &:nth-child(4) {
+            animation-delay: -0.15s;
+          }
+          &:nth-child(5) {
+            animation-delay: 0s;
+          }
+        }
+      }
+    }
+    
+  }
+  // 全村的希望
+  .game {
+    // .container {
+    //   min-height: 100vh;
+    // }
+    &-entro {
+      height: 100vh;
+      // background-color: red;
+      justify-content: center;
+      align-items: center;
+      &.hide {
+        transform: translateY(-100%);
+        opacity: 0;
+        display: none;
+      }
+      .wrap-container {
+        width: 850px;
+        @include media($big-desktop) {
+          width: 1000px;
+        }
+        @include media($small-desktop) {
+          width: 720px;
+        }
+        @include media($tablet) {
+          width: calc(100vw - 60px);
+        }
+      }
+      .info-box {
+        background-color: #00B9EF;
+        color: #FFF;
+        width: 100%;
+        box-shadow: -20px 20px 0 0 #F4D8B1;
+        margin-bottom: 40px;
+        @include media($tablet) {
+          box-shadow: -10px 10px 0 0 #F4D8B1;
+          margin-bottom: 30px;
+        }
+        .bar {
+          width: 100%;
+          height: 45px;
+          background-color: #F3981C;
+          background-image: url(../images/game-entro_deco-dots.svg);
+          background-repeat: no-repeat;
+          background-size: 65px;
+          background-position: 36px center;
+          @include media($tablet) {
+            background-size: 50px;
+            background-position: 20px center;
+            height: 30px;
+          }
+        }
+        .content {
+          height: 360px;
+          display: flex;
+          align-self: stretch;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          gap: 40px;
+          @include media($tablet) {
+            height: auto;
+            gap: 30px;
+            padding: 30px 20px;
+          }
+          &::before {
+            @include media($tablet) {
+              content: "";
+              position: absolute;
+              right: 5px;
+              top: 5px;
+              width: 8.7vw;
+              max-width: 34px;
+              height: 8.7vw;
+              max-height: 34px;
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-image: url(../images/game-entro_deco-notice.svg);
+              animation: blink 1.2s ease infinite;
+            }   
+          }
+        }
+        p {
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 1.8;
+          letter-spacing: 2.2px;
+          text-align: center;
+          @include media($small-desktop) {
+            font-size: 18px;
+            letter-spacing: 1.8px;
+          }
+          @include media($tablet) {
+            text-align: left;
+            padding-left: 5vw;
+            padding-right: 5vw;
+          }
+        }
+        .hint {
+          width: 630px;
+          background-image: url(../images/game-entro_line.svg);
+          background-repeat: no-repeat;
+          background-size: 615px;
+          background-position: left top;
+          @include media($small-desktop) {
+            width: calc(630px*0.8);
+            background-size: calc(615px*0.8);
+          }
+          @include media($tablet) {
+            width: 100%;
+            background-image: url(../images/game-entro_line_mb.svg);
+            background-size: contain;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            right: -44px;
+            top: -96px;
+            width: 76px;
+            height: 76px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(../images/game-entro_deco-notice.svg);
+            animation: blink 1.2s ease infinite;
+            @include media($big-desktop) {
+              right: -110px;
+            }
+            @include media($small-desktop) {
+              width: calc(76px*0.8);
+              height: calc(76px*0.8);
+              top: calc(-105px*0.8);
+            }
+            @include media($tablet) {
+              display: none;
+            }
+          }
+          p {
+            text-align: justify;
+            padding-left: 40px;
+            letter-spacing: 0;
+            @include media($small-desktop) {
+              font-size: 16px;
+            }
+            @include media($tablet) 
+              {
+                padding-right: 0;
+                padding-left: 5vw;
+              }
+            &.title {
+              font-weight: 600;
+              letter-spacing: 1.32px;
+              padding-left: 27px;
+              padding-top: 2px;
+              margin-bottom: 35px;
+              @include media($small-desktop) {
+                padding-top: 4px;
+                margin-bottom: 25px;
+              }
+              @include media($tablet) 
+              {
+                padding-left: 5vw;
+                padding-top: 2px;
+                margin-bottom: 8px;
+              }
+            }
+          }
+        }
+        .deco {
+          position: absolute;
+          background-repeat: no-repeat;
+          background-size: contain;
+          @include media($small-desktop) {
+            transform: scale(0.8);
+          }
+          @include media($tablet) {
+            transform: none;
+          }
+          &.green {
+            width: 200px;
+            height: 75px;
+            left: -118px;
+            top: 90px;
+            background-image: url(../images/game-entro_deco-green.png);
+            @include media($big-desktop) {
+              left: -100px;
+            }
+            @include media($small-desktop) {
+              left: -80px;
+            }
+            @include media($tablet) {
+              width: 76px;
+              height: 27px;
+              top: inherit;
+              bottom: -15px;
+              left: -30px;
+            }
+          }
+          &.orange {
+            width: 250px;
+            height: 142px;
+            right: -182px;
+            top: 202px;
+            background-image: url(../images/game-entro_deco-orange.png);
+            @include media($big-desktop) {
+              right: -100px;
+            }
+            @include media($small-desktop) {
+              right: -150px;
+            }
+            @include media($tablet) {
+              width: 79px;
+              height: 42px;
+              top: 34%;
+              right: -22px;
+            }
+          }
+          &.envelope {
+            width: 145px;
+            height: 133px;
+            left: -125px;
+            top: 240px;
+            background-image: url(../images/game-entro_deco-envelope.svg);
+            animation: flow 1.2s ease infinite;
+            @include media($big-desktop) {
+              left: -60px;
+            }
+            @include media($small-desktop) {
+              left: -85px;
+            }
+            @include media($tablet) {
+              width: 63px;
+              height: 63px;
+              top: inherit;
+              left: inherit;
+              bottom: -25px;
+              right: -20px;
+            }
+          }
+        }
+      }
+      .submit-box {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 45px;
+        align-self: stretch;
+        width: 100%;
+        @include media($tablet) {
+          flex-direction: column;
+          gap: 15px;
+        }
+        .name-box {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 15px;
+          flex: 1 0 0;
+          @include media($tablet) {
+            gap: 10px;
+            width: 100%;
+            align-items: center;
+          }
+          .name-input-wrap {
+            position: relative;
+            width: 100%;
+            height: 70px;
+            background-color: #fff;
+            border-bottom: 3px solid #00B9EF;
+            @include media($small-desktop) {
+              height: 45px;
+            }
+            input {
+              position: relative;
+              z-index: 1;
+              display: block;
+              width: 100%;
+              height: 100%;
+              padding: 15px 10px;
+              color: #33869F;
+              font-size: 22px;
+              font-weight: 400;
+              letter-spacing: 1.1px;
+              background: transparent;
+              border: 0;
+              outline: none;
+              box-sizing: border-box;
+              @include media($small-desktop) {
+                font-size: 16px;
+                letter-spacing: 0.8;
+              }
+            }
+
+            .name-placeholder {
+              position: absolute;
+              z-index: 0;
+              top: 50%;
+              left: 10px;
+              display: flex;
+              align-items: center;
+              color: #33869F;
+              font-size: 22px;
+              font-weight: 400;
+              letter-spacing: 1.1px;
+              transform: translateY(-50%);
+              pointer-events: none;
+              opacity: 1;
+              transition: opacity 0.15s ease;
+              @include media($small-desktop) {
+                font-size: 16px;
+                letter-spacing: 0.8;
+              }
+              // 閃動直線
+              &::after {
+                content: '';
+                display: block;
+                width: 1px;
+                height: 1.2em;
+                margin-left: 10px;
+                background-color: currentColor;
+                animation: placeholderCursor 0.9s steps(1) infinite;
+              }
+            }
+
+            // 點擊 input 或已有輸入內容時隱藏
+            &.is-active,
+            &.has-value {
+              .name-placeholder {
+                opacity: 0;
+              }
+            }
+          }
+        }
+        p {
+          color: #00B9EF;
+          font-size: 36px;
+          font-weight: 600;
+          letter-spacing: 2.16px;
+          @include media($small-desktop) {
+            font-size: 24px;
+            letter-spacing: 1.2px;
+          }
+          @include media($tablet) {
+            font-size: 20px;
+          }
+        }
+        .game-start-btn {
+          width: 300px;
+          max-width: 300px;
+          padding: 20px 0;
+          text-align: center;
+          border: none;
+          outline: none;
+          border-radius: 30px;
+          background-color: #00B9EF;
+          box-shadow: 0 15px 0 0 #0095B7;
+          color: #FFF;
+          font-size: 32px;
+          font-weight: 600;
+          letter-spacing: 3.2px;
+          @include media($small-desktop) {
+            width: 250px;
+            max-width: 250px;
+            padding: 15px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 0 0 #0095B7;
+            font-size: 20px;
+            letter-spacing: 2px;
+          }
+          @include media($tablet) {
+            width: 100%;
+            max-width: inherit;
+            padding: 10px 0;
+          }
+          &:hover,&:focus {
+            background-color: #1DCCFF;
+            // box-shadow: 0 15px 0 0 #00AFD7;
+            box-shadow: 0 10px 0 0 #00AFD7;
+            transform: translateY(5px);
+            @include media($small-desktop) {
+              // box-shadow: 0 10px 0 0 #00AFD7;
+              box-shadow: 0 7px 0 0 #00AFD7;
+              transform: translateY(3px);
+            }
+          }
+          &:active {
+            background-color: #00A6CD;
+            box-shadow: 0 0 4px 0 #004656 inset, 0 6px 4px 0 #03829F inset;
+            transform: translateY(5px);
+            @include media($small-desktop) {
+              box-shadow: 0 0 4px 0 #004656 inset, 0 4px 4px 0 #03829F inset;
+              transform: translateY(3px);
+            }
+          }
+        }
+      }
+    }
+    &-main {
+      min-height: 100vh;
+      background: linear-gradient(180deg, #CAFA8A 0%, #00B9EF 14.7%);
+      // background-blend-mode: multiply;
+      justify-content: center;
+      align-items: center;
+      &.hide {
+        transform: translateY(-100%);
+        opacity: 0;
+        display: none;
+      }
+      .wrap-container {
+        width: 900px;
+        padding-top: 40px;
+        padding-bottom: 80px;
+        @include media($big-desktop) {
+          width: 1200px;
+        }
+        @include media($small-desktop) {
+          width: 750px;
+        }
+        @include media($tablet) {
+          width: calc(100vw - 60px);
+          padding-bottom: 60px;
+        }
+      }
+      .question-box {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        color: #FFF;
+        @media screen and (max-width: 1366px){
+          gap: 15px;
+        }
+        p {
+          font-size: 36px;
+          font-weight: 600;
+          line-height: 1.4;
+          letter-spacing: 2.16px;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          align-self: stretch;
+          @media screen and (max-width: 1366px){
+            font-size: 26px;
+            letter-spacing: 1.2px;
+          }
+          @include media($small-desktop) {
+            font-size: 20px;
+            gap: 10px;
+          }
+          @include media($tablet) {
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            align-self: stretch;
+          }
+          .number {
+            font-size: 120px;
+            @media screen and (max-width: 1366px){
+              font-size: 60px;
+            }
+            @include media($small-desktop) {
+              font-size: 30px;
+            }
+          }
+        }
+        img {
+          width: 600px;
+          @include media($big-desktop) {
+            width: 900px;
+          }
+          @media screen and (max-width: 1366px){
+            width: 550px;
+          }
+          @include media($small-desktop) {
+            width: 450px;
+          }
+          @include media($tablet) {
+            width: calc(100% - 30px);
+          }
+        }
+      }
+      .answer-box {
+        gap: 50px;
+        justify-content: center;
+        margin-top: 45px;
+        @media screen and (max-width: 1366px) {
+          margin-top: 35px;
+          gap: 25px;
+        }
+        @include media($tablet) {
+          flex-direction: column;
+          margin-top: 15px;
+        }
+        .answer-card {
+          flex: 1;
+          padding: 20px 30px;
+          align-items: center;
+          gap: 25px;
+          align-self: stretch;
+          border-radius: 80px;
+          border: 5px solid #CBF98A;
+          background: #00B9EF;
+          box-shadow: 0 20px 0 0 rgba(0, 0, 0, 0.25);
+          cursor: pointer;
+          @include media($small-desktop) {
+            gap: 15px;
+            padding: 15px 30px;
+            box-shadow: 0 10px 0 0 rgba(0, 0, 0, 0.25);
+          }
+          @include media($tablet) {
+            border-width: 3px;
+          }
+          &:hover {
+            transform: translateY(-20px);
+            @include media($tablet) {
+              transform: translateY(0);
+            }
+          }
+          img {
+            width: 51px;
+            @include media($small-desktop) {
+              width: 32px;
+            }
+          }
+          p {
+            color: #FFF;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            border-left: 5px solid #CBF98A;
+            padding-left: 25px;
+            text-align: left;
+            @include media($small-desktop) {
+              padding-left: 15px;
+            }
+            @include media($tablet) {
+              border-width: 3px;
+            }
+          }
+        }
+      }
+      .game-percent {
+        position: absolute;
+        width: calc(100vw - 140px);
+        height: 12px;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
+        gap: 15px;
+        @include media($tablet) {
+          width: calc(100vw - 60px);
+          height: 10px;
+          gap: 10px;
+        }
+        span {
+          display: block;
+          background: rgba(255, 255, 255, 0.50);
+          width: calc(100% / 7);
+          height: 100%;
+          border-radius: 10px;
+          &.is-active {
+            background: rgba(255, 255, 255, 1);
+          }
+        }
+      }
+    }
+    &-result {
+      background-image: url(../images/game-result-bg.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center bottom;
+      min-height: 100vh;
+      padding: 50px 30px;
+      justify-content: center;
+      align-items: center;
+      @include media($tablet) {
+        background-image: url(../images/game-result-bg_mb.png);
+      }
+      .wrap-container {
+        gap: 80px;
+        justify-content: center;
+        align-items: center;
+        width: 900px;
+        @include media($big-desktop) {
+          width: 1200px;
+        }
+        @media screen and (max-width:1366px) {
+          gap: 40px;
+          width: 750px;
+        }
+        @include media($tablet) {
+          width: calc(100% - 30px);
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+      .info-box {
+        padding-bottom: 150px;
+        @include media($tablet) {
+          order: 2;
+          padding-bottom: 0;
+        }
+        .slogan {
+          margin-bottom: 60px;
+        }
+      }
+      .btn-box {
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width:1366px) {
+          gap: 30px;
+        }
+        @include media($tablet) {
+          gap: 40px;
+        }
+        .game-btn {
+          width: 100px;
+          height: 100px;
+          background-color: #FFF;
+          // padding: 10px;
+          padding-bottom: 13px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          aspect-ratio: 1/1;
+          border-radius: 50px;
+          border: 3px solid #80DCF7;
+          background: #FFF;
+          box-shadow: 5px 9px 0 0 rgba(0, 0, 0, 0.25);
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 1.4;
+          @include media($tablet) {
+            flex-direction: inherit;
+            gap: 5px;
+            padding: 10px 0;
+            width: 120px;
+            height: 45px;
+            font-size: 16px;
+            border-radius: 10px;
+            box-shadow: 4px 5px 0 0 rgba(0, 0, 0, 0.25);
+          }
+          span {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            aspect-ratio: 1/1;
+            position: relative;
+            @include media($tablet) {
+              width: 25px;
+              height: 25px;
+            }
+            &::before,&::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              left: 0;
+              top: 0;
+              background-repeat: no-repeat;
+              background-size: contain;
+            }
+            &::after {
+              opacity: 0;
+            }
+          }
+          &:hover {
+            background-color: #00B9EF;
+            border-color: #00B9EF;
+            color: #FFF;
+            span {
+              &::before {
+                opacity: 0;
+              }
+              &::after {
+                opacity: 1;
+              }
+            }
+          }
+        }
+        .game-retry {
+          color: #727171;
+          span {
+            transform: translateY(4px);
+            @include media($tablet) {
+              transform: none;
+            }
+            &::before {
+              background-image: url(../images/icon_retry.svg);
+            }
+            &::after {
+              background-image: url(../images/icon_retry_white.svg);
+            }
+          }
+        }
+        .game-download {
+          color: #0095B7;
+          span {
+            &::before {
+              background-image: url(../images/icon_download.svg);
+            }
+            &::after {
+              background-image: url(../images/icon_download_white.svg);
+            }
+          }
+        }
+      }
+      .card-box {
+        width: 420px;
+        flex-shrink: 0;
+        position: relative;
+        line-height: 0;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+        @include media($big-desktop) {
+          width: 560px;
+        }
+        @media screen and (max-width:1366px) {
+          width: calc(420px * 0.8);
+        }
+        @include media($tablet) {
+          width: 300px;
+          box-shadow: none;
+          order: 1;
+        }
+        img {
+          position: relative;
+          z-index: 1;
+        }
+        .name {
+          position: absolute;
+          top: 25px;
+          left: 20px;
+          color: #FFF;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 1.2%;
+          letter-spacing: 0.9px;
+          opacity: 1;
+          visibility: visible;
+          z-index: 2;
+          @include media($big-desktop) {
+            font-size: 22px;
+            top: 35px;
+            left: 25px;
+          }
+          @media screen and (max-width:1366px) {
+            font-size: 15px;
+            letter-spacing: 0;
+          }
+          @include media($tablet) {
+            font-size: 14px;
+            left: 4%;
+            top: 4%;
+          }
+        }
+      }
+    }
+  }
+  // 關鍵趨勢
+  .data {
+    background-color: #FFF;
+    .data-before {
+      background-image: url(../images/data-content-top.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center top;
+      width: 100%;
+      height: 8.97vw;
+      @include media($tablet) {
+        background-image: url(../images/data-content-top_mb.svg);
+        height: 14.1vw;
+      }
+    }
+    .container {
+      padding: 80px 30px;
+      max-width: 900px;
+      margin: auto;
+      @include media($big-desktop) {
+        max-width: 1200px;
+      }
+      @include media($tablet) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      p {
+        font-size: 17px;
+        line-height: 2;
+        margin-bottom: 34px;
+        text-align: center;
+        @include media($tablet) {
+          margin-left: 30px;
+          margin-right: 30px;
+          margin-bottom: 0;
+          font-size: 16px;
+          letter-spacing: 1.6px;
+        }
+        br {
+          @include media($tablet) {
+            display: none;
+          }
+        }
+        strong {
+          color: #00897F;
+          .single {
+            display: block;
+          }
+        }
+      }
+      img {
+        display: block;
+        margin: auto;
+        margin-top: 60px;
+        width: 100%;
+        max-width: 414px;
+        @include media($tablet) {
+            margin-top: 50px;
+        }
+      }      
+    }
+  }
+  // 數據地圖
+  .map {
+    position: relative;
+    overflow: visible;
+    background-color: #fff;
+    .data-story-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 80px;
+      align-items: stretch;
+      padding: 0 120px 0 70px;
+      @include media($small-desktop) {
+        padding: 0 60px 0 40px;
+        gap: 30px;
+      }
+      @include media($tablet) {
+        padding: 0;
+        gap: 0;
+        display: block;
+      }
+    }
+
+    .data-visual {
+      position: relative;
+      width: 100%;
+      min-width: 0;
+      align-self: stretch;
+      @include media($tablet) {
+        display: none;
+      }
+    }
+
+    .data-visual-sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .data-image {
+      position: absolute;
+      inset: 0;
+      // background-color: red;
+      margin: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      opacity: 0;
+      visibility: hidden;
+      // transform: translateY(20px);
+      width: 90%;
+      max-width: 500px;
+
+      transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s;
+
+      &.is-active {
+        opacity: 1;
+        visibility: visible;
+        // transform: translateY(0);
+      }
+    }
+
+    .data-content {
+      width: 100%;
+      min-width: 0;
+      @include media($tablet) {
+        padding-bottom: 50px;
+      }
+    }
+
+    .data-item {
+      min-height: 100vh;
+      // padding-block: 120px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include media($tablet) {
+        padding-top: 50px;
+        min-height: auto;
+      }
+
+      h3 {
+        font-size: 20px;
+        line-height: 2;
+        font-weight: 600;
+        margin-bottom: 10px;
+        @include media($tablet) {
+          margin-left: 30px;
+          margin-right: 30px;
+          font-size: 18px;
+        }
+      }
+
+      p {
+        font-size: 17px;
+        line-height: 2;
+        margin-bottom: 5px;
+        @include media($tablet) {
+          margin-left: 30px;
+          margin-right: 30px;
+        }
+      }
+
+      .source {
+        font-size: 10px;
+        color: #959595;
+      }
+    }
+  }
+
+  // 深度解析
+  .analysis {
+    min-height: auto;
+    background: linear-gradient(180deg, #51BA97 0%, #CCF990 100%);
+    .container {
+      padding: 100px 30px 60px 30px;
+      @include media($tablet) {
+            padding-top: 80px;
+      }
+      .preface {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: 1px;
+        text-align: center;
+        color: #FFF;
+        margin-bottom: 30px;
+        @include media($tablet) {
+          margin-bottom: 0;
+        }
+      }
+      .analysis-list {
+        padding: 0 120px 50px 120px;
+        @include media($tablet) {
+          padding-left: 0;
+          padding-right: 0;
+          width: calc(100% + 30px);
+          margin-left: -15px;
+          padding-bottom: 40px;
+        }
+        .analysis-card {
+          margin: 0 15px;
+          padding-top: 230px;
+          position: relative;
+          padding-bottom: 15px;
+          @media screen and (max-width: 1300px) {
+            padding-top: 205px;
+          }
+          @include media($tablet) {
+            padding-top: calc(40vw + 64px);
+          }
+          &:hover {
+            transform: translateY(-15px);
+            @include media($tablet) {
+              transform: translateY(0);
+            }
+          }
+          a {
+            position: absolute;
+            left: 0;
+            top: 0;
+            // background-color: red;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+          }
+          .tag {
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            transform: translateX(-50%);
+            padding: 6px 0;
+            font-size: 22px;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: 1.1px;
+            text-align: center;
+            width: 180px;
+            word-wrap: none;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            color: #FFF;
+            background-color: var(--card-color);
+          }
+          .img {
+            position: absolute;
+            width: 300px;
+            left: 50%;
+            top: 64px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            overflow: hidden;
+            transform: translateX(-50%);
+            z-index: 1;
+            @media screen and (max-width: 1400px) {
+              width: 270px;
+            }
+            @media screen and (max-width: 1300px) {
+              width: 240px;
+            }
+            @include media($tablet) {
+              width: 66.67vw;
+            }
+          }
+          .content-wrap {
+            background-color: #FFF;
+            padding: 90px 25px 50px 25px;
+            border-radius: 20px;
+            background: #FFF;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
+            font-size: 17px;
+            line-height: 1.6;
+            @media screen and (max-width: 1400px) {
+              padding-top: 65px;
+            }
+            .name {
+              color: var(--card-color);
+              text-align: center;
+              font-size: 18px;
+              font-weight: 600;
+              line-height: 1.6;
+              letter-spacing: 0.9px;
+              margin-bottom: 5px;
+            }
+            .title {
+              font-weight: 600;
+              margin-bottom: 5px;
+            }
+            .content {
+              max-height: 110px;
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-line-clamp: 4;
+              -webkit-box-orient: vertical;
+              text-overflow: ellipsis;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              text-align: justify;
+            }
+            .site {
+              font-size: 16px;
+              line-height: 1.8;
+              position: absolute;
+              left: 25px;
+              bottom: 12px;
+              &::before {
+                content: "";
+                width: 18px;
+                height: 18px;
+                display: inline-block;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url(../images/icon_site.svg);
+                margin-right: 5px;
+                transform: translateY(2px);
+              }
+            }
+            .arrow {
+              background-color: var(--card-color);
+              background-repeat: no-repeat;
+              background-size: 23px;
+              background-position: center;
+              background-image: url(../images/analysis-arrow.svg);
+              border-top-left-radius: 20px;
+              border-bottom-right-radius: 20px;
+              width: 50px;
+              height: 50px;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+            }
+          }
+        }
+      }
+      .slick-prev {
+        left: 65px;
+        @include media($tablet) {
+          left: 7%;
+        }
+      }
+      .slick-next {
+        right: 65px;
+        @include media($tablet) {
+          right: 7%;
+        }
+      }
+    }
+  }
+
+  // 主題報導
+  .articles {
+    min-height: auto;
+    background: linear-gradient(180deg, #18948A 0%, #7DCEA4 100%);
+    .article-before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center top;
+      width: 100%;
+      height: 9vw;
+      background-image: url(../images/article-before.svg);
+      @include media($tablet) {
+        background-image: url(../images/article-before_mb.svg);
+        height: 14.11vw;
+      }
+    }
+    .container {
+      padding-top: calc(9vw + 80px);
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 80px;
+      @include media($tablet) {
+        padding-top: calc(14.11vw + 30px);
+        padding-bottom: 50px;
+      }
+      .article-list {
+        width: 900px;
+        margin: auto;
+        @include media($big-desktop) {
+          width: 1200px;
+        }
+        @include media($old-desktop) {
+          width: 720px;
+        }
+        @include media($tablet) {
+          width: 100%;
+        }
+        .article-card {
+          margin: 0 15px;
+          padding-bottom: 50px;
+          @include media($tablet) {
+            margin: auto;
+            padding-bottom: 40px;
+          }
+          .img {
+            border-radius: 20px;
+            height: 162px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            @include media($big-desktop) {
+              height: 222px;
+            }
+            @include media($old-desktop) {
+              height: 198px;
+            }
+            @include media($tablet) {
+              height: auto;
+            }
+            a {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              align-content: center;
+            }
+            img {
+              transition: all 0.3s ease;
+            }
+          }
+          a {
+            color: #FFF;
+          }
+          p {
+            a {
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 1.6;
+              letter-spacing: 0.9px;
+              max-height: 57px;
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              text-overflow: ellipsis;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              text-align: justify;
+            }
+          }
+          &:hover {
+            img {
+              width: 110%;
+              @include media($tablet) {
+                width: 100%;
+              }
+            }
+            a {
+              color: #CBF98A;
+            }
+            
+          }
+        }
+      }
+    }
+  }
+
+  // 下載工具箱
+  .download {
+    min-height: auto;
+    background-color: #7DCEA4;
+    // background-image: url(../images/download-bg.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    &::before {
+      content: "";
+      background-image: url(../images/dowload-before.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left bottom;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 425px;
+      height: 114px;
+      @include media($tablet) {
+        width: 201px;
+        height: 54px;
+      }
+    }
+    &::after {
+      content: "";
+      background-image: url(../images/dowload-after.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right bottom;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 456px;
+      height: 143px;
+      @include media($tablet) {
+        width: 216px;
+        height: 68px;
+      }
+    }
+    .container {
+      padding: 60px 30px;
+      text-align: center;
+      line-height: 1.6;
+      color: #FFF;
+      z-index: 1;
+      @include media($tablet) {
+        padding: 50px 30px 100px 30px;
+      }
+      h2 {
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 1.6px;
+        margin-bottom: 10px;
+        @include media($tablet) {
+          font-size: 24px;
+          letter-spacing: 1.2px;
+        }
+      }
+      p {
+        font-size: 17px;
+        letter-spacing: 0.85px;
+        max-width: 900px;
+        margin: auto;
+        &.cta {
+          margin-top: 50px;
+          @include media($tablet) {
+            margin-top: 30px;
+          }
+          a {
+            color: #727171;
+            display: block;
+            font-size: 20px;
+            font-weight: 400;
+            width: 150px;
+            line-height: 46px;
+            border-radius: 30px;
+            background-color: #FFF;
+            margin: auto;
+            animation: flow 1.2s ease infinite;
+            @include media($tablet) {
+              font-size: 18px;
+              width: 140px;
+              line-height: 43px;
+            }
+            span {
+              background-image: url(../images/icon_arrow-right.svg);
+              background-repeat: no-repeat;
+              background-size: contain;
+              margin-left: 5px;
+              width: 20px;
+              height: 20px;
+              display: inline-block;
+              transform: translateY(2px);
+              @include media($tablet) {
+                width: 18px;
+              height: 18px;
+              }
+            }
+            &:hover {
+              transform: translateY(-5px);
+              animation-play-state: paused;
+              background-color: #E1F8FF;
+              span {
+                transform: translate(2px , 2px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 贊助企業
+  .sponsors {
+    background-color: #FFF;
+    min-height: auto;
+    .container {
+      padding: 80px 30px;
+    }
+    .sponsor-list {
+      margin: auto;
+      max-width: 1200px;
+      h2 {
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 30px;
+        letter-spacing: 0.85px;
+      }
+      ul {
+        gap: 30px;
+        justify-content: center;
+      }
+      img {
+        height: 50px;
+        width: auto;
+      }
+      &.host {
+        margin-bottom: 80px;
+        ul {
+          gap: 25px;
+        }
+      }
+    }
+  }
+}
+// fixedbtn
+.fixedbtn {
+  position: fixed;
+  right: 0;
+  bottom: 5vw;
+  width: 42px;
+  font-size: 20px;
+  line-height: 1.1;
+  padding: 10px 10px 10px 12px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background: linear-gradient(180deg, #51BA97 0%, #00897F 100%);
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-10px);
+  }
+  &.hide {
+    opacity: 0;
+    right: -50px;
+  }
+  @include media($tablet) {
+    font-size: 16px;
+    width: 36px;
+  }
+  a {
+    color: #FFF;
+  }
+}
+footer {
+  background-color: #4AB998;
+  color: #FFF;
+  padding: 30px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: calc(22/12);
+  a {
+    color: #FFF;
+    text-decoration: underline;
+    &:hover {
+      opacity: 0.75;
+      text-decoration: none;
+    }
+  }
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    gap: 35px;
+    align-items: center;
+    @include media($tablet) {
+      text-align: center;
+    }
+    .sociallinks {
+      width: 130px;
+      flex-shrink: 0;
+      gap: 20px;
+      @include media($tablet) {
+        margin: auto;
+        margin-bottom: 10px;
+      }
+      a {
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .ig {
+        background-image: url(../images/icon_instagram.svg);
+      }
+      .fb {
+        background-image: url(../images/icon_facebook.svg);
+      }
+      .line {
+        background-image: url(../images/icon_line.svg);
+      }
+    }
+    .copyright {
+      flex: 1;
+      min-width: 250px;
+      @include media($tablet) {
+        margin-bottom: 10px;
+      }
+      .links {
+        @include media($tablet) {
+          margin: auto;
+          margin-bottom: 10px;
+          justify-content: center;
+        }
+        li {
+          &:after {
+            content: "｜";
+          }
+          &:last-child {
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .team {
+      // flex-shrink: 0;
+      p {
+        span {
+          &:after {
+            content: "｜";
+          }
+          &:last-child {
+            &::after {
+              display: none;
+            }
+          }
+        }
+        &:last-child {
+          @include media($tablet) {
+            max-width: 210px;
+            margin: auto;
+          }
+          span:nth-child(2):after {
+            @include media($tablet) {
+              display: none;
+            } 
+          }
+        }
+      }
+    }
+  }
+  
+}
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  animation: blink 1s infinite;
+  z-index: 999;
+  display: none; /* 預設隱藏 */
+  &::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 3px solid #ccc;
+    border-top-color: #000;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    display: block;
+    margin: auto;
+  }
+}
+
+@keyframes jump {
+  0%,
+  10% { transform: translateY(0); }
+  20%,
+  24% { transform: translateY(-3vw); }
+  36%,
+  100% { transform: translateY(0); }
+}
+@keyframes jump_mb {
+  0%,
+  10% { transform: translateY(0); }
+  20%,
+  24% { transform: translateY(-6vw); }
+  36%,
+  100% { transform: translateY(0); }
+}
+@keyframes slogan {
+  0%,
+  10%,
+  20% { transform: translateY(0); }
+  25%,
+  28% { transform: translateY(-1vw); }
+  33% { transform: translateY(0); }
+  35%,
+  36% { transform: translateY(-0.2vw); }
+  38%,
+  100% { transform: translateY(0); }
+}
+@keyframes slogan_mb {
+  0%,
+  10%,
+  20% { transform: translateY(0); }
+  25%,
+  28% { transform: translateY(-2vw); }
+  33% { transform: translateY(0); }
+  37%,
+  38% { transform: translateY(-0.3vw); }
+  42%,
+  100% { transform: translateY(0); }
+}
+
+@keyframes scrolldown {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  35% {
+    opacity: 0.45;
+  }
+
+  55% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0.45;
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes placeholderCursor {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes flow {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(0);}
+}
