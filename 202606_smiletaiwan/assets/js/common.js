@@ -227,19 +227,112 @@ function getSheetCellValue(row, index) {
 /* ========================================
  * 遊戲初始畫面姓名input 相關設定
  * ======================================== */
-// 預設顯示文字
+/* ========================================
+ * 姓名輸入框
+ * ======================================== */
 function initNameInput() {
   const inputWrap = document.querySelector('.name-input-wrap');
-  const input = inputWrap?.querySelector('input');
+  const input = inputWrap?.querySelector('#userName');
+  const limitHint = document.querySelector('.name-limit-hint');
 
   if (!inputWrap || !input) return;
 
-  function updateInputState() {
+  const maxFullWidthLength = 7;
+  let isComposing = false;
+  let hintTimer = null;
+
+  function getCharacterWidth(character) {
+    return /^[\x00-\x7F]$/.test(character) ? 0.5 : 1;
+  }
+
+  function getValueWidth(value) {
+    return Array.from(value).reduce((total, character) => {
+      return total + getCharacterWidth(character);
+    }, 0);
+  }
+
+  function getLimitedValue(value) {
+    let result = '';
+    let currentLength = 0;
+
+    for (const character of Array.from(value)) {
+      const characterWidth = getCharacterWidth(character);
+
+      if (
+        currentLength + characterWidth >
+        maxFullWidthLength
+      ) {
+        break;
+      }
+
+      result += character;
+      currentLength += characterWidth;
+    }
+
+    return result;
+  }
+
+  function updatePlaceholderState() {
     inputWrap.classList.toggle(
       'has-value',
       input.value.trim().length > 0
     );
   }
+
+  function showLimitHint() {
+    if (!limitHint) return;
+
+    limitHint.classList.add('show');
+
+    clearTimeout(hintTimer);
+
+    hintTimer = window.setTimeout(() => {
+      limitHint.classList.remove('show');
+    }, 2000);
+  }
+
+  function hideLimitHint() {
+    if (!limitHint) return;
+
+    clearTimeout(hintTimer);
+    limitHint.classList.remove('show');
+  }
+
+  function limitInputValue() {
+    const originalValue = input.value;
+    const originalWidth = getValueWidth(originalValue);
+    const limitedValue = getLimitedValue(originalValue);
+
+    if (originalWidth > maxFullWidthLength) {
+      input.value = limitedValue;
+      showLimitHint();
+    } else {
+      hideLimitHint();
+    }
+
+    updatePlaceholderState();
+  }
+
+  input.addEventListener('compositionstart', () => {
+    isComposing = true;
+  });
+
+  input.addEventListener('compositionend', () => {
+    isComposing = false;
+
+    window.setTimeout(() => {
+      limitInputValue();
+    }, 0);
+  });
+
+  input.addEventListener('input', (event) => {
+    if (isComposing || event.isComposing) {
+      updatePlaceholderState();
+      return;
+    }
+
+    limitInputValue();
+  });
 
   input.addEventListener('focus', () => {
     inputWrap.classList.add('is-active');
@@ -247,50 +340,17 @@ function initNameInput() {
 
   input.addEventListener('blur', () => {
     inputWrap.classList.remove('is-active');
-    updateInputState();
+    hideLimitHint();
+
+    if (!isComposing) {
+      limitInputValue();
+    } else {
+      updatePlaceholderState();
+    }
   });
 
-  input.addEventListener('input', updateInputState);
-
-  updateInputState();
+  updatePlaceholderState();
 }
-// document.addEventListener('DOMContentLoaded', initNameInput);
-
-// 字數限制
-function getFullWidthLength(value) {
-  let length = 0;
-
-  for (const char of value) {
-    // ASCII 半形字元算 0.5，其餘算 1
-    length += /[\x00-\x7F]/.test(char) ? 0.5 : 1;
-  }
-
-  return length;
-}
-
-function limitFullWidthLength(input, maxLength = 7) {
-  let result = '';
-  let currentLength = 0;
-
-  for (const char of input.value) {
-    const charLength = /[\x00-\x7F]/.test(char) ? 0.5 : 1;
-
-    if (currentLength + charLength > maxLength) break;
-
-    result += char;
-    currentLength += charLength;
-  }
-
-  if (input.value !== result) {
-    input.value = result;
-  }
-}
-
-const nameInput = document.querySelector('#userName');
-
-nameInput?.addEventListener('input', () => {
-  limitFullWidthLength(nameInput, 7);
-});
 
 /* ========================================
  * 遊戲測驗設定
