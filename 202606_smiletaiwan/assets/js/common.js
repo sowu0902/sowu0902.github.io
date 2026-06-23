@@ -1513,7 +1513,7 @@ function createAnalysisCard(item) {
 
   const tag = document.createElement('div');
   tag.className = 'tag';
-  tag.textContent = `${item.tag}的村長`;
+  tag.textContent = `${item.tag}`;
 
   const imageWrap = document.createElement('div');
   imageWrap.className = 'img';
@@ -1533,10 +1533,13 @@ function createAnalysisCard(item) {
   const contentWrap = document.createElement('div');
   contentWrap.className = 'content-wrap';
 
-  const name = createTextElement('p', 'name', item.name);
+  // const name = createTextElement('p', 'name', item.name);
+  const name = document.createElement('p');
+  name.className = 'name';
+  name.textContent = `${item.site}｜${item.name}`;
   const title = createTextElement('p', 'title', item.title);
   const content = createTextElement('p', 'content', item.content);
-  const site = createTextElement('p', 'site', item.site);
+  // const site = createTextElement('p', 'site', item.site);
 
   const arrow = document.createElement('span');
   arrow.className = 'arrow';
@@ -1546,7 +1549,6 @@ function createAnalysisCard(item) {
     name,
     title,
     content,
-    site,
     arrow
   );
 

@@ -1485,22 +1485,22 @@ main {
           }
           .content-wrap {
             background-color: #FFF;
-            padding: 90px 25px 50px 25px;
+            padding: 100px 25px 50px 25px;
             border-radius: 20px;
             background: #FFF;
             box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
             font-size: 17px;
             line-height: 1.6;
             @media screen and (max-width: 1400px) {
-              padding-top: 65px;
+              padding-top: 75px;
             }
             .name {
               color: var(--card-color);
               text-align: center;
-              font-size: 18px;
+              font-size: 16px;
               font-weight: 600;
               line-height: 1.6;
-              letter-spacing: 0.9px;
+              letter-spacing: 0.8px;
               margin-bottom: 5px;
             }
             .title {
@@ -1538,17 +1538,29 @@ main {
             }
             .arrow {
               background-color: var(--card-color);
-              background-repeat: no-repeat;
-              background-size: 23px;
-              background-position: center;
-              background-image: url(../images/analysis-arrow.svg);
-              border-top-left-radius: 20px;
+              // background-repeat: no-repeat;
+              // background-size: 23px;
+              // background-position: center;
+              // background-image: url(../images/analysis-arrow.svg);
+              // border-top-left-radius: 20px;
               border-bottom-right-radius: 20px;
+              border-top-left-radius: 20px;
               width: 50px;
               height: 50px;
               position: absolute;
               right: 0;
               bottom: 0;
+              &::before {
+                content: "more";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                color: #FFF;
+                font-size: 16px;
+                font-weight: 400;
+                letter-spacing: 0.8px;
+              }
             }
           }
         }
