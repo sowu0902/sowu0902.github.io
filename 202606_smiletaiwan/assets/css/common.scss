@@ -1176,10 +1176,6 @@ main {
         img {
           position: relative;
           z-index: 1;
-          @include media($tablet) {
-            width: 100%;
-            height: auto;
-          }
         }
         .name {
           position: absolute;
