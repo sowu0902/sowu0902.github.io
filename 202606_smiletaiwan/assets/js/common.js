@@ -389,10 +389,16 @@ function scrollToGameTop(behavior = 'smooth') {
 
   if (!gameSection) return;
 
-  gameSection.scrollIntoView({
+  const gameTop =
+    gameSection.getBoundingClientRect().top +
+    window.scrollY;
+
+  window.scrollTo({
+    top: gameTop,
     behavior,
-    block: 'start',
   });
+
+  console.log("SCROLL new");
 }
 
 /* ========================================
@@ -566,6 +572,7 @@ function startGame() {
   resetGameProgress();
   showGameScreen('main', {
     shouldScroll: true,
+    scrollBehavior: 'auto',
   });
   renderCurrentQuestion();
 }
@@ -795,6 +802,7 @@ function finishGame() {
 
   showGameScreen('result', {
     shouldScroll: true,
+    scrollBehavior: 'auto',
   });
 
   prepareGameResultFile();
@@ -874,6 +882,7 @@ function retryGame() {
 
   showGameScreen('intro', {
     shouldScroll: true,
+    scrollBehavior: 'auto',
   });
 }
 
