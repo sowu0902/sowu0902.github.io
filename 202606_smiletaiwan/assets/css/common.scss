@@ -1169,13 +1169,17 @@ main {
           width: calc(420px * 0.8);
         }
         @include media($tablet) {
-          width: 300px;
+          width: calc(100vw - 30px);
           box-shadow: none;
           order: 1;
         }
         img {
           position: relative;
           z-index: 1;
+          @include media($tablet) {
+            width: 100%;
+            height: auto;
+          }
         }
         .name {
           position: absolute;
