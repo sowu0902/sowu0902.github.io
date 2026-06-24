@@ -397,8 +397,6 @@ function scrollToGameTop(behavior = 'smooth') {
     top: gameTop,
     behavior,
   });
-
-  console.log("SCROLL new");
 }
 
 /* ========================================
