@@ -1432,7 +1432,7 @@ async function loadAnalysis() {
      * E：name
      * F：title
      * G：content
-     * H：site
+    //  * H：site
      * I：url
      */
     const analysisItems = sheetRows
@@ -1444,7 +1444,7 @@ async function loadAnalysis() {
         name: getSheetCellValue(row, 4),
         title: getSheetCellValue(row, 5),
         content: getSheetCellValue(row, 6),
-        site: getSheetCellValue(row, 7),
+        // site: getSheetCellValue(row, 7),
         url: getSheetCellValue(row, 8),
       }))
       .filter((item) => {
@@ -1542,10 +1542,10 @@ function createAnalysisCard(item) {
   const contentWrap = document.createElement('div');
   contentWrap.className = 'content-wrap';
 
-  // const name = createTextElement('p', 'name', item.name);
-  const name = document.createElement('p');
-  name.className = 'name';
-  name.textContent = `${item.site}｜${item.name}`;
+  const name = createTextElement('p', 'name', item.name);
+  // const name = document.createElement('p');
+  // name.className = 'name';
+  // name.textContent = `${item.site}｜${item.name}`;
   const title = createTextElement('p', 'title', item.title);
   const content = createTextElement('p', 'content', item.content);
   // const site = createTextElement('p', 'site', item.site);
