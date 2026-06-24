@@ -1234,7 +1234,7 @@ main {
     }
     .container {
       padding: 80px 30px;
-      max-width: 900px;
+      max-width: 930px;
       margin: auto;
       @include media($big-desktop) {
         max-width: 1200px;
@@ -1418,10 +1418,13 @@ main {
         margin-bottom: 30px;
         @include media($tablet) {
           margin-bottom: 0;
+          font-size: 17px;
+          text-align: left;
+          letter-spacing: 0.85px;
         }
       }
       .analysis-list {
-        padding: 0 120px 50px 120px;
+        padding: 10px 120px 50px 120px;
         @include media($tablet) {
           padding-left: 0;
           padding-right: 0;
