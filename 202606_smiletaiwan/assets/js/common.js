@@ -363,7 +363,7 @@ const GAME_TOTAL_QUESTIONS = 7;
  * (曉亞的sheet的api url=https://script.google.com/macros/s/AKfycbzufOsveWoNJlKFYnO6dNqdSvimPNUNJ-lqnMRMEEX8tQW1peHpU2M9Q8VdEes_RAuw/exec)
  * (微笑的sheet的api url=https://script.google.com/macros/s/AKfycbxeCi5u_B-Y9M3pgN4nRSzW0TtG5otQxNLkF3ByscPOnkze3OIiB9ZydJE1yaM_d3Gw8Q/exec)
  */
-const GAME_RECORD_API_URL = 'https://script.google.com/macros/s/AKfycbzufOsveWoNJlKFYnO6dNqdSvimPNUNJ-lqnMRMEEX8tQW1peHpU2M9Q8VdEes_RAuw/exec';
+const GAME_RECORD_API_URL = 'https://script.google.com/macros/s/AKfycbxeCi5u_B-Y9M3pgN4nRSzW0TtG5otQxNLkF3ByscPOnkze3OIiB9ZydJE1yaM_d3Gw8Q/exec';
 
 const gameState = {
   userName: '',
