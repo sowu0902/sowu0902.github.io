@@ -258,14 +258,23 @@ main {
         height: 25px;
         position: absolute;
         top: 18px;
+        @include media($tablet) {
+          top: 10px;
+        }
       }
       &::before {
         background-image: url(../images/h2-before.svg);
         left: -70px;
+        @include media($tablet) {
+          left: -60px;
+        }
       }
       &::after {
         background-image: url(../images/h2-after.svg);
         right: -70px;
+        @include media($tablet) {
+          right: -60px;
+        }
       }
       &.white {
         color: #FFF;
@@ -1502,7 +1511,7 @@ main {
               font-weight: 600;
               line-height: 1.6;
               letter-spacing: 0.8px;
-              margin-bottom: 5px;
+              margin-bottom: 8px;
             }
             .title {
               font-weight: 600;
