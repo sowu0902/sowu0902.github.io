@@ -363,7 +363,7 @@ const GAME_TOTAL_QUESTIONS = 7;
  * (曉亞的sheet的api url=https://script.google.com/macros/s/AKfycbzufOsveWoNJlKFYnO6dNqdSvimPNUNJ-lqnMRMEEX8tQW1peHpU2M9Q8VdEes_RAuw/exec)
  * (微笑的sheet的api url=https://script.google.com/macros/s/AKfycbxeCi5u_B-Y9M3pgN4nRSzW0TtG5otQxNLkF3ByscPOnkze3OIiB9ZydJE1yaM_d3Gw8Q/exec)
  */
-const GAME_RECORD_API_URL = 'https://script.google.com/macros/s/AKfycbxeCi5u_B-Y9M3pgN4nRSzW0TtG5otQxNLkF3ByscPOnkze3OIiB9ZydJE1yaM_d3Gw8Q/exec';
+const GAME_RECORD_API_URL = 'https://script.google.com/macros/s/AKfycbzufOsveWoNJlKFYnO6dNqdSvimPNUNJ-lqnMRMEEX8tQW1peHpU2M9Q8VdEes_RAuw/exec';
 
 const gameState = {
   userName: '',
@@ -389,10 +389,16 @@ function scrollToGameTop(behavior = 'smooth') {
 
   if (!gameSection) return;
 
-  gameSection.scrollIntoView({
+  const gameTop =
+    gameSection.getBoundingClientRect().top +
+    window.scrollY;
+
+  window.scrollTo({
+    top: gameTop,
     behavior,
-    block: 'start',
   });
+
+  console.log("SCROLL new");
 }
 
 /* ========================================
@@ -566,6 +572,7 @@ function startGame() {
   resetGameProgress();
   showGameScreen('main', {
     shouldScroll: true,
+    scrollBehavior: 'auto',
   });
   renderCurrentQuestion();
 }
@@ -795,6 +802,7 @@ function finishGame() {
 
   showGameScreen('result', {
     shouldScroll: true,
+    scrollBehavior: 'auto',
   });
 
   prepareGameResultFile();
@@ -874,6 +882,7 @@ function retryGame() {
 
   showGameScreen('intro', {
     shouldScroll: true,
+    scrollBehavior: 'auto',
   });
 }
 
@@ -1020,6 +1029,22 @@ function downloadBlob(blob, fileName) {
   }, 1000);
 }
 
+
+// 裝置判斷函式
+function shouldUseNativeShare(file) {
+  const isMobileOrTablet =
+    window.matchMedia('(pointer: coarse)').matches &&
+    window.matchMedia('(hover: none)').matches;
+
+  return (
+    isMobileOrTablet &&
+    typeof navigator.share === 'function' &&
+    typeof navigator.canShare === 'function' &&
+    navigator.canShare({
+      files: [file],
+    })
+  );
+}
 /* ========================================
  * 下載結果圖
  * ======================================== */
@@ -1037,9 +1062,6 @@ async function downloadGameResult() {
   }
 
   try {
-    /*
-     * 若預先準備尚未完成，這裡再產生一次。
-     */
     if (
       !gameState.resultImageBlob ||
       !gameState.resultImageFile
@@ -1066,18 +1088,7 @@ async function downloadGameResult() {
 
     const file = gameState.resultImageFile;
 
-    /*
-     * 手機／瀏覽器支援分享圖片檔時，
-     * 優先開啟系統分享面板。
-     */
-    const canShareFile =
-      typeof navigator.share === 'function' &&
-      typeof navigator.canShare === 'function' &&
-      navigator.canShare({
-        files: [file],
-      });
-
-    if (canShareFile) {
+    if (shouldUseNativeShare(file)) {
       await navigator.share({
         files: [file],
       });
@@ -1085,17 +1096,12 @@ async function downloadGameResult() {
       return;
     }
 
-    /*
-     * 不支援 Web Share 時回退為一般下載。
-     */
+    // Mac、Windows 等桌機環境皆走一般下載
     downloadBlob(
       gameState.resultImageBlob,
       file.name
     );
   } catch (error) {
-    /*
-     * 使用者自行關閉分享面板不視為程式錯誤。
-     */
     if (error?.name !== 'AbortError') {
       console.error('結果圖片儲存失敗：', error);
 
@@ -1516,7 +1522,7 @@ function createAnalysisCard(item) {
 
   const tag = document.createElement('div');
   tag.className = 'tag';
-  tag.textContent = `${item.tag}的村長`;
+  tag.textContent = `${item.tag}`;
 
   const imageWrap = document.createElement('div');
   imageWrap.className = 'img';
@@ -1536,10 +1542,13 @@ function createAnalysisCard(item) {
   const contentWrap = document.createElement('div');
   contentWrap.className = 'content-wrap';
 
-  const name = createTextElement('p', 'name', item.name);
+  // const name = createTextElement('p', 'name', item.name);
+  const name = document.createElement('p');
+  name.className = 'name';
+  name.textContent = `${item.site}｜${item.name}`;
   const title = createTextElement('p', 'title', item.title);
   const content = createTextElement('p', 'content', item.content);
-  const site = createTextElement('p', 'site', item.site);
+  // const site = createTextElement('p', 'site', item.site);
 
   const arrow = document.createElement('span');
   arrow.className = 'arrow';
@@ -1549,7 +1558,6 @@ function createAnalysisCard(item) {
     name,
     title,
     content,
-    site,
     arrow
   );
 
