@@ -22,6 +22,54 @@ function refreshAOS() {
 }
 
 /* ========================================
+ * 判斷會員是否登入，登入的話不轉址直接去下載pdf
+ * ======================================== */
+async function updateMemberLinks() {
+  const links = document.querySelectorAll('a.pdf-link-click');
+
+  if (!links.length) return;
+
+  const defaultUrl = 'https://web.cw.com.tw/activity/redirect/59aa3a73-b4a0-4054-bdce-4952f34a84c3';
+  const memberUrl = 'https://smiletaiwan.cw.com.tw/topics/communityresilience/地方韌性工具箱-微笑台灣.pdf';
+  const apiUrl =
+    'https://smiletaiwan.cw.com.tw/api/v1.0/member/me?fields=account,email,name';
+
+  // API 失敗或尚未登入時，維持原本網址
+  links.forEach((link) => {
+    link.href = defaultUrl;
+    
+  });
+
+  try {
+    const response = await fetch(apiUrl, {
+      method: 'GET',
+      credentials: 'include',
+      headers: {
+        Accept: 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`API 請求失敗：${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (data.success === true) {
+      links.forEach((link) => {
+        link.href = memberUrl;
+        // console.log("已登入");
+      });
+    }
+  } catch (error) {
+    console.error('會員狀態檢查失敗：', error);
+
+    // 發生錯誤時不處理，連結不變
+  }
+}
+
+
+/* ========================================
  * datalayer.push 相關設定
  * ======================================== */
 window.dataLayer = window.dataLayer || [];
@@ -43,7 +91,7 @@ function initReadingProgressTracking() {
           eventAction: '閱讀進度',
           eventLabel: entry.target.id,
         });
-        console.log(entry.target.id);
+        // console.log(entry.target.id);
         // 每個 section 只送出一次
         currentObserver.unobserve(entry.target);
       });
@@ -360,7 +408,7 @@ const GAME_TOTAL_QUESTIONS = 7;
 
 /*
  * 部署完成後的 Google Apps Script Web App URL。
- * (曉亞的sheet的api url=https://script.google.com/macros/s/AKfycbzufOsveWoNJlKFYnO6dNqdSvimPNUNJ-lqnMRMEEX8tQW1peHpU2M9Q8VdEes_RAuw/exec)
+ * (曉亞的測試用sheet的api url=https://script.google.com/macros/s/AKfycbzufOsveWoNJlKFYnO6dNqdSvimPNUNJ-lqnMRMEEX8tQW1peHpU2M9Q8VdEes_RAuw/exec)
  * (微笑的sheet的api url=https://script.google.com/macros/s/AKfycbxeCi5u_B-Y9M3pgN4nRSzW0TtG5otQxNLkF3ByscPOnkze3OIiB9ZydJE1yaM_d3Gw8Q/exec)
  */
 const GAME_RECORD_API_URL = 'https://script.google.com/macros/s/AKfycbxeCi5u_B-Y9M3pgN4nRSzW0TtG5otQxNLkF3ByscPOnkze3OIiB9ZydJE1yaM_d3Gw8Q/exec';
@@ -425,7 +473,7 @@ async function initGameQuiz() {
     !retryButton ||
     !downloadButton
   ) {
-    console.warn('遊戲 HTML 結構不完整');
+    // console.warn('遊戲 HTML 結構不完整');
     return;
   }
 
@@ -1305,7 +1353,7 @@ function initGameButtonTracking() {
         gameState.resultCardNumber || undefined,
     };
 
-    console.log('遊戲按鈕點擊事件：', trackingData);
+    // console.log('遊戲按鈕點擊事件：', trackingData);
 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(trackingData);
@@ -2153,6 +2201,9 @@ function renderSponsorEmpty(container) {
  * ======================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 判斷登入狀況更換連結
+  updateMemberLinks();
+
   // datalayer.push閱讀進度
   initReadingProgressTracking();
 
