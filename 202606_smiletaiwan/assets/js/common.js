@@ -22,6 +22,149 @@ function refreshAOS() {
 }
 
 /* ========================================
+ * 內建瀏覽器提示
+ * ======================================== */
+
+function getInAppBrowserType() {
+  const userAgent = navigator.userAgent || '';
+
+  if (/Line\//i.test(userAgent)) {
+    return 'line';
+  }
+
+  if (
+    /FBAN|FBAV|FB_IAB|Messenger/i.test(userAgent)
+  ) {
+    return 'messenger';
+  }
+
+  if (/Instagram/i.test(userAgent)) {
+    return 'instagram';
+  }
+
+  if (/Twitter/i.test(userAgent)) {
+    return 'twitter';
+  }
+
+  if (/MicroMessenger/i.test(userAgent)) {
+    return 'wechat';
+  }
+
+  return '';
+}
+
+function isInAppBrowser() {
+  return Boolean(getInAppBrowserType());
+}
+
+function initInAppBrowserNotice() {
+  const notice = document.querySelector(
+    '.inapp-browser-notice'
+  );
+
+  if (!notice || !isInAppBrowser()) return;
+
+  const closeButton = notice.querySelector(
+    '.inapp-browser-notice__close'
+  );
+
+  const confirmButton = notice.querySelector(
+    '.inapp-browser-notice__confirm'
+  );
+
+  const overlay = notice.querySelector(
+    '.inapp-browser-notice__overlay'
+  );
+
+  function openNotice() {
+    notice.hidden = false;
+    document.body.classList.add('is-modal-open');
+
+    confirmButton?.focus();
+  }
+
+  function closeNotice() {
+    notice.hidden = true;
+    document.body.classList.remove('is-modal-open');
+
+    sessionStorage.setItem(
+      'inAppBrowserNoticeClosed',
+      'true'
+    );
+  }
+
+  const hasClosedNotice =
+    sessionStorage.getItem(
+      'inAppBrowserNoticeClosed'
+    ) === 'true';
+
+  if (!hasClosedNotice) {
+    openNotice();
+  }
+
+  closeButton?.addEventListener('click', closeNotice);
+  confirmButton?.addEventListener('click', closeNotice);
+  overlay?.addEventListener('click', closeNotice);
+
+  document.addEventListener('keydown', (event) => {
+    if (
+      event.key === 'Escape' &&
+      !notice.hidden
+    ) {
+      closeNotice();
+    }
+  });
+}
+
+/* ========================================
+ * 判斷會員是否登入，登入的話不轉址直接去下載pdf
+ * ======================================== */
+async function updateMemberLinks() {
+  const links = document.querySelectorAll('a.pdf-link-click');
+
+  if (!links.length) return;
+
+  const defaultUrl = 'https://beta-web.cw.com.tw/activity/redirect/917f60cf-f1d8-4062-ac58-a67691318fbf';
+  const memberUrl = 'https://dev-smiletaiwan.cw.com.tw/topics/communityresilience/地方韌性工具箱-微笑台灣.pdf';
+  const apiUrl =
+    'https://dev-smiletaiwan.cw.com.tw/api/v1.0/member/me?fields=account,email,name';
+
+  // API 失敗或尚未登入時，維持原本網址
+  links.forEach((link) => {
+    link.href = defaultUrl;
+  });
+
+  try {
+    const response = await fetch(apiUrl, {
+      method: 'GET',
+      credentials: 'include',
+      headers: {
+        Accept: 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`API 請求失敗：${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (data.success === true) {
+      links.forEach((link) => {
+        link.href = memberUrl;
+      });
+      console.log('已登入');
+    } else {
+      console.log('未登入/API 失敗');
+    }
+  } catch (error) {
+    console.error('會員狀態檢查失敗：', error);
+    console.log('未登入/API 失敗');
+
+    // 發生錯誤時不處理，連結繼續使用 https://aaa
+  }
+}
+/* ========================================
  * datalayer.push 相關設定
  * ======================================== */
 window.dataLayer = window.dataLayer || [];
@@ -43,7 +186,7 @@ function initReadingProgressTracking() {
           eventAction: '閱讀進度',
           eventLabel: entry.target.id,
         });
-        console.log(entry.target.id);
+        // console.log(entry.target.id);
         // 每個 section 只送出一次
         currentObserver.unobserve(entry.target);
       });
@@ -76,7 +219,7 @@ function updateFixedElementsState() {
   if (!gameSection) return;
 
   const gameRect = gameSection.getBoundingClientRect();
-  const viewportMiddle = window.innerHeight *0.67;
+  const viewportMiddle = window.innerHeight * 0.67;
 
   // 遊戲區塊進入並涵蓋瀏覽器1/3時隱藏
   const shouldHide =
@@ -360,7 +503,7 @@ const GAME_TOTAL_QUESTIONS = 7;
 
 /*
  * 部署完成後的 Google Apps Script Web App URL。
- * (曉亞的sheet的api url=https://script.google.com/macros/s/AKfycbzufOsveWoNJlKFYnO6dNqdSvimPNUNJ-lqnMRMEEX8tQW1peHpU2M9Q8VdEes_RAuw/exec)
+ * (曉亞的測試用sheet的api url=https://script.google.com/macros/s/AKfycbzufOsveWoNJlKFYnO6dNqdSvimPNUNJ-lqnMRMEEX8tQW1peHpU2M9Q8VdEes_RAuw/exec)
  * (微笑的sheet的api url=https://script.google.com/macros/s/AKfycbxeCi5u_B-Y9M3pgN4nRSzW0TtG5otQxNLkF3ByscPOnkze3OIiB9ZydJE1yaM_d3Gw8Q/exec)
  */
 const GAME_RECORD_API_URL = 'https://script.google.com/macros/s/AKfycbxeCi5u_B-Y9M3pgN4nRSzW0TtG5otQxNLkF3ByscPOnkze3OIiB9ZydJE1yaM_d3Gw8Q/exec';
@@ -425,7 +568,7 @@ async function initGameQuiz() {
     !retryButton ||
     !downloadButton
   ) {
-    console.warn('遊戲 HTML 結構不完整');
+    // console.warn('遊戲 HTML 結構不完整');
     return;
   }
 
@@ -841,7 +984,7 @@ function renderGameResult() {
 
   /* 因實際檔案是 game-result_01.png，所以補0 */
   const fileNumber =
-  gameState.resultCardNumber.padStart(2, '0');
+    gameState.resultCardNumber.padStart(2, '0');
 
   resultImage.src =
     `assets/images/game-result/game-result_${fileNumber}.png`;
@@ -1305,7 +1448,7 @@ function initGameButtonTracking() {
         gameState.resultCardNumber || undefined,
     };
 
-    console.log('遊戲按鈕點擊事件：', trackingData);
+    // console.log('遊戲按鈕點擊事件：', trackingData);
 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(trackingData);
@@ -2153,6 +2296,9 @@ function renderSponsorEmpty(container) {
  * ======================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 判斷登入狀況更換連結
+  updateMemberLinks();
+
   // datalayer.push閱讀進度
   initReadingProgressTracking();
 
@@ -2160,6 +2306,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollDown();
   initNameInput();
   initDataStory();
+  initInAppBrowserNotice();
 
   // GAME
   initGameQuiz();
