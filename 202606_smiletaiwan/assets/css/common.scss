@@ -1263,7 +1263,7 @@ main {
         strong {
           color: #00897F;
           font-weight: 600;
-          .single {
+          &.single {
             display: block;
           }
         }
@@ -1976,28 +1976,77 @@ footer {
   }
   
 }
-.loading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 16px;
-  animation: blink 1s infinite;
-  z-index: 999;
-  display: none; /* 預設隱藏 */
-  &::after {
-    content: "";
-    width: 30px;
-    height: 30px;
-    border: 3px solid #ccc;
-    border-top-color: #000;
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-    display: block;
-    margin: auto;
+.inapp-browser-notice {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+
+  &[hidden] {
+    display: none;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  &__panel {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    padding: 50px 30px 30px 30px;
+    // border-radius: 16px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  &__close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: 28px;
+    line-height: 1;
+    color: #727171;
+    cursor: pointer;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 0.85px;
+    line-height: 1.7;
+    text-align: justify;
+  }
+
+  &__confirm {
+    width: 100%;
+    margin-top: 24px;
+    padding: 14px 16px;
+    border: 0;
+    border-radius: 10px;
+    background: #00B9EF;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.85px;
+    cursor: pointer;
   }
 }
 
+body.is-modal-open {
+  overflow: hidden;
+}
 @keyframes jump {
   0%,
   10% { transform: translateY(0); }

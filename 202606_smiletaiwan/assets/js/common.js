@@ -22,6 +22,101 @@ function refreshAOS() {
 }
 
 /* ========================================
+ * 內建瀏覽器提示
+ * ======================================== */
+
+function getInAppBrowserType() {
+  const userAgent = navigator.userAgent || '';
+
+  if (/Line\//i.test(userAgent)) {
+    return 'line';
+  }
+
+  if (
+    /FBAN|FBAV|FB_IAB|Messenger/i.test(userAgent)
+  ) {
+    return 'messenger';
+  }
+
+  if (/Instagram/i.test(userAgent)) {
+    return 'instagram';
+  }
+
+  if (/Twitter/i.test(userAgent)) {
+    return 'twitter';
+  }
+
+  if (/MicroMessenger/i.test(userAgent)) {
+    return 'wechat';
+  }
+
+  return '';
+}
+
+function isInAppBrowser() {
+  return Boolean(getInAppBrowserType());
+}
+
+function initInAppBrowserNotice() {
+  const notice = document.querySelector(
+    '.inapp-browser-notice'
+  );
+
+  if (!notice || !isInAppBrowser()) return;
+
+  const closeButton = notice.querySelector(
+    '.inapp-browser-notice__close'
+  );
+
+  const confirmButton = notice.querySelector(
+    '.inapp-browser-notice__confirm'
+  );
+
+  const overlay = notice.querySelector(
+    '.inapp-browser-notice__overlay'
+  );
+
+  function openNotice() {
+    notice.hidden = false;
+    document.body.classList.add('is-modal-open');
+
+    confirmButton?.focus();
+  }
+
+  function closeNotice() {
+    notice.hidden = true;
+    document.body.classList.remove('is-modal-open');
+
+    sessionStorage.setItem(
+      'inAppBrowserNoticeClosed',
+      'true'
+    );
+  }
+
+  const hasClosedNotice =
+    sessionStorage.getItem(
+      'inAppBrowserNoticeClosed'
+    ) === 'true';
+
+  if (!hasClosedNotice) {
+    openNotice();
+  }
+
+  closeButton?.addEventListener('click', closeNotice);
+  confirmButton?.addEventListener('click', closeNotice);
+  overlay?.addEventListener('click', closeNotice);
+
+  document.addEventListener('keydown', (event) => {
+    if (
+      event.key === 'Escape' &&
+      !notice.hidden
+    ) {
+      closeNotice();
+    }
+  });
+}
+
+/* ========================================
  * 判斷會員是否登入，登入的話不轉址直接去下載pdf
  * ======================================== */
 async function updateMemberLinks() {
@@ -2211,6 +2306,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollDown();
   initNameInput();
   initDataStory();
+  initInAppBrowserNotice();
 
   // GAME
   initGameQuiz();
