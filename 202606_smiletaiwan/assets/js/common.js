@@ -29,15 +29,14 @@ async function updateMemberLinks() {
 
   if (!links.length) return;
 
-  const defaultUrl = 'https://web.cw.com.tw/activity/redirect/59aa3a73-b4a0-4054-bdce-4952f34a84c3';
-  const memberUrl = 'https://smiletaiwan.cw.com.tw/topics/communityresilience/地方韌性工具箱-微笑台灣.pdf';
+  const defaultUrl = 'https://beta-web.cw.com.tw/activity/redirect/917f60cf-f1d8-4062-ac58-a67691318fbf';
+  const memberUrl = 'https://dev-smiletaiwan.cw.com.tw/topics/communityresilience/地方韌性工具箱-微笑台灣.pdf';
   const apiUrl =
-    'https://smiletaiwan.cw.com.tw/api/v1.0/member/me?fields=account,email,name';
+    'https://dev-smiletaiwan.cw.com.tw/api/v1.0/member/me?fields=account,email,name';
 
   // API 失敗或尚未登入時，維持原本網址
   links.forEach((link) => {
     link.href = defaultUrl;
-    
   });
 
   try {
@@ -58,17 +57,18 @@ async function updateMemberLinks() {
     if (data.success === true) {
       links.forEach((link) => {
         link.href = memberUrl;
-        // console.log("已登入");
       });
+      console.log('已登入');
+    } else {
+      console.log('未登入/API 失敗');
     }
   } catch (error) {
     console.error('會員狀態檢查失敗：', error);
+    console.log('未登入/API 失敗');
 
-    // 發生錯誤時不處理，連結不變
+    // 發生錯誤時不處理，連結繼續使用 https://aaa
   }
 }
-
-
 /* ========================================
  * datalayer.push 相關設定
  * ======================================== */
@@ -124,7 +124,7 @@ function updateFixedElementsState() {
   if (!gameSection) return;
 
   const gameRect = gameSection.getBoundingClientRect();
-  const viewportMiddle = window.innerHeight *0.67;
+  const viewportMiddle = window.innerHeight * 0.67;
 
   // 遊戲區塊進入並涵蓋瀏覽器1/3時隱藏
   const shouldHide =
@@ -889,7 +889,7 @@ function renderGameResult() {
 
   /* 因實際檔案是 game-result_01.png，所以補0 */
   const fileNumber =
-  gameState.resultCardNumber.padStart(2, '0');
+    gameState.resultCardNumber.padStart(2, '0');
 
   resultImage.src =
     `assets/images/game-result/game-result_${fileNumber}.png`;
