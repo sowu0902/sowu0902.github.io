@@ -13,11 +13,14 @@
 <!--控制手機顯示比例固定+禁止縮放-->
 <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' />
 <meta name='format-detection' content='telephone=no'>
+<!-- CSS -->
+<link rel="stylesheet" href="slick/slick-theme.css">
+<link rel="stylesheet" href="slick/slick.css">
 <style>
   body {
     margin: 0;
     padding: 0;
-    background-color: #eee;
+    background-color: #fff;
   }
   section {
     width: 100%;
@@ -38,6 +41,27 @@
     width: 100%;
     height: auto;
     display: block;
+  }
+  .slider {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #60bcff;
+    padding-bottom: 60px;
+  }
+  .slider .slick-dots {
+    bottom: 40px;
+  }
+  .slider .card {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .slider .gif {
+    position: absolute;
+    top: 29.5%;
+    left: 14%;
+    width: 72%;
+    /* display: none; */
   }
 </style>
 </head>
@@ -107,7 +131,25 @@
 </section>
   <section>
     <!-- <div class="blank">首屏<br>Coming soon</div> -->
-     <div><img src="zone1.png"></div>
+    <div><img src="0727/0727new_a.png"></div>
+    <div><img src="0727/0727new_b.png"></div>
+    <div><img src="0727/0727new_c1-1.png"></div>
+    <div class="slider">
+      <div class="card">
+        <img src="0727/0727new_c1-2a.png" class="bg">
+        <img src="0727/0727new_c1-2a.gif" class="gif">
+      </div>
+      <div class="card">
+        <img src="0727/0727new_c1-2b.png" class="bg">
+        <img src="0727/0727new_c1-2b.gif" class="gif">
+      </div>
+      <div class="card">
+        <img src="0727/0727new_c1-2c.png" class="bg">
+        <img src="0727/0727new_c1-2c.gif" class="gif">
+      </div>
+    </div>
+    <div style="padding: 20px 0;"><img src="0727/0727new_d.png"></div>
+    <!-- <div><img src="zone1.png"></div>
     <div><img src="zone2_0623.png"></div>
     <div><img src="zone3.png"></div>
     <div><img src="0626/zone04.png"></div>
@@ -124,7 +166,27 @@
     <div><img src="0626/zone10-2_PLANS.png"></div>
     <div><img src="0626/zone10-3_PLANS.png"></div>
     <div><img src="zone11_0623.png"></div>
-    <div><img src="0626/zone12.png"></div>
+    <div><img src="0626/zone12.png"></div> -->
   </section>
+  <!-- JS -->
+  <!-- jquery -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <!-- slick -->
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 900,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000
+      });
+    });
+  </script>
 </body>
 </html>
