@@ -42,26 +42,34 @@
     height: auto;
     display: block;
   }
-  .slider {
+</style>
+<!-- 以下是要給康健的css -->
+<style>
+  .ch_slider {
     width: 100%;
     margin: 0 auto;
     background-color: #60bcff;
     padding-bottom: 60px;
   }
-  .slider .slick-dots {
+  .ch_slider .slick-dots {
     bottom: 40px;
   }
-  .slider .card {
+  .ch_slider .card {
     position: relative;
     width: 100%;
     height: auto;
   }
-  .slider .gif {
+  .ch_slider .gif {
     position: absolute;
     top: 29.5%;
     left: 14%;
     width: 72%;
     /* display: none; */
+  }
+  .ch_slider img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 </style>
 </head>
@@ -131,26 +139,28 @@
 </section>
   <section>
     <!-- <div class="blank">首屏<br>Coming soon</div> -->
-    <div><img src="0727/0727new_a.png"></div>
-    <div><img src="0727/0727new_b.png"></div>
-    <div><img src="0727/0727new_c1-1.png"></div>
-    <div class="slider">
+    <div><img src="0727/0727new_a-v2.png"></div>
+    <div><img src="0727/0727new_b-v2.png"></div>
+    <div><img src="0727/0727new_c1-1-v2.png"></div>
+    <!-- 以下是要給康健的html start -->
+    <div class="ch_slider">
       <div class="card">
-        <img src="0727/0727new_c1-2a.png" class="bg">
+        <img src="0727/0727new_c1-2a-v2.png" class="bg">
         <img src="0727/0727new_c1-2a.gif" class="gif">
       </div>
       <div class="card">
-        <img src="0727/0727new_c1-2b.png" class="bg">
+        <img src="0727/0727new_c1-2b-v2.png" class="bg">
         <img src="0727/0727new_c1-2b.gif" class="gif">
       </div>
       <div class="card">
-        <img src="0727/0727new_c1-2c.png" class="bg">
+        <img src="0727/0727new_c1-2c-v2.png" class="bg">
         <img src="0727/0727new_c1-2c.gif" class="gif">
       </div>
     </div>
-    <div style="padding: 20px 0;"><img src="0727/0727new_d.png"></div>
-    <!-- <div><img src="zone1.png"></div>
-    <div><img src="zone2_0623.png"></div>
+    <!-- 以下是要給康健的html end -->
+    <div style="padding: 20px 0;"><img src="0727/0727new_d-v2.png"></div>
+    <!-- <div><img src="zone1-v2.png"></div> -->
+    <!-- <div><img src="zone2_0623.png"></div>
     <div><img src="zone3.png"></div>
     <div><img src="0626/zone04.png"></div>
     <div><img src="zone5_1.png"></div>
@@ -169,13 +179,14 @@
     <div><img src="0626/zone12.png"></div> -->
   </section>
   <!-- JS -->
+  <!-- 以下是要給康健的js -->
   <!-- jquery -->
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <!-- slick -->
   <script type="text/javascript" src="slick/slick.min.js"></script>
   <script>
     $(document).ready(function(){
-      $('.slider').slick({
+      $('.ch_slider').slick({
         dots: true,
         infinite: true,
         speed: 900,
