@@ -1,0 +1,98 @@
+<!-- css start -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<style>
+  .ch_slider {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #60bcff;
+    padding-bottom: 60px;
+  }
+  .ch_slider .slick-dots {
+    bottom: 40px;
+  }
+  .ch_slider .card {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .ch_slider .gif {
+    position: absolute;
+    top: 29.5%;
+    left: 14%;
+    width: 72%;
+  }
+  .ch_slider img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .ch_slider .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .ch_slider .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #FFF;
+    opacity: 0.5;
+  }
+  .ch_slider .slick-dots li button:before {
+    display: none;
+  }
+  .ch_slider .slick-dots li.slick-active button {
+    opacity: 1;
+  }
+</style>
+<!-- css end -->
+<!-- html start -->
+<!-- 圖片src請改為絕對路徑如hhttps://files.sat.cool/public/tinymce/ajktJpf4ZjinYUPBuvJjAOMkppCxYunplW31zmYb.jpg -->
+<div class="ch_slider">
+  <div class="card">
+    <img src="0727/0727new_c1-2a-v2.png" class="bg">
+    <img src="0727/0727new_c1-2a.gif" class="gif">
+  </div>
+  <div class="card">
+    <img src="0727/0727new_c1-2b-v2.png" class="bg">
+    <img src="0727/0727new_c1-2b.gif" class="gif">
+  </div>
+  <div class="card">
+    <img src="0727/0727new_c1-2c-v2.png" class="bg">
+    <img src="0727/0727new_c1-2c.gif" class="gif">
+  </div>
+</div>
+<!-- html end -->
+<!-- jquery start -->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<!-- slick -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.ch_slider').slick({
+      dots: true,
+      infinite: true,
+      speed: 900,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerMode: true,
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 3000
+    });
+  });
+</script>
+<!-- jquery end -->
