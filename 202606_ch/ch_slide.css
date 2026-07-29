@@ -1,0 +1,56 @@
+@charset 'UTF-8';
+.ch_slider {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #60bcff;
+    padding-bottom: 60px;
+  }
+  .ch_slider .slick-dots {
+    bottom: 40px;
+  }
+  .ch_slider .card {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .ch_slider .gif {
+    position: absolute;
+    top: 29.5%;
+    left: 14%;
+    width: 72%;
+  }
+  .ch_slider img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .ch_slider .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .ch_slider .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #FFF;
+    opacity: 0.5;
+  }
+  .ch_slider .slick-dots li button:before {
+    display: none;
+  }
+  .ch_slider .slick-dots li.slick-active button {
+    opacity: 1;
+  }
