@@ -14,8 +14,6 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' />
 <meta name='format-detection' content='telephone=no'>
 <!-- CSS -->
-<link rel="stylesheet" href="slick/slick-theme.css">
-<link rel="stylesheet" href="slick/slick.css">
 <style>
   body {
     margin: 0;
@@ -44,6 +42,8 @@
   }
 </style>
 <!-- 以下是要給康健的css -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <style>
   .ch_slider {
     width: 100%;
@@ -70,6 +70,36 @@
     width: 100%;
     height: auto;
     display: block;
+  }
+  .ch_slider .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .ch_slider .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #FFF;
+    opacity: 0.5;
+  }
+  .ch_slider .slick-dots li button:before {
+    display: none;
+  }
+  .ch_slider .slick-dots li.slick-active button {
+    opacity: 1;
   }
 </style>
 </head>
@@ -143,18 +173,19 @@
     <div><img src="0727/0727new_b-v2.png"></div>
     <div><img src="0727/0727new_c1-1-v2.png"></div>
     <!-- 以下是要給康健的html start -->
+     <!-- 圖片請改為康健的絕對路徑 -->
     <div class="ch_slider">
       <div class="card">
-        <img src="0727/0727new_c1-2a-v2.png" class="bg">
-        <img src="0727/0727new_c1-2a.gif" class="gif">
+        <img src="https://sowu0902.github.io/202606_ch/0727/0727new_c1-2a-v2.png" class="bg">
+        <img src="https://sowu0902.github.io/202606_ch/0727/0727new_c1-2a.gif" class="gif">
       </div>
       <div class="card">
-        <img src="0727/0727new_c1-2b-v2.png" class="bg">
-        <img src="0727/0727new_c1-2b.gif" class="gif">
+        <img src="https://sowu0902.github.io/202606_ch/0727/0727new_c1-2b-v2.png" class="bg">
+        <img src="https://sowu0902.github.io/202606_ch/0727/0727new_c1-2b.gif" class="gif">
       </div>
       <div class="card">
-        <img src="0727/0727new_c1-2c-v2.png" class="bg">
-        <img src="0727/0727new_c1-2c.gif" class="gif">
+        <img src="https://sowu0902.github.io/202606_ch/0727/0727new_c1-2c-v2.png" class="bg">
+        <img src="https://sowu0902.github.io/202606_ch/0727/0727new_c1-2c.gif" class="gif">
       </div>
     </div>
     <!-- 以下是要給康健的html end -->
@@ -183,7 +214,7 @@
   <!-- jquery -->
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <!-- slick -->
-  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script>
     $(document).ready(function(){
       $('.ch_slider').slick({
