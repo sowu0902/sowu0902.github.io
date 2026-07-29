@@ -120,6 +120,28 @@
       autoplay: true,
       autoplaySpeed: 3000
     });
+    function sendHeightToParent() {
+      const height = Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight
+      );
+
+      window.parent.postMessage(
+        {
+          type: 'iframeResize',
+          height: height
+        },
+        'https://wabay.tw/'
+      );
+    }
+
+    window.addEventListener('load', sendHeightToParent);
+    window.addEventListener('resize', sendHeightToParent);
+
+    const observer = new ResizeObserver(sendHeightToParent);
+
+    observer.observe(document.body);
+    observer.observe(document.documentElement);
   });
 </script>
 <!-- jquery end -->
