@@ -1,0 +1,38 @@
+[
+  {
+    "image": "./images/reviews/photo01.jpg",
+    "name": "愛麗 Ellie",
+    "review": "最近開始用 KANEBO 新出的凝萃潤光系列，這個系列都有添加 TAISHI™ Lipo 胎脂科技概念成分，簡單來說就是希望讓保養後的肌膚維持水潤、澎彈的狀態。最近覺得皮膚不像夏天那麼容易出油，反而開始有一點乾，用這組的時機剛剛好。",
+    "link": "https://www.instagram.com/"
+  },
+  {
+    "image": "./images/reviews/photo02.jpg",
+    "name": "安安兒Queena",
+    "review": "我自己很喜歡凝萃潤光乳的質地，看起來很滋潤，但抹開之後很好延展，碰到肌膚有種慢慢融開的感覺。裡面還有玻尿酸精華跟植物保濕精萃，擦完不只是表面滑滑的，臉摸起來會有比較飽滿、水嫩的感覺💧",
+    "link": "https://www.instagram.com/"
+  },
+  {
+    "image": "./images/reviews/photo03.jpg",
+    "name": "愛麗絲的遊樂園",
+    "review": "凝萃潤光乳的質地，看起來很滋潤，但抹開之後很好延展，碰到肌膚有種慢慢融開的感覺。裡面還有玻尿酸精華跟植物保濕精萃，擦完不只是表面滑滑的，臉摸起來會有比較飽滿、水嫩的感覺💧",
+    "link": "https://www.instagram.com/"
+  },
+  {
+    "image": "./images/reviews/photo01.jpg",
+    "name": "愛麗 Ellie",
+    "review": "最近開始用 KANEBO 新出的凝萃潤光系列，這個系列都有添加 TAISHI™ Lipo 胎脂科技概念成分，簡單來說就是希望讓保養後的肌膚維持水潤、澎彈的狀態。最近覺得皮膚不像夏天那麼容易出油，反而開始有一點乾，用這組的時機剛剛好。",
+    "link": "https://www.instagram.com/"
+  },
+  {
+    "image": "./images/reviews/photo02.jpg",
+    "name": "安安兒Queena",
+    "review": "我自己很喜歡凝萃潤光乳的質地，看起來很滋潤，但抹開之後很好延展，碰到肌膚有種慢慢融開的感覺。裡面還有玻尿酸精華跟植物保濕精萃，擦完不只是表面滑滑的，臉摸起來會有比較飽滿、水嫩的感覺💧",
+    "link": "https://www.instagram.com/"
+  },
+  {
+    "image": "./images/reviews/photo03.jpg",
+    "name": "愛麗絲的遊樂園",
+    "review": "凝萃潤光乳的質地，看起來很滋潤，但抹開之後很好延展，碰到肌膚有種慢慢融開的感覺。裡面還有玻尿酸精華跟植物保濕精萃，擦完不只是表面滑滑的，臉摸起來會有比較飽滿、水嫩的感覺💧",
+    "link": "https://www.instagram.com/"
+  }
+]

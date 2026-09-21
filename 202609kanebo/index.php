@@ -1,0 +1,279 @@
+<?php
+include_once './common.php';
+?>
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title><?= $eventSetting->meta_title ?></title>
+  <meta name="author" content="<?= $eventSetting->author ?>" />
+  <meta name="copyright" content="Hearst Magazines Taiwan" />
+  <meta name="keywords" content="<?= $eventSetting->meta_keywords ?>" />
+  <meta name="description" content="<?= $eventSetting->meta_description ?>" />
+  <meta property="minisite_type" content="<?= $eventSetting->minisite_type ?>" />
+  <meta name="event_id" content="<?= $event_id ?>" />
+  <!-- FB Open Graphic -->
+  <meta property="fb:app_id" content="<?= $eventSetting->fb_app_id ?>" />
+  <meta property="og:title" content="<?= $eventSetting->meta_title ?>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="<?= $eventSetting->og_image ?>" />
+  <meta property="og:url" content="<?= $eventSetting->url ?>" />
+  <meta property="og:site_name" content="<?= $eventSetting->site_name ?>" />
+  <meta property="og:description" content="<?= $eventSetting->meta_description ?>" />
+  <link rel="image_src" type="image/jpeg" href="<?= $eventSetting->og_image ?>" />
+  <!-- Favicons -->
+  <link rel="shortcut icon" type="image/x-icon" href="<?= $eventSetting->favicon ?>" />
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://event.hearst.com.tw/common_support/css/font.css" />
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="scss/index.min.css">
+  <!-- js -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/rem.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js" integrity="sha512-jNDtFf7qgU0eH/+Z42FG4fw3w7DM/9zbgNPe3wfJlCylVDTT3IgKW5r92Vy9IHa6U50vyMz5gRByIu4YIXFtaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <!-- wrapper start -->
+  <div class="wrapper">
+    <!-- kv start -->
+    <section class="kv" id="kv">
+      <div class="container">
+        <div class="top_area">
+          <img src="images/kv/logo@2x.png" alt="I HOPE. KANEBO" class="logo" data-aos="fade-up" data-aos-duration="800">
+        </div>
+        <div class="bottom_area" data-aos="fade-down" data-aos-duration="800">
+          <div class="sloganbox">
+            <img src="images/kv/slogan@2x.png" alt="凝萃潤光系列登場 美肌大使一致盛讚！" class="slogan" data-aos="fade-down" data-aos-duration="800">
+            <img src="images/kv/elle-plus@2x.png" alt="社群好評洗版" class="flowing">
+          </div>
+          <div class="cta" data-href="data">
+            <span>立即預約專櫃體驗</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- kv end -->
+    <!-- info start -->
+    <section class="info" id="product">
+      <div class="container">
+        <div class="title-1 title_area">
+          <h2 class="margin_bottom--40" data-aos="fade-up" data-aos-duration="800">
+            <img src="images/info/KANEBO_logo.png" alt="KANEBO">
+            凝萃潤光保養系列
+          </h2>
+          <div class="subtitle margin_bottom--60 margin_top--30" data-aos="fade-down" data-aos-duration="800">
+            <img src="images/info/subtitle@2x.png" alt="42秒精準手舞，重塑未來肌 7 天深層有感・42 天煥然一新">
+          </div> 
+        </div>
+
+        <!-- 胎脂與KANEBO養膚哲學 -->
+        <div class="content-1 content_area content_info-block" data-aos="fade-up" data-aos-duration="800">
+          <div class="text">
+            <h3 class="white">胎脂與KANEBO養膚哲學</h3>
+            <p>
+              「你知道嗎？寶寶在媽媽肚子裡、皮膚還沒發育完全時，就有一層神奇的『胎脂』，養護著初生的肌膚！
+              <br>
+              這層天然屏障能鎖住水分、抵禦外界刺激。」
+            </p>
+          </div>
+          
+        </div>
+
+        <!-- TAISHI Lipo 胎脂概念成份 -->
+        <div class="content-2 content_area content_info-block" data-aos="fade-up" data-aos-duration="800">
+          <div class="text">
+            <h3>
+              <span class="trademark">TAISHI</span> Lipo 
+              <br>
+              胎脂概念成份
+            </h3>
+            <p>胎脂是世界上最完美的高保濕修護膜，富含高濃度神經醯胺，KANEBO歷經數十年獨家研發，將胎脂強大的修護概念注入保養中，完美模擬胎脂高親膚、極保濕的特性，讓肌膚從容面對現代生活的各種壓力。</p>
+          </div>
+          <img src="images/info/block2_img.png" alt="">
+        </div>
+
+        <!-- 凝萃潤光乳 -->
+        <div class="content-3 content_area content_product-block">
+          <div class="text" data-aos="fade-up" data-aos-duration="800">
+            <h3>凝萃潤光乳<span class="eng"><img src="images/info/Replenishing-Charms.png" alt="Replenishing Charms"></span></h3>
+            <p>
+              為肌膚充滿水潤彈力
+              <br>
+              打造盈滿笑容印象的美容乳液
+            </p>
+          </div>          
+          <div class="text text_taishi" data-aos="fade-down" data-aos-duration="800">
+            <p class="title">
+              獨家胎脂概念成分
+              <br>
+              <span class="trademark">TAISHI</span> Lipo b
+            </p>
+            <p>
+              搭載豐潤滿盈技術，有助淡化細紋
+            </p>
+          </div>
+        </div>
+
+        <!-- 凝萃潤光霜 -->
+        <div class="content-4 content_area content_product-block">
+          <div class="text" data-aos="fade-up" data-aos-duration="800">
+            <h3>凝萃潤光霜<span class="eng"><img src="images/info/Repairing-energies.png" alt="Repairing energies"></span></h3>
+            <p>
+              翌日清晨仍綻放光采
+              <br>
+              打造緊緻水潤、盈透美肌的乳霜
+            </p>
+          </div>
+          <div class="text text_taishi" data-aos="fade-down" data-aos-duration="800">
+            <p class="title">
+              獨家胎脂概念成分
+              <br>
+              <span class="trademark">TAISHI</span> Lipo a
+            </p>
+            <p>
+              緊實塑帶技術，感受輪廓緊實彈力
+            </p>
+          </div>
+          <div class="text margin_top--50">
+            <a class="cta" href="#">
+              <span>看看編輯怎麼說</span>
+            </a>
+          </div>
+        </div>
+        
+        <!-- 美肌大王Kevin老師親授 -->
+        <div class="content-5 content_area content_special-block">
+          <h3>
+            美肌大王Kevin老師親授
+            <span class="small">42秒微笑拉提</span>
+          </h3>
+          <div class="video padding_top--20 padding_bottom--20" data-aos="fade-up" data-aos-duration="800">
+            <div class="video_box">
+            <div style="position: relative; width: 100%;">
+              <div class="play"></div>
+              <!-- <img src="images/info/video-img.jpg" alt="Background image" style="position: absolute; top: 0; left: 0; width: 100%; height: auto; z-index: -1;"> -->
+              <video id="my-video" autoplay controls playsinline muted loop style="width: 100%;">
+                <source src="kanebo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <script>
+              const playButton = document.querySelector(".play");
+              const video = document.getElementById("my-video");
+              playButton.addEventListener("click", () => {
+                video.play();
+                playButton.style.display = "none";
+              });
+            </script>
+            </div>
+          </div>
+          <div class="text margin_top--50" data-aos="fade-up" data-aos-duration="800">
+            <p>
+              跟著老師掌握獨家拉提手法
+              <br>
+              搭配凝萃潤光系列 
+              <br>
+              在家也能享受奢華護膚儀式！ 
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <!-- info end -->
+    <!-- feedback start -->
+    <section class="feedback" id="feedback">
+      <div class="container">
+        <h2 class="margin_bottom--40 padding_bottom--70" data-aos="fade-up" data-aos-duration="800">
+          <img src="images/feedback/h2--before.png" alt="社群洗版好評">
+          潤光美肌大使實測盛讚
+        </h2>
+        <!-- 回饋區 -->
+        <div class="reviews">
+          <div class="reviews-title padding_top--10" data-aos="fade-up" data-aos-duration="800">
+            <strong>告別乾荒與疲憊影肌</strong>
+            讓笑容更加耀眼迷人
+          </div>
+          <div class="reviews-inner" data-aos="fade-up" data-aos-duration="800">
+            <div class="reviews_area">
+              <div class="reviews-slider">
+                <!-- JS 動態產生內容 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- feedback end -->
+    <!-- data start -->
+    <section class="data" id="data">
+      <div class="container">
+        <div class="data-infobox">
+          <div class="top-text" data-aos="fade-up" data-aos-duration="800">
+            <h2>KANEBO<br>凝萃潤光美肌體驗計劃</h2>
+            <p class="margin_top--10">跟著潤光美肌大使，親身解鎖胎脂澎潤奇蹟！</p>
+          </div>
+          <div class="bottom-text" data-aos="fade-down" data-aos-duration="800">
+            <p>
+              即日起填寫以下資料，憑簡訊至指定櫃點體驗完整肌膚諮詢，完成後即可獲贈「KANEBO凝萃潤光體驗組」乙份。數量有限，換完為止。
+            </p>
+            <p class="small margin_top--20">＊恕不得與其他兌換活動重複領取。</p>
+          </div>
+        </div>
+        <div class="data-content" data-aos="fade-up" data-aos-duration="800">
+          <div class="top-text padding_top--40 padding_bottom--40">
+            <p>
+              請填寫個人聯絡資料
+            </p>
+          </div>
+          <div class="data-area margin_left--30 margin_right--30">
+            <!-- 套用表單區 開始 -->
+            <div class="data_group">
+              <p class="tetris" data-id="<?= $tetris_id ?>" data-new-style="1" data-theme="event-theme">Loading...</p>
+              <!-- <script src="<?= TETRIS_SERVER ?>app.js"></script>
+              <?php
+              if (isset($_GET['debug']) && $_GET['debug']) {
+                echo '<script type="text/javascript" src="'. TETRIS_SERVER .'debug.js"></script>';
+              }
+              ?> -->
+            </div>
+            <!-- 套用表單區 結束 -->
+          </div>
+          <div class="data-notice margin_top--40 margin_left--30 margin_right--30 padding_left-right--40 padding_top--30 padding_bottom--30">
+            <p>注意事項：</p>
+            <ol>
+              <li>送出前請確認您的手機門號正確無誤，且可接受廣告簡訊。</li>
+              <li>手機須有網路功能方能兌換。</li>
+              <li>每人每支門號限兌換乙次，限本人憑兌換頁面兌換。贈品以實物為準，數量有限，送完為止。</li>
+              <li>收到簡訊後，請交付櫃點服務人員按下兌換鈕方才完成兌換。</li>
+              <li>ELLE 與 KANEBO 佳麗寶化粧品集團保留最終修改、取消、停止本活動權利。送出資料前，請詳閱隱私權條款。 </li>
+            </ol>
+          </div>
+        </div>
+        <div class="elle">
+          <img src="images/ELLE@2x.png" alt="ELLE">
+        </div>
+      </div>
+    </section>
+    <!-- data end -->
+  </div>
+  <!-- wrapper end -->
+  <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="js/aos.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script src="js/index.js"></script>
+  <script>
+    AOS.init({
+        offset: 60,
+        duration: 1000,
+        easing: "ease",
+    });
+  </script>
+
+  <?php $eventSetting->getTracker(); ?> 
+</body>
+</html>
